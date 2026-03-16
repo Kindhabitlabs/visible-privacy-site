@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Visible — Your Privacy, Explained</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #080808;
+      --surface: #111111;
+      --surface-2: #191919;
+      --border: #242424;
+      --text: #e8e4dc;
+      --muted: #7a7670;
+      --accent: #c8402a;
+      --accent-warm: #e8824a;
+      --gold: #c8a96e;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* ---- NAV ---- */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 48px;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.3s, background 0.3s;
+    }
+    nav.scrolled {
+      border-color: var(--border);
+      background: rgba(8,8,8,0.94);
+      backdrop-filter: blur(12px);
+    }
+    .nav-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      color: var(--text);
+      text-decoration: none;
+    }
+    .nav-logo span { color: var(--accent); }
+    nav ul { list-style: none; display: flex; gap: 36px; }
+    nav ul a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+    nav ul a:hover { color: var(--text); }
+    .nav-cta {
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--bg) !important;
+      background: var(--text);
+      padding: 8px 20px;
+      border-radius: 2px;
+      transition: background 0.2s !important;
+    }
+    .nav-cta:hover { background: var(--accent) !important; color: white !important; }
+
+    /* ---- HERO ---- */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 0 48px 80px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 70% 60% at 80% 20%, rgba(200,64,42,0.07) 0%, transparent 70%),
+        radial-gradient(ellipse 50% 40% at 20% 80%, rgba(200,169,110,0.04) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .hero-eyebrow {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 28px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .hero-eyebrow::before {
+      content: '';
+      width: 40px;
+      height: 1px;
+      background: var(--accent);
+    }
+    .hero h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(52px, 9vw, 130px);
+      font-weight: 700;
+      line-height: 0.92;
+      letter-spacing: -0.02em;
+      max-width: 1000px;
+      margin-bottom: 40px;
+    }
+    .hero h1 em {
+      font-style: italic;
+      color: var(--gold);
+    }
+    .hero-sub {
+      max-width: 540px;
+      font-size: 18px;
+      font-weight: 300;
+      line-height: 1.7;
+      color: var(--muted);
+      margin-bottom: 48px;
+    }
+    .hero-sub strong { color: var(--text); font-weight: 500; }
+    .hero-actions { display: flex; gap: 16px; align-items: center; }
+    .btn-primary {
+      display: inline-block;
+      background: var(--accent);
+      color: white;
+      padding: 14px 32px;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      text-decoration: none;
+      border-radius: 2px;
+      transition: background 0.2s;
+    }
+    .btn-primary:hover { background: #a8321e; }
+    .btn-ghost {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 400;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .btn-ghost:hover { color: var(--text); }
+    .hero-stat-bar {
+      position: absolute;
+      right: 48px;
+      bottom: 80px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      text-align: right;
+    }
+    .hero-stat .num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 42px;
+      font-weight: 600;
+      color: var(--gold);
+      line-height: 1;
+    }
+    .hero-stat .label {
+      font-size: 11px;
+      font-weight: 400;
+      color: var(--muted);
+      letter-spacing: 0.08em;
+      max-width: 150px;
+      margin-left: auto;
+    }
+    .hero-rule {
+      width: 1px;
+      height: 60px;
+      background: var(--border);
+      margin: 0 auto;
+    }
+
+    /* ---- SCROLL LINE ---- */
+    .scroll-line {
+      width: 1px;
+      height: 80px;
+      background: linear-gradient(to bottom, transparent, var(--border));
+      margin: 0 auto;
+    }
+
+    /* ---- SECTION BASE ---- */
+    section { padding: 120px 48px; }
+    .section-label {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 60px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .section-label::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+    h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(36px, 5vw, 66px);
+      font-weight: 700;
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+    }
+    h2 em { font-style: italic; color: var(--gold); }
+
+    /* ---- PARADOX SECTION ---- */
+    .paradox {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .paradox-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+      max-width: 1200px;
+    }
+    .paradox-text h2 { margin-bottom: 28px; }
+    .paradox-text p {
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.75;
+      margin-bottom: 20px;
+    }
+    .paradox-text p strong { color: var(--text); font-weight: 500; }
+    .stat-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .big-stat {
+      padding: 36px 40px;
+      border: 1px solid var(--border);
+      position: relative;
+      overflow: hidden;
+      background: var(--bg);
+    }
+    .big-stat::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 3px;
+      background: var(--accent);
+    }
+    .big-stat .n {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 72px;
+      font-weight: 700;
+      line-height: 1;
+      color: var(--text);
+      margin-bottom: 8px;
+    }
+    .big-stat .n span { color: var(--accent); }
+    .big-stat .d {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.5;
+      max-width: 280px;
+    }
+    .big-stat .src {
+      font-size: 10px;
+      color: #3a3a3a;
+      margin-top: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    /* ---- RATIONALIZATIONS ---- */
+    .rationalizations { max-width: 1200px; margin: 0 auto; }
+    .rat-header {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: end;
+      margin-bottom: 80px;
+    }
+    .rat-header p {
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.75;
+    }
+    .rat-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+    }
+    .rat-card {
+      background: var(--surface);
+      padding: 40px 36px;
+      border: 1px solid var(--border);
+      position: relative;
+      overflow: hidden;
+      transition: border-color 0.2s;
+      cursor: default;
+    }
+    .rat-card:hover { border-color: var(--accent); }
+    .rat-card:hover .rat-reframe { opacity: 1; transform: translateY(0); }
+    .rat-card:hover .rat-quote { opacity: 0.3; }
+    .rat-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 14px;
+      color: var(--border);
+      margin-bottom: 24px;
+      letter-spacing: 0.1em;
+    }
+    .rat-quote {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px;
+      font-style: italic;
+      font-weight: 400;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 20px;
+      transition: opacity 0.3s;
+    }
+    .rat-label {
+      font-size: 10px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 500;
+    }
+    .rat-reframe {
+      position: absolute;
+      inset: 0;
+      background: var(--surface-2);
+      padding: 40px 36px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      opacity: 0;
+      transform: translateY(8px);
+      transition: opacity 0.3s, transform 0.3s;
+      border-left: 2px solid var(--accent);
+    }
+    .rat-reframe-label {
+      font-size: 10px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 16px;
+    }
+    .rat-reframe p {
+      font-size: 15px;
+      color: var(--text);
+      line-height: 1.65;
+    }
+
+    /* ---- CONSEQUENCES ---- */
+    .consequences {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .consequences-inner { max-width: 1200px; margin: 0 auto; }
+    .consequences h2 { margin-bottom: 16px; }
+    .consequences .intro {
+      color: var(--muted);
+      font-size: 17px;
+      max-width: 600px;
+      margin-bottom: 72px;
+      line-height: 1.75;
+    }
+    .consequence-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2px;
+    }
+    .consequence-item {
+      padding: 40px 44px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      display: flex;
+      gap: 24px;
+    }
+    .consequence-icon {
+      font-size: 28px;
+      line-height: 1;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .consequence-item h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px;
+      font-weight: 600;
+      margin-bottom: 10px;
+      color: var(--text);
+    }
+    .consequence-item p {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+    .consequence-item p strong { color: var(--text); font-weight: 500; }
+
+    /* ---- CIVIC ---- */
+    .civic { max-width: 1200px; margin: 0 auto; }
+    .civic-split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 100px;
+      align-items: start;
+    }
+    .civic-left h2 { margin-bottom: 32px; }
+    .civic-left p {
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+    .civic-left p strong { color: var(--text); font-weight: 500; }
+    .pullquote {
+      border-left: 2px solid var(--gold);
+      padding: 24px 28px;
+      margin: 40px 0;
+      background: var(--surface);
+    }
+    .pullquote p {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 24px;
+      font-style: italic;
+      line-height: 1.45;
+      color: var(--text) !important;
+      margin: 0 !important;
+    }
+    .pullquote cite {
+      display: block;
+      font-size: 12px;
+      color: var(--muted);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-top: 14px;
+      font-style: normal;
+    }
+    .eu-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 44px;
+    }
+    .eu-box h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 28px;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+    .eu-box p {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+    .eu-box p:last-child { margin-bottom: 0; }
+    .eu-box strong { color: var(--text); font-weight: 500; }
+    .eu-stat-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2px;
+      margin-top: 28px;
+    }
+    .eu-stat {
+      background: var(--bg);
+      padding: 20px 24px;
+      border: 1px solid var(--border);
+    }
+    .eu-stat .n {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 36px;
+      color: var(--gold);
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+    .eu-stat .d {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    /* ---- TOOLS ---- */
+    .tools-section { background: var(--surface); border-top: 1px solid var(--border); }
+    .tools-inner { max-width: 1200px; margin: 0 auto; }
+    .tools-inner h2 { margin-bottom: 16px; }
+    .tools-inner .intro {
+      color: var(--muted);
+      font-size: 17px;
+      max-width: 560px;
+      margin-bottom: 72px;
+      line-height: 1.75;
+    }
+    .tools-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+      margin-bottom: 80px;
+    }
+    .tool-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      padding: 36px;
+      position: relative;
+      overflow: hidden;
+      transition: border-color 0.25s;
+    }
+    .tool-card:hover { border-color: #444; }
+    .tool-tier {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 28px;
+      padding: 4px 10px;
+      border-radius: 1px;
+      display: inline-block;
+    }
+    .tier-start { background: rgba(200,169,110,0.1); color: var(--gold); }
+    .tier-mid { background: rgba(200,64,42,0.1); color: var(--accent-warm); }
+    .tier-deep { background: rgba(100,100,200,0.1); color: #8888dd; }
+    .tool-card h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 14px;
+    }
+    .tool-card p {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.65;
+      margin-bottom: 20px;
+    }
+    .tool-links { display: flex; flex-direction: column; gap: 8px; }
+    .tool-link {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .tool-link:hover { color: var(--text); }
+    .tool-link::before {
+      content: '→';
+      color: var(--accent);
+      font-size: 12px;
+    }
+
+    /* ---- MANIFESTO ---- */
+    .manifesto {
+      text-align: center;
+      padding: 140px 48px;
+      position: relative;
+      overflow: hidden;
+    }
+    .manifesto::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 60% 60% at 50% 50%, rgba(200,64,42,0.06) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .manifesto h2 {
+      font-size: clamp(40px, 6vw, 90px);
+      max-width: 900px;
+      margin: 0 auto 48px;
+      line-height: 1;
+    }
+    .manifesto p {
+      font-size: 18px;
+      color: var(--muted);
+      max-width: 520px;
+      margin: 0 auto 48px;
+      line-height: 1.75;
+    }
+    .manifesto-actions { display: flex; gap: 16px; justify-content: center; }
+
+    /* ---- FOOTER ---- */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 40px 48px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    footer .logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--text);
+    }
+    footer .logo span { color: var(--accent); }
+    footer p {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    /* ---- ANIMATIONS ---- */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 900px) {
+      nav { padding: 20px 24px; }
+      nav ul { display: none; }
+      section { padding: 80px 24px; }
+      .hero { padding: 0 24px 80px; }
+      .hero-stat-bar { display: none; }
+      .paradox-grid { grid-template-columns: 1fr; gap: 48px; }
+      .rat-grid { grid-template-columns: 1fr; }
+      .rat-header { grid-template-columns: 1fr; }
+      .consequence-list { grid-template-columns: 1fr; }
+      .civic-split { grid-template-columns: 1fr; gap: 56px; }
+      .tools-grid { grid-template-columns: 1fr; }
+      .manifesto-actions { flex-direction: column; align-items: center; }
+      footer { flex-direction: column; gap: 16px; text-align: center; }
+      .eu-stat-row { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="#" class="nav-logo">Visible<span>.</span></a>
+  <ul>
+    <li><a href="#why">Why It Matters</a></li>
+    <li><a href="#rationalizations">The Myths</a></li>
+    <li><a href="#civic">The Bigger Picture</a></li>
+    <li><a href="#tools" class="nav-cta">Protect Yourself</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-eyebrow">A Privacy Education Project</div>
+  <h1>You said you have<br /><em>nothing to hide.</em><br />That's the problem.</h1>
+  <p class="hero-sub">
+    <strong>79% of Americans say they're concerned about their data.</strong> And then they open the app. Privacy isn't about guilt. It's about power — who has it, and who doesn't.
+  </p>
+  <div class="hero-actions">
+    <a href="#why" class="btn-primary">Start Here</a>
+    <a href="#rationalizations" class="btn-ghost">See The Myths →</a>
+  </div>
+  <div class="hero-stat-bar">
+    <div class="hero-stat">
+      <div class="num">353M</div>
+      <div class="label">people affected by data breaches in 2023 alone</div>
+    </div>
+    <div class="hero-rule"></div>
+    <div class="hero-stat">
+      <div class="num">€2.8B</div>
+      <div class="label">in GDPR fines — because regulators understood what we haven't</div>
+    </div>
+  </div>
+</section>
+
+<div class="scroll-line"></div>
+
+<!-- PARADOX -->
+<section class="paradox" id="why">
+  <div class="paradox-grid fade-up">
+    <div class="paradox-text">
+      <div class="section-label">The Paradox</div>
+      <h2>You already <em>care.</em><br />You've just been taught to stop acting like it.</h2>
+      <p>This isn't apathy. Researchers call it <strong>hyperbolic discounting</strong> — the tendency to choose immediate convenience over future protection, every single time. Your brain isn't broken. It's being exploited.</p>
+      <p>Tech companies don't just collect your data. They spend billions engineering the psychological conditions under which you <strong>willingly hand it over</strong> and then rationalize it afterward.</p>
+      <p>There's a name for the gap between how much you say you care about privacy and what you actually do about it: <strong>the privacy paradox</strong>. Understanding it is the first step to escaping it.</p>
+    </div>
+    <div class="stat-stack">
+      <div class="big-stat">
+        <div class="n">79<span>%</span></div>
+        <div class="d">of Americans express concern about how companies use their data — yet change almost nothing about their behavior</div>
+        <div class="src">Pew Research Center, 2023</div>
+      </div>
+      <div class="big-stat">
+        <div class="n">67<span>%</span></div>
+        <div class="d">of people believe they have more control over their data than they actually do. This illusion causes people to share more freely.</div>
+        <div class="src">University College London, 2021</div>
+      </div>
+      <div class="big-stat">
+        <div class="n">75<span>%</span></div>
+        <div class="d">of people worldwide report they have already lost control of how organizations use their data</div>
+        <div class="src">Global Privacy Survey, 2024</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RATIONALIZATIONS -->
+<section id="rationalizations" style="max-width: none;">
+  <div class="rationalizations">
+    <div class="rat-header fade-up">
+      <div>
+        <div class="section-label">The Myths</div>
+        <h2>Six things people say<br />to stop thinking about it.</h2>
+      </div>
+      <p>These aren't stupid arguments — they're sophisticated psychological defenses against a threat that feels abstract. Hover each one to see what's actually going on underneath.</p>
+    </div>
+    <div class="rat-grid">
+      <div class="rat-card">
+        <div class="rat-num">01</div>
+        <div class="rat-quote">"I have nothing to hide."</div>
+        <div class="rat-label">The Most Common</div>
+        <div class="rat-reframe">
+          <div class="rat-reframe-label">The Truth</div>
+          <p>Privacy isn't about hiding wrongdoing. Cardinal Richelieu said "give me six lines written by the hand of the most honest man — I'll find enough to hang him." Your data doesn't need to be incriminating. It just needs to exist.</p>
+        </div>
+      </div>
+      <div class="rat-card">
+        <div class="rat-num">02</div>
+        <div class="rat-quote">"They already have my data anyway."</div>
+        <div class="rat-label">The Surrender</div>
+        <div class="rat-reframe">
+          <div class="rat-reframe-label">The Truth</div>
+          <p>This is learned hopelessness, not logic. You lock your door even though thieves exist. Minimizing new exposure still matters — every piece of data you protect is one they can't use, sell, or lose in a breach.</p>
+        </div>
+      </div>
+      <div class="rat-card">
+        <div class="rat-num">03</div>
+        <div class="rat-quote">"It's just personalized ads."</div>
+        <div class="rat-label">The Minimization</div>
+        <div class="rat-reframe">
+          <div class="rat-reframe-label">The Truth</div>
+          <p>The same data that serves you ads determines your insurance rates, whether you get a loan, how you're targeted politically, and what job opportunities reach you. The pipeline is invisible. The consequences are not.</p>
+        </div>
+      </div>
+      <div class="rat-card">
+        <div class="rat-num">04</div>
+        <div class="rat-quote">"I'm not important enough to target."</div>
+        <div class="rat-label">The Modesty Trap</div>
+        <div class="rat-reframe">
+          <div class="rat-reframe-label">The Truth</div>
+          <p>Mass surveillance isn't targeted — it's structural. Julian Assange said it plainly: "when society goes bad, it takes you with it, even if you're the blandest person on earth." You don't need to be special to be affected.</p>
+        </div>
+      </div>
+      <div class="rat-card">
+        <div class="rat-num">05</div>
+        <div class="rat-quote">"I don't really use social media."</div>
+        <div class="rat-label">The Blind Spot</div>
+        <div class="rat-reframe">
+          <div class="rat-reframe-label">The Truth</div>
+          <p>Your browsing, location, purchases, apps, connected devices, and even your friends' behavior all create a detailed profile of you — without you ever posting a single thing. Absence from platforms ≠ absence from surveillance.</p>
+        </div>
+      </div>
+      <div class="rat-card">
+        <div class="rat-num">06</div>
+        <div class="rat-quote">"The government wouldn't misuse it."</div>
+        <div class="rat-label">The Trust Argument</div>
+        <div class="rat-reframe">
+          <div class="rat-reframe-label">The Truth</div>
+          <p>Governments change. Laws change. The EU recognized this — they made privacy a fundamental right specifically because they'd lived through what happens when surveillance infrastructure meets a regime that decides to use it.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONSEQUENCES -->
+<section class="consequences">
+  <div class="consequences-inner">
+    <div class="section-label fade-up">Real-World Consequences</div>
+    <h2 class="fade-up">This isn't abstract.<br />It's happening <em>now.</em></h2>
+    <p class="intro fade-up">Here's what the pipeline from your data to your daily life actually looks like.</p>
+    <div class="consequence-list fade-up">
+      <div class="consequence-item">
+        <div class="consequence-icon">🏥</div>
+        <div>
+          <h3>Health & Insurance</h3>
+          <p>Your location data, purchase history, and browsing habits are used by insurers and employers to infer health conditions. <strong>No diagnosis required.</strong> Pattern recognition does it for them.</p>
+        </div>
+      </div>
+      <div class="consequence-item">
+        <div class="consequence-icon">🗳️</div>
+        <div>
+          <h3>Political Manipulation</h3>
+          <p>Cambridge Analytica illegally harvested data from <strong>87 million Facebook users</strong> to build psychological profiles used to influence elections. This is not a hypothetical.</p>
+        </div>
+      </div>
+      <div class="consequence-item">
+        <div class="consequence-icon">💰</div>
+        <div>
+          <h3>Financial Discrimination</h3>
+          <p>Zip code, browsing behavior, and social connections influence loan approvals, credit limits, and interest rates — often without any legal disclosure that this data was used at all.</p>
+        </div>
+      </div>
+      <div class="consequence-item">
+        <div class="consequence-icon">🧠</div>
+        <div>
+          <h3>Behavioral Engineering</h3>
+          <p>Shoshana Zuboff calls it <strong>surveillance capitalism</strong>: your behavioral data isn't just observed, it's used to predict and modify your future behavior — for profit, by people you'll never meet.</p>
+        </div>
+      </div>
+      <div class="consequence-item">
+        <div class="consequence-icon">🔒</div>
+        <div>
+          <h3>Data Breaches at Scale</h3>
+          <p>In 2023, breaches impacted <strong>353 million people</strong> — a 78% jump from the prior year. When companies collect your data, they also hold your risk. And they keep getting breached.</p>
+        </div>
+      </div>
+      <div class="consequence-item">
+        <div class="consequence-icon">🎯</div>
+        <div>
+          <h3>Irreversibility</h3>
+          <p>Once your data is out, it doesn't expire. It's bought, sold, aggregated, and refined across data brokers you've never heard of. <strong>You can't un-leak yourself</strong> — but you can stop the bleeding.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CIVIC -->
+<section id="civic">
+  <div class="civic fade-up">
+    <div class="civic-split">
+      <div class="civic-left">
+        <div class="section-label">The Bigger Picture</div>
+        <h2>Privacy is not personal.<br /><em>It's political.</em></h2>
+        <p>Privacy is the infrastructure of autonomy. Without it, you cannot freely form opinions, organize with others, dissent, or simply exist outside someone else's definition of who you are.</p>
+        <p>The European Union enshrined data protection as a <strong>fundamental human right</strong> — not because Europeans are more paranoid, but because they're more historically informed. They've seen what happens when surveillance infrastructure meets a government that decides to use it.</p>
+        <div class="pullquote">
+          <p>"Without privacy, people cannot freely express themselves or freely engage in their communities."</p>
+          <cite>European Journal of Social Psychology, 2017</cite>
+        </div>
+        <p>Privacy isn't about hiding. It's about having a self that isn't permanently legible to power. That's not a radical idea. It's the reason we have doors.</p>
+      </div>
+      <div class="civic-right">
+        <div class="eu-box">
+          <h3>What happened when Europe got serious</h3>
+          <p>The GDPR went into effect in 2018. It didn't just create rules — it shifted the entire cultural baseline for what privacy means as a right, not a preference.</p>
+          <p><strong>The results are measurable.</strong> European consumers became the world's most privacy-conscious, with 78% actively voicing concerns and abandoning services over privacy risks. When the law said your data belongs to you, people started acting like it did.</p>
+          <p>The US has no equivalent federal law. Instead: a fragmented patchwork of state regulations, 26% of states with active privacy laws, and an industry that spent decades lobbying against any change.</p>
+          <div class="eu-stat-row">
+            <div class="eu-stat">
+              <div class="n">€2.8B+</div>
+              <div class="d">in GDPR fines since 2018 — because real enforcement changes behavior</div>
+            </div>
+            <div class="eu-stat">
+              <div class="n">78%</div>
+              <div class="d">of European consumers voice active privacy concerns vs. a global average of 53%</div>
+            </div>
+            <div class="eu-stat">
+              <div class="n">62%</div>
+              <div class="d">of UK consumers felt more comfortable sharing data once laws were in place</div>
+            </div>
+            <div class="eu-stat">
+              <div class="n">138</div>
+              <div class="d">countries now have data privacy laws — GDPR sparked a global movement</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TOOLS -->
+<section class="tools-section" id="tools">
+  <div class="tools-inner">
+    <div class="section-label fade-up">What You Can Do</div>
+    <h2 class="fade-up">Start where you are.<br /><em>Right now.</em></h2>
+    <p class="intro fade-up">You don't have to go off-grid. You just have to stop being passive. Three tiers — pick your level of commitment.</p>
+    <div class="tools-grid fade-up">
+      <div class="tool-card">
+        <div class="tool-tier tier-start">Start Here — 30 Minutes</div>
+        <h3>Basic Hygiene</h3>
+        <p>The lowest-effort changes with the highest immediate impact. Do these today — they eliminate the most common attack surfaces and data leaks.</p>
+        <div class="tool-links">
+          <a href="https://haveibeenpwned.com" class="tool-link" target="_blank">Check if your email was breached (HaveIBeenPwned)</a>
+          <a href="https://duckduckgo.com" class="tool-link" target="_blank">Switch your default search engine to DuckDuckGo</a>
+          <a href="https://bitwarden.com" class="tool-link" target="_blank">Use a password manager (Bitwarden — free)</a>
+          <a href="https://support.apple.com/en-us/HT212614" class="tool-link" target="_blank">Turn on App Tracking Transparency (iOS)</a>
+        </div>
+      </div>
+      <div class="tool-card">
+        <div class="tool-tier tier-mid">Go Further — A Few Hours</div>
+        <h3>Data Removal</h3>
+        <p>Data brokers collect and sell your personal info — name, address, phone, income, relatives — to anyone who pays. You can opt out. It takes persistence.</p>
+        <div class="tool-links">
+          <a href="https://redact.dev" class="tool-link" target="_blank">Redact — bulk delete your old social media posts</a>
+          <a href="https://joindeleteme.com" class="tool-link" target="_blank">DeleteMe — automated data broker removal</a>
+          <a href="https://inteltechniques.com/workbook.html" class="tool-link" target="_blank">Michael Bazzell's opt-out workbook (free, manual)</a>
+          <a href="https://simpleoptout.com" class="tool-link" target="_blank">SimpleOptOut — direct links to every major opt-out</a>
+        </div>
+      </div>
+      <div class="tool-card">
+        <div class="tool-tier tier-deep">Go Deep — Ongoing Practice</div>
+        <h3>Structural Change</h3>
+        <p>These changes address the underlying architecture of how you interact with the internet. They require more commitment but provide lasting protection.</p>
+        <div class="tool-links">
+          <a href="https://proton.me" class="tool-link" target="_blank">Proton Mail + VPN — encrypted by default</a>
+          <a href="https://signal.org" class="tool-link" target="_blank">Signal — end-to-end encrypted messaging</a>
+          <a href="https://brave.com" class="tool-link" target="_blank">Brave Browser — blocks trackers, fingerprinting</a>
+          <a href="https://privacyguides.org" class="tool-link" target="_blank">PrivacyGuides.org — the comprehensive reference</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MANIFESTO CTA -->
+<section class="manifesto">
+  <div class="section-label" style="justify-content: center; margin-bottom: 40px;">
+    <span>The Bottom Line</span>
+  </div>
+  <h2>Privacy is not paranoia.<br />It is <em>maintenance</em> of the self.</h2>
+  <p>You maintain your health. Your finances. Your relationships. Your data is the raw material other people use to build a model of you they can profit from. Start treating it accordingly.</p>
+  <div class="manifesto-actions">
+    <a href="#tools" class="btn-primary">Take Action Now</a>
+    <a href="#rationalizations" class="btn-ghost">Revisit The Myths →</a>
+  </div>
+</section>
+
+<footer>
+  <div class="logo">Visible<span>.</span></div>
+  <p>A project by KHL — built because the conversation deserves to be better.</p>
+  <p style="color: #2a2a2a; font-size: 11px;">No tracking. No analytics. No ads. Ever.</p>
+</footer>
+
+<script>
+  // Nav scroll behavior
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 40);
+  });
+
+  // Fade-up on scroll
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
+
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+  // Smooth scroll for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const target = document.querySelector(a.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+</script>
+</body>
+</html>
