@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Donate — Visable</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+</head>
+<body>
+  <canvas id="binary-canvas" class="binary-canvas" aria-hidden="true"></canvas>
+
+  <nav id="nav">
+    <a href="index.html" class="nav-logo">Visable<span>.</span></a>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <ul id="nav-menu">
+      <li><a href="index.html#why">Why It Matters</a></li>
+      <li><a href="index.html#rationalizations">The Myths</a></li>
+      <li><a href="index.html#civic">The Bigger Picture</a></li>
+      <li><a href="tracker.html">Corporate Dossier</a></li>
+      <li><a href="donate.html" class="active">Donate</a></li>
+      <li><a href="index.html#tools" class="nav-cta">Protect Yourself</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="donate-hero">
+      <div class="donate-hero-inner">
+        <div class="section-label">Support the Project</div>
+        <h1>Keep this site ad-free, independent, and growing.</h1>
+        <p class="donate-sub">Visable stays free and useful because readers like you choose to contribute. Donations help us keep the Corporate Dossier updated, continue researching the best privacy recommendations, and avoid the conflicts that come with advertising.</p>
+        <div class="donate-actions">
+          <a class="btn-primary donate-btn" href="https://donate.stripe.com/cNicN5bKJ6yrfAv3pcgYU00" target="_blank" rel="noopener noreferrer">Donate $5 (recommended)</a>
+        </div>
+        <p class="donate-note">The Stripe checkout lets you adjust the amount to any gift you choose. Every donation helps keep the project sustainable and ad-free.</p>
+      </div>
+    </section>
+
+    <section class="donate-details">
+      <div class="donate-card">
+        <h3>Why it matters</h3>
+        <p>An independent privacy project means honest guidance. Donations fund research, update work, and the maintenance needed to keep the site current without selling attention or data.</p>
+      </div>
+      <div class="donate-card">
+        <h3>What your support does</h3>
+        <p>Funds are used to keep the Corporate Dossier current, expand coverage of privacy threats, and invest in the writing and design that makes complex issues clear and actionable.</p>
+      </div>
+      <div class="donate-card">
+        <h3>How you can give</h3>
+        <p>Click the button above to visit our Stripe donation page. It recommends a $5 contribution, but you can choose any amount that fits your budget.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="logo">Visable<span>.</span></div>
+    <p>A project by Kindhabitlabs — built because the conversation deserves to be better.</p>
+    <p style="color: #2a2a2a; font-size: 11px;">No tracking. No analytics. No ads. Ever.</p>
+  </footer>
+
+  <script src="binary-background.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

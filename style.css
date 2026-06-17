@@ -648,6 +648,75 @@
     }
     .manifesto-actions { display: flex; gap: 16px; justify-content: center; }
 
+    .donate-hero {
+      min-height: calc(100vh - 96px);
+      display: flex;
+      align-items: center;
+      padding: 120px 48px 100px;
+      position: relative;
+      background: radial-gradient(circle at top right, rgba(200,64,42,0.08), transparent 35%),
+        radial-gradient(circle at 20% 30%, rgba(200,169,110,0.05), transparent 25%);
+    }
+    .donate-hero-inner {
+      max-width: 700px;
+      padding: 40px;
+      background: rgba(17,17,17,0.92);
+      border: 1px solid var(--border);
+    }
+    .donate-hero h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(44px, 6vw, 72px);
+      font-weight: 700;
+      line-height: 1.05;
+      margin-bottom: 24px;
+    }
+    .donate-hero p.donate-sub {
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1.8;
+      margin-bottom: 36px;
+    }
+    .donate-actions { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 16px; }
+    .donate-btn {
+      display: inline-block;
+      padding: 16px 32px;
+    }
+    .donate-note {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.7;
+    }
+    .donate-details {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 80px 48px 120px;
+      display: grid;
+      gap: 40px;
+    }
+    .donate-cards {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+    .donate-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .donate-card h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 24px;
+      margin-bottom: 12px;
+    }
+    .donate-card p {
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.75;
+    }
+
     /* ---- ANIMATIONS ---- */
     .fade-up {
       opacity: 0;
