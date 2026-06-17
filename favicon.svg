@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Visible privacy favicon">
+  <rect width="64" height="64" rx="12" fill="#080808" />
+  <path d="M18 14h8v36h-8z" fill="#c8402a" />
+  <path d="M32 14h6v12h-6zm0 18h6v18h-6z" fill="#c8a96e" />
+  <path d="M46 14h6v36h-6z" fill="#e8824a" opacity="0.85" />
+  <path d="M16 42h32" stroke="#e8e4dc" stroke-width="4" stroke-linecap="round" opacity="0.12" />
+</svg>
