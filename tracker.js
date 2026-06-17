@@ -743,6 +743,228 @@ const COMPANIES = [
       },
     ],
   },
+  {
+    name: "Verizon",
+    ticker: "VZ",
+    industry: "Telecom",
+    totalFines: "$48.25M",
+    fineRaw: 0.04825,
+    categories: ["privacy"],
+    violations: [
+      {
+        title: "'Supercookie' Tracking Without Consent",
+        amount: "$1.35M",
+        year: "2016",
+        detail:
+          "Verizon inserted hidden tracking identifiers called 'supercookies' into customers' web traffic starting in 2012, allowing Verizon and ad partners to build profiles of users' browsing habits. Unlike normal cookies, these couldn't be deleted by the customer. Verizon didn't disclose the practice until 2014, two years after it started, and didn't update its privacy policy until 2015.",
+        source: "FCC",
+      },
+      {
+        title: "Failure to Protect Location Data, Enabling Unauthorized Tracking",
+        amount: "$46.9M",
+        year: "2024",
+        detail:
+          "Verizon sold access to customers' real-time device-location data to third-party aggregators. One of those aggregators, Securus Technologies, let law enforcement access customer location data without proper consent or a warrant. Verizon kept the broader location-data-sharing program running for months after the breach became public. The FCC calculated the penalty as 63 separate continuing violations and added a 50% penalty increase for egregious conduct.",
+        source: "FCC / 2nd Circuit Court of Appeals",
+      },
+    ],
+  },
+  {
+    name: "Clearview AI",
+    ticker: "Private",
+    industry: "Facial Recognition Tech",
+    totalFines: "$51.75M",
+    fineRaw: 0.05175,
+    categories: ["privacy"],
+    violations: [
+      {
+        title: "Mass Biometric Scraping Without Consent",
+        amount: "$51.75M",
+        year: "2024",
+        detail:
+          "Clearview AI scraped billions of facial photographs from social media and other public websites without consent, built a searchable biometric database, and sold access to roughly 2,200 entities including law enforcement agencies and private companies. The settlement is structurally unusual: rather than cash, Clearview is paying out a 23% equity stake in the company, since it didn't have the cash to cover a normal settlement. Twenty-two state attorneys general objected to letting a company settle a privacy violation with ownership in the very business built on that violation.",
+        source: "N.D. Illinois Federal Court / Multistate AG Coalition",
+      },
+    ],
+  },
+  {
+    name: "Twitter / X",
+    ticker: "Private",
+    industry: "Social Media",
+    totalFines: "$150M",
+    fineRaw: 0.15,
+    categories: ["privacy"],
+    violations: [
+      {
+        title: "Selling Security Data for Ad Targeting",
+        amount: "$150M",
+        year: "2022",
+        detail:
+          "Twitter told over 140 million users it was collecting their phone numbers and email addresses to secure their accounts, things like two-factor authentication. It then quietly used that same data to sell targeted advertising, without telling users that's what the data would also be used for. This was the second time Twitter had broken a privacy promise to the FTC, having already settled a similar case in 2011. The new order extended federal oversight of Twitter's data practices through 2042. In 2026, under new ownership as X, the company petitioned the FTC to set aside the order, arguing the employees responsible no longer work there.",
+        source: "DOJ / FTC",
+      },
+    ],
+  },
+  {
+    name: "TikTok / ByteDance",
+    ticker: "Private",
+    industry: "Social Media",
+    totalFines: "$5.7M+ (ongoing case)",
+    fineRaw: 0.0057,
+    categories: ["privacy"],
+    violations: [
+      {
+        title: "Illegal Collection of Children's Data",
+        amount: "$5.7M",
+        year: "2019",
+        detail:
+          "TikTok's predecessor, Musical.ly, paid what was then the largest civil penalty ever obtained in a children's privacy case for collecting personal information from kids under 13 without parental consent, a violation of COPPA. The company was placed under a court order requiring specific compliance measures.",
+        source: "FTC",
+      },
+      {
+        title: "Continued Violations Despite Court Order",
+        amount: "Pending",
+        year: "2024-present",
+        detail:
+          "Despite the 2019 order, the FTC found reason to believe TikTok continued knowingly allowing children under 13 to create accounts and share videos and messages with adults. The DOJ filed suit in 2024 seeking civil penalties of up to $51,744 per violation, per day, a figure that could run into the billions given TikTok's scale.",
+        source: "DOJ / FTC",
+      },
+    ],
+  },
+  {
+    name: "Zoom Video Communications",
+    ticker: "ZM",
+    industry: "Video Conferencing",
+    totalFines: "No fine — compliance order",
+    fineRaw: 0,
+    categories: ["privacy"],
+    violations: [
+      {
+        title: "Falsely Claiming End-to-End Encryption",
+        amount: "No fine",
+        year: "2021",
+        detail:
+          "Zoom told users their meetings were protected by 'end-to-end, 256-bit encryption' when in reality Zoom itself held the cryptographic keys that could let it access meeting content, and the actual encryption level was weaker than advertised. This happened during 2020, while hundreds of millions of people were suddenly relying on Zoom for work, school, therapy, and medical appointments under the belief their conversations were private. Zoom also secretly installed a web server on Mac users' computers in 2018 that bypassed a browser security feature and remained even after Zoom was uninstalled. The settlement included no financial penalty, only a mandated security program and a ban on future misrepresentations.",
+        source: "FTC",
+      },
+    ],
+  },
+  {
+    name: "Epic Games",
+    ticker: "Private",
+    industry: "Video Games (Fortnite)",
+    totalFines: "$520M",
+    fineRaw: 0.52,
+    categories: ["privacy"],
+    violations: [
+      {
+        title: "Children's Privacy Violations at Massive Scale",
+        amount: "$275M",
+        year: "2022",
+        detail:
+          "Fortnite had over 400 million users, many of them minors, yet for years Epic collected children's personal data without parental consent and defaulted to public, on-by-default voice and text chat that matched kids and teens with strangers. This was the largest penalty ever obtained for violating an FTC rule.",
+        source: "FTC / DOJ",
+      },
+      {
+        title: "Dark Patterns Tricking Players Into Unwanted Purchases",
+        amount: "$245M",
+        year: "2022",
+        detail:
+          "Epic used deliberately confusing button placement and design tricks to cause unintended in-game purchases, then made it difficult for players to find cancellation or refund options. The company ignored more than one million consumer complaints about unauthorized charges, and employees internally flagged the issue repeatedly before the FTC stepped in. This remains the FTC's largest gaming-related refund order in history.",
+        source: "FTC",
+      },
+    ],
+  },
+  {
+    name: "BetterHelp",
+    ticker: "Private (Teladoc subsidiary)",
+    industry: "Online Mental Health",
+    totalFines: "$7.8M",
+    fineRaw: 0.0078,
+    categories: ["health", "privacy"],
+    violations: [
+      {
+        title: "Selling Therapy Seekers' Mental Health Data to Advertisers",
+        amount: "$7.8M",
+        year: "2023",
+        detail:
+          "BetterHelp told users seeking therapy, including a dedicated track for LGBTQ users, that information from their intake questionnaire, covering things like depression, suicidal thoughts, and medications, would stay private between them and their counselor. Instead, BetterHelp sent the email addresses and health questionnaire data of millions of users to Facebook, Snapchat, Pinterest, and Criteo for ad targeting between 2017 and 2020, generating tens of millions of dollars in new customer revenue. This was the FTC's first-ever order requiring direct refunds to consumers over compromised health data.",
+        source: "FTC",
+      },
+    ],
+  },
+  {
+    name: "GoodRx",
+    ticker: "GDRX",
+    industry: "Prescription Discounts / Telehealth",
+    totalFines: "$1.5M",
+    fineRaw: 0.0015,
+    categories: ["health", "privacy"],
+    violations: [
+      {
+        title: "Sharing Prescription and Health Data With Facebook and Google",
+        amount: "$1.5M",
+        year: "2023",
+        detail:
+          "GoodRx promised users it would limit sharing of their personal health information, then disclosed users' specific prescription medications, health conditions, and contact information to Facebook, Google, and Criteo for advertising purposes. This was the first enforcement action ever brought under the FTC's Health Breach Notification Rule, since GoodRx isn't bound by HIPAA as a non-covered entity, a regulatory gap the FTC explicitly used this case to close.",
+        source: "DOJ / FTC",
+      },
+    ],
+  },
+  {
+    name: "Avast",
+    ticker: "Private (Gen Digital)",
+    industry: "Antivirus Software",
+    totalFines: "$16.5M",
+    fineRaw: 0.0165,
+    categories: ["privacy"],
+    violations: [
+      {
+        title: "Selling Browsing Data After Promising to Block Tracking",
+        amount: "$16.5M",
+        year: "2024",
+        detail:
+          "Avast marketed its antivirus software and browser extensions as privacy protection that would block third-party tracking. Instead, the company collected over 8 petabytes of detailed browsing history, including users' searches, visited pages, and inferred religious beliefs, health concerns, political leanings, and financial status, then sold it through its subsidiary Jumpshot to more than 100 third parties including ad agencies and data brokers. Despite claiming the data was anonymized, some contracts let buyers re-identify specific users and connect their browsing history to other personal data they already held.",
+        source: "FTC",
+      },
+    ],
+  },
+  {
+    name: "Kochava",
+    ticker: "Private",
+    industry: "Location Data Broker",
+    totalFines: "No fine — injunctive relief",
+    fineRaw: 0,
+    categories: ["privacy"],
+    violations: [
+      {
+        title: "Selling Location Data That Tracked Visits to Abortion Clinics and Shelters",
+        amount: "No fine",
+        year: "2026",
+        detail:
+          "Kochava's tracking code, embedded in over 10,000 apps, collected precise GPS-level location data on hundreds of millions of phones and sold it with minimal restriction, at one point making a sample of over 61 million devices available to anyone with a basic AWS account. The FTC demonstrated that the data could be used to trace a specific phone from a reproductive health clinic to a private residence, or identify someone's stay at a domestic violence shelter or addiction recovery center. The case arrived months after Roe v. Wade was overturned, amid concerns that commercially available location data could be used to prosecute abortion-related activity in states that had banned it. The settlement bans Kochava from selling sensitive location data without affirmative consent.",
+        source: "FTC / U.S. District Court, District of Idaho",
+      },
+    ],
+  },
+  {
+    name: "Equifax",
+    ticker: "EFX",
+    industry: "Credit Reporting",
+    totalFines: "$700M",
+    fineRaw: 0.7,
+    categories: ["privacy", "financial"],
+    violations: [
+      {
+        title: "Largest Data Breach in US History at the Time",
+        amount: "$700M",
+        year: "2019",
+        detail:
+          "A security flaw in a web application tool let hackers steal the personal data of roughly 147 million Americans, nearly half the country, including Social Security numbers, birth dates, addresses, and driver's license numbers. Equifax knew about the underlying security flaw for two months before hackers exploited it. The company didn't publicly disclose the breach until three months after discovering it, during which time three executives sold company stock. As a credit bureau, Equifax's entire business model is collecting and monetizing Americans' financial data, without most of those people ever choosing to become its customers.",
+        source: "FTC / CFPB / 48 State AGs",
+      },
+    ],
+  },
 ];
 
 function categoryColor(catId) {
@@ -897,6 +1119,8 @@ document.querySelectorAll(".sort-btn").forEach((btn) => {
 });
 
 document.getElementById("stat-companies").textContent = COMPANIES.length;
+const totalFinesSum = COMPANIES.reduce((sum, c) => sum + c.fineRaw, 0);
+document.getElementById("stat-total-fines").textContent = "$" + Math.round(totalFinesSum) + "B+";
 
 renderFilters();
 renderCards();
