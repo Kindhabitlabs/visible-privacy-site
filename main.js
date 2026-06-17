@@ -6,6 +6,24 @@ window.addEventListener('scroll', () => {
   nav.classList.toggle('scrolled', window.scrollY > 40);
 });
 
+// Hamburger menu toggle (mobile navigation)
+const hamburger = document.getElementById('hamburger');
+const navMenu = document.getElementById('nav-menu');
+if (hamburger && navMenu) {
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navMenu.classList.toggle('active');
+  });
+  
+  // Close menu when a link is clicked
+  navMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('active');
+      navMenu.classList.remove('active');
+    });
+  });
+}
+
 // Fade-up animation as sections enter the viewport (index.html only,
 // harmless no-op on pages with no .fade-up elements)
 const observer = new IntersectionObserver((entries) => {
