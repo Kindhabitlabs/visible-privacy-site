@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flock: The Surveillance You Already Paid For — Visable</title>
+  <meta property="og:title" content="Flock: The Surveillance You Already Paid For — Visable">
+  <meta property="og:description" content="Flock Safety ALPR cameras photograph every passing vehicle and store a searchable record of your movements. What they capture, why 'nothing to hide' fails, and the only lever that works: local.">
+  <meta property="og:image" content="/social-share.svg">
+  <meta name="twitter:image" content="/social-share.svg">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Visable">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Flock: The Surveillance You Already Paid For — Visable">
+  <meta name="twitter:description" content="Flock Safety ALPR cameras photograph every passing vehicle and store a searchable record of your movements. What they capture, why 'nothing to hide' fails, and the only lever that works: local.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+</head>
+<body>
+  <canvas id="binary-canvas" class="binary-canvas" aria-hidden="true"></canvas>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="index.html" class="nav-logo">Visable<span>.</span></a>
+  <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <ul id="nav-menu">
+    <li><a href="index.html#why">Why It Matters</a></li>
+    <li><a href="index.html#rationalizations">The Myths</a></li>
+    <li><a href="index.html#civic">The Bigger Picture</a></li>
+    <li><a href="tracker.html">Corporate Dossier</a></li>
+    <li><a href="flock.html" class="active">Flock Cameras</a></li>
+    <li><a href="donate.html">Donate</a></li>
+    <li><a href="index.html#tools" class="nav-cta">Protect Yourself</a></li>
+  </ul>
+</nav>
+
+<main>
+  <!-- HEADER -->
+  <div class="dossier-header">
+    <div class="section-label">Automated License Plate Readers</div>
+    <h1>Flock: the surveillance<br />you <em>already paid for.</em></h1>
+    <p class="dossier-sub">
+      Flock Safety cameras sit on poles at intersections and neighborhood entrances across the country. They photograph every vehicle that passes and build a searchable, shareable record of where you have been. You did not consent to it, you cannot opt out of it, and in most places it was bought with your tax dollars without a vote.
+    </p>
+  </div>
+
+  <div class="flock-body">
+
+    <!-- a) WHAT THEY CAPTURE -->
+    <section class="flock-block" aria-labelledby="capture-h">
+      <h2 id="capture-h">What they actually capture</h2>
+      <p>An automated license plate reader (ALPR) is not a red-light camera aimed at rule-breakers. It records <strong>every vehicle</strong> that drives past — not just suspects, not just cars flagged for anything. If you drove past one today, you are in the database.</p>
+      <ul class="flock-list">
+        <li><strong>Every passing vehicle</strong>, photographed automatically, day and night.</li>
+        <li><strong>The plate text</strong>, read by optical character recognition — including temporary and paper plates.</li>
+        <li><strong>A timestamp and GPS coordinates</strong>: exactly where you were, and exactly when.</li>
+        <li><strong>A "vehicle fingerprint"</strong>: make, model, and color, plus distinguishing details — dents, bumper stickers, roof racks, ladders — so a vehicle can be tracked even with no readable plate.</li>
+        <li><strong>Uploaded to Flock's cloud</strong>, where it becomes searchable and shareable across thousands of participating agencies nationwide.</li>
+      </ul>
+      <p class="flock-vendors">Flock Safety is one vendor among several building this infrastructure. Others include <strong>Motorola Solutions (Vigilant)</strong>, <strong>Rekor</strong>, <strong>Genetec</strong>, and <strong>Axon</strong>. The pattern is the same across all of them: capture everyone, store it in the cloud, make it searchable.</p>
+    </section>
+
+    <!-- b) WHY "NOTHING TO HIDE" FAILS -->
+    <section class="flock-block" aria-labelledby="myth-h">
+      <h2 id="myth-h">Why "I have nothing to hide" fails here</h2>
+      <div class="myth-card">
+        <div class="myth-quote">"I'm not doing anything wrong, so it doesn't affect me."</div>
+        <div class="myth-reframe-label">The Truth</div>
+        <p>The risk was never getting caught doing something wrong. The risk is that a durable, searchable record of your movements now exists — where you sleep, worship, protest, seek medical care, and who you visit — and you have no control over who queries it, or why.</p>
+        <p>You are trusting not only your local department, but every agency it shares the network with, forever. Reporting has documented Flock data being accessed by federal agencies including <strong>ICE</strong> and <strong>CBP</strong>, in some cases without the local department that owns the camera even knowing its data had been searched.</p>
+      </div>
+    </section>
+
+    <!-- c) YOU CANNOT OPT OUT -->
+    <section class="flock-block" aria-labelledby="optout-h">
+      <h2 id="optout-h">You cannot opt out</h2>
+      <p>There is no consumer-facing exit from this system. The usual privacy playbook — adjust a setting, submit a deletion request — does not apply.</p>
+      <ul class="flock-list">
+        <li><strong>No national opt-out registry.</strong> Unlike data brokers, there is no central place to remove yourself.</li>
+        <li><strong>No consumer deletion path.</strong> You cannot ask Flock to delete your vehicle from its records.</li>
+        <li><strong>Flock calls itself a data processor, not the data owner.</strong> It redirects deletion requests to the law enforcement agency that owns the camera — an agency that has no obligation, and often no interest, in honoring them.</li>
+      </ul>
+      <p>The only lever that actually works is <strong>local</strong>: the contracts your city or county signs, the councils that approve them, and the records requests that expose how the system is used.</p>
+    </section>
+
+    <!-- d) FIND THE CAMERAS NEAR YOU -->
+    <section class="flock-block" aria-labelledby="maps-h">
+      <h2 id="maps-h">Find the cameras near you</h2>
+      <p>Volunteers have mapped ALPR locations across the country. Start with DeFlock — it is the primary community project and feeds its data into OpenStreetMap. The other map below largely renders that same OpenStreetMap-sourced data.</p>
+      <div class="flock-cards">
+        <div class="flock-card primary">
+          <span class="flock-badge">Primary</span>
+          <div class="flock-card-name">DeFlock</div>
+          <p>A community project that maps ALPR cameras and feeds the data into OpenStreetMap. No login required. States plainly: no tracking, no analytics, no ads.</p>
+          <div class="flock-card-links">
+            <a class="ext-link" href="https://deflock.org/" target="_blank" rel="noopener noreferrer">
+              deflock.org<span class="ext-ind" aria-hidden="true">↗</span><span class="visually-hidden"> (opens in a new tab)</span>
+            </a>
+            <a class="ext-link secondary" href="https://maps.deflock.org/?lat=39.8283&amp;lng=-98.5795&amp;zoom=4.00" target="_blank" rel="noopener noreferrer">
+              National map view<span class="ext-ind" aria-hidden="true">↗</span><span class="visually-hidden"> (opens in a new tab)</span>
+            </a>
+          </div>
+        </div>
+        <div class="flock-card">
+          <div class="flock-card-name">Don't Get Flocked</div>
+          <p>Another map of ALPR locations. It largely renders the same OpenStreetMap-sourced data that DeFlock feeds.</p>
+          <div class="flock-card-links">
+            <a class="ext-link" href="https://dontgetflocked.com/maps" target="_blank" rel="noopener noreferrer">
+              dontgetflocked.com<span class="ext-ind" aria-hidden="true">↗</span><span class="visually-hidden"> (opens in a new tab)</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <p class="flock-caveat">These maps are crowdsourced and incomplete. Absence from a map is not evidence of absence — a camera you cannot see on the map may still be on your street.</p>
+    </section>
+
+    <!-- e) WHAT ACTUALLY CHANGES THINGS -->
+    <section class="flock-block" aria-labelledby="civic-h">
+      <h2 id="civic-h">What actually changes things</h2>
+      <p>Because the lever is local, so is the work. This is not a problem you solve by hardening your own devices — it is decided in public meetings and public contracts, which means it can be changed there too.</p>
+      <ul class="flock-list">
+        <li><strong>File a public records request</strong> with your city or county for the Flock contract and the audit logs. Audit logs show which agency searched the system and the reason they stated for each search.</li>
+        <li><strong>Check for a Flock "transparency portal"</strong> for your city — some jurisdictions publish search counts and policies online.</li>
+        <li><strong>Show up at council meetings.</strong> These contracts come up for renewal, and renewal is the moment a community can say no.</li>
+        <li><strong>Frame it as a budget question as well as a rights question.</strong> This is public money spent on ongoing surveillance of everyone who drives through town. Ask what it costs, what it is for, and what it caught that justifies the price.</li>
+      </ul>
+    </section>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="logo">Visable<span>.</span></div>
+  <p>A project by Kindhabitlabs — built because the conversation deserves to be better.</p>
+  <p style="color: #2a2a2a; font-size: 11px;">No tracking. No analytics. No ads. Ever.</p>
+</footer>
+
+<script src="binary-background.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
