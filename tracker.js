@@ -965,6 +965,194 @@ const COMPANIES = [
       },
     ],
   },
+  {
+    name: "Amazon (Ring & Alexa)",
+    ticker: "AMZN",
+    industry: "E-Commerce / Smart Home Tech",
+    totalFines: "$30.8M",
+    fineRaw: 0.0308,
+    categories: ["privacy"],
+    violations: [
+      {
+        title: "Illegally Retaining Children's Voice Recordings",
+        amount: "$25M",
+        year: "2023",
+        detail:
+          "Amazon promised parents they could delete their children's Alexa voice recordings, then kept the audio, written transcripts, and geolocation data indefinitely, sometimes ignoring deletion requests entirely and retaining the data 'for its own potential use.' Because children's speech patterns differ from adults', the FTC found Amazon used the illegally retained recordings to train Alexa's algorithm to better understand children, turning a privacy violation into a direct commercial advantage. Amazon was barred from using improperly retained data to train its models going forward.",
+        source: "FTC / DOJ",
+      },
+      {
+        title: "Ring Employees Spied on Customers in Bedrooms and Bathrooms",
+        amount: "$5.8M",
+        year: "2023",
+        detail:
+          "Despite marketing Ring's home security cameras around the promise of protection, the company gave every employee and hundreds of Ukraine-based contractors unrestricted access to every customer's video feed, with no logging or oversight of who viewed what. One employee spent months in 2017 viewing thousands of recordings from at least 81 female users, specifically targeting cameras placed in bedrooms and bathrooms. A coworker's initial misconduct report was ignored until a supervisor separately noticed the employee was only watching videos of 'pretty girls.' Ring's lax security also let outside hackers hijack customer accounts and cameras.",
+        source: "FTC",
+      },
+    ],
+  },
+  {
+    name: "Oracle",
+    ticker: "ORCL",
+    industry: "Enterprise Software / Data Broker",
+    totalFines: "$115M",
+    fineRaw: 0.115,
+    categories: ["privacy"],
+    violations: [
+      {
+        title: "Secret Surveillance Network Tracking 5 Billion People",
+        amount: "$115M",
+        year: "2024",
+        detail:
+          "While best known as an enterprise database company, Oracle quietly built one of the largest data brokerages on Earth, compiling detailed digital dossiers on an estimated 5 billion people worldwide, including roughly 300 million Americans, or about 80% of the US population. Using cookies, device identifiers, tracking pixels, and its BlueKai and AddThis subsidiaries, Oracle combined online browsing behavior with real-world purchase and location data to build identity profiles that advertisers could target down to the specific store aisle a person was standing in. The lawsuit alleged this amounted to deliberate, purposeful surveillance of the general population conducted largely without consent. Oracle shut down its ad-tech business and agreed to stop several of the specific tracking practices as part of the settlement.",
+        source: "N.D. California Federal Court / Class Action",
+      },
+    ],
+  },
+  {
+    name: "Grindr",
+    ticker: "GRND",
+    industry: "Dating App",
+    totalFines: "$20M+ (US) / $11.7M (Norway)",
+    fineRaw: 0.032,
+    categories: ["privacy"],
+    violations: [
+      {
+        title: "Selling HIV Status and Sexual Orientation to Advertisers",
+        amount: "$20M",
+        year: "2026",
+        detail:
+          "Grindr shared users' precise location, HIV status, and sexual orientation with ad-tech companies without meaningful consent, data sensitive enough that its exposure has led directly to people being outed. In one documented case, a religious advocacy group purchased a user's Grindr data for years and passed it to a publication that used it to out him publicly, causing severe reputational harm. Norway's data protection authority separately fined Grindr $11.7 million for the same underlying practice, finding it let advertisers effectively label users as LGBTQ+ without their knowledge. The FTC settlement requires Grindr to obtain affirmative consent before sharing any health or sexual orientation data going forward.",
+        source: "FTC / Norway Data Protection Authority",
+      },
+    ],
+  },
+  {
+    name: "Flo Health",
+    ticker: "Private",
+    industry: "Period & Fertility Tracking App",
+    totalFines: "Settlement (undisclosed) + FTC order",
+    fineRaw: 0,
+    categories: ["privacy", "health"],
+    violations: [
+      {
+        title: "Sharing Period and Pregnancy Data With Facebook and Google",
+        amount: "No fine — compliance order",
+        year: "2021",
+        detail:
+          "Flo promised over 100 million users it would keep their menstrual cycle, symptom, and pregnancy intention data private, using that promise as a core selling point for an app built around some of the most intimate health information a person can share. Instead, Flo told Facebook's and Google's analytics divisions exactly when a user was on their period or had indicated an intention to get pregnant. The app only stopped after a Wall Street Journal investigation and resulting press coverage forced its hand, not proactively. A subsequent class action against Flo, Google, and Meta over the same conduct settled directly with users.",
+        source: "FTC / Class Action (N.D. California)",
+      },
+    ],
+  },
+  {
+    name: "LexisNexis Risk Solutions",
+    ticker: "Private (RELX subsidiary)",
+    industry: "Data Broker / Background Checks",
+    totalFines: "$13.5M+",
+    fineRaw: 0.0135,
+    categories: ["privacy"],
+    violations: [
+      {
+        title: "Selling Americans' Personal Data to ICE and Debt Collectors",
+        amount: "$13.5M",
+        year: "2010-present",
+        detail:
+          "LexisNexis compiles a database on over 200 million Americans, called Accurint, built from everyday consumer interactions like setting up a utility account or taking out a car loan, then sells access to that database to third parties including federal immigration authorities and debt collectors. A 2022 lawsuit from immigration advocacy groups alleged the company's data directly enabled ICE enforcement actions against immigrants, calling it a grave threat to civil liberties. Separately, LexisNexis settled a class action for $13.5 million after selling Accurint reports to debt collectors while claiming the reports weren't subject to federal consumer protection law, a legal workaround that let it skip disclosures normally required when selling data used to make decisions about people's lives. The company disclosed a further breach in December 2024 affecting over 364,000 people, exposing Social Security numbers and driver's license data.",
+        source: "D.N.J. Federal Court / Cook County Lawsuit / Company Disclosures",
+      },
+    ],
+  },
+  {
+    name: "Vizio",
+    ticker: "Private (acquired by Walmart)",
+    industry: "Smart TV Manufacturer",
+    totalFines: "$19.2M",
+    fineRaw: 0.0192,
+    categories: ["privacy"],
+    violations: [
+      {
+        title: "Secretly Tracking What 11 Million Households Watched",
+        amount: "$2.2M",
+        year: "2017",
+        detail:
+          "Vizio built software into its smart TVs that captured second-by-second data on everything displayed on screen, including cable, DVD, streaming, and over-the-air broadcasts, then appended household demographic details like income, marital status, and education level before selling the combined profiles to advertisers. The company marketed the feature as 'Smart Interactivity' that enabled 'program offers and suggestions,' never disclosing that it also secretly tracked viewing habits. Vizio even remotely installed the tracking software onto TVs that didn't originally have it at the time of purchase. A related class action added another $17 million in consumer payouts.",
+        source: "FTC / New Jersey AG / Class Action",
+      },
+    ],
+  },
+  {
+    name: "Marriott International",
+    ticker: "MAR",
+    industry: "Hotels / Hospitality",
+    totalFines: "$76M+",
+    fineRaw: 0.076,
+    categories: ["privacy"],
+    violations: [
+      {
+        title: "Three Data Breaches Exposing 344 Million Guests Worldwide",
+        amount: "$52M",
+        year: "2024",
+        detail:
+          "Marriott acquired Starwood Hotels in 2016 without ever detecting that intruders had already been living inside Starwood's reservation database since 2014. The breach went unnoticed for four more years, ultimately exposing 339 million guest records worldwide, including 5.25 million unencrypted passport numbers. A second, separate breach hit Marriott's own network from 2018 to 2020, exposing another 5.2 million guest records. Regulators found a clear pattern: Marriott's security failures weren't a single incident but a repeated failure to protect guest data across multiple systems and years. The UK's data regulator separately fined Marriott $24 million for the same underlying breach affecting seven million UK residents.",
+        source: "FTC / 49 State AGs / UK ICO",
+      },
+    ],
+  },
+  {
+    name: "Rite Aid",
+    ticker: "Private (post-bankruptcy)",
+    industry: "Pharmacy Retail",
+    totalFines: "No fine — 5-year technology ban",
+    fineRaw: 0,
+    categories: ["privacy"],
+    violations: [
+      {
+        title: "Facial Recognition Falsely Accused Shoppers of Shoplifting, Disproportionately Targeting People of Color",
+        amount: "No fine",
+        year: "2023",
+        detail:
+          "For nearly a decade, Rite Aid used AI facial recognition built from a database of low-quality images, pulled from security cameras, employee phones, and even news stories, to flag customers as 'likely' shoplifters without ever telling them the technology existed, and actively discouraged employees from disclosing it. The system generated thousands of false positives, and the FTC found those false matches were significantly more common in stores located in neighborhoods with large Black and Asian populations than in predominantly white ones. Acting on false alerts, employees followed shoppers around stores, searched them, publicly accused them of crimes in front of family and coworkers, and called police to remove them, sometimes flagging the same misidentified person as a repeat offender at stores thousands of miles apart.",
+        source: "FTC",
+      },
+    ],
+  },
+  {
+    name: "Life360",
+    ticker: "LIF (ASX)",
+    industry: "Family Location-Tracking App",
+    totalFines: "Litigation ongoing",
+    fineRaw: 0,
+    categories: ["privacy"],
+    violations: [
+      {
+        title: "Selling Children's and Families' Precise Locations to Data Brokers",
+        amount: "No fine — litigation pending",
+        year: "2021-present",
+        detail:
+          "Life360 markets itself as a family safety app that gives parents peace of mind by tracking their kids' whereabouts, used by over 33 million people worldwide. A 2021 investigation found the company was quietly one of the largest suppliers to the entire location-data-broker industry, selling precise GPS coordinates on millions of users, many of them minors, to roughly a dozen data brokers who then resold the data to virtually anyone willing to pay. Unlike apps that leak data through detectable third-party code, Life360 routed the data through its own servers, making the transfer invisible to the privacy researchers and app-store reviewers who normally catch this kind of practice. A later investigation found Life360 continued selling location-based advertising 'segments,' like which specific businesses a user visited, through a separate data marketplace years after publicly promising to scale back.",
+        source: "The Markup Investigation / Class Action (Florida)",
+      },
+    ],
+  },
+  {
+    name: "Sephora",
+    ticker: "Private (LVMH subsidiary)",
+    industry: "Beauty Retail",
+    totalFines: "$1.2M",
+    fineRaw: 0.0012,
+    categories: ["privacy"],
+    violations: [
+      {
+        title: "First-Ever CCPA Enforcement Case for Ignoring Do-Not-Sell Requests",
+        amount: "$1.2M",
+        year: "2022",
+        detail:
+          "Sephora installed tracking software from third-party companies on its website and app that shared customers' shopping activity and precise identity in exchange for free or discounted analytics services, a practice California's attorney general classified as a 'sale' of personal data under the state's new privacy law. When customers used their browser's Global Privacy Control signal, an industry-standard tool that broadcasts 'do not sell my data' automatically, Sephora didn't honor it. This became the first enforcement action ever brought under the California Consumer Privacy Act, and the case was explicitly framed by regulators as a warning shot to the broader retail industry about ignoring consumer opt-out signals.",
+        source: "California Attorney General",
+      },
+    ],
+  },
 ];
 
 function categoryColor(catId) {
