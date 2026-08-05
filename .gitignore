@@ -1,0 +1,5 @@
+# Airtable credentials — never commit these
+.env
+.env.*
+*.env
+airtable.local.*
