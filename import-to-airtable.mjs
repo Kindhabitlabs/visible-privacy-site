@@ -160,10 +160,12 @@ const bizIdToRec = new Map();
 for (const r of existingBiz) if (r.fields.business_id) bizIdToRec.set(r.fields.business_id, r.id);
 
 // Dedup key for a piece of business evidence, so re-running never duplicates it.
-// Keyed by business record + source_url (falling back to tag+description).
+// Keyed by business record + tag + source_url + description, so two distinct
+// findings that happen to cite the SAME source (e.g. one article documenting
+// both a financial and a care-quality problem) don't collide.
 const norm = (s) => (typeof s === "string" ? s.trim() : "");
 const evidenceKey = (bizRec, e) =>
-  `${bizRec}::${norm(e.source_url) || norm(e.tag) + "|" + norm(e.description)}`;
+  `${bizRec}::${norm(e.tag)}::${norm(e.source_url)}::${norm(e.description)}`;
 const existingEvidenceKeys = new Set();
 for (const r of existingBizTags) {
   const f = r.fields;
