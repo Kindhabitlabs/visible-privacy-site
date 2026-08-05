@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-08-05T20:40:44.748Z",
+  "generated_at": "2026-08-05T21:16:59.335Z",
   "counts": {
     "firms": 14,
     "businesses": 19,
-    "tags": 12,
-    "evidence": 0
+    "tags": 10,
+    "evidence": 4
   },
   "firms": [
     {
@@ -31,22 +31,7 @@
       "headquarters": "Los Angeles, CA",
       "portfolio_url": "https://www.aresmgmt.com",
       "notes": "Co-majority owner of Aspen Dental Management (with Leonard Green & Partners; American Securities holds a minority stake).",
-      "tags": [
-        {
-          "tag": "Legal/regulatory",
-          "tier": "A",
-          "alleged": false,
-          "description": "California AG settlement (May 2026): Aspen agreed to $2M in penalties plus $300K restitution over alleged illegal corporate practice of dentistry and false/misleading advertising, with injunctive terms barring it from directing clinical practice or replacing practice-owner dentists of its choosing.",
-          "source_url": "https://oag.ca.gov/news/press-releases/attorney-general-bonta-announces-settlement-aspen-dental-over-corporate-practice"
-        },
-        {
-          "tag": "Consumer harm",
-          "tier": "A",
-          "alleged": false,
-          "description": "Massachusetts AG settlement announced Jan 5, 2023 ($3.5M): resolved a 2021 lawsuit alleging Aspen Dental used bait-and-switch advertising — charging patients for exams/x-rays/screenings it advertised as free and claiming to accept all insurance when it did not accept MassHealth Medicaid. Aspen agreed to return up to $750K to affected patients.",
-          "source_url": "https://www.mass.gov/news/attorney-generals-office-reaches-35-million-settlement-with-aspen-dental-over-claims-of-deceptive-advertising"
-        }
-      ]
+      "tags": []
     },
     {
       "id": "gi-partners",
@@ -253,7 +238,15 @@
       "source_url": "https://www.gipartners.com/news/gi-partners-joins-charlesbank-capital-partners-to-accelerate-growth-at-american-residential-services",
       "last_verified": "2026-08-05",
       "locations": [],
-      "evidence": []
+      "evidence": [
+        {
+          "tag": "Consumer harm",
+          "tier": "A",
+          "alleged": false,
+          "description": "Arizona AG consent judgment (April 2012, ~$395,000): resolved a 2011 lawsuit alleging ARS used false, misleading and deceptive sales tactics against (often older) consumers — including fake 'safety notices' to frighten buyers into unnecessary systems and official-looking solicitations — and undermined buyers' 3-day cancellation rights. ARS agreed to substantial changes in its sales practices. Predates GI Partners' 2020 ownership.",
+          "source_url": "https://www.azag.gov/press-release/ag-horne-announces-395000-judgment-fraud-case-involving-hvac-company"
+        }
+      ]
     },
     {
       "id": "aspen-dental",
@@ -267,7 +260,22 @@
       "source_url": "https://www.leonardgreen.com/ares-management-leonard-green-increase-ownership-in-aspen-dental-management-inc/",
       "last_verified": "2026-08-05",
       "locations": [],
-      "evidence": []
+      "evidence": [
+        {
+          "tag": "Legal/regulatory",
+          "tier": "A",
+          "alleged": false,
+          "description": "California AG settlement (May 2026): Aspen agreed to $2M in penalties plus $300K restitution over alleged illegal corporate practice of dentistry and false/misleading advertising, with injunctive terms barring it from directing clinical practice or replacing practice-owner dentists of its choosing.",
+          "source_url": "https://oag.ca.gov/news/press-releases/attorney-general-bonta-announces-settlement-aspen-dental-over-corporate-practice"
+        },
+        {
+          "tag": "Consumer harm",
+          "tier": "A",
+          "alleged": false,
+          "description": "Massachusetts AG settlement announced Jan 5, 2023 ($3.5M): resolved a 2021 lawsuit alleging Aspen used bait-and-switch advertising — charging patients for exams/x-rays/screenings it advertised as free and claiming to accept all insurance when it did not accept MassHealth Medicaid. Aspen agreed to return up to $750K to affected patients.",
+          "source_url": "https://www.mass.gov/news/attorney-generals-office-reaches-35-million-settlement-with-aspen-dental-over-claims-of-deceptive-advertising"
+        }
+      ]
     },
     {
       "id": "banfield-pet-hospital",
@@ -295,7 +303,15 @@
       "source_url": "https://www.dentistrytoday.com/benevis-files-for-chapter-11-bankruptcy/",
       "last_verified": "2026-08-05",
       "locations": [],
-      "evidence": []
+      "evidence": [
+        {
+          "tag": "Consumer harm",
+          "tier": "A",
+          "alleged": false,
+          "description": "US DOJ False Claims Act settlement (2018): Benevis and 130+ affiliated Kool Smiles clinics paid $23.9M to resolve allegations they billed Medicaid for medically unnecessary pediatric procedures — baby root canals, extractions and stainless-steel crowns on children (2009–2011) — with dentists pressured by production-quota bonuses. Settled without admission of wrongdoing. Conduct and settlement PREDATE New Mountain Capital's 2020 bankruptcy acquisition (then-owners FFL Partners, later Tailwind/Littlejohn).",
+          "source_url": "https://www.justice.gov/usao-ct/pr/dental-management-company-benevis-and-its-affiliated-kool-smiles-dental-clinics-pay-239"
+        }
+      ]
     },
     {
       "id": "bluepearl",
