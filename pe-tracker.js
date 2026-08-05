@@ -5,8 +5,6 @@
 // practice tags. A business inherits its owning firm's tags at render time,
 // so tags are looked up via firmById[business.firm_id], never stored per row.
 
-// Paste your Airtable submission Form's share URL here to wire up the
-// "Suggest an addition" link. Leave "" to fall back to an email/quiet link.
 const SUBMISSION_FORM_URL = "https://airtable.com/appH6PBGeN9oVJ5a0/shrzWNKmqwp1mj16O";
 
 const TAG_COLORS = {

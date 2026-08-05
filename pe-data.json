@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-08-05T21:48:09.824Z",
+  "generated_at": "2026-08-05T23:28:15.546Z",
   "counts": {
-    "firms": 25,
-    "businesses": 31,
+    "firms": 28,
+    "businesses": 36,
     "tags": 10,
-    "evidence": 17
+    "evidence": 19
   },
   "firms": [
     {
@@ -34,6 +34,15 @@
       ]
     },
     {
+      "id": "amherst-holdings",
+      "name": "Amherst Holdings",
+      "type": "PE",
+      "headquarters": "Austin, TX",
+      "portfolio_url": "https://www.amherst.com",
+      "notes": "Runs the Main Street Renewal single-family rental platform; manages roughly $20B.",
+      "tags": []
+    },
+    {
       "id": "ares-management",
       "name": "Ares Management",
       "type": "PE",
@@ -58,6 +67,15 @@
       "headquarters": "New York, NY",
       "portfolio_url": "https://www.bluewolfcapital.com",
       "notes": "Created Elara Caring in 2018 (with Kelso & Company) by merging three home-health companies.",
+      "tags": []
+    },
+    {
+      "id": "cerberus-capital",
+      "name": "Cerberus Capital Management",
+      "type": "PE",
+      "headquarters": "New York, NY",
+      "portfolio_url": "https://www.cerberus.com",
+      "notes": "Owner of FirstKey Homes, one of the largest US single-family rental platforms.",
       "tags": []
     },
     {
@@ -237,6 +255,15 @@
       "headquarters": "New York, NY",
       "portfolio_url": "",
       "notes": "PE group co-founded by Joel Landau; controls Genesis Healthcare through ReGen Healthcare (~93% equity). Genesis entered Chapter 11 in 2025.",
+      "tags": []
+    },
+    {
+      "id": "pretium-partners",
+      "name": "Pretium Partners",
+      "type": "PE",
+      "headquarters": "New York, NY",
+      "portfolio_url": "https://www.pretium.com",
+      "notes": "Founded and owns Progress Residential, the largest US institutional single-family landlord. Led by former Goldman Sachs executive Don Mullen.",
       "tags": []
     },
     {
@@ -571,6 +598,20 @@
       "evidence": []
     },
     {
+      "id": "firstkey-homes",
+      "name": "FirstKey Homes",
+      "industry": "Single-family rentals",
+      "firm_id": "cerberus-capital",
+      "firm_name": "Cerberus Capital Management",
+      "platform_company": "One of the largest US single-family rental platforms, owned by Cerberus Capital Management",
+      "acquisition_date": "2015",
+      "ownership_status": "confirmed",
+      "source_url": "https://pestakeholder.org/wp-content/uploads/2019/04/Private-Equity-Single-Family-Rental-4-2019.pdf",
+      "last_verified": "2026-08-05",
+      "locations": [],
+      "evidence": []
+    },
+    {
       "id": "genesis-healthcare",
       "name": "Genesis Healthcare",
       "industry": "Nursing homes",
@@ -665,6 +706,42 @@
       "evidence": []
     },
     {
+      "id": "invitation-homes",
+      "name": "Invitation Homes",
+      "industry": "Single-family rentals",
+      "firm_id": "blackstone",
+      "firm_name": "Blackstone",
+      "platform_company": "The largest US single-family landlord; created by Blackstone in 2012 after the foreclosure crisis, taken public in 2017, and fully exited by Blackstone by ~2019 (now NYSE: INVH)",
+      "acquisition_date": "2012",
+      "ownership_status": "former",
+      "source_url": "https://www.housingwire.com/articles/blackstone-cashes-out-on-invitation-homes/",
+      "last_verified": "2026-08-05",
+      "locations": [],
+      "evidence": [
+        {
+          "tag": "Legal/regulatory",
+          "tier": "A",
+          "alleged": false,
+          "description": "FTC settlement ($48M, Sept 2024): the FTC charged Invitation Homes with deceiving renters on price, charging undisclosed 'junk fees' (mandatory monthly charges for smart-home tech and air-filter delivery costing up to ~$1,700/yr), withholding security deposits (returned in only ~40% of cases vs. a ~64% norm), and unfair eviction practices — including steering pandemic-era renters away from the CDC declaration that would have protected them from eviction. Invitation paid $48M in consumer refunds (no admission of wrongdoing). Blackstone founded and ran the company 2012–2019; the FTC's conduct period spans 2018–2023.",
+          "source_url": "https://www.ftc.gov/news-events/news/press-releases/2024/09/ftc-takes-action-against-invitation-homes-deceiving-renters-charging-junk-fees-withholding-security"
+        }
+      ]
+    },
+    {
+      "id": "main-street-renewal",
+      "name": "Main Street Renewal",
+      "industry": "Single-family rentals",
+      "firm_id": "amherst-holdings",
+      "firm_name": "Amherst Holdings",
+      "platform_company": "Amherst's single-family rental platform — roughly 16,000 homes across the Midwest and Sunbelt",
+      "acquisition_date": "2018",
+      "ownership_status": "confirmed",
+      "source_url": "https://pestakeholder.org/wp-content/uploads/2019/04/Private-Equity-Single-Family-Rental-4-2019.pdf",
+      "last_verified": "2026-08-05",
+      "locations": [],
+      "evidence": []
+    },
+    {
       "id": "mission-pet-health",
       "name": "Mission Pet Health",
       "industry": "Veterinary",
@@ -705,6 +782,28 @@
       "last_verified": "2026-08-05",
       "locations": [],
       "evidence": []
+    },
+    {
+      "id": "progress-residential",
+      "name": "Progress Residential",
+      "industry": "Single-family rentals",
+      "firm_id": "pretium-partners",
+      "firm_name": "Pretium Partners",
+      "platform_company": "Largest US institutional single-family landlord (~94,000 homes as of 2025), including scattered-site and build-to-rent",
+      "acquisition_date": "2012",
+      "ownership_status": "confirmed",
+      "source_url": "https://pestakeholder.org/news/progress-residential-becomes-largest-single-family-rental-company-in-the-u-s-amid-criticism-for-eviction-practices-and-unsafe-housing-conditions/",
+      "last_verified": "2026-08-05",
+      "locations": [],
+      "evidence": [
+        {
+          "tag": "Consumer harm",
+          "tier": "B",
+          "alleged": false,
+          "description": "Progress charges an array of fees on top of rent (e.g., a $200 eviction-administration fee, a $75 maintenance-visit fee, per-pet fees, and a 10% late fee) and has been an aggressive evictor, filing on tenants only a single month behind. Congress investigated whether Progress and peers filed evictions during the pandemic moratorium, and Sen. Sherrod Brown questioned why its pandemic-era eviction filings fell disproportionately on majority-Black communities. Tenants formed a 3,000+ member 'Victims of Progress Residential' group citing lost deposits, fees, and unaddressed maintenance.",
+          "source_url": "https://pestakeholder.org/news/progress-residential-becomes-largest-single-family-rental-company-in-the-u-s-amid-criticism-for-eviction-practices-and-unsafe-housing-conditions/"
+        }
+      ]
     },
     {
       "id": "scp-health",
@@ -801,6 +900,20 @@
       "acquisition_date": "2020",
       "ownership_status": "confirmed",
       "source_url": "https://www.tsgconsumer.com/pets/thrive-pet-healthcare",
+      "last_verified": "2026-08-05",
+      "locations": [],
+      "evidence": []
+    },
+    {
+      "id": "tricon-residential",
+      "name": "Tricon Residential",
+      "industry": "Single-family rentals",
+      "firm_id": "blackstone",
+      "firm_name": "Blackstone",
+      "platform_company": "~40,000 US homes; Blackstone took Tricon private in May 2024 for ~$3.5B — its return to single-family rentals and now its primary US SFR platform (it also absorbed the wound-down Home Partners of America)",
+      "acquisition_date": "2024",
+      "ownership_status": "confirmed",
+      "source_url": "https://www.blackstone.com/news/press/blackstone-real-estate-to-take-tricon-residential-private/",
       "last_verified": "2026-08-05",
       "locations": [],
       "evidence": []
