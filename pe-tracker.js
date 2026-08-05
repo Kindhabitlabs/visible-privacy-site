@@ -41,7 +41,7 @@ let FIRMS = [];
 let BUSINESSES = [];
 let firmById = {};
 
-const filters = { state: "", city: "", industry: "", firm: "", tag: "" };
+const filters = { industry: "", firm: "", tag: "" };
 let searchTerm = "";
 let sortBy = "firm";
 const openCards = new Set();
@@ -60,6 +60,12 @@ function firmTags(b) {
 function bizEvidence(b) {
   return Array.isArray(b.evidence) ? b.evidence : [];
 }
+// Subtitle under a business name: industry, plus the acquisition year if known.
+function cardMeta(b) {
+  const bits = [b.industry || "—"];
+  if (b.acquisition_date) bits.push(`acquired ${b.acquisition_date}`);
+  return bits.join(" · ");
+}
 // Combined firm + business tags — used for filtering and the tag facet.
 function allTags(b) {
   return [...firmTags(b), ...bizEvidence(b)];
@@ -76,21 +82,11 @@ function badgeTags(b) {
   return out;
 }
 
-function locationSummary(b) {
-  if (!b.locations || !b.locations.length) return "location data pending";
-  const states = uniqSorted(b.locations.map((l) => l.state));
-  const n = b.locations.length;
-  const stateBit = states.length ? ` · ${states.length} state${states.length === 1 ? "" : "s"}` : "";
-  return `${n} location${n === 1 ? "" : "s"}${stateBit}`;
-}
-
 // ── Filtering ───────────────────────────────────────────────────────────────
 function getFiltered() {
   let list = BUSINESSES.filter((b) => {
     if (filters.industry && b.industry !== filters.industry) return false;
     if (filters.firm && b.firm_id !== filters.firm) return false;
-    if (filters.state && !(b.locations || []).some((l) => l.state === filters.state)) return false;
-    if (filters.city && !(b.locations || []).some((l) => l.city === filters.city)) return false;
     if (filters.tag && !allTags(b).some((t) => t.tag === filters.tag)) return false;
 
     if (searchTerm.trim()) {
@@ -116,7 +112,7 @@ function getFiltered() {
   return list;
 }
 
-// ── Filter bar (five facets) ────────────────────────────────────────────────
+// ── Filter bar (industry / owning firm / practice tag) ──────────────────────
 function buildSelect(key, label, options) {
   const wrap = document.createElement("label");
   wrap.className = "pe-facet";
@@ -140,9 +136,6 @@ function renderFilterBar() {
   const bar = document.getElementById("pe-filter-bar");
   bar.innerHTML = "";
 
-  const allLocs = BUSINESSES.flatMap((b) => b.locations || []);
-  const states = uniqSorted(allLocs.map((l) => l.state)).map((s) => ({ value: s, label: s }));
-  const cities = uniqSorted(allLocs.map((l) => l.city)).map((c) => ({ value: c, label: c }));
   const industries = uniqSorted(BUSINESSES.map((b) => b.industry)).map((i) => ({ value: i, label: i }));
   const firms = [...FIRMS]
     .sort((a, b) => a.name.localeCompare(b.name))
@@ -152,8 +145,6 @@ function renderFilterBar() {
     ...BUSINESSES.flatMap((b) => (b.evidence || []).map((t) => t.tag)),
   ]).map((t) => ({ value: t, label: t }));
 
-  bar.appendChild(buildSelect("state", "State", states));
-  bar.appendChild(buildSelect("city", "City", cities));
   bar.appendChild(buildSelect("industry", "Industry", industries));
   bar.appendChild(buildSelect("firm", "Owning firm", firms));
   bar.appendChild(buildSelect("tag", "Practice tag", tagsPresent));
@@ -235,7 +226,7 @@ function renderCards() {
     nameBlock.className = "card-name-block";
     nameBlock.innerHTML = `
       <div class="card-name">${b.name}</div>
-      <div class="card-meta">${b.industry || "—"} &middot; ${locationSummary(b)}</div>
+      <div class="card-meta">${cardMeta(b)}</div>
     `;
 
     const badges = document.createElement("div");
@@ -318,8 +309,8 @@ function renderCards() {
 function renderStats() {
   document.getElementById("stat-businesses").textContent = BUSINESSES.length;
   document.getElementById("stat-firms").textContent = FIRMS.length;
-  const states = uniqSorted(BUSINESSES.flatMap((b) => (b.locations || []).map((l) => l.state)));
-  document.getElementById("stat-states").textContent = states.length;
+  const industries = uniqSorted(BUSINESSES.map((b) => b.industry));
+  document.getElementById("stat-industries").textContent = industries.length;
 }
 
 // ── Wire-up ────────────────────────────────────────────────────────────────
