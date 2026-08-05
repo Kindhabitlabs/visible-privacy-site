@@ -1,0 +1,42 @@
+{
+  "generated_at": "2026-08-05T07:51:43.616Z",
+  "counts": {
+    "firms": 1,
+    "businesses": 1,
+    "tags": 1
+  },
+  "firms": [
+    {
+      "id": "kkr",
+      "name": "KKR",
+      "type": "PE",
+      "headquarters": "New York, NY",
+      "portfolio_url": "https://www.kkr.com/invest/portfolio",
+      "notes": "",
+      "tags": [
+        {
+          "tag": "Financial extraction",
+          "tier": "B",
+          "alleged": false,
+          "description": "2023 recapitalization of PetVet used a ~$2.3B private loan to refinance over $3B of debt maturing from 2025.",
+          "source_url": "https://pe-insights.com/kkr-secures-2-3bn-unitranche-loan-to-recapitalize-petvet/"
+        }
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "id": "petvet-care-centers",
+      "name": "Petvet Care Centers",
+      "industry": "Veterinary",
+      "firm_id": "kkr",
+      "firm_name": "KKR",
+      "platform_company": "",
+      "acquisition_date": "2017",
+      "ownership_status": "confirmed",
+      "source_url": "https://www.privateequitywire.co.uk/kkr-acquire-petvet-care-centers/",
+      "last_verified": "2026-08-05",
+      "locations": []
+    }
+  ]
+}
