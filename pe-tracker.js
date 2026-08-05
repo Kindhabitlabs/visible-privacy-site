@@ -235,9 +235,10 @@ function renderCards() {
 
     const owner = document.createElement("div");
     owner.className = "card-fines pe-owner";
+    const ownerLabel = b.ownership_status === "former" ? "former owner" : "current owner";
     owner.innerHTML = `
       <div class="amt">${b.firm_name || "Unknown"}</div>
-      <div class="lbl">current owner</div>
+      <div class="lbl">${ownerLabel}</div>
     `;
 
     const arrow = document.createElement("div");
