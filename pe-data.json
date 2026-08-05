@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-08-05T21:16:59.335Z",
+  "generated_at": "2026-08-05T21:28:36.744Z",
   "counts": {
-    "firms": 14,
-    "businesses": 19,
+    "firms": 17,
+    "businesses": 23,
     "tags": 10,
-    "evidence": 4
+    "evidence": 8
   },
   "firms": [
     {
@@ -31,6 +31,15 @@
       "headquarters": "Los Angeles, CA",
       "portfolio_url": "https://www.aresmgmt.com",
       "notes": "Co-majority owner of Aspen Dental Management (with Leonard Green & Partners; American Securities holds a minority stake).",
+      "tags": []
+    },
+    {
+      "id": "blackstone",
+      "name": "Blackstone",
+      "type": "PE",
+      "headquarters": "New York, NY",
+      "portfolio_url": "https://www.blackstone.com",
+      "notes": "Took TeamHealth private in 2017 (its second time owning the firm). Co-investors include CDPQ, PSP Investments and Korea's National Pension Service.",
       "tags": []
     },
     {
@@ -177,6 +186,15 @@
       "tags": []
     },
     {
+      "id": "onex",
+      "name": "Onex",
+      "type": "PE",
+      "headquarters": "Toronto, Canada",
+      "portfolio_url": "https://www.onex.com",
+      "notes": "Owner of SCP Health (formerly Schumacher Clinical Partners) since 2015.",
+      "tags": []
+    },
+    {
       "id": "silver-lake",
       "name": "Silver Lake",
       "type": "PE",
@@ -192,6 +210,15 @@
           "source_url": "https://www.axios.com/2024/11/04/private-equity-preps-veterinary-merger"
         }
       ]
+    },
+    {
+      "id": "summit-partners",
+      "name": "Summit Partners",
+      "type": "PE",
+      "headquarters": "Boston, MA",
+      "portfolio_url": "https://www.summitpartners.com",
+      "notes": "Led the 2018 buyout consortium for Sound Physicians (with Optum, Revelstoke and Silversmith).",
+      "tags": []
     },
     {
       "id": "tsg-consumer-partners",
@@ -328,6 +355,35 @@
       "evidence": []
     },
     {
+      "id": "envision-healthcare",
+      "name": "Envision Healthcare",
+      "industry": "Emergency medicine",
+      "firm_id": "kkr",
+      "firm_name": "KKR",
+      "platform_company": "EmCare (ER staffing) + AmSurg (ambulatory surgery); KKR's equity was wiped out in the May 2023 Chapter 11 — now owned by former creditors",
+      "acquisition_date": "2018",
+      "ownership_status": "former",
+      "source_url": "https://pestakeholder.org/news/it-should-come-as-no-surprise-that-kkr-owned-envision-healthcare-has-finally-declared-bankruptcy/",
+      "last_verified": "2026-08-05",
+      "locations": [],
+      "evidence": [
+        {
+          "tag": "Consumer harm",
+          "tier": "B",
+          "alleged": false,
+          "description": "Envision's EmCare unit was a central driver of the US surprise-billing crisis. A Yale study (Cooper & Scott Morton) of 2.2M ER visits found out-of-network billing rates jumped sharply after EmCare took over hospital emergency rooms — at ~15% of hospitals out-of-network rates exceeded 80% — exposing in-network patients to large surprise bills.",
+          "source_url": "https://isps.yale.edu/node/22306"
+        },
+        {
+          "tag": "Financial extraction",
+          "tier": "B",
+          "alleged": false,
+          "description": "KKR took Envision private in 2018 in a $9.9B deal financed with ~$7B of debt (~70% of the price). When the No Surprises Act (2022) ended its lucrative out-of-network billing model, the debt load became unsustainable and Envision filed Chapter 11 in May 2023 — one of the largest PE-backed healthcare bankruptcies. KKR's equity was wiped out and creditors took control.",
+          "source_url": "https://pestakeholder.org/news/it-should-come-as-no-surprise-that-kkr-owned-envision-healthcare-has-finally-declared-bankruptcy/"
+        }
+      ]
+    },
+    {
       "id": "ethos-veterinary-health",
       "name": "Ethos Veterinary Health",
       "industry": "Veterinary",
@@ -398,6 +454,20 @@
       "evidence": []
     },
     {
+      "id": "scp-health",
+      "name": "SCP Health",
+      "industry": "Emergency medicine",
+      "firm_id": "onex",
+      "firm_name": "Onex",
+      "platform_company": "4th-largest US emergency-medicine staffing firm (~258 emergency departments; 7,500+ clinicians across 36 states)",
+      "acquisition_date": "2015",
+      "ownership_status": "confirmed",
+      "source_url": "https://mergr.com/transaction/onex-partners-invests-in-scp-health",
+      "last_verified": "2026-08-05",
+      "locations": [],
+      "evidence": []
+    },
+    {
       "id": "sila-services",
       "name": "Sila Services",
       "industry": "Home Services",
@@ -424,6 +494,49 @@
       "last_verified": "2026-08-05",
       "locations": [],
       "evidence": []
+    },
+    {
+      "id": "sound-physicians",
+      "name": "Sound Physicians",
+      "industry": "Emergency medicine",
+      "firm_id": "summit-partners",
+      "firm_name": "Summit Partners",
+      "platform_company": "Hospitalist + emergency-medicine staffing; 2018 ~$2.15B buyout led by Summit Partners with Optum (UnitedHealth), Revelstoke and Silversmith",
+      "acquisition_date": "2018",
+      "ownership_status": "confirmed",
+      "source_url": "https://www.healthcarefinancenews.com/news/optumhealth-and-summit-partners-acquire-staffing-firm-sound-inpatient-physician-holdings-22",
+      "last_verified": "2026-08-05",
+      "locations": [],
+      "evidence": []
+    },
+    {
+      "id": "teamhealth",
+      "name": "TeamHealth",
+      "industry": "Emergency medicine",
+      "firm_id": "blackstone",
+      "firm_name": "Blackstone",
+      "platform_company": "One of the largest US emergency-medicine and hospital physician staffing firms",
+      "acquisition_date": "2017",
+      "ownership_status": "confirmed",
+      "source_url": "https://www.prnewswire.com/news-releases/teamhealth-completes-previously-announced-transaction-with-blackstone-cdpq-psp-investments-and-nps-and-becomes-a-private-company-300402609.html",
+      "last_verified": "2026-08-05",
+      "locations": [],
+      "evidence": [
+        {
+          "tag": "Consumer harm",
+          "tier": "B",
+          "alleged": false,
+          "description": "ProPublica documented how TeamHealth, under Blackstone, used out-of-network emergency-room billing to mark up patient bills — a model that generated large surprise bills for insured patients who had no choice of ER physician.",
+          "source_url": "https://www.propublica.org/article/how-rich-investors-not-doctors-profit-from-marking-up-er-bills"
+        },
+        {
+          "tag": "Legal/regulatory",
+          "tier": "A",
+          "alleged": false,
+          "description": "US DOJ False Claims Act settlement ($60M, 2017): TeamHealth, as successor to IPC Healthcare, resolved allegations of 'upcoding' — billing Medicare, Medicaid, the Defense Health Agency and the federal employee program for higher and more expensive levels of service than were actually provided. Originated as a qui tam whistleblower suit; TeamHealth entered a 5-year Corporate Integrity Agreement.",
+          "source_url": "https://www.justice.gov/archives/opa/pr/healthcare-service-provider-pay-60-million-settle-medicare-and-medicaid-false-claims-act"
+        }
+      ]
     },
     {
       "id": "thrive-pet-healthcare",
