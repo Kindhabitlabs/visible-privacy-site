@@ -134,18 +134,44 @@ const input = JSON.parse(await readFile(inputPath, "utf8"));
 const inFirms = input.firms || [];
 const inBusinesses = input.businesses || [];
 
+// Read a table but tolerate it not existing yet (Airtable answers a missing
+// table with 403). Used for Business Tags, which may not be created on first run.
+async function fetchAllOptional(table) {
+  try {
+    return await fetchAll(table);
+  } catch (e) {
+    console.warn(`  ⚠ Could not read "${table}" (${String(e.message).split("\n")[0]}) — treating as empty.`);
+    return [];
+  }
+}
+
 console.log(`Reading existing records from Airtable…`);
-const [existingFirms, existingBiz] = await Promise.all([
+const [existingFirms, existingBiz, existingBizTags] = await Promise.all([
   fetchAll(TABLES.firms),
   fetchAll(TABLES.businesses),
+  fetchAllOptional(TABLES.businessTags),
 ]);
 
-// slug → record id, for dedup and for linking businesses to firms.
+// slug → record id, for dedup and for linking businesses/evidence to their parents.
 const firmIdToRec = new Map();
 for (const r of existingFirms) if (r.fields.firm_id) firmIdToRec.set(r.fields.firm_id, r.id);
 const bizIdSet = new Set(existingBiz.map((r) => r.fields.business_id).filter(Boolean));
+const bizIdToRec = new Map();
+for (const r of existingBiz) if (r.fields.business_id) bizIdToRec.set(r.fields.business_id, r.id);
 
-const plan = { firmsNew: [], firmsSkip: [], bizNew: [], bizSkip: [], tags: 0, locations: 0, evidence: 0 };
+// Dedup key for a piece of business evidence, so re-running never duplicates it.
+// Keyed by business record + source_url (falling back to tag+description).
+const norm = (s) => (typeof s === "string" ? s.trim() : "");
+const evidenceKey = (bizRec, e) =>
+  `${bizRec}::${norm(e.source_url) || norm(e.tag) + "|" + norm(e.description)}`;
+const existingEvidenceKeys = new Set();
+for (const r of existingBizTags) {
+  const f = r.fields;
+  const bizRec = Array.isArray(f.business) && f.business.length ? f.business[0] : null;
+  if (bizRec) existingEvidenceKeys.add(evidenceKey(bizRec, f));
+}
+
+const plan = { firmsNew: [], firmsSkip: [], bizNew: [], bizSkip: [], tags: 0, locations: 0, evidence: 0, evidenceRows: [] };
 
 for (const f of inFirms) {
   if (firmIdToRec.has(f.firm_id)) plan.firmsSkip.push(f.firm_id);
@@ -158,7 +184,29 @@ for (const b of inBusinesses) {
   else plan.bizNew.push(b);
 }
 plan.locations = plan.bizNew.reduce((n, b) => n + (b.locations?.length || 0), 0);
-plan.evidence = plan.bizNew.reduce((n, b) => n + (b.evidence?.length || 0), 0);
+
+// Evidence can attach to ANY input business — new or already-existing — so long
+// as it isn't already present. New businesses have no record id yet, but a
+// brand-new business can't have pre-existing evidence, so all of theirs counts.
+for (const b of inBusinesses) {
+  const ev = b.evidence || [];
+  if (!ev.length) continue;
+  const existingRec = bizIdToRec.get(b.business_id); // set only for existing businesses
+  const seen = new Set();
+  let cnt = 0;
+  for (const e of ev) {
+    if (existingRec) {
+      const k = evidenceKey(existingRec, e);
+      if (existingEvidenceKeys.has(k) || seen.has(k)) continue;
+      seen.add(k);
+    }
+    cnt++;
+  }
+  if (cnt) {
+    plan.evidence += cnt;
+    plan.evidenceRows.push({ id: b.business_id, existing: !!existingRec, count: cnt });
+  }
+}
 
 // ── Print the plan ──────────────────────────────────────────────────────────
 console.log(`\n${COMMIT ? "COMMIT" : "DRY RUN"} — plan for ${inputPath}:`);
@@ -167,10 +215,11 @@ plan.firmsNew.forEach((f) => console.log(`      + ${f.firm_name} (${f.firm_id}),
 plan.firmsSkip.forEach((s) => console.log(`      · skip existing firm: ${s}`));
 console.log(`  Firm Tags:  ${plan.tags} new (on new firms only)`);
 console.log(`  Businesses: ${plan.bizNew.length} new, ${plan.bizSkip.length} already exist`);
-plan.bizNew.forEach((b) => console.log(`      + ${b.business_name} (${b.business_id}) → ${b.owning_firm_id}, ${b.locations?.length || 0} location(s), ${b.evidence?.length || 0} evidence`));
+plan.bizNew.forEach((b) => console.log(`      + ${b.business_name} (${b.business_id}) → ${b.owning_firm_id}, ${b.locations?.length || 0} location(s)`));
 plan.bizSkip.forEach((s) => console.log(`      · skip existing business: ${s}`));
 console.log(`  Locations:  ${plan.locations} new`);
-console.log(`  Business evidence: ${plan.evidence} new (on new businesses only)`);
+console.log(`  Business evidence: ${plan.evidence} new (existing evidence is de-duplicated)`);
+plan.evidenceRows.forEach((r) => console.log(`      + ${r.count} on ${r.id}${r.existing ? " (existing business)" : ""}`));
 
 if (!COMMIT) {
   console.log(`\nDry run only — nothing written. Re-run with --commit to apply.`);
@@ -219,7 +268,7 @@ if (tagRows.length) {
 }
 
 // 3) Businesses
-const bizWithChildren = []; // [{ recId, locations, evidence }]
+const bizWithLocs = []; // [{ recId, locations }]
 if (plan.bizNew.length) {
   const rows = plan.bizNew.map((b) => {
     const firmRec = firmIdToRec.get(b.owning_firm_id);
@@ -239,14 +288,16 @@ if (plan.bizNew.length) {
     });
   });
   const made = await createRecords(TABLES.businesses, rows);
-  plan.bizNew.forEach((b, i) =>
-    bizWithChildren.push({ recId: made[i].id, locations: b.locations || [], evidence: b.evidence || [] }));
+  plan.bizNew.forEach((b, i) => {
+    bizWithLocs.push({ recId: made[i].id, locations: b.locations || [] });
+    bizIdToRec.set(b.business_id, made[i].id); // so evidence can now link to it
+  });
   console.log(`  ✓ ${made.length} businesses`);
 }
 
 // 4) Locations
 const locRows = [];
-for (const { recId, locations } of bizWithChildren) {
+for (const { recId, locations } of bizWithLocs) {
   for (const l of locations) {
     locRows.push(
       fields({
@@ -263,10 +314,16 @@ if (locRows.length) {
   console.log(`  ✓ ${made.length} locations`);
 }
 
-// 5) Business evidence (only for the businesses we just created)
+// 5) Business evidence — for ANY input business (new or existing), skipping
+// evidence that already exists so re-runs stay idempotent.
 const bizTagRows = [];
-for (const { recId, evidence } of bizWithChildren) {
-  for (const e of evidence) {
+for (const b of inBusinesses) {
+  const recId = bizIdToRec.get(b.business_id);
+  if (!recId || !b.evidence?.length) continue;
+  for (const e of b.evidence) {
+    const key = evidenceKey(recId, e);
+    if (existingEvidenceKeys.has(key)) continue;
+    existingEvidenceKeys.add(key);
     bizTagRows.push(
       fields({
         business: [recId],
