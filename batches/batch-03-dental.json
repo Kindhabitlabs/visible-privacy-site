@@ -1,0 +1,92 @@
+{
+  "_note": "Batch 3 — dental support organizations (DSOs). Imported via import-to-airtable.mjs; businesses land review_status=pending, spot-check then flip to verified. DECISION (firm-only, ownership-focused): tags live on firms and every business inherits all of them, so tags are attached ONLY where they don't bleed across a firm's businesses. Aspen's two Tier A AG settlements are attached to Ares Management (Ares owns only Aspen in our data → no bleed); Leonard Green is a genuine co-owner of Aspen but is NOT used as the owning firm here because it also owns Wrench Group (HVAC) and the dental tags would bleed onto it. The Kool Smiles/Benevis $23.9M DOJ False Claims Act settlement (2018) was deliberately OMITTED: the conduct (2009-2011) and settlement predate New Mountain Capital's 2020 bankruptcy acquisition — same prior-ownership call we made for ARS/GI Partners in Batch 2. CAVEAT: Heartland Dental is owned by KKR, which already carries a PetVet-specific 'Financial extraction' tag from Batch 1; because the firm-only model inherits all firm tags, Heartland will display that PetVet tag. If that misattribution isn't acceptable, keep Heartland review_status=pending. National chains have no locations enumerated (deferred).",
+  "firms": [
+    {
+      "firm_id": "ares-management",
+      "firm_name": "Ares Management",
+      "firm_type": "PE",
+      "headquarters": "Los Angeles, CA",
+      "portfolio_url": "https://www.aresmgmt.com",
+      "notes": "Co-majority owner of Aspen Dental Management (with Leonard Green & Partners; American Securities holds a minority stake).",
+      "tags": [
+        { "tag": "Consumer harm", "evidence_tier": "A", "description": "Massachusetts AG settlement announced Jan 5, 2023 ($3.5M): resolved a 2021 lawsuit alleging Aspen Dental used bait-and-switch advertising — charging patients for exams/x-rays/screenings it advertised as free and claiming to accept all insurance when it did not accept MassHealth Medicaid. Aspen agreed to return up to $750K to affected patients.", "source_url": "https://www.mass.gov/news/attorney-generals-office-reaches-35-million-settlement-with-aspen-dental-over-claims-of-deceptive-advertising", "publish": true },
+        { "tag": "Legal/regulatory", "evidence_tier": "A", "description": "California AG settlement (May 2026): Aspen agreed to $2M in penalties plus $300K restitution over alleged illegal corporate practice of dentistry and false/misleading advertising, with injunctive terms barring it from directing clinical practice or replacing practice-owner dentists of its choosing.", "source_url": "https://oag.ca.gov/news/press-releases/attorney-general-bonta-announces-settlement-aspen-dental-over-corporate-practice", "publish": true }
+      ]
+    },
+    {
+      "firm_id": "new-mountain-capital",
+      "firm_name": "New Mountain Capital",
+      "firm_type": "PE",
+      "headquarters": "New York, NY",
+      "portfolio_url": "https://www.newmountaincapital.com",
+      "notes": "Owns two DSOs: Benevis/Kool Smiles (acquired out of Chapter 11 bankruptcy in 2020) and Western Dental / Sonrava Health (held since 2012).",
+      "tags": []
+    },
+    {
+      "firm_id": "gryphon-investors",
+      "firm_name": "Gryphon Investors",
+      "firm_type": "PE",
+      "headquarters": "San Francisco, CA",
+      "portfolio_url": "https://www.gryphon-inv.com",
+      "notes": "Owner of Smile Brands (originally acquired 2016, sold, re-acquired 2024).",
+      "tags": []
+    }
+  ],
+  "businesses": [
+    {
+      "business_id": "heartland-dental",
+      "business_name": "Heartland Dental",
+      "industry": "Dental",
+      "owning_firm_id": "kkr",
+      "platform_company": "Largest US DSO — 1,900+ affiliated practices across 39 states + DC; Ontario Teachers' Pension Plan retains a minority stake",
+      "acquisition_date": "2018",
+      "ownership_status": "confirmed",
+      "source_url": "https://www.drbicuspid.com/dental-business/practice-sales/article/15374248/private-equity-firm-completes-heartland-acquisition",
+      "last_verified": "2026-08-05"
+    },
+    {
+      "business_id": "aspen-dental",
+      "business_name": "Aspen Dental",
+      "industry": "Dental",
+      "owning_firm_id": "ares-management",
+      "platform_company": "2nd-largest US DSO, 1,000+ locations in 46 states; co-owned by Leonard Green & Partners with a minority stake held by American Securities",
+      "acquisition_date": "2017",
+      "ownership_status": "confirmed",
+      "source_url": "https://www.leonardgreen.com/ares-management-leonard-green-increase-ownership-in-aspen-dental-management-inc/",
+      "last_verified": "2026-08-05"
+    },
+    {
+      "business_id": "benevis-kool-smiles",
+      "business_name": "Benevis / Kool Smiles",
+      "industry": "Dental",
+      "owning_firm_id": "new-mountain-capital",
+      "platform_company": "Medicaid-focused DSO behind the Kool Smiles clinics; acquired out of Chapter 11 bankruptcy in 2020 (prior owners: FFL Partners, then Tailwind Capital & Littlejohn)",
+      "acquisition_date": "2020",
+      "ownership_status": "confirmed",
+      "source_url": "https://www.dentistrytoday.com/benevis-files-for-chapter-11-bankruptcy/",
+      "last_verified": "2026-08-05"
+    },
+    {
+      "business_id": "western-dental-sonrava",
+      "business_name": "Western Dental / Sonrava Health",
+      "industry": "Dental",
+      "owning_firm_id": "new-mountain-capital",
+      "platform_company": "Rebranded Sonrava Health; one of the longest-held PE dental platforms (since 2012); a 2024 sale process did not complete",
+      "acquisition_date": "2012",
+      "ownership_status": "confirmed",
+      "source_url": "https://www.dentistrytoday.com/new-mountain-capital-s-attempted-western-dental-sale-serves-up-lessons-for-the-industry/",
+      "last_verified": "2026-08-05"
+    },
+    {
+      "business_id": "smile-brands",
+      "business_name": "Smile Brands",
+      "industry": "Dental",
+      "owning_firm_id": "gryphon-investors",
+      "platform_company": "75+ affiliated brands including Affordable Care; Gryphon re-acquired the DSO in 2024",
+      "acquisition_date": "2024",
+      "ownership_status": "confirmed",
+      "source_url": "https://www.gryphon-inv.com/news/gryphon-investors-acquires-smile-brands/",
+      "last_verified": "2026-08-05"
+    }
+  ]
+}
