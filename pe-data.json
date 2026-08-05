@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-08-05T21:28:36.744Z",
+  "generated_at": "2026-08-05T21:41:51.555Z",
   "counts": {
-    "firms": 17,
-    "businesses": 23,
+    "firms": 21,
+    "businesses": 27,
     "tags": 10,
-    "evidence": 8
+    "evidence": 15
   },
   "firms": [
     {
@@ -40,6 +40,15 @@
       "headquarters": "New York, NY",
       "portfolio_url": "https://www.blackstone.com",
       "notes": "Took TeamHealth private in 2017 (its second time owning the firm). Co-investors include CDPQ, PSP Investments and Korea's National Pension Service.",
+      "tags": []
+    },
+    {
+      "id": "formation-capital",
+      "name": "Formation Capital",
+      "type": "PE",
+      "headquarters": "Alpharetta, GA",
+      "portfolio_url": "https://www.formationcapital.com",
+      "notes": "Senior-care-focused PE firm; owner of Consulate Health Care and an earlier (2007) co-owner of Genesis Healthcare.",
       "tags": []
     },
     {
@@ -195,6 +204,15 @@
       "tags": []
     },
     {
+      "id": "pinta-capital",
+      "name": "Pinta Capital Partners",
+      "type": "PE",
+      "headquarters": "New York, NY",
+      "portfolio_url": "",
+      "notes": "PE group co-founded by Joel Landau; controls Genesis Healthcare through ReGen Healthcare (~93% equity). Genesis entered Chapter 11 in 2025.",
+      "tags": []
+    },
+    {
       "id": "silver-lake",
       "name": "Silver Lake",
       "type": "PE",
@@ -221,6 +239,24 @@
       "tags": []
     },
     {
+      "id": "carlyle-group",
+      "name": "The Carlyle Group",
+      "type": "PE",
+      "headquarters": "Washington, DC",
+      "portfolio_url": "https://www.carlyle.com",
+      "notes": "Former owner of HCR ManorCare (2007–2018). Its LBO ended in the chain's 2018 bankruptcy.",
+      "tags": []
+    },
+    {
+      "id": "portopiccolo-group",
+      "name": "The Portopiccolo Group",
+      "type": "PE",
+      "headquarters": "Englewood Cliffs, NJ",
+      "portfolio_url": "",
+      "notes": "PE firm (Simcha Hyman, Naftali Zanziper) that rolled up ~100 nursing facilities under brands including Accordius Health, Pelican Health and Orchid Cove.",
+      "tags": []
+    },
+    {
       "id": "tsg-consumer-partners",
       "name": "TSG Consumer Partners",
       "type": "PE",
@@ -239,6 +275,28 @@
     }
   ],
   "businesses": [
+    {
+      "id": "accordius-health",
+      "name": "Accordius Health",
+      "industry": "Nursing homes",
+      "firm_id": "portopiccolo-group",
+      "firm_name": "The Portopiccolo Group",
+      "platform_company": "Portopiccolo's nursing-home operating brand (part of a ~100-facility network incl. Pelican Health, Orchid Cove)",
+      "acquisition_date": "2016",
+      "ownership_status": "confirmed",
+      "source_url": "https://www.axios.com/local/richmond/2022/08/26/private-equity-firm-henrico-nursing-home",
+      "last_verified": "2026-08-05",
+      "locations": [],
+      "evidence": [
+        {
+          "tag": "Consumer harm",
+          "tier": "B",
+          "alleged": false,
+          "description": "Investigative reporting (Axios, The New Yorker, Washington Post) documented steep staffing cuts and declining care after Portopiccolo acquisitions — including a Richmond-area (Henrico) nursing home where deaths doubled following the takeover, and a facility where some shifts had as few as two staff for 72 beds, with residents going days without care.",
+          "source_url": "https://www.axios.com/local/richmond/2022/08/26/private-equity-firm-henrico-nursing-home"
+        }
+      ]
+    },
     {
       "id": "apex-service-partners",
       "name": "Apex Service Partners",
@@ -355,6 +413,35 @@
       "evidence": []
     },
     {
+      "id": "consulate-health-care",
+      "name": "Consulate Health Care",
+      "industry": "Nursing homes",
+      "firm_id": "formation-capital",
+      "firm_name": "Formation Capital",
+      "platform_company": "One of the largest US nursing-home providers, concentrated in Florida",
+      "acquisition_date": "2011",
+      "ownership_status": "confirmed",
+      "source_url": "https://www.mcknights.com/news/six-nursing-home-affiliates-file-for-bankruptcy-following-258m-fca-ruling/",
+      "last_verified": "2026-08-05",
+      "locations": [],
+      "evidence": [
+        {
+          "tag": "Legal/regulatory",
+          "tier": "A",
+          "alleged": false,
+          "description": "False Claims Act case brought by whistleblower nurse Angela Ruckh: a federal jury found Consulate liable for 'upcoding' — billing Medicare/Medicaid for medically unnecessary and inflated therapy. The judgment reached ~$258M; after appeals and six affiliated entities' bankruptcy filings, DOJ ultimately settled the judgment for $4.5M.",
+          "source_url": "https://www.mcknights.com/news/six-nursing-home-affiliates-file-for-bankruptcy-following-258m-fca-ruling/"
+        },
+        {
+          "tag": "Financial extraction",
+          "tier": "B",
+          "alleged": false,
+          "description": "An analysis found a web of related companies made Consulate-owned nursing homes appear 'cash-strapped' — a related-party structure that moves money among affiliates while limiting the operators' apparent ability to pay judgments or invest in care.",
+          "source_url": "https://www.mcknights.com/news/report-finds-web-of-related-companies-make-consulate-owned-nursing-homes-appear-cash-strapped/"
+        }
+      ]
+    },
+    {
       "id": "envision-healthcare",
       "name": "Envision Healthcare",
       "industry": "Emergency medicine",
@@ -396,6 +483,64 @@
       "last_verified": "2026-08-05",
       "locations": [],
       "evidence": []
+    },
+    {
+      "id": "genesis-healthcare",
+      "name": "Genesis Healthcare",
+      "industry": "Nursing homes",
+      "firm_id": "pinta-capital",
+      "firm_name": "Pinta Capital Partners",
+      "platform_company": "~175 skilled-nursing/assisted-living facilities in 18 states; originally taken private by Formation Capital & JER Partners in 2007; filed Chapter 11 in July 2025 (an insider sale to ReGen/Pinta was rejected by the court in Dec 2025)",
+      "acquisition_date": "2021",
+      "ownership_status": "reported-unverified",
+      "source_url": "https://pestakeholder.org/news/genesis-healthcare-files-for-bankruptcy/",
+      "last_verified": "2026-08-05",
+      "locations": [],
+      "evidence": [
+        {
+          "tag": "Legal/regulatory",
+          "tier": "A",
+          "alleged": false,
+          "description": "$53.6M DOJ settlement (2017): Genesis resolved allegations it billed Medicare/Medicaid for medically unnecessary therapy and hospice services and provided 'grossly substandard' care with inadequate staffing — much of the conduct at acquired operators Skilled Healthcare and Sun Healthcare (2005–2013).",
+          "source_url": "https://www.healthcarefinancenews.com/news/genesis-healthcare-pay-nearly-54-million-resolve-allegations-unnecessary-hospice-care"
+        },
+        {
+          "tag": "Financial extraction",
+          "tier": "B",
+          "alleged": false,
+          "description": "Genesis filed for Chapter 11 in July 2025 with more than $2.3B in debt, threatening care for residents across 18 states. Sens. Warren & Blumenthal and Reps. Goodlander & Welch opened an investigation into the PE-driven bankruptcy's impact on nursing-home and assisted-living residents.",
+          "source_url": "https://goodlander.house.gov/media/press-releases/goodlander-warren-blumenthal-and-welch-investigate-genesis-healthcare-private-equity-bankruptcy-and-its-impact-on-nursing-home-assisted-living-residents-across-the-country/"
+        }
+      ]
+    },
+    {
+      "id": "hcr-manorcare",
+      "name": "HCR ManorCare",
+      "industry": "Nursing homes",
+      "firm_id": "carlyle-group",
+      "firm_name": "The Carlyle Group",
+      "platform_company": "Then the 2nd-largest US nursing-home chain; after Carlyle's LBO collapsed it was acquired out of 2018 bankruptcy by ProMedica (a nonprofit)",
+      "acquisition_date": "2007",
+      "ownership_status": "former",
+      "source_url": "https://www.washingtonpost.com/business/economy/opioid-overdoses-bedsores-and-broken-bones-what-happened-when-a-private-equity-firm-sought-profits-in-caring-for-societys-most-vulnerable/2018/11/25/09089a4a-ed14-11e8-baac-2a674e91502b_story.html",
+      "last_verified": "2026-08-05",
+      "locations": [],
+      "evidence": [
+        {
+          "tag": "Financial extraction",
+          "tier": "B",
+          "alleged": false,
+          "description": "Carlyle took HCR ManorCare private in 2007 for $6.3B, three-quarters funded by debt. A 2011 sale-leaseback sold the company's real estate for $6.1B — recouping Carlyle's ~$1.3B equity — but left the chain paying rent it increasingly couldn't afford. It filed for bankruptcy in March 2018.",
+          "source_url": "https://www.washingtonpost.com/business/economy/opioid-overdoses-bedsores-and-broken-bones-what-happened-when-a-private-equity-firm-sought-profits-in-caring-for-societys-most-vulnerable/2018/11/25/09089a4a-ed14-11e8-baac-2a674e91502b_story.html"
+        },
+        {
+          "tag": "Consumer harm",
+          "tier": "B",
+          "alleged": false,
+          "description": "As ManorCare cut costs and laid off staff, health-code violations rose 26% between 2013 and 2017. State inspectors found residents left unattended — call buttons so poorly staffed that some residents regularly soiled themselves waiting for help to the bathroom (Washington Post investigation).",
+          "source_url": "https://www.washingtonpost.com/business/economy/opioid-overdoses-bedsores-and-broken-bones-what-happened-when-a-private-equity-firm-sought-profits-in-caring-for-societys-most-vulnerable/2018/11/25/09089a4a-ed14-11e8-baac-2a674e91502b_story.html"
+        }
+      ]
     },
     {
       "id": "heartland-dental",
