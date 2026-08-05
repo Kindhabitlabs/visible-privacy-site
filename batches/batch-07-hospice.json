@@ -1,0 +1,93 @@
+{
+  "_note": "Batch 7 — hospice (and home-health/hospice) operators. Imported via import-to-airtable.mjs; businesses land review_status=pending, evidence lands publish=true but still needs the publish checkbox verified. Scope: PE-owned only — VITAS (Chemed) and Amedisys are publicly traded and excluded. Two Tier A DOJ False Claims Act settlements as business-level evidence: Gentiva ($19.4M, 2024) and Elara Caring ($4.2M, 2024). Gentiva's fraud conduct (2010–2020) largely predates CD&R's 2022 acquisition (Kindred at Home / Humana era) — noted in the evidence. Compassus and AccentCare are ownership-only. NOT attached: the CEPR 'Preying on the Dying' industry report (industry-level, no single-firm home). AccentCare was bought from Oak Hill Capital (already a firm in the base) — cross-reference, but owning_firm is the current owner, Advent.",
+  "firms": [
+    {
+      "firm_id": "clayton-dubilier-rice",
+      "firm_name": "Clayton, Dubilier & Rice",
+      "firm_type": "PE",
+      "headquarters": "New York, NY",
+      "portfolio_url": "https://www.cdr.com",
+      "notes": "Acquired a 60% interest in Humana's Kindred at Home hospice/personal-care divisions in 2022 and rebranded them Gentiva; Humana held a 40% minority stake it is now divesting.",
+      "tags": []
+    },
+    {
+      "firm_id": "towerbrook-capital",
+      "firm_name": "TowerBrook Capital Partners",
+      "firm_type": "PE",
+      "headquarters": "New York, NY",
+      "portfolio_url": "https://www.towerbrook.com",
+      "notes": "Co-owns Compassus 50/50 with the Catholic nonprofit health system Ascension (a PE/nonprofit joint venture).",
+      "tags": []
+    },
+    {
+      "firm_id": "advent-international",
+      "firm_name": "Advent International",
+      "firm_type": "PE",
+      "headquarters": "Boston, MA",
+      "portfolio_url": "https://www.adventinternational.com",
+      "notes": "Acquired AccentCare from Oak Hill Capital in 2019 — its first move into home health and hospice.",
+      "tags": []
+    },
+    {
+      "firm_id": "blue-wolf-capital",
+      "firm_name": "Blue Wolf Capital Partners",
+      "firm_type": "PE",
+      "headquarters": "New York, NY",
+      "portfolio_url": "https://www.bluewolfcapital.com",
+      "notes": "Created Elara Caring in 2018 (with Kelso & Company) by merging three home-health companies.",
+      "tags": []
+    }
+  ],
+  "businesses": [
+    {
+      "business_id": "gentiva",
+      "business_name": "Gentiva",
+      "industry": "Hospice",
+      "owning_firm_id": "clayton-dubilier-rice",
+      "platform_company": "Largest US end-of-life care provider; carved out of Humana's Kindred at Home in 2022 (Humana retained a 40% minority stake it is now divesting)",
+      "acquisition_date": "2022",
+      "ownership_status": "confirmed",
+      "source_url": "https://www.cdr.com/news/cdr-completes-acquisition-of-gentiva-health-services",
+      "last_verified": "2026-08-05",
+      "evidence": [
+        { "tag": "Legal/regulatory", "evidence_tier": "A", "description": "$19.4M DOJ and Tennessee AG settlement (2024): resolved allegations that Gentiva entities billed Medicare and Medicaid (2010–Feb 2020) for hospice services for patients who were not terminally ill and then improperly concealed or avoided repaying those claims; separately, its Alabama segment SouthernCare New Beacon paid kickbacks to a consulting physician to induce referrals (2016–2022). Much of this conduct predates CD&R's 2022 acquisition (Kindred at Home / Humana era).", "source_url": "https://pestakeholder.org/news/pe-owned-home-health-hospice-giant-pays-to-settle-federal-billing-fraud-allegations/", "publish": true }
+      ]
+    },
+    {
+      "business_id": "elara-caring",
+      "business_name": "Elara Caring",
+      "industry": "Hospice",
+      "owning_firm_id": "blue-wolf-capital",
+      "platform_company": "Home health, hospice, behavioral and personal care across 16+ states; created in 2018 by Blue Wolf Capital and Kelso from a three-company merger",
+      "acquisition_date": "2018",
+      "ownership_status": "confirmed",
+      "source_url": "https://mergr.com/transaction/blue-wolf-capital-partners-acquires-elara-caring",
+      "last_verified": "2026-08-05",
+      "evidence": [
+        { "tag": "Legal/regulatory", "evidence_tier": "A", "description": "$4.2M DOJ settlement (May 2024): resolved False Claims Act allegations that Elara Caring billed Medicare for hospice services for patients who were ineligible for the hospice benefit because they were not terminally ill, and knowingly retained overpayments, over roughly six years.", "source_url": "https://pestakeholder.org/news/private-equity-owned-hospice-company-agrees-to-pay-4-2-million-settlement/", "publish": true }
+      ]
+    },
+    {
+      "business_id": "compassus",
+      "business_name": "Compassus",
+      "industry": "Hospice",
+      "owning_firm_id": "towerbrook-capital",
+      "platform_company": "National hospice, palliative and home-health provider; owned 50/50 by TowerBrook Capital and the nonprofit health system Ascension",
+      "acquisition_date": "2019",
+      "ownership_status": "confirmed",
+      "source_url": "https://pestakeholder.org/news/compassus-private-equitys-joint-venture-playbook/",
+      "last_verified": "2026-08-05"
+    },
+    {
+      "business_id": "accentcare",
+      "business_name": "AccentCare",
+      "industry": "Hospice",
+      "owning_firm_id": "advent-international",
+      "platform_company": "Home health + hospice provider (includes Seasons Hospice); Advent acquired it from Oak Hill Capital in 2019",
+      "acquisition_date": "2019",
+      "ownership_status": "confirmed",
+      "source_url": "https://hospicenews.com/2019/05/16/advent-international-to-acquire-post-acute-hospice-provider-accentcare/",
+      "last_verified": "2026-08-05"
+    }
+  ]
+}
