@@ -46,7 +46,7 @@ const TABLES = {
 // canonical letter to the EXACT option text. ⚠ "B" is confirmed from your base;
 // verify "A" and "C" match your options exactly (edit if they differ).
 const TIER_LABELS = {
-  A: "A = confirmed / primary document",
+  A: "A = confirmed / primary doc",
   B: "B = reported / investigative journalism",
   C: "C = alleged / pending",
 };
