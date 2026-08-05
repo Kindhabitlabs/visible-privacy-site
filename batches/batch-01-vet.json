@@ -1,0 +1,189 @@
+{
+  "_note": "Batch 1 — veterinary rollups. Imported via import-to-airtable.mjs. KKR + PetVet already exist in Airtable and will be skipped by the dedup. Businesses import as review_status=pending; spot-check in Airtable, then flip to verified. National chains have no locations enumerated (deferred; map view is out of v1 scope).",
+  "firms": [
+    {
+      "firm_id": "kkr",
+      "firm_name": "KKR",
+      "firm_type": "PE",
+      "headquarters": "New York, NY",
+      "portfolio_url": "https://www.kkr.com/invest/portfolio",
+      "tags": [
+        { "tag": "Financial extraction", "evidence_tier": "B", "description": "2023 recapitalization of PetVet used a ~$2.3B private loan (led by Blue Owl) to refinance over $3B of debt maturing from 2025.", "source_url": "https://pe-insights.com/kkr-secures-2-3bn-unitranche-loan-to-recapitalize-petvet/", "publish": true }
+      ]
+    },
+    {
+      "firm_id": "tsg-consumer-partners",
+      "firm_name": "TSG Consumer Partners",
+      "firm_type": "PE",
+      "headquarters": "San Francisco, CA",
+      "portfolio_url": "https://www.tsgconsumer.com",
+      "tags": [
+        { "tag": "Financial extraction", "evidence_tier": "B", "description": "2024–25 financial-press reporting documented persistent liquidity deficits at Thrive; the company engaged restructuring advisers and secured $350M+ of rescue financing.", "source_url": "https://news.bloomberglaw.com/bankruptcy-law/thrive-pet-healthcare-eyes-new-debt-and-more-time-from-lenders", "publish": true }
+      ]
+    },
+    {
+      "firm_id": "jab-holding",
+      "firm_name": "JAB Holding Company",
+      "firm_type": "holding-company",
+      "headquarters": "Luxembourg",
+      "portfolio_url": "https://www.jabholco.com",
+      "tags": [
+        { "tag": "Legal/regulatory", "evidence_tier": "A", "description": "FTC consent orders (2022) required clinic divestitures and imposed prior-approval / prior-notice conditions on JAB's future specialty/emergency vet acquisitions (SAGE and Ethos matters).", "source_url": "https://www.ftc.gov/news-events/news/press-releases/2022/06/ftc-takes-second-action-against-jab-consumer-partners-protect-pet-owners-private-equity-firms-rollup-of-veterinary-services", "publish": true },
+        { "tag": "Consumer harm", "evidence_tier": "B", "description": "Subject of a 2024 US Senate inquiry (Sens. Warren & Blumenthal) into consolidation and post-acquisition price increases at PE-owned vet clinics.", "source_url": "https://www.warren.senate.gov/wp-content/uploads/media/doc/warren_blumenthal_letter_to_jab_holdings_re_veterinary_clinics.pdf", "publish": true }
+      ]
+    },
+    {
+      "firm_id": "shore-capital-partners",
+      "firm_name": "Shore Capital Partners",
+      "firm_type": "PE",
+      "headquarters": "Chicago, IL",
+      "portfolio_url": "https://www.shorecp.com",
+      "notes": "Co-owner of Mission Pet Health with Silver Lake after the 2025 recap.",
+      "tags": []
+    },
+    {
+      "firm_id": "silver-lake",
+      "firm_name": "Silver Lake",
+      "firm_type": "PE",
+      "headquarters": "Menlo Park, CA",
+      "portfolio_url": "https://www.silverlake.com",
+      "tags": [
+        { "tag": "Financial extraction", "evidence_tier": "B", "description": "2025 ~$8.6B recapitalization merging Southern Veterinary Partners + Mission Veterinary Partners included ~$3B of secured debt.", "source_url": "https://www.axios.com/2024/11/04/private-equity-preps-veterinary-merger", "publish": true }
+      ]
+    },
+    {
+      "firm_id": "oak-hill-capital",
+      "firm_name": "Oak Hill Capital",
+      "firm_type": "PE",
+      "headquarters": "New York, NY",
+      "portfolio_url": "https://www.oakhill.com",
+      "notes": "VetCor lead investor; co-owners Harvest Partners and Cressey & Company.",
+      "tags": []
+    },
+    {
+      "firm_id": "partners-group",
+      "firm_name": "Partners Group",
+      "firm_type": "PE",
+      "headquarters": "Baar, Switzerland",
+      "portfolio_url": "https://www.partnersgroup.com",
+      "tags": []
+    },
+    {
+      "firm_id": "mars-veterinary-health",
+      "firm_name": "Mars Veterinary Health",
+      "firm_type": "holding-company",
+      "headquarters": "McLean, VA",
+      "portfolio_url": "https://www.marsveterinary.com",
+      "notes": "Family-owned CPG holding company; in scope as a holding company running a vet rollup.",
+      "tags": [
+        { "tag": "Legal/regulatory", "evidence_tier": "A", "description": "FTC required divestiture of 12 specialty/emergency clinics as a condition of the $9.1B VCA acquisition (2017), plus a 10-year FTC notice requirement.", "source_url": "https://www.ftc.gov/news-events/news/press-releases/2017/08/ftc-requires-mars-divest-12-veterinary-clinics-condition-acquiring-pet-care-company-vca-inc", "publish": true },
+        { "tag": "Consumer harm", "evidence_tier": "B", "description": "Subject of a Nov 2024 US Senate investigation (Warren & Blumenthal) into Mars' impact on pet owners and veterinary workers.", "source_url": "https://www.warren.senate.gov/newsroom/press-releases/warren-blumenthal-take-on-private-equity-and-corporate-consolidation-in-pet-care-open-investigation-into-mars-impact-on-pet-owners-veterinary-workers", "publish": true }
+      ]
+    }
+  ],
+  "businesses": [
+    {
+      "business_id": "petvet-care-centers",
+      "business_name": "PetVet Care Centers",
+      "industry": "Veterinary",
+      "owning_firm_id": "kkr",
+      "acquisition_date": "2017",
+      "ownership_status": "confirmed",
+      "source_url": "https://www.privateequitywire.co.uk/kkr-acquire-petvet-care-centers/",
+      "last_verified": "2026-08-05"
+    },
+    {
+      "business_id": "thrive-pet-healthcare",
+      "business_name": "Thrive Pet Healthcare",
+      "industry": "Veterinary",
+      "owning_firm_id": "tsg-consumer-partners",
+      "platform_company": "formerly Pathway Vet Alliance",
+      "acquisition_date": "2020",
+      "ownership_status": "confirmed",
+      "source_url": "https://www.tsgconsumer.com/pets/thrive-pet-healthcare",
+      "last_verified": "2026-08-05"
+    },
+    {
+      "business_id": "national-veterinary-associates",
+      "business_name": "National Veterinary Associates (NVA)",
+      "industry": "Veterinary",
+      "owning_firm_id": "jab-holding",
+      "acquisition_date": "2019",
+      "ownership_status": "confirmed",
+      "source_url": "https://www.jabholco.com/documents/6/Press%20release%20NVA%20Acquisition.pdf",
+      "last_verified": "2026-08-05"
+    },
+    {
+      "business_id": "ethos-veterinary-health",
+      "business_name": "Ethos Veterinary Health",
+      "industry": "Veterinary",
+      "owning_firm_id": "jab-holding",
+      "acquisition_date": "2021",
+      "ownership_status": "confirmed",
+      "source_url": "https://www.ftc.gov/legal-library/browse/cases-proceedings/211-0174-jab-consumer-partnersvipwethos-veterinary-health-matter",
+      "last_verified": "2026-08-05"
+    },
+    {
+      "business_id": "mission-pet-health",
+      "business_name": "Mission Pet Health",
+      "industry": "Veterinary",
+      "owning_firm_id": "silver-lake",
+      "platform_company": "Southern Veterinary Partners + Mission Veterinary Partners; co-owned with Shore Capital",
+      "acquisition_date": "2024",
+      "ownership_status": "confirmed",
+      "source_url": "https://transitionselite.com/southern-veterinary-partners-is-now-mission-pet-health/",
+      "last_verified": "2026-08-05"
+    },
+    {
+      "business_id": "vetcor",
+      "business_name": "VetCor",
+      "industry": "Veterinary",
+      "owning_firm_id": "oak-hill-capital",
+      "platform_company": "co-owned with Harvest Partners and Cressey & Company",
+      "acquisition_date": "2025",
+      "ownership_status": "confirmed",
+      "source_url": "https://www.cresseyco.com/news/vetcor-acquires-people-pets-vets",
+      "last_verified": "2026-08-05"
+    },
+    {
+      "business_id": "blue-river-petcare",
+      "business_name": "Blue River PetCare",
+      "industry": "Veterinary",
+      "owning_firm_id": "partners-group",
+      "acquisition_date": "2019",
+      "ownership_status": "reported-unverified",
+      "source_url": "https://www.partnersgroup.com/news-and-views/press-releases/investment-news/detail?news_id=683afd9d-36a8-4504-875d-5a6fbb34e07e",
+      "last_verified": "2026-08-05"
+    },
+    {
+      "business_id": "vca-animal-hospitals",
+      "business_name": "VCA Animal Hospitals",
+      "industry": "Veterinary",
+      "owning_firm_id": "mars-veterinary-health",
+      "acquisition_date": "2017",
+      "ownership_status": "confirmed",
+      "source_url": "https://www.mars.com/news-and-stories/press-releases/vca-acquisition",
+      "last_verified": "2026-08-05"
+    },
+    {
+      "business_id": "banfield-pet-hospital",
+      "business_name": "Banfield Pet Hospital",
+      "industry": "Veterinary",
+      "owning_firm_id": "mars-veterinary-health",
+      "acquisition_date": "2007",
+      "ownership_status": "confirmed",
+      "source_url": "https://www.avma.org/javma-news/2015-12-01/bluepearl-banfield-now-part-same-company",
+      "last_verified": "2026-08-05"
+    },
+    {
+      "business_id": "bluepearl",
+      "business_name": "BluePearl",
+      "industry": "Veterinary",
+      "owning_firm_id": "mars-veterinary-health",
+      "acquisition_date": "2015",
+      "ownership_status": "confirmed",
+      "source_url": "https://www.avma.org/javma-news/2015-12-01/bluepearl-banfield-now-part-same-company",
+      "last_verified": "2026-08-05"
+    }
+  ]
+}

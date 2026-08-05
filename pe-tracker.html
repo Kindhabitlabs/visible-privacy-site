@@ -3,19 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Corporate Accountability Dossier — Visable</title>
-  <meta property="og:title" content="Corporate Accountability Dossier — Visable">
-  <meta property="og:description" content="Documented fines, settlements, and violations from major corporations that affect privacy — a searchable dossier to hold companies accountable.">
+  <title>Who Owns Your Local Business? — Visable</title>
+  <meta property="og:title" content="Who Owns Your Local Business? — Visable">
+  <meta property="og:description" content="A sourced, filterable tracker of local businesses acquired by private equity firms, growth-equity firms, and holding companies running rollups.">
   <meta property="og:image" content="/social-share.svg">
   <meta name="twitter:image" content="/social-share.svg">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Visable">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Corporate Accountability Dossier — Visable">
-  <meta name="twitter:description" content="Documented fines, settlements, and violations from major corporations that affect privacy — a searchable dossier to hold companies accountable.">
+  <meta name="twitter:title" content="Who Owns Your Local Business? — Visable">
+  <meta name="twitter:description" content="A sourced, filterable tracker of local businesses acquired by private equity firms, growth-equity firms, and holding companies running rollups.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
 </head>
 <body>
 
@@ -33,8 +34,8 @@
     <li><a href="index.html#why">Why It Matters</a></li>
     <li><a href="index.html#rationalizations">The Myths</a></li>
     <li><a href="index.html#civic">The Bigger Picture</a></li>
-    <li><a href="tracker.html" class="active">Corporate Dossier</a></li>
-    <li><a href="pe-tracker.html">PE Ownership</a></li>
+    <li><a href="tracker.html">Corporate Dossier</a></li>
+    <li><a href="pe-tracker.html" class="active">PE Ownership</a></li>
     <li><a href="flock.html">Flock Cameras</a></li>
     <li><a href="donate.html">Donate</a></li>
     <li><a href="index.html#tools" class="nav-cta">Protect Yourself</a></li>
@@ -44,35 +45,35 @@
 <main>
   <!-- HEADER -->
   <div class="dossier-header">
-    <div class="section-label">Corporate Accountability Report</div>
-    <h1>The companies you trust<br />have a <em>documented</em> record.</h1>
+    <div class="section-label">Private Equity Ownership Tracker</div>
+    <h1>Who <em>really</em> owns<br />your local business?</h1>
     <p class="dossier-sub">
-      Fines, settlements, and violations from America's largest corporations — sourced from federal agencies, courts, and investigative reporting. This is the receipt for "I have nothing to hide."
+      Private equity firms, growth-equity firms, and holding companies are quietly buying up the vet clinics, dental offices, and everyday businesses you use — then loading them with debt, cutting service, and raising prices. This is a sourced, filterable map of who owns what, so you can decide where your money goes.
     </p>
     <div class="dossier-stats">
       <div class="dossier-stat">
-        <div class="n" id="stat-companies">0</div>
-        <div class="d">Companies Tracked</div>
+        <div class="n" id="stat-businesses">0</div>
+        <div class="d">Businesses Tracked</div>
       </div>
       <div class="dossier-stat">
-        <div class="n" id="stat-total-fines">$0B+</div>
-        <div class="d">Total Documented Fines</div>
+        <div class="n" id="stat-firms">0</div>
+        <div class="d">Owning Firms</div>
       </div>
       <div class="dossier-stat">
-        <div class="n">6</div>
-        <div class="d">Violation Categories</div>
+        <div class="n" id="stat-states">0</div>
+        <div class="d">States Covered</div>
       </div>
     </div>
   </div>
 
   <!-- CONTROLS -->
   <div class="controls-wrap">
-    <div class="filter-row" id="filter-row"></div>
+    <div class="pe-filter-bar" id="pe-filter-bar"></div>
     <div class="search-row">
-      <input type="text" class="search-input" id="search-input" placeholder="Search companies or industries..." />
+      <input type="text" class="search-input" id="search-input" placeholder="Search businesses, firms, or industries..." />
       <div class="sort-group">
         <span>Sort:</span>
-        <button class="sort-btn active" data-sort="fines">By Fines</button>
+        <button class="sort-btn active" data-sort="firm">By Firm</button>
         <button class="sort-btn" data-sort="az">A&ndash;Z</button>
       </div>
       <div class="result-count" id="result-count"></div>
@@ -80,8 +81,8 @@
     <div class="card-list" id="card-list"></div>
     <div class="dossier-footer">
       <div class="dossier-footer-rule"></div>
-      <div>DATA SOURCES: Good Jobs First / Violation Tracker · DOJ · FTC · SEC · EPA · OSHA · NLRB · CFPB · State Attorneys General · Federal Court Records</div>
-      <div style="margin-top: 6px;">All fine and settlement amounts reflect publicly announced figures. Some settlements include future payments. Companies deny wrongdoing in many civil settlements.</div>
+      <div>Every ownership entry links to its source. Practice tags attach to the owning firm — each with its own evidence tier and source — and are inherited by the businesses that firm owns. Tags marked <strong>ALLEGED / PENDING</strong> reflect claims not yet resolved by a court or regulator.</div>
+      <div style="margin-top: 6px;">Ownership changes over time; see the "verified" date on each entry. Spotted something out of date or missing? <a href="#" id="suggest-link" style="color: var(--accent-warm);">Suggest an addition or correction</a>.</div>
     </div>
   </div>
 </main>
@@ -92,7 +93,7 @@
   <p style="color: #2a2a2a; font-size: 11px;">No tracking. No analytics. No ads. Ever.</p>
 </footer>
 
-<script src="tracker.js"></script>
+<script src="pe-tracker.js"></script>
 <script src="binary-background.js"></script>
 <script src="main.js"></script>
 </body>
