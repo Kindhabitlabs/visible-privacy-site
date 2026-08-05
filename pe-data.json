@@ -1,12 +1,21 @@
 {
-  "generated_at": "2026-08-05T21:41:51.555Z",
+  "generated_at": "2026-08-05T21:48:09.824Z",
   "counts": {
-    "firms": 21,
-    "businesses": 27,
+    "firms": 25,
+    "businesses": 31,
     "tags": 10,
-    "evidence": 15
+    "evidence": 17
   },
   "firms": [
+    {
+      "id": "advent-international",
+      "name": "Advent International",
+      "type": "PE",
+      "headquarters": "Boston, MA",
+      "portfolio_url": "https://www.adventinternational.com",
+      "notes": "Acquired AccentCare from Oak Hill Capital in 2019 — its first move into home health and hospice.",
+      "tags": []
+    },
     {
       "id": "alpine-investors",
       "name": "Alpine Investors",
@@ -40,6 +49,24 @@
       "headquarters": "New York, NY",
       "portfolio_url": "https://www.blackstone.com",
       "notes": "Took TeamHealth private in 2017 (its second time owning the firm). Co-investors include CDPQ, PSP Investments and Korea's National Pension Service.",
+      "tags": []
+    },
+    {
+      "id": "blue-wolf-capital",
+      "name": "Blue Wolf Capital Partners",
+      "type": "PE",
+      "headquarters": "New York, NY",
+      "portfolio_url": "https://www.bluewolfcapital.com",
+      "notes": "Created Elara Caring in 2018 (with Kelso & Company) by merging three home-health companies.",
+      "tags": []
+    },
+    {
+      "id": "clayton-dubilier-rice",
+      "name": "Clayton, Dubilier & Rice",
+      "type": "PE",
+      "headquarters": "New York, NY",
+      "portfolio_url": "https://www.cdr.com",
+      "notes": "Acquired a 60% interest in Humana's Kindred at Home hospice/personal-care divisions in 2022 and rebranded them Gentiva; Humana held a 40% minority stake it is now divesting.",
       "tags": []
     },
     {
@@ -257,6 +284,15 @@
       "tags": []
     },
     {
+      "id": "towerbrook-capital",
+      "name": "TowerBrook Capital Partners",
+      "type": "PE",
+      "headquarters": "New York, NY",
+      "portfolio_url": "https://www.towerbrook.com",
+      "notes": "Co-owns Compassus 50/50 with the Catholic nonprofit health system Ascension (a PE/nonprofit joint venture).",
+      "tags": []
+    },
+    {
       "id": "tsg-consumer-partners",
       "name": "TSG Consumer Partners",
       "type": "PE",
@@ -275,6 +311,20 @@
     }
   ],
   "businesses": [
+    {
+      "id": "accentcare",
+      "name": "AccentCare",
+      "industry": "Hospice",
+      "firm_id": "advent-international",
+      "firm_name": "Advent International",
+      "platform_company": "Home health + hospice provider (includes Seasons Hospice); Advent acquired it from Oak Hill Capital in 2019",
+      "acquisition_date": "2019",
+      "ownership_status": "confirmed",
+      "source_url": "https://hospicenews.com/2019/05/16/advent-international-to-acquire-post-acute-hospice-provider-accentcare/",
+      "last_verified": "2026-08-05",
+      "locations": [],
+      "evidence": []
+    },
     {
       "id": "accordius-health",
       "name": "Accordius Health",
@@ -413,6 +463,20 @@
       "evidence": []
     },
     {
+      "id": "compassus",
+      "name": "Compassus",
+      "industry": "Hospice",
+      "firm_id": "towerbrook-capital",
+      "firm_name": "TowerBrook Capital Partners",
+      "platform_company": "National hospice, palliative and home-health provider; owned 50/50 by TowerBrook Capital and the nonprofit health system Ascension",
+      "acquisition_date": "2019",
+      "ownership_status": "confirmed",
+      "source_url": "https://pestakeholder.org/news/compassus-private-equitys-joint-venture-playbook/",
+      "last_verified": "2026-08-05",
+      "locations": [],
+      "evidence": []
+    },
+    {
       "id": "consulate-health-care",
       "name": "Consulate Health Care",
       "industry": "Nursing homes",
@@ -438,6 +502,28 @@
           "alleged": false,
           "description": "An analysis found a web of related companies made Consulate-owned nursing homes appear 'cash-strapped' — a related-party structure that moves money among affiliates while limiting the operators' apparent ability to pay judgments or invest in care.",
           "source_url": "https://www.mcknights.com/news/report-finds-web-of-related-companies-make-consulate-owned-nursing-homes-appear-cash-strapped/"
+        }
+      ]
+    },
+    {
+      "id": "elara-caring",
+      "name": "Elara Caring",
+      "industry": "Hospice",
+      "firm_id": "blue-wolf-capital",
+      "firm_name": "Blue Wolf Capital Partners",
+      "platform_company": "Home health, hospice, behavioral and personal care across 16+ states; created in 2018 by Blue Wolf Capital and Kelso from a three-company merger",
+      "acquisition_date": "2018",
+      "ownership_status": "confirmed",
+      "source_url": "https://mergr.com/transaction/blue-wolf-capital-partners-acquires-elara-caring",
+      "last_verified": "2026-08-05",
+      "locations": [],
+      "evidence": [
+        {
+          "tag": "Legal/regulatory",
+          "tier": "A",
+          "alleged": false,
+          "description": "$4.2M DOJ settlement (May 2024): resolved False Claims Act allegations that Elara Caring billed Medicare for hospice services for patients who were ineligible for the hospice benefit because they were not terminally ill, and knowingly retained overpayments, over roughly six years.",
+          "source_url": "https://pestakeholder.org/news/private-equity-owned-hospice-company-agrees-to-pay-4-2-million-settlement/"
         }
       ]
     },
@@ -510,6 +596,28 @@
           "alleged": false,
           "description": "Genesis filed for Chapter 11 in July 2025 with more than $2.3B in debt, threatening care for residents across 18 states. Sens. Warren & Blumenthal and Reps. Goodlander & Welch opened an investigation into the PE-driven bankruptcy's impact on nursing-home and assisted-living residents.",
           "source_url": "https://goodlander.house.gov/media/press-releases/goodlander-warren-blumenthal-and-welch-investigate-genesis-healthcare-private-equity-bankruptcy-and-its-impact-on-nursing-home-assisted-living-residents-across-the-country/"
+        }
+      ]
+    },
+    {
+      "id": "gentiva",
+      "name": "Gentiva",
+      "industry": "Hospice",
+      "firm_id": "clayton-dubilier-rice",
+      "firm_name": "Clayton, Dubilier & Rice",
+      "platform_company": "Largest US end-of-life care provider; carved out of Humana's Kindred at Home in 2022 (Humana retained a 40% minority stake it is now divesting)",
+      "acquisition_date": "2022",
+      "ownership_status": "confirmed",
+      "source_url": "https://www.cdr.com/news/cdr-completes-acquisition-of-gentiva-health-services",
+      "last_verified": "2026-08-05",
+      "locations": [],
+      "evidence": [
+        {
+          "tag": "Legal/regulatory",
+          "tier": "A",
+          "alleged": false,
+          "description": "$19.4M DOJ and Tennessee AG settlement (2024): resolved allegations that Gentiva entities billed Medicare and Medicaid (2010–Feb 2020) for hospice services for patients who were not terminally ill and then improperly concealed or avoided repaying those claims; separately, its Alabama segment SouthernCare New Beacon paid kickbacks to a consulting physician to induce referrals (2016–2022). Much of this conduct predates CD&R's 2022 acquisition (Kindred at Home / Humana era).",
+          "source_url": "https://pestakeholder.org/news/pe-owned-home-health-hospice-giant-pays-to-settle-federal-billing-fraud-allegations/"
         }
       ]
     },
