@@ -1,0 +1,95 @@
+{
+  "_note": "Batch 8 — single-family rentals (institutional 'Wall Street landlord' operators). Imported via import-to-airtable.mjs; businesses land review_status=pending, evidence lands publish=true but still needs the publish checkbox verified. Scope: PE-owned landlords only. DR Horton and other homebuilders are publicly traded and excluded (relevant only as builders that sell build-to-rent communities in bulk to these landlords). Blackstone appears twice: Invitation Homes (ownership_status=former — Blackstone created it in 2012 and exited by ~2019, now NYSE:INVH) and Tricon Residential (confirmed — Blackstone took it private in 2024). Tier A evidence: FTC $48M settlement vs Invitation Homes (2024). Blackstone already exists as a firm (Batch 5) with no firm tags, so its two SFR businesses inherit nothing. NOT attached: the 2022 House Financial Services Committee report on institutional landlords (industry-level, names multiple firms — no single-firm home).",
+  "firms": [
+    {
+      "firm_id": "pretium-partners",
+      "firm_name": "Pretium Partners",
+      "firm_type": "PE",
+      "headquarters": "New York, NY",
+      "portfolio_url": "https://www.pretium.com",
+      "notes": "Founded and owns Progress Residential, the largest US institutional single-family landlord. Led by former Goldman Sachs executive Don Mullen.",
+      "tags": []
+    },
+    {
+      "firm_id": "cerberus-capital",
+      "firm_name": "Cerberus Capital Management",
+      "firm_type": "PE",
+      "headquarters": "New York, NY",
+      "portfolio_url": "https://www.cerberus.com",
+      "notes": "Owner of FirstKey Homes, one of the largest US single-family rental platforms.",
+      "tags": []
+    },
+    {
+      "firm_id": "amherst-holdings",
+      "firm_name": "Amherst Holdings",
+      "firm_type": "PE",
+      "headquarters": "Austin, TX",
+      "portfolio_url": "https://www.amherst.com",
+      "notes": "Runs the Main Street Renewal single-family rental platform; manages roughly $20B.",
+      "tags": []
+    }
+  ],
+  "businesses": [
+    {
+      "business_id": "invitation-homes",
+      "business_name": "Invitation Homes",
+      "industry": "Single-family rentals",
+      "owning_firm_id": "blackstone",
+      "platform_company": "The largest US single-family landlord; created by Blackstone in 2012 after the foreclosure crisis, taken public in 2017, and fully exited by Blackstone by ~2019 (now NYSE: INVH)",
+      "acquisition_date": "2012",
+      "ownership_status": "former",
+      "source_url": "https://www.housingwire.com/articles/blackstone-cashes-out-on-invitation-homes/",
+      "last_verified": "2026-08-05",
+      "evidence": [
+        { "tag": "Legal/regulatory", "evidence_tier": "A", "description": "FTC settlement ($48M, Sept 2024): the FTC charged Invitation Homes with deceiving renters on price, charging undisclosed 'junk fees' (mandatory monthly charges for smart-home tech and air-filter delivery costing up to ~$1,700/yr), withholding security deposits (returned in only ~40% of cases vs. a ~64% norm), and unfair eviction practices — including steering pandemic-era renters away from the CDC declaration that would have protected them from eviction. Invitation paid $48M in consumer refunds (no admission of wrongdoing). Blackstone founded and ran the company 2012–2019; the FTC's conduct period spans 2018–2023.", "source_url": "https://www.ftc.gov/news-events/news/press-releases/2024/09/ftc-takes-action-against-invitation-homes-deceiving-renters-charging-junk-fees-withholding-security", "publish": true }
+      ]
+    },
+    {
+      "business_id": "progress-residential",
+      "business_name": "Progress Residential",
+      "industry": "Single-family rentals",
+      "owning_firm_id": "pretium-partners",
+      "platform_company": "Largest US institutional single-family landlord (~94,000 homes as of 2025), including scattered-site and build-to-rent",
+      "acquisition_date": "2012",
+      "ownership_status": "confirmed",
+      "source_url": "https://pestakeholder.org/news/progress-residential-becomes-largest-single-family-rental-company-in-the-u-s-amid-criticism-for-eviction-practices-and-unsafe-housing-conditions/",
+      "last_verified": "2026-08-05",
+      "evidence": [
+        { "tag": "Consumer harm", "evidence_tier": "B", "description": "Progress charges an array of fees on top of rent (e.g., a $200 eviction-administration fee, a $75 maintenance-visit fee, per-pet fees, and a 10% late fee) and has been an aggressive evictor, filing on tenants only a single month behind. Congress investigated whether Progress and peers filed evictions during the pandemic moratorium, and Sen. Sherrod Brown questioned why its pandemic-era eviction filings fell disproportionately on majority-Black communities. Tenants formed a 3,000+ member 'Victims of Progress Residential' group citing lost deposits, fees, and unaddressed maintenance.", "source_url": "https://pestakeholder.org/news/progress-residential-becomes-largest-single-family-rental-company-in-the-u-s-amid-criticism-for-eviction-practices-and-unsafe-housing-conditions/", "publish": true }
+      ]
+    },
+    {
+      "business_id": "tricon-residential",
+      "business_name": "Tricon Residential",
+      "industry": "Single-family rentals",
+      "owning_firm_id": "blackstone",
+      "platform_company": "~40,000 US homes; Blackstone took Tricon private in May 2024 for ~$3.5B — its return to single-family rentals and now its primary US SFR platform (it also absorbed the wound-down Home Partners of America)",
+      "acquisition_date": "2024",
+      "ownership_status": "confirmed",
+      "source_url": "https://www.blackstone.com/news/press/blackstone-real-estate-to-take-tricon-residential-private/",
+      "last_verified": "2026-08-05"
+    },
+    {
+      "business_id": "firstkey-homes",
+      "business_name": "FirstKey Homes",
+      "industry": "Single-family rentals",
+      "owning_firm_id": "cerberus-capital",
+      "platform_company": "One of the largest US single-family rental platforms, owned by Cerberus Capital Management",
+      "acquisition_date": "2015",
+      "ownership_status": "confirmed",
+      "source_url": "https://pestakeholder.org/wp-content/uploads/2019/04/Private-Equity-Single-Family-Rental-4-2019.pdf",
+      "last_verified": "2026-08-05"
+    },
+    {
+      "business_id": "main-street-renewal",
+      "business_name": "Main Street Renewal",
+      "industry": "Single-family rentals",
+      "owning_firm_id": "amherst-holdings",
+      "platform_company": "Amherst's single-family rental platform — roughly 16,000 homes across the Midwest and Sunbelt",
+      "acquisition_date": "2018",
+      "ownership_status": "confirmed",
+      "source_url": "https://pestakeholder.org/wp-content/uploads/2019/04/Private-Equity-Single-Family-Rental-4-2019.pdf",
+      "last_verified": "2026-08-05"
+    }
+  ]
+}
