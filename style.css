@@ -1234,17 +1234,27 @@
       color: var(--muted);
     }
     .pe-facet select {
-      background: var(--surface);
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      background-color: var(--surface-2);
+      background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='none' stroke='%237a7670' stroke-width='1.5' d='M1 1.5 6 6.5 11 1.5'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 12px center;
       color: var(--text);
       border: 1px solid var(--border);
       border-radius: 2px;
-      padding: 8px 10px;
+      padding: 9px 34px 9px 12px;
       font-family: 'Space Grotesk', sans-serif;
       font-size: 13px;
       min-width: 150px;
       cursor: pointer;
+      transition: border-color 0.18s ease, background-color 0.18s ease;
     }
-    .pe-facet select:focus { outline: none; border-color: var(--muted); }
+    .pe-facet select:hover { border-color: var(--muted); background-color: var(--surface); }
+    .pe-facet select:focus { outline: none; border-color: var(--accent-warm); }
+    /* style the dropdown list itself where the browser honors it */
+    .pe-facet select option { background: var(--surface-2); color: var(--text); }
     .pe-clear {
       align-self: flex-end;
       background: none;
