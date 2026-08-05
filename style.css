@@ -1326,6 +1326,12 @@
     }
     .pe-no-tags { padding: 18px 24px 24px; font-size: 13px; color: var(--muted); font-style: italic; }
 
+    /* Business-specific evidence header — set apart from the inherited firm record */
+    .pe-evidence-head {
+      color: var(--gold);
+      font-weight: 600;
+    }
+
     /* colored dot per tag category, overriding the dossier's fixed accent dot */
     .card-body .violation::before { background: var(--dot, var(--accent)); }
 

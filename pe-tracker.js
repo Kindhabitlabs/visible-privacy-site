@@ -52,9 +52,30 @@ const openCards = new Set();
 const uniqSorted = (arr) =>
   [...new Set(arr.filter(Boolean))].sort((a, b) => a.localeCompare(b));
 
-function businessTags(b) {
+// Tags a business inherits from its owning firm (the firm's overall pattern).
+function firmTags(b) {
   const f = firmById[b.firm_id];
   return f && Array.isArray(f.tags) ? f.tags : [];
+}
+// Evidence documented against this specific business (DOJ/AG actions, etc.),
+// which may predate the current owner — rendered only on this business.
+function bizEvidence(b) {
+  return Array.isArray(b.evidence) ? b.evidence : [];
+}
+// Combined firm + business tags — used for filtering and the tag facet.
+function allTags(b) {
+  return [...firmTags(b), ...bizEvidence(b)];
+}
+// Header badges: business evidence first (most specific), deduped by tag name.
+function badgeTags(b) {
+  const seen = new Set();
+  const out = [];
+  for (const t of [...bizEvidence(b), ...firmTags(b)]) {
+    if (seen.has(t.tag)) continue;
+    seen.add(t.tag);
+    out.push(t);
+  }
+  return out;
 }
 
 function locationSummary(b) {
@@ -72,7 +93,7 @@ function getFiltered() {
     if (filters.firm && b.firm_id !== filters.firm) return false;
     if (filters.state && !(b.locations || []).some((l) => l.state === filters.state)) return false;
     if (filters.city && !(b.locations || []).some((l) => l.city === filters.city)) return false;
-    if (filters.tag && !businessTags(b).some((t) => t.tag === filters.tag)) return false;
+    if (filters.tag && !allTags(b).some((t) => t.tag === filters.tag)) return false;
 
     if (searchTerm.trim()) {
       const q = searchTerm.toLowerCase();
@@ -128,8 +149,10 @@ function renderFilterBar() {
   const firms = [...FIRMS]
     .sort((a, b) => a.name.localeCompare(b.name))
     .map((f) => ({ value: f.id, label: f.name }));
-  const tagsPresent = uniqSorted(FIRMS.flatMap((f) => (f.tags || []).map((t) => t.tag)))
-    .map((t) => ({ value: t, label: t }));
+  const tagsPresent = uniqSorted([
+    ...FIRMS.flatMap((f) => (f.tags || []).map((t) => t.tag)),
+    ...BUSINESSES.flatMap((b) => (b.evidence || []).map((t) => t.tag)),
+  ]).map((t) => ({ value: t, label: t }));
 
   bar.appendChild(buildSelect("state", "State", states));
   bar.appendChild(buildSelect("city", "City", cities));
@@ -163,6 +186,26 @@ function tagBadge(tag) {
   return b;
 }
 
+// One evidence/tag row (used for both business evidence and firm practice tags).
+function renderViolation(t) {
+  const v = document.createElement("div");
+  v.className = "violation";
+  const c = tagColor(t.tag);
+  v.style.setProperty("--dot", c);
+  v.innerHTML = `
+    <div class="violation-top">
+      <div class="violation-title" style="color:${c}">${t.tag}</div>
+      <div class="violation-amt-year">
+        ${t.alleged ? `<span class="pe-alleged">Alleged / pending</span>` : ""}
+        <span class="violation-year">${TIER_LABELS[t.tier] || ""}</span>
+      </div>
+    </div>
+    <div class="violation-detail">${t.description || ""}</div>
+    <div class="violation-source">SOURCE: ${t.source_url ? `<a href="${t.source_url}" target="_blank" rel="noopener">${t.source_url}</a>` : "—"}</div>
+  `;
+  return v;
+}
+
 function renderCards() {
   const list = getFiltered();
   const container = document.getElementById("card-list");
@@ -180,7 +223,8 @@ function renderCards() {
 
   list.forEach((b) => {
     const firm = firmById[b.firm_id];
-    const tags = businessTags(b);
+    const fTags = firmTags(b);
+    const evid = bizEvidence(b);
 
     const card = document.createElement("div");
     card.className = "company-card";
@@ -198,7 +242,7 @@ function renderCards() {
 
     const badges = document.createElement("div");
     badges.className = "card-badges";
-    tags.forEach((t) => badges.appendChild(tagBadge(t)));
+    badgeTags(b).forEach((t) => badges.appendChild(tagBadge(t)));
 
     const owner = document.createElement("div");
     owner.className = "card-fines pe-owner";
@@ -234,34 +278,28 @@ function renderCards() {
     `;
     body.appendChild(facts);
 
-    if (tags.length) {
-      const tagsHead = document.createElement("div");
-      tagsHead.className = "pe-tags-head";
-      tagsHead.textContent = `Practice record — ${b.firm_name}`;
-      body.appendChild(tagsHead);
+    // Business-specific evidence first — most specific to this chain.
+    if (evid.length) {
+      const head = document.createElement("div");
+      head.className = "pe-tags-head pe-evidence-head";
+      head.textContent = `Documented at ${b.name}`;
+      body.appendChild(head);
+      evid.forEach((t) => body.appendChild(renderViolation(t)));
+    }
 
-      tags.forEach((t) => {
-        const v = document.createElement("div");
-        v.className = "violation";
-        const c = tagColor(t.tag);
-        v.style.setProperty("--dot", c);
-        v.innerHTML = `
-          <div class="violation-top">
-            <div class="violation-title" style="color:${c}">${t.tag}</div>
-            <div class="violation-amt-year">
-              ${t.alleged ? `<span class="pe-alleged">Alleged / pending</span>` : ""}
-              <span class="violation-year">${TIER_LABELS[t.tier] || ""}</span>
-            </div>
-          </div>
-          <div class="violation-detail">${t.description || ""}</div>
-          <div class="violation-source">SOURCE: ${t.source_url ? `<a href="${t.source_url}" target="_blank" rel="noopener">${t.source_url}</a>` : "—"}</div>
-        `;
-        body.appendChild(v);
-      });
-    } else {
+    // Inherited firm practice record.
+    if (fTags.length) {
+      const head = document.createElement("div");
+      head.className = "pe-tags-head";
+      head.textContent = `Firm practice record — ${b.firm_name}`;
+      body.appendChild(head);
+      fTags.forEach((t) => body.appendChild(renderViolation(t)));
+    }
+
+    if (!evid.length && !fTags.length) {
       const none = document.createElement("div");
       none.className = "pe-no-tags";
-      none.textContent = "No documented practice concerns recorded for this firm yet.";
+      none.textContent = "No documented concerns recorded for this business yet.";
       body.appendChild(none);
     }
 

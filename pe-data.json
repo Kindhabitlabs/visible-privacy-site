@@ -1,9 +1,10 @@
 {
-  "generated_at": "2026-08-05T20:34:04.935Z",
+  "generated_at": "2026-08-05T20:40:44.748Z",
   "counts": {
     "firms": 14,
     "businesses": 19,
-    "tags": 12
+    "tags": 12,
+    "evidence": 0
   },
   "firms": [
     {
@@ -237,7 +238,8 @@
       "ownership_status": "confirmed",
       "source_url": "https://alpineinvestors.com/update/alpine-launches-apex-service-partners/",
       "last_verified": "2026-08-05",
-      "locations": []
+      "locations": [],
+      "evidence": []
     },
     {
       "id": "american-residential-services",
@@ -250,7 +252,8 @@
       "ownership_status": "confirmed",
       "source_url": "https://www.gipartners.com/news/gi-partners-joins-charlesbank-capital-partners-to-accelerate-growth-at-american-residential-services",
       "last_verified": "2026-08-05",
-      "locations": []
+      "locations": [],
+      "evidence": []
     },
     {
       "id": "aspen-dental",
@@ -263,7 +266,8 @@
       "ownership_status": "confirmed",
       "source_url": "https://www.leonardgreen.com/ares-management-leonard-green-increase-ownership-in-aspen-dental-management-inc/",
       "last_verified": "2026-08-05",
-      "locations": []
+      "locations": [],
+      "evidence": []
     },
     {
       "id": "banfield-pet-hospital",
@@ -276,7 +280,8 @@
       "ownership_status": "confirmed",
       "source_url": "https://www.avma.org/javma-news/2015-12-01/bluepearl-banfield-now-part-same-company",
       "last_verified": "2026-08-05",
-      "locations": []
+      "locations": [],
+      "evidence": []
     },
     {
       "id": "benevis-kool-smiles",
@@ -289,7 +294,8 @@
       "ownership_status": "confirmed",
       "source_url": "https://www.dentistrytoday.com/benevis-files-for-chapter-11-bankruptcy/",
       "last_verified": "2026-08-05",
-      "locations": []
+      "locations": [],
+      "evidence": []
     },
     {
       "id": "bluepearl",
@@ -302,7 +308,8 @@
       "ownership_status": "confirmed",
       "source_url": "https://www.avma.org/javma-news/2015-12-01/bluepearl-banfield-now-part-same-company",
       "last_verified": "2026-08-05",
-      "locations": []
+      "locations": [],
+      "evidence": []
     },
     {
       "id": "ethos-veterinary-health",
@@ -315,7 +322,8 @@
       "ownership_status": "confirmed",
       "source_url": "https://www.ftc.gov/legal-library/browse/cases-proceedings/211-0174-jab-consumer-partnersvipwethos-veterinary-health-matter",
       "last_verified": "2026-08-05",
-      "locations": []
+      "locations": [],
+      "evidence": []
     },
     {
       "id": "heartland-dental",
@@ -328,7 +336,8 @@
       "ownership_status": "confirmed",
       "source_url": "https://www.drbicuspid.com/dental-business/practice-sales/article/15374248/private-equity-firm-completes-heartland-acquisition",
       "last_verified": "2026-08-05",
-      "locations": []
+      "locations": [],
+      "evidence": []
     },
     {
       "id": "mission-pet-health",
@@ -341,7 +350,8 @@
       "ownership_status": "confirmed",
       "source_url": "https://transitionselite.com/southern-veterinary-partners-is-now-mission-pet-health/",
       "last_verified": "2026-08-05",
-      "locations": []
+      "locations": [],
+      "evidence": []
     },
     {
       "id": "national-veterinary-associates",
@@ -354,7 +364,8 @@
       "ownership_status": "confirmed",
       "source_url": "https://www.jabholco.com/documents/6/Press%20release%20NVA%20Acquisition.pdf",
       "last_verified": "2026-08-05",
-      "locations": []
+      "locations": [],
+      "evidence": []
     },
     {
       "id": "petvet-care-centers",
@@ -367,7 +378,8 @@
       "ownership_status": "confirmed",
       "source_url": "https://www.privateequitywire.co.uk/kkr-acquire-petvet-care-centers/",
       "last_verified": "2026-08-05",
-      "locations": []
+      "locations": [],
+      "evidence": []
     },
     {
       "id": "sila-services",
@@ -380,7 +392,8 @@
       "ownership_status": "confirmed",
       "source_url": "https://www.businesswire.com/news/home/20241110227672/en/Sila-Services-Announces-Equity-Investment-From-Goldman-Sachs-Alternatives-Private-Equity-Business",
       "last_verified": "2026-08-05",
-      "locations": []
+      "locations": [],
+      "evidence": []
     },
     {
       "id": "smile-brands",
@@ -393,7 +406,8 @@
       "ownership_status": "confirmed",
       "source_url": "https://www.gryphon-inv.com/news/gryphon-investors-acquires-smile-brands/",
       "last_verified": "2026-08-05",
-      "locations": []
+      "locations": [],
+      "evidence": []
     },
     {
       "id": "thrive-pet-healthcare",
@@ -406,7 +420,8 @@
       "ownership_status": "confirmed",
       "source_url": "https://www.tsgconsumer.com/pets/thrive-pet-healthcare",
       "last_verified": "2026-08-05",
-      "locations": []
+      "locations": [],
+      "evidence": []
     },
     {
       "id": "turnpoint-services",
@@ -419,7 +434,8 @@
       "ownership_status": "confirmed",
       "source_url": "https://www.trivest.com/trivest-announces-sale-of-turnpoint-services/",
       "last_verified": "2026-08-05",
-      "locations": []
+      "locations": [],
+      "evidence": []
     },
     {
       "id": "vca-animal-hospitals",
@@ -432,7 +448,8 @@
       "ownership_status": "confirmed",
       "source_url": "https://www.mars.com/news-and-stories/press-releases/vca-acquisition",
       "last_verified": "2026-08-05",
-      "locations": []
+      "locations": [],
+      "evidence": []
     },
     {
       "id": "vetcor",
@@ -445,7 +462,8 @@
       "ownership_status": "confirmed",
       "source_url": "https://www.cresseyco.com/news/vetcor-acquires-people-pets-vets",
       "last_verified": "2026-08-05",
-      "locations": []
+      "locations": [],
+      "evidence": []
     },
     {
       "id": "western-dental-sonrava",
@@ -458,7 +476,8 @@
       "ownership_status": "confirmed",
       "source_url": "https://www.dentistrytoday.com/new-mountain-capital-s-attempted-western-dental-sale-serves-up-lessons-for-the-industry/",
       "last_verified": "2026-08-05",
-      "locations": []
+      "locations": [],
+      "evidence": []
     },
     {
       "id": "wrench-group",
@@ -471,7 +490,8 @@
       "ownership_status": "confirmed",
       "source_url": "https://www.leonardgreen.com/investcorp-announces-sale-of-the-wrench-group-to-leonard-green/",
       "last_verified": "2026-08-05",
-      "locations": []
+      "locations": [],
+      "evidence": []
     }
   ]
 }

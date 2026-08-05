@@ -20,9 +20,15 @@
  *       { "business_id","business_name","industry","owning_firm_id","platform_company",
  *         "acquisition_date","ownership_status","source_url","last_verified","submitter",
  *         "review_status",
- *         "locations": [ { "city","state","street_address" } ] }
+ *         "locations": [ { "city","state","street_address" } ],
+ *         "evidence": [ { "tag","evidence_tier","description","source_url","publish" } ] }
  *     ]
  *   }
+ *
+ * `evidence` is business-specific documentation (a DOJ/AG action against that
+ * chain, etc.) that renders only on that business — use it for facts that
+ * belong to the business rather than the firm's overall pattern, including
+ * conduct that predates the current owner. Same shape as a firm tag.
  *
  * Safety:
  *   - Dedup by slug: a firm_id / business_id that already exists is SKIPPED, never
@@ -40,6 +46,7 @@ const TABLES = {
   firmTags: "Firm Tags",
   businesses: "Businesses",
   locations: "locations",
+  businessTags: "Business Tags",
 };
 
 // The evidence_tier single-select in your base uses descriptive labels. Map the
@@ -138,7 +145,7 @@ const firmIdToRec = new Map();
 for (const r of existingFirms) if (r.fields.firm_id) firmIdToRec.set(r.fields.firm_id, r.id);
 const bizIdSet = new Set(existingBiz.map((r) => r.fields.business_id).filter(Boolean));
 
-const plan = { firmsNew: [], firmsSkip: [], bizNew: [], bizSkip: [], tags: 0, locations: 0 };
+const plan = { firmsNew: [], firmsSkip: [], bizNew: [], bizSkip: [], tags: 0, locations: 0, evidence: 0 };
 
 for (const f of inFirms) {
   if (firmIdToRec.has(f.firm_id)) plan.firmsSkip.push(f.firm_id);
@@ -151,6 +158,7 @@ for (const b of inBusinesses) {
   else plan.bizNew.push(b);
 }
 plan.locations = plan.bizNew.reduce((n, b) => n + (b.locations?.length || 0), 0);
+plan.evidence = plan.bizNew.reduce((n, b) => n + (b.evidence?.length || 0), 0);
 
 // ── Print the plan ──────────────────────────────────────────────────────────
 console.log(`\n${COMMIT ? "COMMIT" : "DRY RUN"} — plan for ${inputPath}:`);
@@ -159,9 +167,10 @@ plan.firmsNew.forEach((f) => console.log(`      + ${f.firm_name} (${f.firm_id}),
 plan.firmsSkip.forEach((s) => console.log(`      · skip existing firm: ${s}`));
 console.log(`  Firm Tags:  ${plan.tags} new (on new firms only)`);
 console.log(`  Businesses: ${plan.bizNew.length} new, ${plan.bizSkip.length} already exist`);
-plan.bizNew.forEach((b) => console.log(`      + ${b.business_name} (${b.business_id}) → ${b.owning_firm_id}, ${b.locations?.length || 0} location(s)`));
+plan.bizNew.forEach((b) => console.log(`      + ${b.business_name} (${b.business_id}) → ${b.owning_firm_id}, ${b.locations?.length || 0} location(s), ${b.evidence?.length || 0} evidence`));
 plan.bizSkip.forEach((s) => console.log(`      · skip existing business: ${s}`));
 console.log(`  Locations:  ${plan.locations} new`);
+console.log(`  Business evidence: ${plan.evidence} new (on new businesses only)`);
 
 if (!COMMIT) {
   console.log(`\nDry run only — nothing written. Re-run with --commit to apply.`);
@@ -210,7 +219,7 @@ if (tagRows.length) {
 }
 
 // 3) Businesses
-const bizWithLocs = []; // [{ recId, locations }]
+const bizWithChildren = []; // [{ recId, locations, evidence }]
 if (plan.bizNew.length) {
   const rows = plan.bizNew.map((b) => {
     const firmRec = firmIdToRec.get(b.owning_firm_id);
@@ -230,13 +239,14 @@ if (plan.bizNew.length) {
     });
   });
   const made = await createRecords(TABLES.businesses, rows);
-  plan.bizNew.forEach((b, i) => bizWithLocs.push({ recId: made[i].id, locations: b.locations || [] }));
+  plan.bizNew.forEach((b, i) =>
+    bizWithChildren.push({ recId: made[i].id, locations: b.locations || [], evidence: b.evidence || [] }));
   console.log(`  ✓ ${made.length} businesses`);
 }
 
 // 4) Locations
 const locRows = [];
-for (const { recId, locations } of bizWithLocs) {
+for (const { recId, locations } of bizWithChildren) {
   for (const l of locations) {
     locRows.push(
       fields({
@@ -251,6 +261,27 @@ for (const { recId, locations } of bizWithLocs) {
 if (locRows.length) {
   const made = await createRecords(TABLES.locations, locRows);
   console.log(`  ✓ ${made.length} locations`);
+}
+
+// 5) Business evidence (only for the businesses we just created)
+const bizTagRows = [];
+for (const { recId, evidence } of bizWithChildren) {
+  for (const e of evidence) {
+    bizTagRows.push(
+      fields({
+        business: [recId],
+        tag: e.tag,
+        evidence_tier: TIER_LABELS[String(e.evidence_tier).trim().toUpperCase()] || e.evidence_tier,
+        description: e.description,
+        source_url: e.source_url,
+        publish: e.publish === true,
+      })
+    );
+  }
+}
+if (bizTagRows.length) {
+  const made = await createRecords(TABLES.businessTags, bizTagRows);
+  console.log(`  ✓ ${made.length} business evidence`);
 }
 
 console.log(`\nDone. Review the new rows in Airtable, then flip review_status to "verified"`);

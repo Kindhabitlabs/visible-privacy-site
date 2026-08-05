@@ -3,7 +3,8 @@
  * export-pe-data.mjs — Airtable → pe-data.json publish step for the PE Ownership Tracker.
  *
  * What it does:
- *   1. Pulls the four Airtable tables (Firms, Firm Tags, Businesses, Locations).
+ *   1. Pulls the Airtable tables (Firms, Firm Tags, Businesses, Locations, and
+ *      the optional Business Tags for per-business evidence).
  *   2. Applies the publish gates from the spec:
  *        - Businesses:  review_status === "verified" AND a non-empty source_url.
  *        - Firm Tags:   publish checked AND evidence_tier in A/B/C.
@@ -41,6 +42,10 @@ const TABLES = {
   firmTags: "Firm Tags",
   businesses: "Businesses",
   locations: "locations",
+  // Optional: per-business evidence (DOJ/AG actions etc.) that belongs to a
+  // specific business rather than a firm's overall pattern — mirrors Firm Tags
+  // but links to a business. Treated as empty if the table doesn't exist yet.
+  businessTags: "Business Tags",
 };
 
 const OUTPUT_FILE = "pe-data.json";
@@ -71,10 +76,12 @@ async function fetchAll(table, { optional = false } = {}) {
     const res = await fetch(url, {
       headers: { Authorization: `Bearer ${TOKEN}` },
     });
-    // An optional child table (e.g. Locations before any are entered) may not
-    // exist yet — warn and treat it as empty rather than failing the export.
-    if (res.status === 404 && optional) {
-      console.warn(`  ⚠ Table "${table}" not found — treating as empty.`);
+    // An optional table (e.g. Business Tags before it's created) may not exist
+    // yet — warn and treat it as empty rather than failing the export. Airtable
+    // answers a missing table with 403 (INVALID_PERMISSIONS_OR_MODEL_NOT_FOUND),
+    // not 404, so accept either for optional tables.
+    if ((res.status === 404 || res.status === 403) && optional) {
+      console.warn(`  ⚠ Table "${table}" not found or inaccessible — treating as empty.`);
       return [];
     }
     if (!res.ok) {
@@ -111,20 +118,24 @@ const summary = {
   firms_included: 0,
   businesses_included: 0,
   tags_included: 0,
+  evidence_included: 0,
   skipped_businesses: [], // { name, reason }
   skipped_tags: 0,
+  skipped_evidence: 0,
 };
 
 console.log("Fetching from Airtable…");
-const [firmRows, tagRows, bizRows, locRows] = await Promise.all([
+const [firmRows, tagRows, bizRows, locRows, bizTagRows] = await Promise.all([
   fetchAll(TABLES.firms),
   fetchAll(TABLES.firmTags),
   fetchAll(TABLES.businesses),
   fetchAll(TABLES.locations, { optional: true }),
+  fetchAll(TABLES.businessTags, { optional: true }),
 ]);
 console.log(
   `  Firms: ${firmRows.length}  Tags: ${tagRows.length}  ` +
-    `Businesses: ${bizRows.length}  Locations: ${locRows.length}`
+    `Businesses: ${bizRows.length}  Locations: ${locRows.length}  ` +
+    `Business evidence: ${bizTagRows.length}`
 );
 
 // Index locations by their Airtable record id, for inlining into businesses.
@@ -138,34 +149,57 @@ for (const r of locRows) {
   });
 }
 
-// Group published tags by owning firm's record id.
-const tagsByFirmRec = new Map();
-for (const r of tagRows) {
-  const f = r.fields;
+// Turn a Firm-Tags / Business-Tags row into a published tag object, applying the
+// shared publish gate. Returns { linkRec, tag } or null if it fails the gate.
+// `linkField` is the name of the record-link column ("firm" or "business").
+function parsePublishedTag(f, linkField) {
   // Take just the leading letter, so both "B" and a descriptive single-select
   // label like "B = reported / investigative journalism" normalize to "B".
   const tier = str(f.evidence_tier).trim().charAt(0).toUpperCase();
   const published = f.publish === true;
 
   // Publish gate: must be explicitly published and a recognized tier.
-  if (!published || !VALID_TIERS.includes(tier)) {
-    summary.skipped_tags++;
-    continue;
-  }
-  const firmRec = firstLink(f.firm);
-  if (!firmRec) {
-    summary.skipped_tags++;
-    continue;
-  }
-  const tag = {
-    tag: str(f.tag),
-    tier, // "A" | "B" | "C"
-    alleged: tier === "C", // page must show the "alleged / pending" label
-    description: str(f.description),
-    source_url: str(f.source_url),
+  if (!published || !VALID_TIERS.includes(tier)) return null;
+  const linkRec = firstLink(f[linkField]);
+  if (!linkRec) return null;
+
+  return {
+    linkRec,
+    tag: {
+      tag: str(f.tag),
+      tier, // "A" | "B" | "C"
+      alleged: tier === "C", // page must show the "alleged / pending" label
+      description: str(f.description),
+      source_url: str(f.source_url),
+    },
   };
-  if (!tagsByFirmRec.has(firmRec)) tagsByFirmRec.set(firmRec, []);
-  tagsByFirmRec.get(firmRec).push(tag);
+}
+
+// Group published firm tags by owning firm's record id.
+const tagsByFirmRec = new Map();
+for (const r of tagRows) {
+  const parsed = parsePublishedTag(r.fields, "firm");
+  if (!parsed) {
+    summary.skipped_tags++;
+    continue;
+  }
+  if (!tagsByFirmRec.has(parsed.linkRec)) tagsByFirmRec.set(parsed.linkRec, []);
+  tagsByFirmRec.get(parsed.linkRec).push(parsed.tag);
+}
+
+// Group published business-level evidence by business record id. Same gate and
+// shape as firm tags, but this evidence renders only on that one business
+// (used for DOJ/AG actions specific to a chain — including conduct that may
+// predate the current owner, which the firm-level model can't represent).
+const evidenceByBizRec = new Map();
+for (const r of bizTagRows) {
+  const parsed = parsePublishedTag(r.fields, "business");
+  if (!parsed) {
+    summary.skipped_evidence++;
+    continue;
+  }
+  if (!evidenceByBizRec.has(parsed.linkRec)) evidenceByBizRec.set(parsed.linkRec, []);
+  evidenceByBizRec.get(parsed.linkRec).push(parsed.tag);
 }
 
 // Build a firm lookup keyed by record id (slug + display data + tags).
@@ -216,6 +250,9 @@ for (const r of bizRows) {
     // Drop blank Locations rows (e.g. Airtable's leftover empty default rows).
     .filter((loc) => loc && (loc.city || loc.state));
 
+  const evidence = evidenceByBizRec.get(r.id) || [];
+  summary.evidence_included += evidence.length;
+
   businesses.push({
     id: str(f.business_id),
     name,
@@ -228,6 +265,7 @@ for (const r of bizRows) {
     source_url: source,
     last_verified: dateOnly(f.last_verified),
     locations,
+    evidence, // business-specific evidence; renders only on this business
   });
 }
 
@@ -249,6 +287,7 @@ const output = {
     firms: firms.length,
     businesses: businesses.length,
     tags: summary.tags_included,
+    evidence: summary.evidence_included,
   },
   firms,
   businesses,
@@ -261,8 +300,12 @@ await writeFile(outPath, JSON.stringify(output, null, 2) + "\n");
 console.log(`\nWrote ${OUTPUT_FILE}`);
 console.log(`  Firms published:      ${summary.firms_included}`);
 console.log(`  Businesses published: ${summary.businesses_included}`);
-console.log(`  Tags published:       ${summary.tags_included}`);
+console.log(`  Firm tags published:  ${summary.tags_included}`);
+console.log(`  Business evidence published: ${summary.evidence_included}`);
 console.log(`  Tags skipped (unpublished / bad tier): ${summary.skipped_tags}`);
+if (summary.skipped_evidence) {
+  console.log(`  Business evidence skipped (unpublished / bad tier): ${summary.skipped_evidence}`);
+}
 if (summary.skipped_businesses.length) {
   console.log(`  Businesses skipped (${summary.skipped_businesses.length}):`);
   for (const s of summary.skipped_businesses) {
