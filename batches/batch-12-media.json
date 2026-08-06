@@ -1,0 +1,90 @@
+{
+  "_note": "Batch 12 — broadcast & digital media (radio, local TV, national digital). Distinct from Batch 11 (local newspapers). Imported via import-to-airtable.mjs; businesses land review_status=pending, evidence lands publish=true but still needs the publish checkbox verified. Scope: PE-owned only — the big cable/network conglomerates (Warner Bros. Discovery/CNN, Fox, NBC/Comcast, Paramount) are publicly traded and excluded. Evidence all Tier B (LBO/bankruptcy financial extraction + layoffs) — media PE harm is documented via journalism and bankruptcy filings, not regulatory enforcement. Fortress Investment Group already exists (Batch 11, Gannett) and now spans a second industry via Vice; Apollo enters the base as a firm (it appeared as a co-lender in earlier batches). iHeartMedia entered as ownership_status=former (Bain/THL exited via the 2018 bankruptcy/2019 IPO; now public). Industry-level media-consolidation research not attached (no single-firm home).",
+  "firms": [
+    {
+      "firm_id": "bain-capital",
+      "firm_name": "Bain Capital",
+      "firm_type": "PE",
+      "headquarters": "Boston, MA",
+      "portfolio_url": "https://www.baincapital.com",
+      "notes": "Co-led (with Thomas H. Lee Partners) the 2008 leveraged buyout of Clear Channel, later renamed iHeartMedia.",
+      "tags": []
+    },
+    {
+      "firm_id": "apollo-global-management",
+      "firm_name": "Apollo Global Management",
+      "firm_type": "PE",
+      "headquarters": "New York, NY",
+      "portfolio_url": "https://www.apollo.com",
+      "notes": "Acquired Cox Media Group's TV and radio stations in 2019.",
+      "tags": []
+    },
+    {
+      "firm_id": "great-hill-partners",
+      "firm_name": "Great Hill Partners",
+      "firm_type": "PE",
+      "headquarters": "Boston, MA",
+      "portfolio_url": "https://www.greathillpartners.com",
+      "notes": "Bought Gizmodo Media Group and The Onion from Univision in 2019, forming G/O Media.",
+      "tags": []
+    }
+  ],
+  "businesses": [
+    {
+      "business_id": "iheartmedia",
+      "business_name": "iHeartMedia",
+      "industry": "Broadcast & digital media",
+      "owning_firm_id": "bain-capital",
+      "platform_company": "Largest US radio broadcaster (~850 stations); taken private by Bain Capital and Thomas H. Lee Partners in 2008, now publicly traded after its 2019 restructuring",
+      "acquisition_date": "2008",
+      "ownership_status": "former",
+      "source_url": "https://fortune.com/2018/03/15/iheart-media-bankruptcy-radio-chapter-11",
+      "last_verified": "2026-08-06",
+      "evidence": [
+        { "tag": "Financial extraction", "evidence_tier": "B", "description": "Bain Capital and Thomas H. Lee Partners took Clear Channel (later iHeartMedia) private in a 2008 leveraged buyout valued at ~$26.7B, loading the largest US radio company with debt that ballooned from ~$8B to more than $20B. Unable to service it, iHeartMedia filed for Chapter 11 in 2018 — one of the largest media bankruptcies ever — while the PE firms nearly broke even through discounted debt purchases and management fees.", "source_url": "https://fortune.com/2018/03/15/iheart-media-bankruptcy-radio-chapter-11", "publish": true }
+      ]
+    },
+    {
+      "business_id": "cox-media-group",
+      "business_name": "Cox Media Group",
+      "industry": "Broadcast & digital media",
+      "owning_firm_id": "apollo-global-management",
+      "platform_company": "14 broadcast TV stations plus dozens of radio stations; Apollo acquired the TV group for ~$3.1B and a majority of the radio group in 2019",
+      "acquisition_date": "2019",
+      "ownership_status": "confirmed",
+      "source_url": "https://www.prnewswire.com/news-releases/cox-enterprises-announces-close-of-cox-media-group-sale-to-affiliates-of-apollo-global-management-300976507.html",
+      "last_verified": "2026-08-06",
+      "evidence": [
+        { "tag": "Labor", "evidence_tier": "B", "description": "Apollo's 2019 acquisition of Cox Media Group's TV and radio stations was accompanied by rounds of layoffs across the stations, both around the deal's close and in the years after under PE ownership.", "source_url": "https://radioinsight.com/headlines/213217/large-round-of-layoffs-hit-cox-media-group-stations/", "publish": true }
+      ]
+    },
+    {
+      "business_id": "go-media",
+      "business_name": "G/O Media",
+      "industry": "Broadcast & digital media",
+      "owning_firm_id": "great-hill-partners",
+      "platform_company": "Digital publisher (Gizmodo, Kotaku, The Onion, Deadspin, Jezebel and more), bought from Univision in 2019",
+      "acquisition_date": "2019",
+      "ownership_status": "confirmed",
+      "source_url": "https://variety.com/2019/digital/news/deadspin-entire-staff-quits-1203390454/",
+      "last_verified": "2026-08-06",
+      "evidence": [
+        { "tag": "Labor", "evidence_tier": "B", "description": "Under Great Hill Partners' G/O Media, Deadspin's entire editorial staff resigned in Oct 2019 after the company fired the interim editor for refusing a 'stick to sports' mandate; the staff left to found Defector. G/O later laid off Jezebel's staff and, in 2024, sold off Deadspin (laying off all its staff) and The Onion.", "source_url": "https://variety.com/2019/digital/news/deadspin-entire-staff-quits-1203390454/", "publish": true }
+      ]
+    },
+    {
+      "business_id": "vice-media",
+      "business_name": "Vice Media",
+      "industry": "Broadcast & digital media",
+      "owning_firm_id": "fortress-investment-group",
+      "platform_company": "Digital media company (Vice, Vice News, Motherboard) once valued at ~$5.7B",
+      "acquisition_date": "2023",
+      "ownership_status": "confirmed",
+      "source_url": "https://www.cnbc.com/2023/05/15/vice-media-files-for-bankruptcy-to-enable-sale-to-lenders-including-soros-and-fortress.html",
+      "last_verified": "2026-08-06",
+      "evidence": [
+        { "tag": "Labor", "evidence_tier": "B", "description": "Vice Media filed for Chapter 11 in May 2023 and was sold for ~$350M to a lender group led by Fortress Investment Group (with Soros Fund Management and Monroe Capital). The new owners shuttered Vice World News, canceled the flagship Vice News Tonight, and later closed Vice.com's newsroom — cutting hundreds of jobs.", "source_url": "https://www.cnbc.com/2023/05/15/vice-media-files-for-bankruptcy-to-enable-sale-to-lenders-including-soros-and-fortress.html", "publish": true }
+      ]
+    }
+  ]
+}
