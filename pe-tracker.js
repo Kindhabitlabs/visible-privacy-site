@@ -50,6 +50,15 @@ const openCards = new Set();
 const uniqSorted = (arr) =>
   [...new Set(arr.filter(Boolean))].sort((a, b) => a.localeCompare(b));
 
+// Defensive DOM helpers: if an element is missing (e.g. a stale cached HTML
+// after a deploy renamed an id), skip it rather than throwing and blanking
+// the whole page.
+const byId = (id) => document.getElementById(id);
+const setText = (id, value) => {
+  const el = byId(id);
+  if (el) el.textContent = value;
+};
+
 // Tags a business inherits from its owning firm (the firm's overall pattern).
 function firmTags(b) {
   const f = firmById[b.firm_id];
@@ -133,7 +142,8 @@ function buildSelect(key, label, options) {
 }
 
 function renderFilterBar() {
-  const bar = document.getElementById("pe-filter-bar");
+  const bar = byId("pe-filter-bar");
+  if (!bar) return;
   bar.innerHTML = "";
 
   const industries = uniqSorted(BUSINESSES.map((b) => b.industry)).map((i) => ({ value: i, label: i }));
@@ -155,7 +165,7 @@ function renderFilterBar() {
   clear.addEventListener("click", () => {
     Object.keys(filters).forEach((k) => (filters[k] = ""));
     searchTerm = "";
-    document.getElementById("search-input").value = "";
+    { const si = byId("search-input"); if (si) si.value = ""; }
     renderFilterBar();
     renderCards();
   });
@@ -197,10 +207,10 @@ function renderViolation(t) {
 
 function renderCards() {
   const list = getFiltered();
-  const container = document.getElementById("card-list");
+  const container = byId("card-list");
+  if (!container) return; // nothing to render into (shouldn't happen)
   container.innerHTML = "";
-  document.getElementById("result-count").textContent =
-    list.length + (list.length === 1 ? " result" : " results");
+  setText("result-count", list.length + (list.length === 1 ? " result" : " results"));
 
   if (!list.length) {
     const empty = document.createElement("div");
@@ -308,17 +318,19 @@ function renderCards() {
 
 // ── Stats ────────────────────────────────────────────────────────────────
 function renderStats() {
-  document.getElementById("stat-businesses").textContent = BUSINESSES.length;
-  document.getElementById("stat-firms").textContent = FIRMS.length;
-  const industries = uniqSorted(BUSINESSES.map((b) => b.industry));
-  document.getElementById("stat-industries").textContent = industries.length;
+  setText("stat-businesses", BUSINESSES.length);
+  setText("stat-firms", FIRMS.length);
+  setText("stat-industries", uniqSorted(BUSINESSES.map((b) => b.industry)).length);
 }
 
 // ── Wire-up ────────────────────────────────────────────────────────────────
-document.getElementById("search-input").addEventListener("input", (e) => {
-  searchTerm = e.target.value;
-  renderCards();
-});
+const searchInput = byId("search-input");
+if (searchInput) {
+  searchInput.addEventListener("input", (e) => {
+    searchTerm = e.target.value;
+    renderCards();
+  });
+}
 document.querySelectorAll(".sort-btn").forEach((btn) => {
   btn.addEventListener("click", () => {
     sortBy = btn.dataset.sort;
@@ -336,21 +348,48 @@ if (suggest && SUBMISSION_FORM_URL) {
 }
 
 // ── Load ────────────────────────────────────────────────────────────────
-fetch("pe-data.json")
-  .then((r) => {
-    if (!r.ok) throw new Error(`pe-data.json ${r.status}`);
-    return r.json();
-  })
-  .then((data) => {
-    FIRMS = data.firms || [];
-    BUSINESSES = data.businesses || [];
-    firmById = Object.fromEntries(FIRMS.map((f) => [f.id, f]));
-    renderStats();
-    renderFilterBar();
-    renderCards();
-  })
-  .catch((err) => {
-    console.error(err);
-    document.getElementById("card-list").innerHTML =
+function showLoadError(err) {
+  const container = byId("card-list");
+  if (container) {
+    container.innerHTML =
       `<div class="pe-empty">Couldn't load the dataset (${err.message}). If you're opening this file directly, serve it over a local web server so the browser can fetch pe-data.json.</div>`;
-  });
+  }
+}
+
+// Load is kept separate from render: a genuine fetch/parse failure shows the
+// "couldn't load" message (and retries once), while a rendering hiccup — e.g. a
+// missing DOM node from a stale cached page — is logged but never masquerades
+// as a data-load failure, so the content still comes up.
+function loadData(attempt = 0) {
+  fetch("pe-data.json", attempt > 0 ? { cache: "reload" } : undefined)
+    .then((r) => {
+      if (!r.ok) throw new Error(`pe-data.json ${r.status}`);
+      return r.json();
+    })
+    .then((data) => {
+      FIRMS = data.firms || [];
+      BUSINESSES = data.businesses || [];
+      firmById = Object.fromEntries(FIRMS.map((f) => [f.id, f]));
+      try {
+        renderStats();
+        renderFilterBar();
+        renderCards();
+      } catch (renderErr) {
+        // Data is fine; a render step threw (likely a version-skewed cached
+        // page). Log it — don't tell the user the dataset failed to load.
+        console.error("PE tracker render error:", renderErr);
+      }
+    })
+    .catch((err) => {
+      // Transient network/cache blips often clear on a second try; retry once
+      // (bypassing cache) before surfacing the error.
+      if (attempt < 1) {
+        console.warn("pe-data.json load failed, retrying…", err);
+        setTimeout(() => loadData(attempt + 1), 1200);
+        return;
+      }
+      console.error(err);
+      showLoadError(err);
+    });
+}
+loadData();
