@@ -1,0 +1,130 @@
+{
+  "_note": "Batch 10 — mobile home parks / manufactured-housing communities. Imported via import-to-airtable.mjs; businesses land review_status=pending, evidence lands publish=true but still needs the publish checkbox verified. Evidence here skews Tier B (congressional inquiries + investigative journalism) — this vertical has less final-judgment litigation than the RealPage/DOJ apartments batch. The core harm pattern: residents own their homes but not the land, so PE owners raise lot rents on a captive population. Havenpark is the most firm-specific. Ownership is layered as usual; each business is tied to its best-documented PE owner. Blackstone already exists as a firm (no firm tags). Alden Global Capital is a hedge fund (closest firm_type is PE). Industry-level context (lot rents +45% in a decade; PE owns the majority of US manufactured-housing communities) is NOT attached (no single-firm home).",
+  "firms": [
+    {
+      "firm_id": "havenpark-capital",
+      "firm_name": "Havenpark Capital",
+      "firm_type": "PE",
+      "headquarters": "Lehi, UT",
+      "portfolio_url": "https://havenparkcommunities.com",
+      "notes": "Utah PE firm that owns Havenpark Communities, a manufactured-housing operator.",
+      "tags": []
+    },
+    {
+      "firm_id": "stockbridge-capital",
+      "firm_name": "Stockbridge Capital Group",
+      "firm_type": "PE",
+      "headquarters": "San Francisco, CA",
+      "portfolio_url": "https://www.stockbridge.com",
+      "notes": "Founded YES! Communities in 2008; sold 71% in 2016 to a JV led by Singapore's sovereign fund GIC (with Pennsylvania's PSERS), retaining ~29%.",
+      "tags": []
+    },
+    {
+      "firm_id": "brookfield",
+      "firm_name": "Brookfield Asset Management",
+      "firm_type": "PE",
+      "headquarters": "Toronto, Canada",
+      "portfolio_url": "https://www.brookfield.com",
+      "notes": "Acquired 135 manufactured-housing parks from RHP Properties in 2017; RHP retains ~5% and manages day-to-day operations.",
+      "tags": []
+    },
+    {
+      "firm_id": "mhp-funds",
+      "firm_name": "MHP Funds (Frank Rolfe & Dave Reynolds)",
+      "firm_type": "PE",
+      "headquarters": "Cedaredge, CO",
+      "notes": "Investment funds run by Frank Rolfe and Dave Reynolds, who also run 'Mobile Home University' investor trainings; operate parks under the Impact Communities brand.",
+      "tags": []
+    },
+    {
+      "firm_id": "alden-global",
+      "firm_name": "Alden Global Capital",
+      "firm_type": "PE",
+      "headquarters": "New York, NY",
+      "notes": "Hedge fund known for aggressive cost-cutting at local newspapers; owns manufactured housing through its subsidiary Homes of America.",
+      "tags": []
+    }
+  ],
+  "businesses": [
+    {
+      "business_id": "havenpark-communities",
+      "business_name": "Havenpark Communities",
+      "industry": "Mobile home parks",
+      "owning_firm_id": "havenpark-capital",
+      "platform_company": "Utah-based operator of manufactured-housing communities across the Midwest and South",
+      "ownership_status": "confirmed",
+      "source_url": "https://iowastartingline.com/2026/01/23/havenpark-mobile-home-park-water-erosion-problems-lake-ridge-estates/",
+      "last_verified": "2026-08-06",
+      "evidence": [
+        { "tag": "Consumer harm", "evidence_tier": "B", "description": "In 2019 Havenpark raised lot rents 24–69% at its Iowa parks (one resident's rent rose ~60%), prompting Sen. Elizabeth Warren and Rep. Dave Loebsack to write the company calling the practices predatory. Residents have since reported neglected conditions — including a park sinking due to water erosion — and Havenpark has been selling off its Iowa parks amid ongoing complaints.", "source_url": "https://iowastartingline.com/2026/01/23/havenpark-mobile-home-park-water-erosion-problems-lake-ridge-estates/", "publish": true }
+      ]
+    },
+    {
+      "business_id": "yes-communities",
+      "business_name": "YES! Communities",
+      "industry": "Mobile home parks",
+      "owning_firm_id": "stockbridge-capital",
+      "platform_company": "~265 communities / 75,000+ home sites in 24 states; majority-owned since 2016 by a JV led by Singapore's GIC (with PSERS), Stockbridge retaining ~29%",
+      "acquisition_date": "2008",
+      "ownership_status": "confirmed",
+      "source_url": "https://pestakeholder.org/pesp-private-equity-manufactured-housing-tracker/",
+      "last_verified": "2026-08-06",
+      "evidence": [
+        { "tag": "Consumer harm", "evidence_tier": "B", "description": "Named among the manufactured-housing landlords in Sen. Elizabeth Warren's March 2026 probe of the biggest corporate landlords over allegedly predatory rent and fee practices, and cited in reporting on aggressive rent increases across large mobile-home operators.", "source_url": "https://www.banking.senate.gov/newsroom/minority/warren-probes-biggest-corporate-landlords-on-predatory-rental-practices-across-housing-sector", "publish": true }
+      ]
+    },
+    {
+      "business_id": "rhp-properties",
+      "business_name": "RHP Properties",
+      "industry": "Mobile home parks",
+      "owning_firm_id": "brookfield",
+      "platform_company": "One of the largest US manufactured-housing owners (~370 communities); Brookfield acquired 135 RHP parks in 2017, RHP retaining ~5% and managing operations",
+      "acquisition_date": "2017",
+      "ownership_status": "confirmed",
+      "source_url": "https://pestakeholder.org/pesp-private-equity-manufactured-housing-tracker/",
+      "last_verified": "2026-08-06",
+      "evidence": [
+        { "tag": "Consumer harm", "evidence_tier": "B", "description": "Named in Sen. Elizabeth Warren's March 2026 probe of the biggest corporate landlords across the single-family, multifamily and manufactured-housing sectors over allegedly aggressive and predatory rent and fee practices.", "source_url": "https://www.banking.senate.gov/newsroom/minority/warren-probes-biggest-corporate-landlords-on-predatory-rental-practices-across-housing-sector", "publish": true }
+      ]
+    },
+    {
+      "business_id": "treehouse-communities",
+      "business_name": "Treehouse Communities",
+      "industry": "Mobile home parks",
+      "owning_firm_id": "blackstone",
+      "platform_company": "Blackstone's manufactured-housing platform",
+      "ownership_status": "confirmed",
+      "source_url": "https://pestakeholder.org/pesp-private-equity-manufactured-housing-tracker/",
+      "last_verified": "2026-08-06",
+      "evidence": [
+        { "tag": "Consumer harm", "evidence_tier": "B", "description": "Blackstone was named in Sen. Elizabeth Warren's March 2026 probe of the 14 biggest corporate landlords over allegedly predatory rent and fee practices across the housing sector, including manufactured housing.", "source_url": "https://www.banking.senate.gov/newsroom/minority/warren-probes-biggest-corporate-landlords-on-predatory-rental-practices-across-housing-sector", "publish": true }
+      ]
+    },
+    {
+      "business_id": "impact-communities",
+      "business_name": "Impact Communities",
+      "industry": "Mobile home parks",
+      "owning_firm_id": "mhp-funds",
+      "platform_company": "Manufactured-housing communities operated by Frank Rolfe & Dave Reynolds, who teach investors a buy-and-raise-lot-rent strategy via 'Mobile Home University'",
+      "ownership_status": "confirmed",
+      "source_url": "https://pestakeholder.org/pesp-private-equity-manufactured-housing-tracker/",
+      "last_verified": "2026-08-06",
+      "evidence": [
+        { "tag": "Consumer harm", "evidence_tier": "B", "description": "Impact Communities — run by Frank Rolfe and Dave Reynolds, who teach investors via 'Mobile Home University' to buy parks and raise lot rents on residents who own their homes but not the land — was named in Sen. Warren's March 2026 corporate-landlord probe.", "source_url": "https://www.banking.senate.gov/newsroom/minority/warren-probes-biggest-corporate-landlords-on-predatory-rental-practices-across-housing-sector", "publish": true }
+      ]
+    },
+    {
+      "business_id": "homes-of-america",
+      "business_name": "Homes of America",
+      "industry": "Mobile home parks",
+      "owning_firm_id": "alden-global",
+      "platform_company": "Manufactured-housing subsidiary of Alden Global Capital, the hedge fund known for aggressive cost-cutting at local newspapers",
+      "ownership_status": "confirmed",
+      "source_url": "https://www.jec.senate.gov/public/index.cfm/democrats/2025/12/senator-hassan-presses-corporate-owners-of-mobile-home-communities-for-answers-on-affordability-and-resident-living-conditions",
+      "last_verified": "2026-08-06",
+      "evidence": [
+        { "tag": "Consumer harm", "evidence_tier": "B", "description": "Homes of America (Alden Global Capital) was named in both Sen. Warren's March 2026 corporate-landlord probe and Sen. Maggie Hassan's Dec 2025 Joint Economic Committee investigation into manufactured-housing owners over affordability and resident living-conditions concerns.", "source_url": "https://www.jec.senate.gov/public/index.cfm/democrats/2025/12/senator-hassan-presses-corporate-owners-of-mobile-home-communities-for-answers-on-affordability-and-resident-living-conditions", "publish": true }
+      ]
+    }
+  ]
+}
