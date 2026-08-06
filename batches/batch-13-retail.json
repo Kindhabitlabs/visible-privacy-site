@@ -1,0 +1,103 @@
+{
+  "_note": "Batch 13 — retail & restaurants (the PE debt-load-and-die pattern). Retrospective/cautionary batch: 4 of 5 are ownership_status=former (liquidated or exited); Sears is confirmed (ESL still controls the Transformco remnant). Imported via import-to-airtable.mjs; businesses land review_status=pending, evidence lands publish=true but still needs the publish checkbox verified. All evidence is Tier B (bankruptcy filings, reporting, and private litigation — not government enforcement) and tagged Financial extraction, illustrating the leveraged-buyout mechanism (debt loading, dividend recaps, sale-leasebacks). Cross-links: Bain Capital (also iHeart) and Leonard Green (also Wrench + Aspen) already exist as firms with no firm tags, so no bleed. Toys R Us is placed under Bain (a co-lead with KKR + Vornado) specifically to avoid KKR's PetVet firm-tag bleeding onto it.",
+  "firms": [
+    {
+      "firm_id": "esl-investments",
+      "firm_name": "ESL Investments",
+      "firm_type": "PE",
+      "headquarters": "Greenwich, CT",
+      "notes": "Eddie Lampert's hedge fund; controlled Sears Holdings from the 2005 Kmart merger through its 2018 bankruptcy, and now the ESL-controlled remnant, Transformco.",
+      "tags": []
+    },
+    {
+      "firm_id": "golden-gate-capital",
+      "firm_name": "Golden Gate Capital",
+      "firm_type": "PE",
+      "headquarters": "San Francisco, CA",
+      "portfolio_url": "https://www.goldengatecap.com",
+      "notes": "Bought Red Lobster from Darden in 2014 (and formerly owned Payless ShoeSource, Eddie Bauer and others).",
+      "tags": []
+    },
+    {
+      "firm_id": "sycamore-partners",
+      "firm_name": "Sycamore Partners",
+      "firm_type": "PE",
+      "headquarters": "New York, NY",
+      "portfolio_url": "https://www.sycamorepartners.com",
+      "notes": "Retail-focused PE firm; portfolio has included Nine West, Aeropostale, Staples, Belk and Talbots.",
+      "tags": []
+    }
+  ],
+  "businesses": [
+    {
+      "business_id": "toys-r-us",
+      "business_name": "Toys R Us",
+      "industry": "Retail & restaurants",
+      "owning_firm_id": "bain-capital",
+      "platform_company": "Iconic toy retailer; taken private in a 2005 $6.6B LBO by Bain Capital, KKR and Vornado Realty Trust; liquidated in 2018",
+      "acquisition_date": "2005",
+      "ownership_status": "former",
+      "source_url": "https://pestakeholder.org/news/kkr-bain-capital-vornado-repeatedly-rewarded-themselves-for-adding-debt-to-toys-r-us/",
+      "last_verified": "2026-08-06",
+      "evidence": [
+        { "tag": "Financial extraction", "evidence_tier": "B", "description": "Bain Capital, KKR and Vornado took Toys R Us private in a 2005 $6.6B leveraged buyout, loading it with ~$5B of debt that cost ~$400M/year to service. The company filed for Chapter 11 in Sept 2017 and liquidated in 2018 — closing ~800 stores and cutting 33,000 jobs, initially with no severance — even as the PE owners collected ~$464M in fees and interest. Congress publicly confronted Bain and KKR over the collapse.", "source_url": "https://pestakeholder.org/news/kkr-bain-capital-vornado-repeatedly-rewarded-themselves-for-adding-debt-to-toys-r-us/", "publish": true }
+      ]
+    },
+    {
+      "business_id": "sears",
+      "business_name": "Sears",
+      "industry": "Retail & restaurants",
+      "owning_firm_id": "esl-investments",
+      "platform_company": "Once ~3,500 stores; controlled by Eddie Lampert's ESL since the 2005 Kmart–Sears merger, now reduced to a handful under the ESL-controlled Transformco",
+      "acquisition_date": "2005",
+      "ownership_status": "confirmed",
+      "source_url": "https://www.cbsnews.com/news/following-bankruptcy-sears-sues-former-chairman-eddie-lampert/",
+      "last_verified": "2026-08-06",
+      "evidence": [
+        { "tag": "Financial extraction", "evidence_tier": "B", "description": "Sears' post-bankruptcy estate sued Eddie Lampert and ESL alleging they stripped more than $2B of assets from the retailer via self-dealing — including the Lands' End spinoff and the 2015 Seritage sale-leaseback of 200+ Sears stores — moving value beyond creditors' reach as the company slid toward its Oct 2018 bankruptcy. The claims settled for $175M. Sears shrank from ~3,500 stores to a handful.", "source_url": "https://www.cbsnews.com/news/following-bankruptcy-sears-sues-former-chairman-eddie-lampert/", "publish": true }
+      ]
+    },
+    {
+      "business_id": "red-lobster",
+      "business_name": "Red Lobster",
+      "industry": "Retail & restaurants",
+      "owning_firm_id": "golden-gate-capital",
+      "platform_company": "Casual-dining seafood chain; Golden Gate bought it from Darden in 2014, later sold it on; filed Chapter 11 in May 2024",
+      "acquisition_date": "2014",
+      "ownership_status": "former",
+      "source_url": "https://www.cnbc.com/2024/05/24/how-private-equity-rolled-red-lobster.html",
+      "last_verified": "2026-08-06",
+      "evidence": [
+        { "tag": "Financial extraction", "evidence_tier": "B", "description": "To help finance its $2.1B 2014 purchase of Red Lobster from Darden, Golden Gate Capital sold the chain's real estate for ~$1.5B in a sale-leaseback — pocketing cash while saddling Red Lobster with rent obligations it couldn't sustain. That debt-and-rent burden was widely cited as a key driver of Red Lobster's May 2024 Chapter 11 bankruptcy.", "source_url": "https://www.cnbc.com/2024/05/24/how-private-equity-rolled-red-lobster.html", "publish": true }
+      ]
+    },
+    {
+      "business_id": "nine-west",
+      "business_name": "Nine West",
+      "industry": "Retail & restaurants",
+      "owning_firm_id": "sycamore-partners",
+      "platform_company": "Footwear/apparel maker (formerly the Jones Group); Sycamore's 2014 LBO; filed for bankruptcy in 2018",
+      "acquisition_date": "2014",
+      "ownership_status": "former",
+      "source_url": "https://www.hklaw.com/en/insights/publications/2021/03/did-a-new-york-federal-court-just-burst-a-private-equity-bubble",
+      "last_verified": "2026-08-06",
+      "evidence": [
+        { "tag": "Financial extraction", "evidence_tier": "B", "description": "Sycamore acquired the Jones Group in a 2014 LBO, renamed it Nine West, and moved its most valuable brands (Stuart Weitzman, Kurt Geiger, Jones Apparel) to Sycamore affiliates for below fair value — beyond creditors' reach — while loading Nine West with debt. Nine West went bankrupt in 2018; in the litigation that followed, a court found the former directors may have breached their fiduciary duty by failing to evaluate whether the LBO would render the company insolvent — a landmark warning about PE buyout structures.", "source_url": "https://www.hklaw.com/en/insights/publications/2021/03/did-a-new-york-federal-court-just-burst-a-private-equity-bubble", "publish": true }
+      ]
+    },
+    {
+      "business_id": "sports-authority",
+      "business_name": "Sports Authority",
+      "industry": "Retail & restaurants",
+      "owning_firm_id": "leonard-green",
+      "platform_company": "Sporting-goods retailer; Leonard Green's 2006 $1.3B LBO; liquidated ~450 stores in 2016",
+      "acquisition_date": "2006",
+      "ownership_status": "former",
+      "source_url": "https://pestakeholder.org/news/joann-store-closures-among-many-leonard-green-and-partners-bankruptcies/",
+      "last_verified": "2026-08-06",
+      "evidence": [
+        { "tag": "Financial extraction", "evidence_tier": "B", "description": "Leonard Green & Partners bought Sports Authority in a 2006 LBO for ~$1.3B, loading it with debt. After missing a debt payment in early 2016, the retailer filed for Chapter 11 in March 2016 and liquidated all ~450 stores. It is one of several Leonard Green retail bankruptcies, alongside J.Crew and Joann.", "source_url": "https://pestakeholder.org/news/joann-store-closures-among-many-leonard-green-and-partners-bankruptcies/", "publish": true }
+      ]
+    }
+  ]
+}
