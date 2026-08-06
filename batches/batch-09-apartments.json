@@ -1,0 +1,88 @@
+{
+  "_note": "Batch 9 — apartments / multifamily, centered on the DOJ RealPage algorithmic rent-fixing case. Imported via import-to-airtable.mjs; businesses land review_status=pending, evidence lands publish=true but still needs the publish checkbox verified. PREREQUISITE: the Airtable 'industry' field must be Single line TEXT (not single-select) before importing — 'Apartments' is the 8th industry value and a single-select at the option cap will reject it. Scope: the three PE-owned RealPage co-defendants (Blackstone/LivCor, Greystar, Cortland) plus RealPage itself (owned by Thoma Bravo). The other three DOJ co-defendants are excluded as non-PE: Camden (public REIT), Cushman & Wakefield (public), Willow Bridge (private). RealPage is software, not a landlord, but it's the PE-owned pricing engine at the center of the case. Blackstone already exists as a firm (no firm tags). Greystar and Cortland are vertically integrated (the operator is its own PE sponsor), so firm and business share a name.",
+  "firms": [
+    {
+      "firm_id": "thoma-bravo",
+      "firm_name": "Thoma Bravo",
+      "firm_type": "PE",
+      "headquarters": "Chicago, IL",
+      "portfolio_url": "https://www.thomabravo.com",
+      "notes": "Software-focused PE firm; acquired RealPage in 2021 for ~$10.2B.",
+      "tags": []
+    },
+    {
+      "firm_id": "greystar",
+      "firm_name": "Greystar Real Estate Partners",
+      "firm_type": "PE",
+      "headquarters": "Charleston, SC",
+      "portfolio_url": "https://www.greystar.com",
+      "notes": "Vertically integrated apartment investment manager and operator — the largest US apartment manager (~1M units under management).",
+      "tags": []
+    },
+    {
+      "firm_id": "cortland",
+      "firm_name": "Cortland Partners",
+      "firm_type": "PE",
+      "headquarters": "Atlanta, GA",
+      "portfolio_url": "https://cortland.com",
+      "notes": "Vertically integrated apartment owner/operator; ~80,000 units, #8 on the NMHC list of largest US apartment owners.",
+      "tags": []
+    }
+  ],
+  "businesses": [
+    {
+      "business_id": "realpage",
+      "business_name": "RealPage",
+      "industry": "Apartments",
+      "owning_firm_id": "thoma-bravo",
+      "platform_company": "Apartment revenue-management / pricing software (YieldStar, AI Revenue Management) used by landlords nationwide — not a landlord itself, but the pricing engine at the center of the DOJ rent-algorithm case",
+      "acquisition_date": "2021",
+      "ownership_status": "confirmed",
+      "source_url": "https://pestakeholder.org/news/thoma-bravos-realpage-reaches-settlement-with-doj/",
+      "last_verified": "2026-08-06",
+      "evidence": [
+        { "tag": "Legal/regulatory", "evidence_tier": "A", "description": "The DOJ and eight state attorneys general sued RealPage in Aug 2024, alleging its YieldStar / AI revenue-management software let competing landlords share nonpublic, competitively sensitive pricing and occupancy data and algorithmically align their rents — an unlawful price-fixing scheme the DOJ said harmed millions of renters. RealPage settled in Nov 2025, agreeing to stop enabling the sharing of competitors' nonpublic pricing data and to stop training its pricing AI on it. Thoma Bravo acquired RealPage in 2021 for ~$10.2B.", "source_url": "https://pestakeholder.org/news/thoma-bravos-realpage-reaches-settlement-with-doj/", "publish": true }
+      ]
+    },
+    {
+      "business_id": "livcor",
+      "business_name": "LivCor",
+      "industry": "Apartments",
+      "owning_firm_id": "blackstone",
+      "platform_company": "Blackstone's apartment platform; Blackstone is the largest US apartment owner (~230,000 units)",
+      "acquisition_date": "2013",
+      "ownership_status": "confirmed",
+      "source_url": "https://pestakeholder.org/news/blackstone-settles-with-department-of-justice-in-realpage-lawsuit/",
+      "last_verified": "2026-08-06",
+      "evidence": [
+        { "tag": "Legal/regulatory", "evidence_tier": "A", "description": "Named in the DOJ's Jan 2025 amended RealPage complaint as one of six large landlords that coordinated rents through RealPage's algorithm. Blackstone's LivCor settled with the DOJ in Dec 2025, agreeing to stop using revenue-management software that relies on competitors' sensitive data and to cooperate in the ongoing litigation.", "source_url": "https://pestakeholder.org/news/blackstone-settles-with-department-of-justice-in-realpage-lawsuit/", "publish": true }
+      ]
+    },
+    {
+      "business_id": "greystar-apartments",
+      "business_name": "Greystar",
+      "industry": "Apartments",
+      "owning_firm_id": "greystar",
+      "platform_company": "Largest US apartment manager — ~1M units under management, ~141,000 owned; vertically integrated investment manager and operator",
+      "ownership_status": "confirmed",
+      "source_url": "https://pestakeholder.org/news/nations-largest-property-manager-greystar-agrees-to-no-longer-set-rents-through-realpage-as-part-of-settlements/",
+      "last_verified": "2026-08-06",
+      "evidence": [
+        { "tag": "Legal/regulatory", "evidence_tier": "A", "description": "Named in the DOJ's RealPage rent-algorithm case; Greystar — the nation's largest apartment manager — agreed in Aug 2025 to stop setting rents using RealPage's software and to stop sharing competitively sensitive data with competitors.", "source_url": "https://pestakeholder.org/news/nations-largest-property-manager-greystar-agrees-to-no-longer-set-rents-through-realpage-as-part-of-settlements/", "publish": true }
+      ]
+    },
+    {
+      "business_id": "cortland-apartments",
+      "business_name": "Cortland",
+      "industry": "Apartments",
+      "owning_firm_id": "cortland",
+      "platform_company": "Vertically integrated apartment owner/operator — ~80,000 units across ~240 communities",
+      "ownership_status": "confirmed",
+      "source_url": "https://www.justice.gov/archives/opa/pr/justice-department-sues-six-large-landlords-algorithmic-pricing-scheme-harms-millions",
+      "last_verified": "2026-08-06",
+      "evidence": [
+        { "tag": "Legal/regulatory", "evidence_tier": "A", "description": "Named in the DOJ's RealPage case; Cortland was the first landlord to settle (Jan 2025), agreeing to stop using RealPage's rent-setting software and not to share competitively sensitive data with competitors.", "source_url": "https://www.justice.gov/archives/opa/pr/justice-department-sues-six-large-landlords-algorithmic-pricing-scheme-harms-millions", "publish": true }
+      ]
+    }
+  ]
+}
