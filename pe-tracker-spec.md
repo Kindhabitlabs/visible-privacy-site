@@ -1,5 +1,15 @@
 # PE Ownership Tracker — Project Spec and Build Prompt
 
+> ⚠️ **Original design spec (historical).** The tracker is built and live; this document captures the
+> original intent. For **current state, totals, and the working process, see `pe-tracker-status.md`.**
+> The core here still governs — the two-layer model, the evidence standard (Tier A/B/C, "≥ B to
+> publish"), the language rule, the tag taxonomy, and the batched research process. Two things have
+> since evolved: (1) the **State/City faceted filtering was removed** (all entries are national
+> chains — the page now filters by industry / owning firm / practice tag); and (2) a
+> **business-level evidence layer was added** (an Airtable `Business Tags` table) so DOJ/FTC/AG
+> actions specific to one chain — including conduct predating the current owner — attach to that
+> business rather than the firm. Business evidence is now where most of the strongest evidence lives.
+
 ## Context (read first)
 
 This is a new feature for **visableprivacy.com** ("Visable"), a privacy and corporate-transparency project by **KindHabitLabs Inc.** (Utah). Visable already has a "corporate dossier" tracker page and a filtering pattern similar to what this feature needs.
