@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-08-05T23:28:15.546Z",
+  "generated_at": "2026-08-06T17:02:47.601Z",
   "counts": {
-    "firms": 28,
-    "businesses": 36,
+    "firms": 44,
+    "businesses": 59,
     "tags": 10,
-    "evidence": 19
+    "evidence": 42
   },
   "firms": [
     {
@@ -14,6 +14,15 @@
       "headquarters": "Boston, MA",
       "portfolio_url": "https://www.adventinternational.com",
       "notes": "Acquired AccentCare from Oak Hill Capital in 2019 — its first move into home health and hospice.",
+      "tags": []
+    },
+    {
+      "id": "alden-global",
+      "name": "Alden Global Capital",
+      "type": "PE",
+      "headquarters": "New York, NY",
+      "portfolio_url": "",
+      "notes": "Hedge fund known for aggressive cost-cutting at local newspapers; owns manufactured housing through its subsidiary Homes of America.",
       "tags": []
     },
     {
@@ -43,12 +52,30 @@
       "tags": []
     },
     {
+      "id": "apollo-global-management",
+      "name": "Apollo Global Management",
+      "type": "PE",
+      "headquarters": "New York, NY",
+      "portfolio_url": "https://www.apollo.com",
+      "notes": "Acquired Cox Media Group's TV and radio stations in 2019.",
+      "tags": []
+    },
+    {
       "id": "ares-management",
       "name": "Ares Management",
       "type": "PE",
       "headquarters": "Los Angeles, CA",
       "portfolio_url": "https://www.aresmgmt.com",
       "notes": "Co-majority owner of Aspen Dental Management (with Leonard Green & Partners; American Securities holds a minority stake).",
+      "tags": []
+    },
+    {
+      "id": "bain-capital",
+      "name": "Bain Capital",
+      "type": "PE",
+      "headquarters": "Boston, MA",
+      "portfolio_url": "https://www.baincapital.com",
+      "notes": "Co-led (with Thomas H. Lee Partners) the 2008 leveraged buyout of Clear Channel, later renamed iHeartMedia.",
       "tags": []
     },
     {
@@ -70,12 +97,30 @@
       "tags": []
     },
     {
+      "id": "brookfield",
+      "name": "Brookfield Asset Management",
+      "type": "PE",
+      "headquarters": "Toronto, Canada",
+      "portfolio_url": "https://www.brookfield.com",
+      "notes": "Acquired 135 manufactured-housing parks from RHP Properties in 2017; RHP retains ~5% and manages day-to-day operations.",
+      "tags": []
+    },
+    {
       "id": "cerberus-capital",
       "name": "Cerberus Capital Management",
       "type": "PE",
       "headquarters": "New York, NY",
       "portfolio_url": "https://www.cerberus.com",
       "notes": "Owner of FirstKey Homes, one of the largest US single-family rental platforms.",
+      "tags": []
+    },
+    {
+      "id": "chatham-asset-management",
+      "name": "Chatham Asset Management",
+      "type": "PE",
+      "headquarters": "Chatham, NJ",
+      "portfolio_url": "https://www.chathamasset.com",
+      "notes": "Hedge fund; acquired McClatchy out of bankruptcy in 2020. Also controls Canada's Postmedia and American Media (publisher of the National Enquirer).",
       "tags": []
     },
     {
@@ -88,6 +133,24 @@
       "tags": []
     },
     {
+      "id": "cortland",
+      "name": "Cortland Partners",
+      "type": "PE",
+      "headquarters": "Atlanta, GA",
+      "portfolio_url": "https://cortland.com",
+      "notes": "Vertically integrated apartment owner/operator; ~80,000 units, #8 on the NMHC list of largest US apartment owners.",
+      "tags": []
+    },
+    {
+      "id": "esl-investments",
+      "name": "ESL Investments",
+      "type": "PE",
+      "headquarters": "Greenwich, CT",
+      "portfolio_url": "",
+      "notes": "Eddie Lampert's hedge fund; controlled Sears Holdings from the 2005 Kmart merger through its 2018 bankruptcy, and now the ESL-controlled remnant, Transformco.",
+      "tags": []
+    },
+    {
       "id": "formation-capital",
       "name": "Formation Capital",
       "type": "PE",
@@ -97,12 +160,30 @@
       "tags": []
     },
     {
+      "id": "fortress-investment-group",
+      "name": "Fortress Investment Group",
+      "type": "PE",
+      "headquarters": "New York, NY",
+      "portfolio_url": "https://www.fortress.com",
+      "notes": "Managed GateHouse Media / New Media Investment Group, which merged with Gannett in 2019 to form the largest US newspaper chain. (Fortress itself has been owned by SoftBank and later Mubadala.)",
+      "tags": []
+    },
+    {
       "id": "gi-partners",
       "name": "GI Partners",
       "type": "PE",
       "headquarters": "San Francisco, CA",
       "portfolio_url": "https://www.gipartners.com",
       "notes": "Made a majority investment in ARS / American Residential Services in 2020; Charlesbank Capital Partners remains a co-owner.",
+      "tags": []
+    },
+    {
+      "id": "golden-gate-capital",
+      "name": "Golden Gate Capital",
+      "type": "PE",
+      "headquarters": "San Francisco, CA",
+      "portfolio_url": "https://www.goldengatecap.com",
+      "notes": "Bought Red Lobster from Darden in 2014 (and formerly owned Payless ShoeSource, Eddie Bauer and others).",
       "tags": []
     },
     {
@@ -130,12 +211,39 @@
       ]
     },
     {
+      "id": "great-hill-partners",
+      "name": "Great Hill Partners",
+      "type": "PE",
+      "headquarters": "Boston, MA",
+      "portfolio_url": "https://www.greathillpartners.com",
+      "notes": "Bought Gizmodo Media Group and The Onion from Univision in 2019, forming G/O Media.",
+      "tags": []
+    },
+    {
+      "id": "greystar",
+      "name": "Greystar Real Estate Partners",
+      "type": "PE",
+      "headquarters": "Charleston, SC",
+      "portfolio_url": "https://www.greystar.com",
+      "notes": "Vertically integrated apartment investment manager and operator — the largest US apartment manager (~1M units under management).",
+      "tags": []
+    },
+    {
       "id": "gryphon-investors",
       "name": "Gryphon Investors",
       "type": "PE",
       "headquarters": "San Francisco, CA",
       "portfolio_url": "https://www.gryphon-inv.com",
       "notes": "Owner of Smile Brands (originally acquired 2016, sold, re-acquired 2024).",
+      "tags": []
+    },
+    {
+      "id": "havenpark-capital",
+      "name": "Havenpark Capital",
+      "type": "PE",
+      "headquarters": "Lehi, UT",
+      "portfolio_url": "https://havenparkcommunities.com",
+      "notes": "Utah PE firm that owns Havenpark Communities, a manufactured-housing operator.",
       "tags": []
     },
     {
@@ -213,6 +321,15 @@
       ]
     },
     {
+      "id": "mhp-funds",
+      "name": "MHP Funds (Frank Rolfe & Dave Reynolds)",
+      "type": "PE",
+      "headquarters": "Cedaredge, CO",
+      "portfolio_url": "",
+      "notes": "Investment funds run by Frank Rolfe and Dave Reynolds, who also run 'Mobile Home University' investor trainings; operate parks under the Impact Communities brand.",
+      "tags": []
+    },
+    {
       "id": "new-mountain-capital",
       "name": "New Mountain Capital",
       "type": "PE",
@@ -284,12 +401,30 @@
       ]
     },
     {
+      "id": "stockbridge-capital",
+      "name": "Stockbridge Capital Group",
+      "type": "PE",
+      "headquarters": "San Francisco, CA",
+      "portfolio_url": "https://www.stockbridge.com",
+      "notes": "Founded YES! Communities in 2008; sold 71% in 2016 to a JV led by Singapore's sovereign fund GIC (with Pennsylvania's PSERS), retaining ~29%.",
+      "tags": []
+    },
+    {
       "id": "summit-partners",
       "name": "Summit Partners",
       "type": "PE",
       "headquarters": "Boston, MA",
       "portfolio_url": "https://www.summitpartners.com",
       "notes": "Led the 2018 buyout consortium for Sound Physicians (with Optum, Revelstoke and Silversmith).",
+      "tags": []
+    },
+    {
+      "id": "sycamore-partners",
+      "name": "Sycamore Partners",
+      "type": "PE",
+      "headquarters": "New York, NY",
+      "portfolio_url": "https://www.sycamorepartners.com",
+      "notes": "Retail-focused PE firm; portfolio has included Nine West, Aeropostale, Staples, Belk and Talbots.",
       "tags": []
     },
     {
@@ -308,6 +443,15 @@
       "headquarters": "Englewood Cliffs, NJ",
       "portfolio_url": "",
       "notes": "PE firm (Simcha Hyman, Naftali Zanziper) that rolled up ~100 nursing facilities under brands including Accordius Health, Pelican Health and Orchid Cove.",
+      "tags": []
+    },
+    {
+      "id": "thoma-bravo",
+      "name": "Thoma Bravo",
+      "type": "PE",
+      "headquarters": "Chicago, IL",
+      "portfolio_url": "https://www.thomabravo.com",
+      "notes": "Software-focused PE firm; acquired RealPage in 2021 for ~$10.2B.",
       "tags": []
     },
     {
@@ -533,6 +677,50 @@
       ]
     },
     {
+      "id": "cortland-apartments",
+      "name": "Cortland",
+      "industry": "Apartments",
+      "firm_id": "cortland",
+      "firm_name": "Cortland Partners",
+      "platform_company": "Vertically integrated apartment owner/operator — ~80,000 units across ~240 communities",
+      "acquisition_date": "",
+      "ownership_status": "confirmed",
+      "source_url": "https://www.justice.gov/archives/opa/pr/justice-department-sues-six-large-landlords-algorithmic-pricing-scheme-harms-millions",
+      "last_verified": "2026-08-06",
+      "locations": [],
+      "evidence": [
+        {
+          "tag": "Legal/regulatory",
+          "tier": "A",
+          "alleged": false,
+          "description": "Named in the DOJ's RealPage case; Cortland was the first landlord to settle (Jan 2025), agreeing to stop using RealPage's rent-setting software and not to share competitively sensitive data with competitors.",
+          "source_url": "https://www.justice.gov/archives/opa/pr/justice-department-sues-six-large-landlords-algorithmic-pricing-scheme-harms-millions"
+        }
+      ]
+    },
+    {
+      "id": "cox-media-group",
+      "name": "Cox Media Group",
+      "industry": "Broadcast & digital media",
+      "firm_id": "apollo-global-management",
+      "firm_name": "Apollo Global Management",
+      "platform_company": "14 broadcast TV stations plus dozens of radio stations; Apollo acquired the TV group for ~$3.1B and a majority of the radio group in 2019",
+      "acquisition_date": "2019",
+      "ownership_status": "confirmed",
+      "source_url": "https://www.prnewswire.com/news-releases/cox-enterprises-announces-close-of-cox-media-group-sale-to-affiliates-of-apollo-global-management-300976507.html",
+      "last_verified": "2026-08-06",
+      "locations": [],
+      "evidence": [
+        {
+          "tag": "Labor",
+          "tier": "B",
+          "alleged": false,
+          "description": "Apollo's 2019 acquisition of Cox Media Group's TV and radio stations was accompanied by rounds of layoffs across the stations, both around the deal's close and in the years after under PE ownership.",
+          "source_url": "https://radioinsight.com/headlines/213217/large-round-of-layoffs-hit-cox-media-group-stations/"
+        }
+      ]
+    },
+    {
       "id": "elara-caring",
       "name": "Elara Caring",
       "industry": "Hospice",
@@ -612,6 +800,50 @@
       "evidence": []
     },
     {
+      "id": "go-media",
+      "name": "G/O Media",
+      "industry": "Broadcast & digital media",
+      "firm_id": "great-hill-partners",
+      "firm_name": "Great Hill Partners",
+      "platform_company": "Digital publisher (Gizmodo, Kotaku, The Onion, Deadspin, Jezebel and more), bought from Univision in 2019",
+      "acquisition_date": "2019",
+      "ownership_status": "confirmed",
+      "source_url": "https://variety.com/2019/digital/news/deadspin-entire-staff-quits-1203390454/",
+      "last_verified": "2026-08-06",
+      "locations": [],
+      "evidence": [
+        {
+          "tag": "Labor",
+          "tier": "B",
+          "alleged": false,
+          "description": "Under Great Hill Partners' G/O Media, Deadspin's entire editorial staff resigned in Oct 2019 after the company fired the interim editor for refusing a 'stick to sports' mandate; the staff left to found Defector. G/O later laid off Jezebel's staff and, in 2024, sold off Deadspin (laying off all its staff) and The Onion.",
+          "source_url": "https://variety.com/2019/digital/news/deadspin-entire-staff-quits-1203390454/"
+        }
+      ]
+    },
+    {
+      "id": "gannett",
+      "name": "Gannett / GateHouse",
+      "industry": "Newspapers",
+      "firm_id": "fortress-investment-group",
+      "firm_name": "Fortress Investment Group",
+      "platform_company": "Largest US newspaper company — 260+ dailies including USA Today; assembled via the 2019 GateHouse–Gannett merger. Now publicly traded (NYSE: GCI) after internalizing management ~2020",
+      "acquisition_date": "2019",
+      "ownership_status": "former",
+      "source_url": "https://www.spokesman.com/stories/2019/aug/26/as-gannett-gatehouse-merge-newspaper-cost-cutting-/",
+      "last_verified": "2026-08-06",
+      "locations": [],
+      "evidence": [
+        {
+          "tag": "Financial extraction",
+          "tier": "B",
+          "alleged": false,
+          "description": "Fortress-managed New Media Investment Group (owner of GateHouse) merged with Gannett in 2019 to form the largest US newspaper chain — a ~$1.4B deal funded partly by a ~$1.79B loan from Apollo Global at ~11.5% interest. GateHouse cut roughly 200 staff in the first half of 2019, and cost-cutting and layoffs continued across the merged papers.",
+          "source_url": "https://www.spokesman.com/stories/2019/aug/26/as-gannett-gatehouse-merge-newspaper-cost-cutting-/"
+        }
+      ]
+    },
+    {
       "id": "genesis-healthcare",
       "name": "Genesis Healthcare",
       "industry": "Nursing homes",
@@ -663,6 +895,50 @@
       ]
     },
     {
+      "id": "greystar-apartments",
+      "name": "Greystar",
+      "industry": "Apartments",
+      "firm_id": "greystar",
+      "firm_name": "Greystar Real Estate Partners",
+      "platform_company": "Largest US apartment manager — ~1M units under management, ~141,000 owned; vertically integrated investment manager and operator",
+      "acquisition_date": "",
+      "ownership_status": "confirmed",
+      "source_url": "https://pestakeholder.org/news/nations-largest-property-manager-greystar-agrees-to-no-longer-set-rents-through-realpage-as-part-of-settlements/",
+      "last_verified": "2026-08-06",
+      "locations": [],
+      "evidence": [
+        {
+          "tag": "Legal/regulatory",
+          "tier": "A",
+          "alleged": false,
+          "description": "Named in the DOJ's RealPage rent-algorithm case; Greystar — the nation's largest apartment manager — agreed in Aug 2025 to stop setting rents using RealPage's software and to stop sharing competitively sensitive data with competitors.",
+          "source_url": "https://pestakeholder.org/news/nations-largest-property-manager-greystar-agrees-to-no-longer-set-rents-through-realpage-as-part-of-settlements/"
+        }
+      ]
+    },
+    {
+      "id": "havenpark-communities",
+      "name": "Havenpark Communities",
+      "industry": "Mobile home parks",
+      "firm_id": "havenpark-capital",
+      "firm_name": "Havenpark Capital",
+      "platform_company": "Utah-based operator of manufactured-housing communities across the Midwest and South",
+      "acquisition_date": "",
+      "ownership_status": "confirmed",
+      "source_url": "https://iowastartingline.com/2026/01/23/havenpark-mobile-home-park-water-erosion-problems-lake-ridge-estates/",
+      "last_verified": "2026-08-06",
+      "locations": [],
+      "evidence": [
+        {
+          "tag": "Consumer harm",
+          "tier": "B",
+          "alleged": false,
+          "description": "In 2019 Havenpark raised lot rents 24–69% at its Iowa parks (one resident's rent rose ~60%), prompting Sen. Elizabeth Warren and Rep. Dave Loebsack to write the company calling the practices predatory. Residents have since reported neglected conditions — including a park sinking due to water erosion — and Havenpark has been selling off its Iowa parks amid ongoing complaints.",
+          "source_url": "https://iowastartingline.com/2026/01/23/havenpark-mobile-home-park-water-erosion-problems-lake-ridge-estates/"
+        }
+      ]
+    },
+    {
       "id": "hcr-manorcare",
       "name": "HCR ManorCare",
       "industry": "Nursing homes",
@@ -706,6 +982,72 @@
       "evidence": []
     },
     {
+      "id": "homes-of-america",
+      "name": "Homes of America",
+      "industry": "Mobile home parks",
+      "firm_id": "alden-global",
+      "firm_name": "Alden Global Capital",
+      "platform_company": "Manufactured-housing subsidiary of Alden Global Capital, the hedge fund known for aggressive cost-cutting at local newspapers",
+      "acquisition_date": "",
+      "ownership_status": "confirmed",
+      "source_url": "https://www.jec.senate.gov/public/index.cfm/democrats/2025/12/senator-hassan-presses-corporate-owners-of-mobile-home-communities-for-answers-on-affordability-and-resident-living-conditions",
+      "last_verified": "2026-08-06",
+      "locations": [],
+      "evidence": [
+        {
+          "tag": "Consumer harm",
+          "tier": "B",
+          "alleged": false,
+          "description": "Homes of America (Alden Global Capital) was named in both Sen. Warren's March 2026 corporate-landlord probe and Sen. Maggie Hassan's Dec 2025 Joint Economic Committee investigation into manufactured-housing owners over affordability and resident living-conditions concerns.",
+          "source_url": "https://www.jec.senate.gov/public/index.cfm/democrats/2025/12/senator-hassan-presses-corporate-owners-of-mobile-home-communities-for-answers-on-affordability-and-resident-living-conditions"
+        }
+      ]
+    },
+    {
+      "id": "iheartmedia",
+      "name": "iHeartMedia",
+      "industry": "Broadcast & digital media",
+      "firm_id": "bain-capital",
+      "firm_name": "Bain Capital",
+      "platform_company": "Largest US radio broadcaster (~850 stations); taken private by Bain Capital and Thomas H. Lee Partners in 2008, now publicly traded after its 2019 restructuring",
+      "acquisition_date": "2008",
+      "ownership_status": "former",
+      "source_url": "https://fortune.com/2018/03/15/iheart-media-bankruptcy-radio-chapter-11",
+      "last_verified": "2026-08-06",
+      "locations": [],
+      "evidence": [
+        {
+          "tag": "Financial extraction",
+          "tier": "B",
+          "alleged": false,
+          "description": "Bain Capital and Thomas H. Lee Partners took Clear Channel (later iHeartMedia) private in a 2008 leveraged buyout valued at ~$26.7B, loading the largest US radio company with debt that ballooned from ~$8B to more than $20B. Unable to service it, iHeartMedia filed for Chapter 11 in 2018 — one of the largest media bankruptcies ever — while the PE firms nearly broke even through discounted debt purchases and management fees.",
+          "source_url": "https://fortune.com/2018/03/15/iheart-media-bankruptcy-radio-chapter-11"
+        }
+      ]
+    },
+    {
+      "id": "impact-communities",
+      "name": "Impact Communities",
+      "industry": "Mobile home parks",
+      "firm_id": "mhp-funds",
+      "firm_name": "MHP Funds (Frank Rolfe & Dave Reynolds)",
+      "platform_company": "Manufactured-housing communities operated by Frank Rolfe & Dave Reynolds, who teach investors a buy-and-raise-lot-rent strategy via 'Mobile Home University'",
+      "acquisition_date": "",
+      "ownership_status": "confirmed",
+      "source_url": "https://pestakeholder.org/pesp-private-equity-manufactured-housing-tracker/",
+      "last_verified": "2026-08-06",
+      "locations": [],
+      "evidence": [
+        {
+          "tag": "Consumer harm",
+          "tier": "B",
+          "alleged": false,
+          "description": "Impact Communities — run by Frank Rolfe and Dave Reynolds, who teach investors via 'Mobile Home University' to buy parks and raise lot rents on residents who own their homes but not the land — was named in Sen. Warren's March 2026 corporate-landlord probe.",
+          "source_url": "https://www.banking.senate.gov/newsroom/minority/warren-probes-biggest-corporate-landlords-on-predatory-rental-practices-across-housing-sector"
+        }
+      ]
+    },
+    {
       "id": "invitation-homes",
       "name": "Invitation Homes",
       "industry": "Single-family rentals",
@@ -728,6 +1070,28 @@
       ]
     },
     {
+      "id": "livcor",
+      "name": "LivCor",
+      "industry": "Apartments",
+      "firm_id": "blackstone",
+      "firm_name": "Blackstone",
+      "platform_company": "Blackstone's apartment platform; Blackstone is the largest US apartment owner (~230,000 units)",
+      "acquisition_date": "2013",
+      "ownership_status": "confirmed",
+      "source_url": "https://pestakeholder.org/news/blackstone-settles-with-department-of-justice-in-realpage-lawsuit/",
+      "last_verified": "2026-08-06",
+      "locations": [],
+      "evidence": [
+        {
+          "tag": "Legal/regulatory",
+          "tier": "A",
+          "alleged": false,
+          "description": "Named in the DOJ's Jan 2025 amended RealPage complaint as one of six large landlords that coordinated rents through RealPage's algorithm. Blackstone's LivCor settled with the DOJ in Dec 2025, agreeing to stop using revenue-management software that relies on competitors' sensitive data and to cooperate in the ongoing litigation.",
+          "source_url": "https://pestakeholder.org/news/blackstone-settles-with-department-of-justice-in-realpage-lawsuit/"
+        }
+      ]
+    },
+    {
       "id": "main-street-renewal",
       "name": "Main Street Renewal",
       "industry": "Single-family rentals",
@@ -740,6 +1104,50 @@
       "last_verified": "2026-08-05",
       "locations": [],
       "evidence": []
+    },
+    {
+      "id": "mcclatchy",
+      "name": "McClatchy",
+      "industry": "Newspapers",
+      "firm_id": "chatham-asset-management",
+      "firm_name": "Chatham Asset Management",
+      "platform_company": "2nd-largest US newspaper chain — 30 papers including the Miami Herald, Sacramento Bee, Kansas City Star and Charlotte Observer",
+      "acquisition_date": "2020",
+      "ownership_status": "confirmed",
+      "source_url": "https://www.poynter.org/local-news/2020/hedge-fund-chatham-asset-management-buy-the-mcclatchy-newspaper-chain/",
+      "last_verified": "2026-08-06",
+      "locations": [],
+      "evidence": [
+        {
+          "tag": "Financial extraction",
+          "tier": "B",
+          "alleged": false,
+          "description": "McClatchy carried heavy debt from its $4.5B 2006 purchase of Knight-Ridder and filed for Chapter 11 in Feb 2020. Hedge fund Chatham Asset Management, its longtime lead lender, won the bankruptcy auction in July 2020 — ending 163 years of family control and handing the chain to its creditors.",
+          "source_url": "https://www.poynter.org/local-news/2020/hedge-fund-chatham-asset-management-buy-the-mcclatchy-newspaper-chain/"
+        }
+      ]
+    },
+    {
+      "id": "medianews-group",
+      "name": "MediaNews Group",
+      "industry": "Newspapers",
+      "firm_id": "alden-global",
+      "firm_name": "Alden Global Capital",
+      "platform_company": "Alden's flagship newspaper group (formerly Digital First Media) — Denver Post, San Jose Mercury News, St. Paul Pioneer Press, Boston Herald and dozens more; Alden controls 200+ US papers",
+      "acquisition_date": "2010",
+      "ownership_status": "confirmed",
+      "source_url": "https://www.npr.org/2021/10/18/1046952430/the-consequences-of-when-a-hedge-fund-buys-newspapers",
+      "last_verified": "2026-08-06",
+      "locations": [],
+      "evidence": [
+        {
+          "tag": "Labor",
+          "tier": "B",
+          "alleged": false,
+          "description": "After taking over MediaNews Group out of bankruptcy in 2010, Alden cut newsroom staffing by more than 75% across its papers, and its 2016 consolidation of eight San Francisco Bay Area papers into two triggered mass layoffs. Alden's playbook — gutting newsrooms and selling off real estate — was the subject of The Atlantic's 2021 cover story 'The Men Who Are Killing America's Newspapers.'",
+          "source_url": "https://www.npr.org/2021/10/18/1046952430/the-consequences-of-when-a-hedge-fund-buys-newspapers"
+        }
+      ]
     },
     {
       "id": "mission-pet-health",
@@ -768,6 +1176,28 @@
       "last_verified": "2026-08-05",
       "locations": [],
       "evidence": []
+    },
+    {
+      "id": "nine-west",
+      "name": "Nine West",
+      "industry": "Retail & restaurants",
+      "firm_id": "sycamore-partners",
+      "firm_name": "Sycamore Partners",
+      "platform_company": "Footwear/apparel maker (formerly the Jones Group); Sycamore's 2014 LBO; filed for bankruptcy in 2018",
+      "acquisition_date": "2014",
+      "ownership_status": "former",
+      "source_url": "https://www.hklaw.com/en/insights/publications/2021/03/did-a-new-york-federal-court-just-burst-a-private-equity-bubble",
+      "last_verified": "2026-08-06",
+      "locations": [],
+      "evidence": [
+        {
+          "tag": "Financial extraction",
+          "tier": "B",
+          "alleged": false,
+          "description": "Sycamore acquired the Jones Group in a 2014 LBO, renamed it Nine West, and moved its most valuable brands (Stuart Weitzman, Kurt Geiger, Jones Apparel) to Sycamore affiliates for below fair value — beyond creditors' reach — while loading Nine West with debt. Nine West went bankrupt in 2018; in the litigation that followed, a court found the former directors may have breached their fiduciary duty by failing to evaluate whether the LBO would render the company insolvent — a landmark warning about PE buyout structures.",
+          "source_url": "https://www.hklaw.com/en/insights/publications/2021/03/did-a-new-york-federal-court-just-burst-a-private-equity-bubble"
+        }
+      ]
     },
     {
       "id": "petvet-care-centers",
@@ -806,6 +1236,72 @@
       ]
     },
     {
+      "id": "realpage",
+      "name": "RealPage",
+      "industry": "Apartments",
+      "firm_id": "thoma-bravo",
+      "firm_name": "Thoma Bravo",
+      "platform_company": "Apartment revenue-management / pricing software (YieldStar, AI Revenue Management) used by landlords nationwide — not a landlord itself, but the pricing engine at the center of the DOJ rent-algorithm case",
+      "acquisition_date": "2021",
+      "ownership_status": "confirmed",
+      "source_url": "https://pestakeholder.org/news/thoma-bravos-realpage-reaches-settlement-with-doj/",
+      "last_verified": "2026-08-06",
+      "locations": [],
+      "evidence": [
+        {
+          "tag": "Legal/regulatory",
+          "tier": "A",
+          "alleged": false,
+          "description": "The DOJ and eight state attorneys general sued RealPage in Aug 2024, alleging its YieldStar / AI revenue-management software let competing landlords share nonpublic, competitively sensitive pricing and occupancy data and algorithmically align their rents — an unlawful price-fixing scheme the DOJ said harmed millions of renters. RealPage settled in Nov 2025, agreeing to stop enabling the sharing of competitors' nonpublic pricing data and to stop training its pricing AI on it. Thoma Bravo acquired RealPage in 2021 for ~$10.2B.",
+          "source_url": "https://pestakeholder.org/news/thoma-bravos-realpage-reaches-settlement-with-doj/"
+        }
+      ]
+    },
+    {
+      "id": "red-lobster",
+      "name": "Red Lobster",
+      "industry": "Retail & restaurants",
+      "firm_id": "golden-gate-capital",
+      "firm_name": "Golden Gate Capital",
+      "platform_company": "Casual-dining seafood chain; Golden Gate bought it from Darden in 2014, later sold it on; filed Chapter 11 in May 2024",
+      "acquisition_date": "2014",
+      "ownership_status": "former",
+      "source_url": "https://www.cnbc.com/2024/05/24/how-private-equity-rolled-red-lobster.html",
+      "last_verified": "2026-08-06",
+      "locations": [],
+      "evidence": [
+        {
+          "tag": "Financial extraction",
+          "tier": "B",
+          "alleged": false,
+          "description": "To help finance its $2.1B 2014 purchase of Red Lobster from Darden, Golden Gate Capital sold the chain's real estate for ~$1.5B in a sale-leaseback — pocketing cash while saddling Red Lobster with rent obligations it couldn't sustain. That debt-and-rent burden was widely cited as a key driver of Red Lobster's May 2024 Chapter 11 bankruptcy.",
+          "source_url": "https://www.cnbc.com/2024/05/24/how-private-equity-rolled-red-lobster.html"
+        }
+      ]
+    },
+    {
+      "id": "rhp-properties",
+      "name": "RHP Properties",
+      "industry": "Mobile home parks",
+      "firm_id": "brookfield",
+      "firm_name": "Brookfield Asset Management",
+      "platform_company": "One of the largest US manufactured-housing owners (~370 communities); Brookfield acquired 135 RHP parks in 2017, RHP retaining ~5% and managing operations",
+      "acquisition_date": "2017",
+      "ownership_status": "confirmed",
+      "source_url": "https://pestakeholder.org/pesp-private-equity-manufactured-housing-tracker/",
+      "last_verified": "2026-08-06",
+      "locations": [],
+      "evidence": [
+        {
+          "tag": "Consumer harm",
+          "tier": "B",
+          "alleged": false,
+          "description": "Named in Sen. Elizabeth Warren's March 2026 probe of the biggest corporate landlords across the single-family, multifamily and manufactured-housing sectors over allegedly aggressive and predatory rent and fee practices.",
+          "source_url": "https://www.banking.senate.gov/newsroom/minority/warren-probes-biggest-corporate-landlords-on-predatory-rental-practices-across-housing-sector"
+        }
+      ]
+    },
+    {
       "id": "scp-health",
       "name": "SCP Health",
       "industry": "Emergency medicine",
@@ -818,6 +1314,28 @@
       "last_verified": "2026-08-05",
       "locations": [],
       "evidence": []
+    },
+    {
+      "id": "sears",
+      "name": "Sears",
+      "industry": "Retail & restaurants",
+      "firm_id": "esl-investments",
+      "firm_name": "ESL Investments",
+      "platform_company": "Once ~3,500 stores; controlled by Eddie Lampert's ESL since the 2005 Kmart–Sears merger, now reduced to a handful under the ESL-controlled Transformco",
+      "acquisition_date": "2005",
+      "ownership_status": "confirmed",
+      "source_url": "https://www.cbsnews.com/news/following-bankruptcy-sears-sues-former-chairman-eddie-lampert/",
+      "last_verified": "2026-08-06",
+      "locations": [],
+      "evidence": [
+        {
+          "tag": "Financial extraction",
+          "tier": "B",
+          "alleged": false,
+          "description": "Sears' post-bankruptcy estate sued Eddie Lampert and ESL alleging they stripped more than $2B of assets from the retailer via self-dealing — including the Lands' End spinoff and the 2015 Seritage sale-leaseback of 200+ Sears stores — moving value beyond creditors' reach as the company slid toward its Oct 2018 bankruptcy. The claims settled for $175M. Sears shrank from ~3,500 stores to a handful.",
+          "source_url": "https://www.cbsnews.com/news/following-bankruptcy-sears-sues-former-chairman-eddie-lampert/"
+        }
+      ]
     },
     {
       "id": "sila-services",
@@ -862,6 +1380,28 @@
       "evidence": []
     },
     {
+      "id": "sports-authority",
+      "name": "Sports Authority",
+      "industry": "Retail & restaurants",
+      "firm_id": "leonard-green",
+      "firm_name": "Leonard Green & Partners",
+      "platform_company": "Sporting-goods retailer; Leonard Green's 2006 $1.3B LBO; liquidated ~450 stores in 2016",
+      "acquisition_date": "2006",
+      "ownership_status": "former",
+      "source_url": "https://pestakeholder.org/news/joann-store-closures-among-many-leonard-green-and-partners-bankruptcies/",
+      "last_verified": "2026-08-06",
+      "locations": [],
+      "evidence": [
+        {
+          "tag": "Financial extraction",
+          "tier": "B",
+          "alleged": false,
+          "description": "Leonard Green & Partners bought Sports Authority in a 2006 LBO for ~$1.3B, loading it with debt. After missing a debt payment in early 2016, the retailer filed for Chapter 11 in March 2016 and liquidated all ~450 stores. It is one of several Leonard Green retail bankruptcies, alongside J.Crew and Joann.",
+          "source_url": "https://pestakeholder.org/news/joann-store-closures-among-many-leonard-green-and-partners-bankruptcies/"
+        }
+      ]
+    },
+    {
       "id": "teamhealth",
       "name": "TeamHealth",
       "industry": "Emergency medicine",
@@ -903,6 +1443,72 @@
       "last_verified": "2026-08-05",
       "locations": [],
       "evidence": []
+    },
+    {
+      "id": "toys-r-us",
+      "name": "Toys R Us",
+      "industry": "Retail & restaurants",
+      "firm_id": "bain-capital",
+      "firm_name": "Bain Capital",
+      "platform_company": "Iconic toy retailer; taken private in a 2005 $6.6B LBO by Bain Capital, KKR and Vornado Realty Trust; liquidated in 2018",
+      "acquisition_date": "2005",
+      "ownership_status": "former",
+      "source_url": "https://pestakeholder.org/news/kkr-bain-capital-vornado-repeatedly-rewarded-themselves-for-adding-debt-to-toys-r-us/",
+      "last_verified": "2026-08-06",
+      "locations": [],
+      "evidence": [
+        {
+          "tag": "Financial extraction",
+          "tier": "B",
+          "alleged": false,
+          "description": "Bain Capital, KKR and Vornado took Toys R Us private in a 2005 $6.6B leveraged buyout, loading it with ~$5B of debt that cost ~$400M/year to service. The company filed for Chapter 11 in Sept 2017 and liquidated in 2018 — closing ~800 stores and cutting 33,000 jobs, initially with no severance — even as the PE owners collected ~$464M in fees and interest. Congress publicly confronted Bain and KKR over the collapse.",
+          "source_url": "https://pestakeholder.org/news/kkr-bain-capital-vornado-repeatedly-rewarded-themselves-for-adding-debt-to-toys-r-us/"
+        }
+      ]
+    },
+    {
+      "id": "treehouse-communities",
+      "name": "Treehouse Communities",
+      "industry": "Mobile home parks",
+      "firm_id": "blackstone",
+      "firm_name": "Blackstone",
+      "platform_company": "Blackstone's manufactured-housing platform",
+      "acquisition_date": "",
+      "ownership_status": "confirmed",
+      "source_url": "https://pestakeholder.org/pesp-private-equity-manufactured-housing-tracker/",
+      "last_verified": "2026-08-06",
+      "locations": [],
+      "evidence": [
+        {
+          "tag": "Consumer harm",
+          "tier": "B",
+          "alleged": false,
+          "description": "Blackstone was named in Sen. Elizabeth Warren's March 2026 probe of the 14 biggest corporate landlords over allegedly predatory rent and fee practices across the housing sector, including manufactured housing.",
+          "source_url": "https://www.banking.senate.gov/newsroom/minority/warren-probes-biggest-corporate-landlords-on-predatory-rental-practices-across-housing-sector"
+        }
+      ]
+    },
+    {
+      "id": "tribune-publishing",
+      "name": "Tribune Publishing",
+      "industry": "Newspapers",
+      "firm_id": "alden-global",
+      "firm_name": "Alden Global Capital",
+      "platform_company": "Chicago Tribune, New York Daily News, Orlando Sentinel, Hartford Courant and more (Baltimore Sun later sold); Alden bought Tribune Publishing for $633M in 2021",
+      "acquisition_date": "2021",
+      "ownership_status": "confirmed",
+      "source_url": "https://www.npr.org/2021/10/18/1046952430/the-consequences-of-when-a-hedge-fund-buys-newspapers",
+      "last_verified": "2026-08-06",
+      "locations": [],
+      "evidence": [
+        {
+          "tag": "Labor",
+          "tier": "B",
+          "alleged": false,
+          "description": "After Alden's $633M takeover of Tribune Publishing in 2021, papers such as the Chicago Tribune quickly lost about a quarter of their newsroom to buyouts, thinning coverage of state and local government. Sens. Dick Durbin and Tammy Duckworth publicly pressed Alden over the 'alarming' staff cuts.",
+          "source_url": "https://www.durbin.senate.gov/newsroom/press-releases/durbin-duckworth-press-alden-global-capital-on-alarming-staff-cuts-at-tribune-publishing"
+        }
+      ]
     },
     {
       "id": "tricon-residential",
@@ -961,6 +1567,28 @@
       "evidence": []
     },
     {
+      "id": "vice-media",
+      "name": "Vice Media",
+      "industry": "Broadcast & digital media",
+      "firm_id": "fortress-investment-group",
+      "firm_name": "Fortress Investment Group",
+      "platform_company": "Digital media company (Vice, Vice News, Motherboard) once valued at ~$5.7B",
+      "acquisition_date": "2023",
+      "ownership_status": "confirmed",
+      "source_url": "https://www.cnbc.com/2023/05/15/vice-media-files-for-bankruptcy-to-enable-sale-to-lenders-including-soros-and-fortress.html",
+      "last_verified": "2026-08-06",
+      "locations": [],
+      "evidence": [
+        {
+          "tag": "Labor",
+          "tier": "B",
+          "alleged": false,
+          "description": "Vice Media filed for Chapter 11 in May 2023 and was sold for ~$350M to a lender group led by Fortress Investment Group (with Soros Fund Management and Monroe Capital). The new owners shuttered Vice World News, canceled the flagship Vice News Tonight, and later closed Vice.com's newsroom — cutting hundreds of jobs.",
+          "source_url": "https://www.cnbc.com/2023/05/15/vice-media-files-for-bankruptcy-to-enable-sale-to-lenders-including-soros-and-fortress.html"
+        }
+      ]
+    },
+    {
       "id": "western-dental-sonrava",
       "name": "Western Dental / Sonrava Health",
       "industry": "Dental",
@@ -987,6 +1615,28 @@
       "last_verified": "2026-08-05",
       "locations": [],
       "evidence": []
+    },
+    {
+      "id": "yes-communities",
+      "name": "YES! Communities",
+      "industry": "Mobile home parks",
+      "firm_id": "stockbridge-capital",
+      "firm_name": "Stockbridge Capital Group",
+      "platform_company": "~265 communities / 75,000+ home sites in 24 states; majority-owned since 2016 by a JV led by Singapore's GIC (with PSERS), Stockbridge retaining ~29%",
+      "acquisition_date": "2008",
+      "ownership_status": "confirmed",
+      "source_url": "https://pestakeholder.org/pesp-private-equity-manufactured-housing-tracker/",
+      "last_verified": "2026-08-06",
+      "locations": [],
+      "evidence": [
+        {
+          "tag": "Consumer harm",
+          "tier": "B",
+          "alleged": false,
+          "description": "Named among the manufactured-housing landlords in Sen. Elizabeth Warren's March 2026 probe of the biggest corporate landlords over allegedly predatory rent and fee practices, and cited in reporting on aggressive rent increases across large mobile-home operators.",
+          "source_url": "https://www.banking.senate.gov/newsroom/minority/warren-probes-biggest-corporate-landlords-on-predatory-rental-practices-across-housing-sector"
+        }
+      ]
     }
   ]
 }
