@@ -334,13 +334,17 @@
       line-height: 1.5;
       max-width: 280px;
     }
-    .big-stat .src {
+    .big-stat .src,
+    .hero-stat .src,
+    .eu-stat .src {
       font-size: 10px;
-      color: #3a3a3a;
+      color: #4a4a4a;
       margin-top: 12px;
       text-transform: uppercase;
       letter-spacing: 0.1em;
+      line-height: 1.4;
     }
+    .eu-stat .src { margin-top: 8px; }
 
     /* ---- RATIONALIZATIONS ---- */
     .rationalizations { max-width: 1200px; margin: 0 auto; }
