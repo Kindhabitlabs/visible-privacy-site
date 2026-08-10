@@ -37,14 +37,14 @@
     <li><a href="pe-tracker.html">PE Ownership</a></li>
     <li><a href="flock.html">Flock Cameras</a></li>
     <li><a href="donate.html">Donate</a></li>
-    <li><a href="#tools" class="nav-cta">Protect Yourself</a></li>
+    <li><a href="#tools" class="nav-cta">Honest Mitigation</a></li>
   </ul>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
   <div class="hero-bg"></div>
-  <div class="hero-eyebrow">A Privacy Education Project</div>
+  <div class="hero-eyebrow">A Privacy & Corporate Accountability Education Project</div>
   <h1>You said you have<br /><em>nothing to hide.</em><br />That's the problem.</h1>
   <a href="tracker.html" class="btn-dossier">See the Corporate Dossier →</a>
   <p class="hero-sub">
@@ -277,46 +277,223 @@
   </div>
 </section>
 
-<!-- TOOLS -->
+<!-- HONEST MITIGATION -->
 <section class="tools-section" id="tools">
   <div class="tools-inner">
     <div class="section-label fade-up">What You Can Do</div>
-    <h2 class="fade-up">Start where you are.<br /><em>Right now.</em></h2>
-    <p class="intro fade-up">You don't have to go off-grid. You just have to stop being passive. Three tiers: pick your level of commitment.</p>
-    <p class="fade-up" style="font-size: 12px; color: var(--muted); margin-top: -24px; margin-bottom: 40px;">Some links below are affiliate links. We only recommend tools we actually trust.</p>
-    <div class="tools-grid fade-up">
-      <div class="tool-card">
-        <div class="tool-tier tier-start">Start Here: 30 Minutes</div>
-        <h3>Basic Hygiene</h3>
-        <p>The lowest-effort changes with the highest immediate impact. Do these today. They eliminate the most common attack surfaces and data leaks.</p>
-        <div class="tool-links">
-          <a href="https://haveibeenpwned.com" class="tool-link" target="_blank">Check if your email was breached (HaveIBeenPwned)</a>
-          <a href="https://duckduckgo.com" class="tool-link" target="_blank">Switch your default search engine to DuckDuckGo</a>
-          <a href="https://bitwarden.com" class="tool-link" target="_blank">Use a password manager (Bitwarden, free)</a>
-          <a href="https://support.apple.com/en-us/HT212614" class="tool-link" target="_blank">Turn on App Tracking Transparency (iOS)</a>
-        </div>
+    <h2 class="fade-up">Honest mitigation.<br />Nothing here is a <em>fix.</em></h2>
+
+    <div class="hm-body">
+
+      <!-- 1. OPENING FRAME -->
+      <div class="hm-block hm-open fade-up">
+        <p>Nothing on this page solves the problem. Every item on it reduces one specific harm by some specific amount and leaves the rest untouched. That is the most any tool currently does. Pretending otherwise is how the privacy industry sells subscriptions.</p>
+        <p>Most privacy advice is abstinence-only. Delete everything. Go off-grid. Trust nobody. It sets a standard almost nobody meets, and when you inevitably fall short of it, the lesson you take away is that none of it works. So you stop. That reaction is rational, and it is exactly what the advice was built to produce.</p>
+        <p>Harm reduction starts from the assumption that you will keep using the internet like a normal person. It asks what actually reduces damage, by how much, and at what ongoing cost. Everything below tells you what a tool stops, what it doesn't, and whether you ever have to think about it again.</p>
       </div>
-      <div class="tool-card">
-        <div class="tool-tier tier-mid">Go Further: A Few Hours</div>
-        <h3>Data Removal</h3>
-        <p>Data brokers collect and sell your personal info (name, address, phone, income, relatives) to anyone who pays. You can opt out. It takes persistence.</p>
-        <div class="tool-links">
-          <a href="https://redact.dev?affiliateCode=89W0HGYNOH" class="tool-link" target="_blank">Redact: bulk delete your old social media posts</a>
-          <a href="https://joindeleteme.com" class="tool-link" target="_blank">DeleteMe: automated data broker removal</a>
-          <a href="https://inteltechniques.com/workbook.html" class="tool-link" target="_blank">Michael Bazzell's opt-out workbook (free, manual)</a>
-          <a href="https://simpleoptout.com" class="tool-link" target="_blank">SimpleOptOut: direct links to every major opt-out</a>
+
+      <!-- 2. THE THREE ACTIONS -->
+      <section class="hm-block fade-up" aria-labelledby="hm-three-h">
+        <h3 id="hm-three-h">Three things. That's the entire ask.</h3>
+        <p>Assume you will do three things, ever, and never revisit them. These are the three, ranked by harm prevented per minute spent. The list is short on purpose. A longer one would be more complete, and you would do none of it.</p>
+
+        <ol class="hm-actions">
+          <li class="tool-card hm-action">
+            <div class="tool-tier tier-start">Action 01</div>
+            <h4>A password manager, 2FA, and a credit freeze</h4>
+            <p>Use <strong>Bitwarden</strong>: free, open source, no upsell required. 1Password is also fine if you would rather pay. So is the manager already built into your browser or phone, which is weaker, but a manager you actually use beats a better one you don't.</p>
+            <p>Do email and bank first and stop there if you run out of patience. Your email is the master key: whoever controls it can reset everything else you own. Two-factor authentication (2FA) means a second step after your password, usually a six-digit code. Use an authenticator app rather than text messages where you are given the choice, because text messages can be redirected to someone else's phone.</p>
+            <p><strong>Then freeze your credit.</strong> A password manager protects the accounts you already have. It does nothing about someone opening a <em>new</em> account in your name, which is the more common problem: of the roughly 449,000 credit card identity theft reports the FTC received in 2024, about 90 percent involved new accounts rather than existing ones. A credit freeze blocks new accounts from being opened against your credit file. It is free by law, you do it once at each of the three bureaus, and you can lift it temporarily when you actually need credit.</p>
+            <dl class="hm-facts">
+              <div><dt>Stops</dt><dd>Two different things. The manager and 2FA stop someone getting into accounts you already have using a password that leaked from a different site. The freeze stops someone opening new accounts in your name.</dd></div>
+              <div><dt>Doesn't stop</dt><dd>Collection. Nobody stops gathering data about you because your passwords got better.</dd></div>
+              <div><dt>Time</dt><dd>About 45 minutes for the manager and 2FA. About 15 more for the freeze, split across three bureaus.</dd></div>
+              <div><dt>One-time?</dt><dd><strong>Yes.</strong> Old passwords migrate gradually as you sign into things. The freeze stays until you lift it.</dd></div>
+            </dl>
+            <div class="hm-action-links">
+              <a class="ext-link" href="https://bitwarden.com" target="_blank" rel="noopener noreferrer">Bitwarden<span class="ext-ind" aria-hidden="true">↗</span><span class="visually-hidden"> (opens in a new tab)</span></a>
+              <a class="ext-link" href="https://consumer.ftc.gov/articles/what-know-about-credit-freezes-fraud-alerts" target="_blank" rel="noopener noreferrer">How to freeze your credit (FTC)<span class="ext-ind" aria-hidden="true">↗</span><span class="visually-hidden"> (opens in a new tab)</span></a>
+              <a class="ext-link secondary" href="https://haveibeenpwned.com" target="_blank" rel="noopener noreferrer">Check which of your accounts have already leaked<span class="ext-ind" aria-hidden="true">↗</span><span class="visually-hidden"> (opens in a new tab)</span></a>
+            </div>
+          </li>
+
+          <li class="tool-card hm-action">
+            <div class="tool-tier tier-mid">Action 02</div>
+            <h4>Use an email alias for every new signup, starting today</h4>
+            <p>An alias is a disposable address that forwards to your real inbox. A different one for each service means a leak or a sale from one does not connect to the rest of your life. It also tells you exactly who sold you out, because you can see which address the spam arrived at.</p>
+            <p><strong>DuckDuckGo Email Protection</strong> is the simplest free place to start: unlimited aliases, no payment. Firefox Relay, addy.io, SimpleLogin, and Apple's Hide My Email all do the same core thing. We are not picking a winner because there isn't one. They differ on price, polish, and how many aliases you get free, not on mechanism. Any of them beats using your real address.</p>
+            <dl class="hm-facts">
+              <div><dt>Stops</dt><dd>Future accumulation, permanently.</dd></div>
+              <div><dt>Doesn't stop</dt><dd>Anything already out there. Your real address is already held by data brokers and nothing here retrieves it.</dd></div>
+              <div><dt>Time</dt><dd>Ten minutes to set up, a few seconds per signup after.</dd></div>
+              <div><dt>One-time?</dt><dd><strong>Setup is.</strong> Using it is a habit, but a cheap one. The alias generator sits in the signup box and you click it.</dd></div>
+            </dl>
+            <div class="hm-action-links">
+              <a class="ext-link" href="https://duckduckgo.com/email/" target="_blank" rel="noopener noreferrer">DuckDuckGo Email Protection<span class="ext-ind" aria-hidden="true">↗</span><span class="visually-hidden"> (opens in a new tab)</span></a>
+              <a class="ext-link secondary" href="https://relay.firefox.com" target="_blank" rel="noopener noreferrer">Firefox Relay<span class="ext-ind" aria-hidden="true">↗</span><span class="visually-hidden"> (opens in a new tab)</span></a>
+              <a class="ext-link secondary" href="https://addy.io" target="_blank" rel="noopener noreferrer">addy.io<span class="ext-ind" aria-hidden="true">↗</span><span class="visually-hidden"> (opens in a new tab)</span></a>
+            </div>
+          </li>
+
+          <li class="tool-card hm-action">
+            <div class="tool-tier tier-deep">Action 03</div>
+            <h4>Install uBlock Origin</h4>
+            <p>A content blocker that removes most advertising and most third-party tracking. "Third-party" means companies other than the site you are actually looking at. It is free, it is not funded by an ad company, and it does not have a paid tier to push you toward.</p>
+            <dl class="hm-facts">
+              <div><dt>Stops</dt><dd>Most third-party tracking and most ads.</dd></div>
+              <div><dt>Doesn't stop</dt><dd>Tracking by the site itself, which is often the site that matters most. Nothing at all inside a phone app.</dd></div>
+              <div><dt>Time</dt><dd>Two minutes on Firefox. About twenty minutes on Chrome, because there it means switching browsers first.</dd></div>
+              <div><dt>One-time?</dt><dd><strong>Yes.</strong> Install it and forget it exists.</dd></div>
+            </dl>
+            <div class="hm-note">
+              <div class="hm-note-label">Browser notice</div>
+              <p><strong>uBlock Origin is going away on Chrome. It is not going away on Firefox.</strong></p>
+              <p>Google removed the extension technology the full version depends on. It stopped working on Chrome in July 2025, and on <strong>31 August 2026</strong> it is removed from the Chrome Web Store entirely.</p>
+              <p><strong>On Firefox:</strong> install uBlock Origin. Full version, unaffected, two minutes.</p>
+              <p><strong>On Chrome:</strong> you can install uBlock Origin Lite, which is meaningfully weaker because Google's rules cap what it is permitted to block, or you can switch to Firefox, which takes about twenty minutes including moving your bookmarks and passwords.</p>
+              <p>We are not going to pretend those two options are equivalent. The tool did not get worse. The browser did.</p>
+            </div>
+            <div class="hm-action-links">
+              <a class="ext-link" href="https://ublockorigin.com" target="_blank" rel="noopener noreferrer">uBlock Origin<span class="ext-ind" aria-hidden="true">↗</span><span class="visually-hidden"> (opens in a new tab)</span></a>
+              <a class="ext-link secondary" href="https://www.mozilla.org/firefox/new/" target="_blank" rel="noopener noreferrer">Firefox<span class="ext-ind" aria-hidden="true">↗</span><span class="visually-hidden"> (opens in a new tab)</span></a>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <!-- 3. THE HONEST TOOL TABLE -->
+      <section class="hm-block fade-up" aria-labelledby="hm-table-h">
+        <h3 id="hm-table-h">What each tool actually does</h3>
+        <p>The last column is the one to read. A permanent fix and a subscription you must re-run every two months are not the same product, and most privacy writing quietly refuses to tell you which one you are buying.</p>
+
+        <div class="hm-table-wrap">
+          <table class="hm-table">
+            <caption class="visually-hidden">Privacy tools compared by what they stop, what they do not stop, and whether they require ongoing effort.</caption>
+            <thead>
+              <tr>
+                <th scope="col">Tool</th>
+                <th scope="col">What it stops</th>
+                <th scope="col">What it doesn't</th>
+                <th scope="col">One-time or ongoing</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row" data-label="Tool">VPN</th>
+                <td data-label="What it stops">Your internet provider, and whoever runs the wifi you are on, from seeing which sites you visit. Genuinely useful on a network you do not control.</td>
+                <td data-label="What it doesn't">Anything Google, Meta, or any account you are logged into does. A VPN moves your trust to the VPN company. It does not remove trust from the equation. If you are going to hand a company that trust anyway, Proton VPN and Mullvad are the usual defensible answers.</td>
+                <td data-label="One-time or ongoing"><span class="hm-cadence hm-ongoing">Ongoing</span> A subscription, indefinitely.</td>
+              </tr>
+              <tr>
+                <th scope="row" data-label="Tool">Tor</th>
+                <td data-label="What it stops">Unlinks you from a destination for a single session, more thoroughly than a VPN can.</td>
+                <td data-label="What it doesn't">Daily life. It is slow, it breaks a lot of sites, and logging into your real accounts over it defeats the entire point.</td>
+                <td data-label="One-time or ongoing"><span class="hm-cadence hm-ongoing">Situational</span> The wrong tool for everyday browsing.</td>
+              </tr>
+              <tr>
+                <th scope="row" data-label="Tool">Data removal services<span class="hm-row-note">DeleteMe, Optery, and similar</span></th>
+                <td data-label="What it stops">Some of your footprint on people-search sites, the ones publishing your address, phone number, and relatives. Less of it than the marketing implies.</td>
+                <td data-label="What it doesn't">Ad tech, entirely. And most of what you are paying them to remove. In <a href="https://innovation.consumerreports.org/wp-content/uploads/2024/08/Data-Defense_-Evaluating-People-Search-Site-Removal-Services-.pdf" target="_blank" rel="noopener noreferrer">Consumer Reports' 2024 test</a> of seven services, only 35 percent of profiles were gone after four months. Opting out by hand, for free, removed 70 percent.</td>
+                <td data-label="One-time or ongoing"><span class="hm-cadence hm-ongoing">Ongoing</span> A subscription that mostly does not finish the job.</td>
+              </tr>
+              <tr>
+                <th scope="row" data-label="Tool">Password manager + 2FA</th>
+                <td data-label="What it stops">Account takeover: someone getting into the accounts you already have.</td>
+                <td data-label="What it doesn't">New accounts opened in your name, which is the more common fraud and needs a credit freeze instead. Collection continues exactly as before.</td>
+                <td data-label="One-time or ongoing"><span class="hm-cadence hm-once">One-time</span> Setup only.</td>
+              </tr>
+              <tr>
+                <th scope="row" data-label="Tool">Credit freeze</th>
+                <td data-label="What it stops">New accounts being opened against your credit file. This is the most-reported form of identity theft, and the freeze is free by law.</td>
+                <td data-label="What it doesn't">Anything about accounts you already have, and nothing whatsoever about collection. It is a lock on your credit file, not on your data.</td>
+                <td data-label="One-time or ongoing"><span class="hm-cadence hm-once">One-time</span> Stays until you lift it.</td>
+              </tr>
+              <tr>
+                <th scope="row" data-label="Tool">uBlock Origin</th>
+                <td data-label="What it stops">Most third-party tracking and ads.</td>
+                <td data-label="What it doesn't">First-party tracking by the site itself. Anything inside a phone app.</td>
+                <td data-label="One-time or ongoing"><span class="hm-cadence hm-once">One-time</span> But see the Chrome notice above.</td>
+              </tr>
+              <tr>
+                <th scope="row" data-label="Tool">Email aliases</th>
+                <td data-label="What it stops">Future accumulation, permanently.</td>
+                <td data-label="What it doesn't">Everything collected about you already.</td>
+                <td data-label="One-time or ongoing"><span class="hm-cadence hm-once">One-time</span> Setup, then a small habit.</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
-      </div>
-      <div class="tool-card">
-        <div class="tool-tier tier-deep">Go Deep: Ongoing Practice</div>
-        <h3>Structural Change</h3>
-        <p>These changes address the underlying architecture of how you interact with the internet. They require more commitment but provide lasting protection.</p>
-        <div class="tool-links">
-          <a href="https://go.getproton.me/aff_c?offer_id=26&aff_id=18595" class="tool-link" target="_blank">Proton Mail + VPN: encrypted by default</a>
-          <a href="https://signal.org" class="tool-link" target="_blank">Signal: end-to-end encrypted messaging</a>
-          <a href="https://brave.com" class="tool-link" target="_blank">Brave Browser: blocks trackers, fingerprinting</a>
+      </section>
+
+      <!-- 4. TARGETED THREAT ESCALATION -->
+      <section class="hm-block fade-up" aria-labelledby="hm-targeted-h">
+        <h3 id="hm-targeted-h">If someone is specifically looking for you</h3>
+        <p>Everything above assumes your problem is ambient: companies collecting data because it is profitable, not because it is you. If a specific person is trying to find you, that is a different problem and this page is not sufficient for it.</p>
+        <p>Stalking. Harassment campaigns. Doxxing. An abusive ex. A job that puts your name in public. Shrinking your people-search footprint is directly protective here, because the attack is literally someone typing your name into a search box. This is the one place on this page where removal work is worth serious effort.</p>
+        <p>It is also the place where the industry selling that work performs worst. <a href="https://innovation.consumerreports.org/wp-content/uploads/2024/08/Data-Defense_-Evaluating-People-Search-Site-Removal-Services-.pdf" target="_blank" rel="noopener noreferrer">Consumer Reports tested seven paid removal services</a> against 13 people-search sites over four months in 2024. The services removed 35 percent of profiles. Opting out by hand, for free, removed 70 percent, and did it faster. Individual services ranged from 4 percent to 68 percent. Consumer Reports also found that some removal services advertise on or partner with the very people-search sites they promise to clear you from.</p>
+        <p><strong>So do it yourself if you possibly can.</strong> It is slow and it is tedious, and it is also the most effective option anyone has measured. Pay for a service to buy back time, not to buy completeness, and know that you are buying a partial result either way.</p>
+        <p>It is also worth thinning your own history: old posts, old photos, old accounts tied to your real name. Redact bulk-deletes old social media posts, though it cannot touch anything already screenshotted, archived, or reposted by someone else.</p>
+        <div class="flock-cards">
+          <div class="flock-card primary">
+            <span class="flock-badge">Free, and most effective</span>
+            <div class="flock-card-name">Do it yourself</div>
+            <p>Michael Bazzell's workbook is the thorough version. SimpleOptOut collects direct opt-out links for the major brokers. This is the option that scored highest in testing.</p>
+            <div class="flock-card-links">
+              <a class="ext-link" href="https://inteltechniques.com/workbook.html" target="_blank" rel="noopener noreferrer">Opt-out workbook<span class="ext-ind" aria-hidden="true">↗</span><span class="visually-hidden"> (opens in a new tab)</span></a>
+              <a class="ext-link secondary" href="https://simpleoptout.com" target="_blank" rel="noopener noreferrer">SimpleOptOut<span class="ext-ind" aria-hidden="true">↗</span><span class="visually-hidden"> (opens in a new tab)</span></a>
+              <a class="ext-link secondary" href="https://redact.dev" target="_blank" rel="noopener noreferrer">Redact<span class="ext-ind" aria-hidden="true">↗</span><span class="visually-hidden"> (opens in a new tab)</span></a>
+            </div>
+          </div>
+          <div class="flock-card">
+            <span class="flock-badge">Free, California only</span>
+            <div class="flock-card-name">California DROP</div>
+            <p>One request to every data broker registered in California, more than 500 of them. Brokers have been legally required to honour it since 1 August 2026. If you are a California resident, start here.</p>
+            <div class="flock-card-links">
+              <a class="ext-link" href="https://privacy.ca.gov/data-brokers" target="_blank" rel="noopener noreferrer">privacy.ca.gov<span class="ext-ind" aria-hidden="true">↗</span><span class="visually-hidden"> (opens in a new tab)</span></a>
+            </div>
+          </div>
+          <div class="flock-card">
+            <span class="flock-badge">Paid, partial</span>
+            <div class="flock-card-name">Removal services</div>
+            <p>If you are paying anyway, Optery and EasyOptOuts scored highest in the Consumer Reports test, at 68 and 65 percent. EasyOptOuts was also the cheapest tested. DeleteMe, the best-known name, removed 27 percent.</p>
+            <div class="flock-card-links">
+              <a class="ext-link" href="https://www.optery.com" target="_blank" rel="noopener noreferrer">Optery<span class="ext-ind" aria-hidden="true">↗</span><span class="visually-hidden"> (opens in a new tab)</span></a>
+              <a class="ext-link secondary" href="https://easyoptouts.com" target="_blank" rel="noopener noreferrer">EasyOptOuts<span class="ext-ind" aria-hidden="true">↗</span><span class="visually-hidden"> (opens in a new tab)</span></a>
+            </div>
+          </div>
         </div>
-      </div>
+        <div class="hm-note hm-note-urgent">
+          <div class="hm-note-label">Read this first</div>
+          <p><strong>If you are in immediate danger, a website is the wrong resource.</strong> Talk to someone who does this for a living.</p>
+          <p><strong>Domestic violence and intimate partner abuse:</strong> the <a href="https://www.techsafety.org/resources-survivors" target="_blank" rel="noopener noreferrer">Safety Net Project</a> at the National Network to End Domestic Violence covers stalkerware, location tracking, and building a technology safety plan. The <a href="https://www.thehotline.org" target="_blank" rel="noopener noreferrer">National Domestic Violence Hotline</a> is staffed around the clock.</p>
+          <p><strong>Journalists, activists, and human rights defenders:</strong> the <a href="https://www.accessnow.org/help/" target="_blank" rel="noopener noreferrer">Access Now Digital Security Helpline</a> gives free, direct technical help, 24 hours a day.</p>
+          <p><strong>Online harassment and doxxing:</strong> the <a href="https://gameshotline.org/online-free-safety-guide/" target="_blank" rel="noopener noreferrer">Games and Online Harassment Hotline</a> maintains a practical digital safety guide, and <a href="https://onlineharassmentfieldmanual.pen.org" target="_blank" rel="noopener noreferrer">PEN America's Online Harassment Field Manual</a> is written for people whose work puts their name in public.</p>
+        </div>
+      </section>
+
+      <!-- 5. FURTHER -->
+      <section class="hm-block fade-up" aria-labelledby="hm-further-h">
+        <h3 id="hm-further-h">If you want to go further</h3>
+        <p><strong>This is for a threat model most readers don't have.</strong> Most people reading this do not need what follows, and adopting it without a reason costs real convenience every day in exchange for protection against an adversary you do not have.</p>
+        <p>If you are a journalist protecting a source, an activist under surveillance, or someone with specific reason to believe a well-resourced adversary is interested in you, the tools change.</p>
+        <ul class="flock-list">
+          <li><strong>Tor</strong>, for genuinely unlinking a session from your identity.</li>
+          <li><strong>Hardened browsers</strong> such as Tor Browser or Mullvad Browser, which resist fingerprinting: the practice of identifying you by your device's exact configuration rather than by a cookie.</li>
+          <li><strong>Compartmentalized identities</strong>: separate email addresses, phone numbers, browsers, and sometimes separate devices for separate parts of your life.</li>
+          <li><strong>A different email provider.</strong> Proton Mail encrypts your mail so the provider itself cannot read it. This is a real improvement and a real migration, which is why it is down here rather than in the three actions above.</li>
+        </ul>
+        <p class="flock-caveat">Each of these costs something every single day. That is the trade, and it is only worth making if you have a reason.</p>
+      </section>
+
+      <!-- 6. CIVIC CLOSE -->
+      <section class="hm-block fade-up" aria-labelledby="hm-civic-h">
+        <h3 id="hm-civic-h">All of this is triage.</h3>
+        <p>Data brokers exist because it is legal for them to exist. Every hour you spend opting out is an hour spent doing, unpaid and on your own time, what the law should have made unnecessary. "Protect yourself" concedes that quietly, then hands you the mop.</p>
+        <p>The evidence for that is sitting in the section above. A whole industry sells removal as a service, and independent testing found it removes about a third of what it promises, while doing it yourself for free works twice as well. The market did not solve this, because the market has no way to reach the upstream sources. A law can.</p>
+        <p><strong>One already has.</strong> California's Delete Act built DROP, a single request that reaches every data broker registered in the state. It went live on 1 January 2026, and since 1 August 2026 brokers have been legally obliged to act on it. One form, more than 500 companies, no subscription. That is what the legislative version of this page looks like, and it exists in exactly one state.</p>
+        <p><a href="#civic">The section above</a> makes the political case. This is the part where you do something with it: ask your own state for a Delete Act, and support the organizations doing the legal work. The <a href="https://www.eff.org" target="_blank" rel="noopener noreferrer">Electronic Frontier Foundation</a>, the <a href="https://epic.org" target="_blank" rel="noopener noreferrer">Electronic Privacy Information Center</a>, <a href="https://advocacy.consumerreports.org" target="_blank" rel="noopener noreferrer">Consumer Reports advocacy</a>, and <a href="https://privacyrights.org" target="_blank" rel="noopener noreferrer">Privacy Rights Clearinghouse</a> all work this specific issue.</p>
+      </section>
+
     </div>
   </div>
 </section>
