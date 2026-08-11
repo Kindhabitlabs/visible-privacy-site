@@ -1518,7 +1518,10 @@
         right: -40px;
         transform: translateY(-50%);
         width: 320px;
-        opacity: 0.1;
+        /* Matches the Flock page's narrow-screen scenes. The teaser sits on
+           --surface rather than --bg, so the same value reads slightly
+           softer here. */
+        opacity: 0.22;
         z-index: 0;
         pointer-events: none;
       }
