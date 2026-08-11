@@ -921,7 +921,42 @@
       border-top: 1px solid var(--border);
       border-bottom: 1px solid var(--border);
     }
-    .flock-teaser-inner { max-width: 1200px; margin: 0 auto; }
+    .flock-teaser-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) clamp(200px, 22vw, 280px);
+      gap: 56px;
+      align-items: center;
+    }
+    .flock-teaser-art { color: var(--accent); }
+    .flock-teaser-art svg { width: 100%; height: auto; display: block; }
+
+    /* Plates drift, each on its own timing, so the frame never repeats
+       exactly. Amplitude is capped by the cone: the nearest plate has about
+       7.5 user units of clearance to the lower sightline at full excursion,
+       so widening much past this pushes a corner out of the camera's view. */
+    @keyframes alpr-drift-a {
+      0%, 100% { transform: translate(0, 0); }
+      30%      { transform: translate(6px, -4px); }
+      65%      { transform: translate(-4px, 3px); }
+    }
+    @keyframes alpr-drift-b {
+      0%, 100% { transform: translate(0, 0); }
+      35%      { transform: translate(-6px, 3px); }
+      70%      { transform: translate(4px, -4px); }
+    }
+    @keyframes alpr-drift-c {
+      0%, 100% { transform: translate(0, 0); }
+      40%      { transform: translate(5px, 4px); }
+      75%      { transform: translate(-5px, -3px); }
+    }
+    .alpr-plate-1 { animation: alpr-drift-a 6s ease-in-out infinite; }
+    .alpr-plate-2 { animation: alpr-drift-b 7.5s ease-in-out infinite; }
+    .alpr-plate-3 { animation: alpr-drift-c 9.5s ease-in-out infinite; }
+    @media (prefers-reduced-motion: reduce) {
+      .alpr-plate-1, .alpr-plate-2, .alpr-plate-3 { animation: none; }
+    }
     .flock-teaser h2 { margin-bottom: 28px; }
     .flock-teaser p {
       color: var(--muted);
@@ -948,8 +983,91 @@
     .flock-block {
       padding: 80px 0;
       border-bottom: 1px solid var(--border);
+      position: relative;
     }
     .flock-block:last-child { border-bottom: none; }
+
+    /* A camera standing on each section rule, alternating sides. The rule
+       reads as the street they are posted along. */
+    .flock-divider-cam {
+      position: absolute;
+      bottom: -1px;
+      width: 56px;
+      /* Explicit height, matching the 56x52 viewBox. An absolutely
+         positioned box gets its height from its content, while height:auto
+         on the SVG wants its height from the box: that circularity collapses
+         the mark to nothing. Pinning both ends breaks the loop. */
+      height: 52px;
+      color: var(--accent);
+      opacity: 0.5;
+      pointer-events: none;
+    }
+    .flock-divider-cam svg { width: 100%; height: 100%; display: block; }
+    .flock-divider-cam.cam-right { right: 8px; }
+    .flock-divider-cam.cam-left { left: 8px; transform: scaleX(-1); }
+
+    /* Full-size camera scenes scattered down the page margins. They live in
+       their own layer behind the text so they can sit at the viewport edges
+       regardless of where the 1000px reading column falls. */
+    .flock-main { position: relative; }
+    .flock-main > .dossier-header,
+    .flock-main > .flock-body { position: relative; z-index: 1; }
+    .flock-cam-layer {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .flock-cam-scene {
+      position: absolute;
+      width: 230px;
+      /* aspect-ratio gives the absolutely positioned box a definite height,
+         which height:auto on the SVG cannot supply on its own. */
+      aspect-ratio: 280 / 250;
+      color: var(--accent);
+      opacity: 0.45;
+    }
+    .flock-cam-scene svg { width: 100%; height: 100%; display: block; }
+    .flock-cam-scene.side-right { right: 16px; }
+    /* Mirrored so the left-hand cameras aim into the page, not off it. */
+    .flock-cam-scene.side-left { left: 16px; transform: scaleX(-1); }
+    .cam-scene-1 { top: 6%; }
+    .cam-scene-2 { top: 30%; }
+    .cam-scene-3 { top: 55%; }
+    .cam-scene-4 { top: 78%; }
+    /* Anchored to the foot of the layer, which ends where the footer begins.
+       The -8px crops the empty slack under the pole so it stands on the
+       footer edge rather than floating above it. */
+    .cam-scene-5 { bottom: -8px; }
+
+    /* Offset each scene's plates so the five do not drift in lockstep. */
+    .cam-scene-2 .alpr-plate-1 { animation-delay: -2.2s; }
+    .cam-scene-2 .alpr-plate-2 { animation-delay: -3.1s; }
+    .cam-scene-2 .alpr-plate-3 { animation-delay: -1.4s; }
+    .cam-scene-3 .alpr-plate-1 { animation-delay: -4.1s; }
+    .cam-scene-3 .alpr-plate-2 { animation-delay: -1.7s; }
+    .cam-scene-3 .alpr-plate-3 { animation-delay: -5.3s; }
+    .cam-scene-4 .alpr-plate-1 { animation-delay: -1.3s; }
+    .cam-scene-4 .alpr-plate-2 { animation-delay: -5.6s; }
+    .cam-scene-4 .alpr-plate-3 { animation-delay: -3.8s; }
+    .cam-scene-5 .alpr-plate-1 { animation-delay: -3.4s; }
+    .cam-scene-5 .alpr-plate-2 { animation-delay: -6.2s; }
+    .cam-scene-5 .alpr-plate-3 { animation-delay: -7.1s; }
+
+    /* Below ~1280px the gutters are gone, so the scenes ride off the viewport
+       edge and crop. They pass behind the reading column on the way, so the
+       opacity drops to keep body text legible. */
+    @media (max-width: 1280px) {
+      .flock-cam-scene { opacity: 0.22; }
+      .flock-cam-scene.side-right { right: -60px; }
+      .flock-cam-scene.side-left { left: -60px; }
+    }
+    @media (max-width: 1000px) {
+      .flock-cam-scene { width: 200px; opacity: 0.18; }
+      .flock-cam-scene.side-right { right: -85px; }
+      .flock-cam-scene.side-left { left: -85px; }
+    }
     .flock-block h2 { font-size: clamp(30px, 4vw, 48px); margin-bottom: 26px; }
     .flock-block > p {
       color: var(--muted);
@@ -1392,6 +1510,18 @@
       .consequence-icon { width: 40px; height: 40px; }
       .consequence-icon svg { width: 20px; height: 20px; }
       .civic-split { grid-template-columns: 1fr; gap: 56px; }
+      .flock-teaser-inner { display: block; position: relative; }
+      .flock-teaser-copy { position: relative; z-index: 1; }
+      .flock-teaser-art {
+        position: absolute;
+        top: 50%;
+        right: -40px;
+        transform: translateY(-50%);
+        width: 320px;
+        opacity: 0.1;
+        z-index: 0;
+        pointer-events: none;
+      }
       .manifesto-actions { flex-direction: column; align-items: center; }
       .eu-stat-row { grid-template-columns: 1fr; }
       footer.site-footer { flex-direction: column; gap: 16px; text-align: center; padding: 32px 24px; }
