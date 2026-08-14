@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-08-06T17:02:47.601Z",
+  "generated_at": "2026-08-14T16:48:55.763Z",
   "counts": {
-    "firms": 44,
-    "businesses": 59,
+    "firms": 47,
+    "businesses": 64,
     "tags": 10,
-    "evidence": 42
+    "evidence": 49
   },
   "firms": [
     {
@@ -13,7 +13,7 @@
       "type": "PE",
       "headquarters": "Boston, MA",
       "portfolio_url": "https://www.adventinternational.com",
-      "notes": "Acquired AccentCare from Oak Hill Capital in 2019 — its first move into home health and hospice.",
+      "notes": "Acquired AccentCare from Oak Hill Capital in 2019, its first move into home health and hospice.",
       "tags": []
     },
     {
@@ -37,7 +37,7 @@
           "tag": "Financial extraction",
           "tier": "B",
           "alleged": false,
-          "description": "Oct 2023 ~$3.4B single-asset continuation-fund transaction for Apex — among the largest in PE history — let Alpine return capital to investors while retaining the asset; in May 2026 Apollo Funds took a ~$2B minority stake at a $10B valuation, capitalizing the rollup further.",
+          "description": "Oct 2023 ~$3.4B single-asset continuation-fund transaction for Apex (among the largest in PE history) let Alpine return capital to investors while retaining the asset; in May 2026 Apollo Funds took a ~$2B minority stake at a $10B valuation, capitalizing the rollup further.",
           "source_url": "https://alpineinvestors.com/resource/single-asset-continuation-transaction-apex-service-partners/"
         }
       ]
@@ -178,6 +178,15 @@
       "tags": []
     },
     {
+      "id": "global-growth-lindberg",
+      "name": "Global Growth (Eli Global / Greg Lindberg)",
+      "type": "holding-company",
+      "headquarters": "Durham, NC",
+      "portfolio_url": "https://www.globalgrowth.com",
+      "notes": "Greg Lindberg's holding company (branded Eli Global, later Global Growth) rolled up 100+ companies, including several insurers he controlled: Colorado Bankers Life, Bankers Life Insurance Company, Southland National Insurance Corporation and Southland National Reinsurance. Lindberg pleaded guilty in Nov 2024 to a ~$2B fraud/money-laundering scheme and was sentenced May 2026 to 12 years; the insurers went into rehabilitation/liquidation.",
+      "tags": []
+    },
+    {
       "id": "golden-gate-capital",
       "name": "Golden Gate Capital",
       "type": "PE",
@@ -198,14 +207,14 @@
           "tag": "Consumer harm",
           "tier": "B",
           "alleged": false,
-          "description": "In Sept 2025 the Nexstar Network — the largest plumbing/HVAC trade group — severed ties with all PE-backed members (~1/3 of its 800 members) over the roll-up model; Forbes cited Sila's 28-acquisition consolidation as a leading example of the consolidation the group rejected.",
+          "description": "In Sept 2025 the Nexstar Network (the largest plumbing/HVAC trade group) severed ties with all PE-backed members (~1/3 of its 800 members) over the roll-up model; Forbes cited Sila's 28-acquisition consolidation as a leading example of the consolidation the group rejected.",
           "source_url": "https://www.forbes.com/sites/brandonkochkodin/2025/09/16/a-group-for-small-building-trade-businesses-tells-private-equity-to-get-lost/"
         },
         {
           "tag": "Financial extraction",
           "tier": "B",
           "alleged": false,
-          "description": "Acquired Sila Services from Morgan Stanley Capital Partners in early 2025 in a roughly $1.5B sponsor-to-sponsor deal including debt — a leveraged continuation of the HVAC roll-up.",
+          "description": "Acquired Sila Services from Morgan Stanley Capital Partners in early 2025 in a roughly $1.5B sponsor-to-sponsor deal including debt, a leveraged continuation of the HVAC roll-up.",
           "source_url": "https://www.businesswire.com/news/home/20241110227672/en/Sila-Services-Announces-Equity-Investment-From-Goldman-Sachs-Alternatives-Private-Equity-Business"
         }
       ]
@@ -225,7 +234,7 @@
       "type": "PE",
       "headquarters": "Charleston, SC",
       "portfolio_url": "https://www.greystar.com",
-      "notes": "Vertically integrated apartment investment manager and operator — the largest US apartment manager (~1M units under management).",
+      "notes": "Vertically integrated apartment investment manager and operator: the largest US apartment manager (~1M units under management).",
       "tags": []
     },
     {
@@ -244,6 +253,15 @@
       "headquarters": "Lehi, UT",
       "portfolio_url": "https://havenparkcommunities.com",
       "notes": "Utah PE firm that owns Havenpark Communities, a manufactured-housing operator.",
+      "tags": []
+    },
+    {
+      "id": "hellman-friedman",
+      "name": "Hellman & Friedman",
+      "type": "PE",
+      "headquarters": "San Francisco, CA",
+      "portfolio_url": "https://www.hf.com",
+      "notes": "Controlling owner of Hub International since 2013; Hub reached a $29B valuation in 2025. Leonard Green & Partners and Altas Partners hold minority stakes.",
       "tags": []
     },
     {
@@ -294,6 +312,15 @@
       "headquarters": "Los Angeles, CA",
       "portfolio_url": "https://www.leonardgreen.com",
       "notes": "Majority owner of Wrench Group (HVAC/plumbing/electrical) since 2019; TSG Consumer Partners and Oak Hill Capital took a minority stake in Nov 2022.",
+      "tags": []
+    },
+    {
+      "id": "madison-dearborn",
+      "name": "Madison Dearborn Partners",
+      "type": "PE",
+      "headquarters": "Chicago, IL",
+      "portfolio_url": "https://www.mdcp.com",
+      "notes": "Took Benefytt Technologies (formerly Health Insurance Innovations) private in an all-cash tender offer completed August 21, 2020 (~$410M, $31.00/share).",
       "tags": []
     },
     {
@@ -513,7 +540,7 @@
           "tag": "Consumer harm",
           "tier": "B",
           "alleged": false,
-          "description": "Investigative reporting (Axios, The New Yorker, Washington Post) documented steep staffing cuts and declining care after Portopiccolo acquisitions — including a Richmond-area (Henrico) nursing home where deaths doubled following the takeover, and a facility where some shifts had as few as two staff for 72 beds, with residents going days without care.",
+          "description": "Investigative reporting (Axios, The New Yorker, Washington Post) documented steep staffing cuts and declining care after Portopiccolo acquisitions, including a Richmond-area (Henrico) nursing home where deaths doubled following the takeover, and a facility where some shifts had as few as two staff for 72 beds, with residents going days without care.",
           "source_url": "https://www.axios.com/local/richmond/2022/08/26/private-equity-firm-henrico-nursing-home"
         }
       ]
@@ -549,7 +576,7 @@
           "tag": "Consumer harm",
           "tier": "A",
           "alleged": false,
-          "description": "Arizona AG consent judgment (April 2012, ~$395,000): resolved a 2011 lawsuit alleging ARS used false, misleading and deceptive sales tactics against (often older) consumers — including fake 'safety notices' to frighten buyers into unnecessary systems and official-looking solicitations — and undermined buyers' 3-day cancellation rights. ARS agreed to substantial changes in its sales practices. Predates GI Partners' 2020 ownership.",
+          "description": "Arizona AG consent judgment (April 2012, ~$395,000): resolved a 2011 lawsuit alleging ARS used false, misleading and deceptive sales tactics against (often older) consumers, including fake 'safety notices' to frighten buyers into unnecessary systems and official-looking solicitations, and undermined buyers' 3-day cancellation rights. ARS agreed to substantial changes in its sales practices. Predates GI Partners' 2020 ownership.",
           "source_url": "https://www.azag.gov/press-release/ag-horne-announces-395000-judgment-fraud-case-involving-hvac-company"
         }
       ]
@@ -578,8 +605,37 @@
           "tag": "Consumer harm",
           "tier": "A",
           "alleged": false,
-          "description": "Massachusetts AG settlement announced Jan 5, 2023 ($3.5M): resolved a 2021 lawsuit alleging Aspen used bait-and-switch advertising — charging patients for exams/x-rays/screenings it advertised as free and claiming to accept all insurance when it did not accept MassHealth Medicaid. Aspen agreed to return up to $750K to affected patients.",
+          "description": "Massachusetts AG settlement announced Jan 5, 2023 ($3.5M): resolved a 2021 lawsuit alleging Aspen used bait-and-switch advertising, charging patients for exams/x-rays/screenings it advertised as free and claiming to accept all insurance when it did not accept MassHealth Medicaid. Aspen agreed to return up to $750K to affected patients.",
           "source_url": "https://www.mass.gov/news/attorney-generals-office-reaches-35-million-settlement-with-aspen-dental-over-claims-of-deceptive-advertising"
+        }
+      ]
+    },
+    {
+      "id": "athene",
+      "name": "Athene",
+      "industry": "Insurance",
+      "firm_id": "apollo-global-management",
+      "firm_name": "Apollo Global Management",
+      "platform_company": "Athene Holding Ltd. (Bermuda): largest US annuity provider and a leading pension-risk-transfer (PRT) writer; wholly owned by Apollo since their 2022 merger",
+      "acquisition_date": "2022",
+      "ownership_status": "confirmed",
+      "source_url": "https://ir.apollo.com/news-events/press-releases/detail/143/apollo-announces-further-expansion-of-its-insurance-asset",
+      "last_verified": "2026-08-14",
+      "locations": [],
+      "evidence": [
+        {
+          "tag": "Legal/regulatory",
+          "tier": "C",
+          "alleged": true,
+          "description": "ALLEGED / PENDING: putative ERISA class actions (led by Schlichter Bogard LLP) allege that plan sponsors which transferred employee pensions to Athene annuities failed to select the safest available annuity provider, exposing retirees to added risk. The suits are pending and the allegations are unproven; the ERISA Advisory Council has heard comment on the fiduciary criteria used to vet PRT annuity providers.",
+          "source_url": "https://retirementincomejournal.com/article/of-private-equity-and-pension-risk-transfers/"
+        },
+        {
+          "tag": "Financial extraction",
+          "tier": "B",
+          "alleged": false,
+          "description": "Investigative and policy reporting documents concern about the Apollo/Athene model: annuity and pension-risk-transfer premiums are invested through Apollo's own credit platforms and risk is ceded to Bermuda-based reinsurance. Athene has reached at least 49 pension-risk-transfer deals with companies including Alcoa, AT&T and Lockheed Martin, converting roughly $53 billion of pensions covering about 535,000 people into annuities, moving retirement savings that retirees, regulators and economists say are exposed to higher and more opaque risk.",
+          "source_url": "https://cepr.net/publications/you-bet-your-life-insurance-private-equity-comes-for-your-annuity/"
         }
       ]
     },
@@ -598,6 +654,35 @@
       "evidence": []
     },
     {
+      "id": "benefytt-technologies",
+      "name": "Benefytt Technologies (formerly Health Insurance Innovations)",
+      "industry": "Insurance",
+      "firm_id": "madison-dearborn",
+      "firm_name": "Madison Dearborn Partners",
+      "platform_company": "Online marketer of short-term / limited-benefit health plans and supplemental insurance products; renamed from Health Insurance Innovations in March 2020, taken private by Madison Dearborn in August 2020",
+      "acquisition_date": "2020",
+      "ownership_status": "confirmed",
+      "source_url": "https://www.globenewswire.com/news-release/2020/07/13/2061108/0/en/Benefytt-Technologies-Inc-to-be-Acquired-by-Madison-Dearborn-Partners.html",
+      "last_verified": "2026-08-14",
+      "locations": [],
+      "evidence": [
+        {
+          "tag": "Consumer harm",
+          "tier": "A",
+          "alleged": false,
+          "description": "Per the FTC, Benefytt (operating under names such as Health Insurance Innovations) and its partners ran deceptive websites targeting consumers searching for comprehensive, ACA-qualified health insurance, then charged them hundreds of dollars a month for products and services that often left them unprotected in a medical emergency.",
+          "source_url": "https://www.ftc.gov/legal-library/browse/cases-proceedings/192-3141-benefytt-technologies-et-al-ftc-v"
+        },
+        {
+          "tag": "Legal/regulatory",
+          "tier": "A",
+          "alleged": false,
+          "description": "FTC v. Benefytt Technologies: under a 2022 settlement, Benefytt was required to pay $100 million for consumer refunds, was barred from lying about its products and from charging illegal junk fees, and former CEO Gavin Southwell and former VP Amy Brady were permanently banned from selling or marketing health-care-related products. In March 2024 the FTC distributed $99,307,988 in refunds to 463,629 consumers who had paid Benefytt $1,000 or more between 2017 and 2022.",
+          "source_url": "https://www.ftc.gov/news-events/news/press-releases/2024/03/ftc-sends-nearly-100-million-refunds-consumers-harmed-benefytt-technologies-sham-health-plans"
+        }
+      ]
+    },
+    {
       "id": "benevis-kool-smiles",
       "name": "Benevis / Kool Smiles",
       "industry": "Dental",
@@ -614,7 +699,7 @@
           "tag": "Consumer harm",
           "tier": "A",
           "alleged": false,
-          "description": "US DOJ False Claims Act settlement (2018): Benevis and 130+ affiliated Kool Smiles clinics paid $23.9M to resolve allegations they billed Medicaid for medically unnecessary pediatric procedures — baby root canals, extractions and stainless-steel crowns on children (2009–2011) — with dentists pressured by production-quota bonuses. Settled without admission of wrongdoing. Conduct and settlement PREDATE New Mountain Capital's 2020 bankruptcy acquisition (then-owners FFL Partners, later Tailwind/Littlejohn).",
+          "description": "US DOJ False Claims Act settlement (2018): Benevis and 130+ affiliated Kool Smiles clinics paid $23.9M to resolve allegations they billed Medicaid for medically unnecessary pediatric procedures: baby root canals, extractions and stainless-steel crowns on children (2009–2011), with dentists pressured by production-quota bonuses. Settled without admission of wrongdoing. Conduct and settlement PREDATE New Mountain Capital's 2020 bankruptcy acquisition (then-owners FFL Partners, later Tailwind/Littlejohn).",
           "source_url": "https://www.justice.gov/usao-ct/pr/dental-management-company-benevis-and-its-affiliated-kool-smiles-dental-clinics-pay-239"
         }
       ]
@@ -632,6 +717,42 @@
       "last_verified": "2026-08-05",
       "locations": [],
       "evidence": []
+    },
+    {
+      "id": "colorado-bankers-life",
+      "name": "Colorado Bankers Life Insurance Company",
+      "industry": "Insurance",
+      "firm_id": "global-growth-lindberg",
+      "firm_name": "Global Growth (Eli Global / Greg Lindberg)",
+      "platform_company": "Largest of several life/annuity insurers controlled by Greg Lindberg (with Bankers Life Insurance Company, Southland National Insurance Corporation and Southland National Reinsurance); placed into court-ordered liquidation effective November 30, 2024",
+      "acquisition_date": "mid-2010s",
+      "ownership_status": "confirmed",
+      "source_url": "https://www.justice.gov/archives/opa/pr/insurance-mogul-pleads-guilty-2b-fraud-and-money-laundering-scheme",
+      "last_verified": "2026-08-14",
+      "locations": [],
+      "evidence": [
+        {
+          "tag": "Legal/regulatory",
+          "tier": "A",
+          "alleged": false,
+          "description": "US DOJ: Greg Lindberg pleaded guilty in November 2024 to conspiracy to commit offenses against the United States and conspiracy to commit money laundering, in connection with a scheme prosecutors valued at roughly $2 billion to defraud insurance regulators, policyholders and others. He was sentenced in May 2026 to 12 years in federal prison and more than $1.6 billion in restitution.",
+          "source_url": "https://www.justice.gov/archives/opa/pr/insurance-mogul-pleads-guilty-2b-fraud-and-money-laundering-scheme"
+        },
+        {
+          "tag": "Financial extraction",
+          "tier": "A",
+          "alleged": false,
+          "description": "Per DOJ, from no later than 2016 through at least 2019 Lindberg caused the insurance companies he controlled to invest more than $2 billion in loans and other securities with his own affiliated companies, evading regulatory requirements meant to protect policyholders and concealing the insurers' true financial condition; he personally benefited by 'forgiving' more than $125 million in loans to himself from the insurers.",
+          "source_url": "https://www.justice.gov/criminal/criminal-vns/case/united-states-v-greg-e-lindberg"
+        },
+        {
+          "tag": "Consumer harm",
+          "tier": "B",
+          "alleged": false,
+          "description": "Colorado Bankers Life was placed into court-ordered liquidation effective November 30, 2024. A moratorium continues to apply to obligations not covered by guaranty associations (including cash surrenders, transfers, policy loans and interest on annuity accounts), and no interest has been credited on annuity accounts since the liquidation date. Lindberg's collapsed insurers left more than 200,000 policyholders, with claims paid out by state guaranty associations.",
+          "source_url": "https://www.insurancejournal.com/news/southeast/2024/08/28/790191.htm"
+        }
+      ]
     },
     {
       "id": "compassus",
@@ -664,14 +785,14 @@
           "tag": "Legal/regulatory",
           "tier": "A",
           "alleged": false,
-          "description": "False Claims Act case brought by whistleblower nurse Angela Ruckh: a federal jury found Consulate liable for 'upcoding' — billing Medicare/Medicaid for medically unnecessary and inflated therapy. The judgment reached ~$258M; after appeals and six affiliated entities' bankruptcy filings, DOJ ultimately settled the judgment for $4.5M.",
+          "description": "False Claims Act case brought by whistleblower nurse Angela Ruckh: a federal jury found Consulate liable for 'upcoding', billing Medicare/Medicaid for medically unnecessary and inflated therapy. The judgment reached ~$258M; after appeals and six affiliated entities' bankruptcy filings, DOJ ultimately settled the judgment for $4.5M.",
           "source_url": "https://www.mcknights.com/news/six-nursing-home-affiliates-file-for-bankruptcy-following-258m-fca-ruling/"
         },
         {
           "tag": "Financial extraction",
           "tier": "B",
           "alleged": false,
-          "description": "An analysis found a web of related companies made Consulate-owned nursing homes appear 'cash-strapped' — a related-party structure that moves money among affiliates while limiting the operators' apparent ability to pay judgments or invest in care.",
+          "description": "An analysis found a web of related companies made Consulate-owned nursing homes appear 'cash-strapped': a related-party structure that moves money among affiliates while limiting the operators' apparent ability to pay judgments or invest in care.",
           "source_url": "https://www.mcknights.com/news/report-finds-web-of-related-companies-make-consulate-owned-nursing-homes-appear-cash-strapped/"
         }
       ]
@@ -682,7 +803,7 @@
       "industry": "Apartments",
       "firm_id": "cortland",
       "firm_name": "Cortland Partners",
-      "platform_company": "Vertically integrated apartment owner/operator — ~80,000 units across ~240 communities",
+      "platform_company": "Vertically integrated apartment owner/operator: ~80,000 units across ~240 communities",
       "acquisition_date": "",
       "ownership_status": "confirmed",
       "source_url": "https://www.justice.gov/archives/opa/pr/justice-department-sues-six-large-landlords-algorithmic-pricing-scheme-harms-millions",
@@ -748,7 +869,7 @@
       "industry": "Emergency medicine",
       "firm_id": "kkr",
       "firm_name": "KKR",
-      "platform_company": "EmCare (ER staffing) + AmSurg (ambulatory surgery); KKR's equity was wiped out in the May 2023 Chapter 11 — now owned by former creditors",
+      "platform_company": "EmCare (ER staffing) + AmSurg (ambulatory surgery); KKR's equity was wiped out in the May 2023 Chapter 11, now owned by former creditors",
       "acquisition_date": "2018",
       "ownership_status": "former",
       "source_url": "https://pestakeholder.org/news/it-should-come-as-no-surprise-that-kkr-owned-envision-healthcare-has-finally-declared-bankruptcy/",
@@ -759,14 +880,14 @@
           "tag": "Consumer harm",
           "tier": "B",
           "alleged": false,
-          "description": "Envision's EmCare unit was a central driver of the US surprise-billing crisis. A Yale study (Cooper & Scott Morton) of 2.2M ER visits found out-of-network billing rates jumped sharply after EmCare took over hospital emergency rooms — at ~15% of hospitals out-of-network rates exceeded 80% — exposing in-network patients to large surprise bills.",
+          "description": "Envision's EmCare unit was a central driver of the US surprise-billing crisis. A Yale study (Cooper & Scott Morton) of 2.2M ER visits found out-of-network billing rates jumped sharply after EmCare took over hospital emergency rooms (at ~15% of hospitals out-of-network rates exceeded 80%), exposing in-network patients to large surprise bills.",
           "source_url": "https://isps.yale.edu/node/22306"
         },
         {
           "tag": "Financial extraction",
           "tier": "B",
           "alleged": false,
-          "description": "KKR took Envision private in 2018 in a $9.9B deal financed with ~$7B of debt (~70% of the price). When the No Surprises Act (2022) ended its lucrative out-of-network billing model, the debt load became unsustainable and Envision filed Chapter 11 in May 2023 — one of the largest PE-backed healthcare bankruptcies. KKR's equity was wiped out and creditors took control.",
+          "description": "KKR took Envision private in 2018 in a $9.9B deal financed with ~$7B of debt (~70% of the price). When the No Surprises Act (2022) ended its lucrative out-of-network billing model, the debt load became unsustainable and Envision filed Chapter 11 in May 2023, one of the largest PE-backed healthcare bankruptcies. KKR's equity was wiped out and creditors took control.",
           "source_url": "https://pestakeholder.org/news/it-should-come-as-no-surprise-that-kkr-owned-envision-healthcare-has-finally-declared-bankruptcy/"
         }
       ]
@@ -800,6 +921,20 @@
       "evidence": []
     },
     {
+      "id": "fortitude-re",
+      "name": "Fortitude Re",
+      "industry": "Insurance",
+      "firm_id": "carlyle-group",
+      "firm_name": "The Carlyle Group",
+      "platform_company": "Bermuda-based reinsurer of AIG's legacy life & retirement and general-insurance run-off (~$30B+ of reserves); acquired Prudential's PALAC in-force variable-annuity block (~$31B). Recorded as an ownership fact: 'who really owns your legacy annuity.'",
+      "acquisition_date": "2020",
+      "ownership_status": "confirmed",
+      "source_url": "https://www.insurancejournal.com/news/international/2020/06/03/570831.htm",
+      "last_verified": "2026-08-14",
+      "locations": [],
+      "evidence": []
+    },
+    {
       "id": "go-media",
       "name": "G/O Media",
       "industry": "Broadcast & digital media",
@@ -827,7 +962,7 @@
       "industry": "Newspapers",
       "firm_id": "fortress-investment-group",
       "firm_name": "Fortress Investment Group",
-      "platform_company": "Largest US newspaper company — 260+ dailies including USA Today; assembled via the 2019 GateHouse–Gannett merger. Now publicly traded (NYSE: GCI) after internalizing management ~2020",
+      "platform_company": "Largest US newspaper company: 260+ dailies including USA Today; assembled via the 2019 GateHouse–Gannett merger. Now publicly traded (NYSE: GCI) after internalizing management ~2020",
       "acquisition_date": "2019",
       "ownership_status": "former",
       "source_url": "https://www.spokesman.com/stories/2019/aug/26/as-gannett-gatehouse-merge-newspaper-cost-cutting-/",
@@ -838,7 +973,7 @@
           "tag": "Financial extraction",
           "tier": "B",
           "alleged": false,
-          "description": "Fortress-managed New Media Investment Group (owner of GateHouse) merged with Gannett in 2019 to form the largest US newspaper chain — a ~$1.4B deal funded partly by a ~$1.79B loan from Apollo Global at ~11.5% interest. GateHouse cut roughly 200 staff in the first half of 2019, and cost-cutting and layoffs continued across the merged papers.",
+          "description": "Fortress-managed New Media Investment Group (owner of GateHouse) merged with Gannett in 2019 to form the largest US newspaper chain, a ~$1.4B deal funded partly by a ~$1.79B loan from Apollo Global at ~11.5% interest. GateHouse cut roughly 200 staff in the first half of 2019, and cost-cutting and layoffs continued across the merged papers.",
           "source_url": "https://www.spokesman.com/stories/2019/aug/26/as-gannett-gatehouse-merge-newspaper-cost-cutting-/"
         }
       ]
@@ -860,7 +995,7 @@
           "tag": "Legal/regulatory",
           "tier": "A",
           "alleged": false,
-          "description": "$53.6M DOJ settlement (2017): Genesis resolved allegations it billed Medicare/Medicaid for medically unnecessary therapy and hospice services and provided 'grossly substandard' care with inadequate staffing — much of the conduct at acquired operators Skilled Healthcare and Sun Healthcare (2005–2013).",
+          "description": "$53.6M DOJ settlement (2017): Genesis resolved allegations it billed Medicare/Medicaid for medically unnecessary therapy and hospice services and provided 'grossly substandard' care with inadequate staffing, much of the conduct at acquired operators Skilled Healthcare and Sun Healthcare (2005–2013).",
           "source_url": "https://www.healthcarefinancenews.com/news/genesis-healthcare-pay-nearly-54-million-resolve-allegations-unnecessary-hospice-care"
         },
         {
@@ -900,7 +1035,7 @@
       "industry": "Apartments",
       "firm_id": "greystar",
       "firm_name": "Greystar Real Estate Partners",
-      "platform_company": "Largest US apartment manager — ~1M units under management, ~141,000 owned; vertically integrated investment manager and operator",
+      "platform_company": "Largest US apartment manager: ~1M units under management, ~141,000 owned; vertically integrated investment manager and operator",
       "acquisition_date": "",
       "ownership_status": "confirmed",
       "source_url": "https://pestakeholder.org/news/nations-largest-property-manager-greystar-agrees-to-no-longer-set-rents-through-realpage-as-part-of-settlements/",
@@ -911,7 +1046,7 @@
           "tag": "Legal/regulatory",
           "tier": "A",
           "alleged": false,
-          "description": "Named in the DOJ's RealPage rent-algorithm case; Greystar — the nation's largest apartment manager — agreed in Aug 2025 to stop setting rents using RealPage's software and to stop sharing competitively sensitive data with competitors.",
+          "description": "Named in the DOJ's RealPage rent-algorithm case; Greystar (the nation's largest apartment manager) agreed in Aug 2025 to stop setting rents using RealPage's software and to stop sharing competitively sensitive data with competitors.",
           "source_url": "https://pestakeholder.org/news/nations-largest-property-manager-greystar-agrees-to-no-longer-set-rents-through-realpage-as-part-of-settlements/"
         }
       ]
@@ -933,7 +1068,7 @@
           "tag": "Consumer harm",
           "tier": "B",
           "alleged": false,
-          "description": "In 2019 Havenpark raised lot rents 24–69% at its Iowa parks (one resident's rent rose ~60%), prompting Sen. Elizabeth Warren and Rep. Dave Loebsack to write the company calling the practices predatory. Residents have since reported neglected conditions — including a park sinking due to water erosion — and Havenpark has been selling off its Iowa parks amid ongoing complaints.",
+          "description": "In 2019 Havenpark raised lot rents 24–69% at its Iowa parks (one resident's rent rose ~60%), prompting Sen. Elizabeth Warren and Rep. Dave Loebsack to write the company calling the practices predatory. Residents have since reported neglected conditions (including a park sinking due to water erosion), and Havenpark has been selling off its Iowa parks amid ongoing complaints.",
           "source_url": "https://iowastartingline.com/2026/01/23/havenpark-mobile-home-park-water-erosion-problems-lake-ridge-estates/"
         }
       ]
@@ -955,14 +1090,14 @@
           "tag": "Financial extraction",
           "tier": "B",
           "alleged": false,
-          "description": "Carlyle took HCR ManorCare private in 2007 for $6.3B, three-quarters funded by debt. A 2011 sale-leaseback sold the company's real estate for $6.1B — recouping Carlyle's ~$1.3B equity — but left the chain paying rent it increasingly couldn't afford. It filed for bankruptcy in March 2018.",
+          "description": "Carlyle took HCR ManorCare private in 2007 for $6.3B, three-quarters funded by debt. A 2011 sale-leaseback sold the company's real estate for $6.1B (recouping Carlyle's ~$1.3B equity) but left the chain paying rent it increasingly couldn't afford. It filed for bankruptcy in March 2018.",
           "source_url": "https://www.washingtonpost.com/business/economy/opioid-overdoses-bedsores-and-broken-bones-what-happened-when-a-private-equity-firm-sought-profits-in-caring-for-societys-most-vulnerable/2018/11/25/09089a4a-ed14-11e8-baac-2a674e91502b_story.html"
         },
         {
           "tag": "Consumer harm",
           "tier": "B",
           "alleged": false,
-          "description": "As ManorCare cut costs and laid off staff, health-code violations rose 26% between 2013 and 2017. State inspectors found residents left unattended — call buttons so poorly staffed that some residents regularly soiled themselves waiting for help to the bathroom (Washington Post investigation).",
+          "description": "As ManorCare cut costs and laid off staff, health-code violations rose 26% between 2013 and 2017. State inspectors found residents left unattended: call buttons so poorly staffed that some residents regularly soiled themselves waiting for help to the bathroom (Washington Post investigation).",
           "source_url": "https://www.washingtonpost.com/business/economy/opioid-overdoses-bedsores-and-broken-bones-what-happened-when-a-private-equity-firm-sought-profits-in-caring-for-societys-most-vulnerable/2018/11/25/09089a4a-ed14-11e8-baac-2a674e91502b_story.html"
         }
       ]
@@ -973,7 +1108,7 @@
       "industry": "Dental",
       "firm_id": "kkr",
       "firm_name": "KKR",
-      "platform_company": "Largest US DSO — 1,900+ affiliated practices across 39 states + DC; Ontario Teachers' Pension Plan retains a minority stake",
+      "platform_company": "Largest US DSO: 1,900+ affiliated practices across 39 states + DC; Ontario Teachers' Pension Plan retains a minority stake",
       "acquisition_date": "2018",
       "ownership_status": "confirmed",
       "source_url": "https://www.drbicuspid.com/dental-business/practice-sales/article/15374248/private-equity-firm-completes-heartland-acquisition",
@@ -1004,6 +1139,20 @@
       ]
     },
     {
+      "id": "hub-international",
+      "name": "Hub International",
+      "industry": "Insurance",
+      "firm_id": "hellman-friedman",
+      "firm_name": "Hellman & Friedman",
+      "platform_company": "One of the largest US insurance brokerages; a buy-and-build rollup that has acquired hundreds of agencies. Recorded as an ownership fact: 'who really owns your insurance broker.'",
+      "acquisition_date": "2013",
+      "ownership_status": "confirmed",
+      "source_url": "https://www.hubinternational.com/media-center/press-releases/2025/05/hub-secures-significant-minority-investment-and-reaches-new-milestone/",
+      "last_verified": "2026-08-14",
+      "locations": [],
+      "evidence": []
+    },
+    {
       "id": "iheartmedia",
       "name": "iHeartMedia",
       "industry": "Broadcast & digital media",
@@ -1020,7 +1169,7 @@
           "tag": "Financial extraction",
           "tier": "B",
           "alleged": false,
-          "description": "Bain Capital and Thomas H. Lee Partners took Clear Channel (later iHeartMedia) private in a 2008 leveraged buyout valued at ~$26.7B, loading the largest US radio company with debt that ballooned from ~$8B to more than $20B. Unable to service it, iHeartMedia filed for Chapter 11 in 2018 — one of the largest media bankruptcies ever — while the PE firms nearly broke even through discounted debt purchases and management fees.",
+          "description": "Bain Capital and Thomas H. Lee Partners took Clear Channel (later iHeartMedia) private in a 2008 leveraged buyout valued at ~$26.7B, loading the largest US radio company with debt that ballooned from ~$8B to more than $20B. Unable to service it, iHeartMedia filed for Chapter 11 in 2018 (one of the largest media bankruptcies ever) while the PE firms nearly broke even through discounted debt purchases and management fees.",
           "source_url": "https://fortune.com/2018/03/15/iheart-media-bankruptcy-radio-chapter-11"
         }
       ]
@@ -1042,7 +1191,7 @@
           "tag": "Consumer harm",
           "tier": "B",
           "alleged": false,
-          "description": "Impact Communities — run by Frank Rolfe and Dave Reynolds, who teach investors via 'Mobile Home University' to buy parks and raise lot rents on residents who own their homes but not the land — was named in Sen. Warren's March 2026 corporate-landlord probe.",
+          "description": "Impact Communities (run by Frank Rolfe and Dave Reynolds, who teach investors via 'Mobile Home University' to buy parks and raise lot rents on residents who own their homes but not the land) was named in Sen. Warren's March 2026 corporate-landlord probe.",
           "source_url": "https://www.banking.senate.gov/newsroom/minority/warren-probes-biggest-corporate-landlords-on-predatory-rental-practices-across-housing-sector"
         }
       ]
@@ -1064,7 +1213,7 @@
           "tag": "Legal/regulatory",
           "tier": "A",
           "alleged": false,
-          "description": "FTC settlement ($48M, Sept 2024): the FTC charged Invitation Homes with deceiving renters on price, charging undisclosed 'junk fees' (mandatory monthly charges for smart-home tech and air-filter delivery costing up to ~$1,700/yr), withholding security deposits (returned in only ~40% of cases vs. a ~64% norm), and unfair eviction practices — including steering pandemic-era renters away from the CDC declaration that would have protected them from eviction. Invitation paid $48M in consumer refunds (no admission of wrongdoing). Blackstone founded and ran the company 2012–2019; the FTC's conduct period spans 2018–2023.",
+          "description": "FTC settlement ($48M, Sept 2024): the FTC charged Invitation Homes with deceiving renters on price, charging undisclosed 'junk fees' (mandatory monthly charges for smart-home tech and air-filter delivery costing up to ~$1,700/yr), withholding security deposits (returned in only ~40% of cases vs. a ~64% norm), and unfair eviction practices, including steering pandemic-era renters away from the CDC declaration that would have protected them from eviction. Invitation paid $48M in consumer refunds (no admission of wrongdoing). Blackstone founded and ran the company 2012–2019; the FTC's conduct period spans 2018–2023.",
           "source_url": "https://www.ftc.gov/news-events/news/press-releases/2024/09/ftc-takes-action-against-invitation-homes-deceiving-renters-charging-junk-fees-withholding-security"
         }
       ]
@@ -1097,7 +1246,7 @@
       "industry": "Single-family rentals",
       "firm_id": "amherst-holdings",
       "firm_name": "Amherst Holdings",
-      "platform_company": "Amherst's single-family rental platform — roughly 16,000 homes across the Midwest and Sunbelt",
+      "platform_company": "Amherst's single-family rental platform: roughly 16,000 homes across the Midwest and Sunbelt",
       "acquisition_date": "2018",
       "ownership_status": "confirmed",
       "source_url": "https://pestakeholder.org/wp-content/uploads/2019/04/Private-Equity-Single-Family-Rental-4-2019.pdf",
@@ -1111,7 +1260,7 @@
       "industry": "Newspapers",
       "firm_id": "chatham-asset-management",
       "firm_name": "Chatham Asset Management",
-      "platform_company": "2nd-largest US newspaper chain — 30 papers including the Miami Herald, Sacramento Bee, Kansas City Star and Charlotte Observer",
+      "platform_company": "2nd-largest US newspaper chain: 30 papers including the Miami Herald, Sacramento Bee, Kansas City Star and Charlotte Observer",
       "acquisition_date": "2020",
       "ownership_status": "confirmed",
       "source_url": "https://www.poynter.org/local-news/2020/hedge-fund-chatham-asset-management-buy-the-mcclatchy-newspaper-chain/",
@@ -1122,7 +1271,7 @@
           "tag": "Financial extraction",
           "tier": "B",
           "alleged": false,
-          "description": "McClatchy carried heavy debt from its $4.5B 2006 purchase of Knight-Ridder and filed for Chapter 11 in Feb 2020. Hedge fund Chatham Asset Management, its longtime lead lender, won the bankruptcy auction in July 2020 — ending 163 years of family control and handing the chain to its creditors.",
+          "description": "McClatchy carried heavy debt from its $4.5B 2006 purchase of Knight-Ridder and filed for Chapter 11 in Feb 2020. Hedge fund Chatham Asset Management, its longtime lead lender, won the bankruptcy auction in July 2020, ending 163 years of family control and handing the chain to its creditors.",
           "source_url": "https://www.poynter.org/local-news/2020/hedge-fund-chatham-asset-management-buy-the-mcclatchy-newspaper-chain/"
         }
       ]
@@ -1133,7 +1282,7 @@
       "industry": "Newspapers",
       "firm_id": "alden-global",
       "firm_name": "Alden Global Capital",
-      "platform_company": "Alden's flagship newspaper group (formerly Digital First Media) — Denver Post, San Jose Mercury News, St. Paul Pioneer Press, Boston Herald and dozens more; Alden controls 200+ US papers",
+      "platform_company": "Alden's flagship newspaper group (formerly Digital First Media): Denver Post, San Jose Mercury News, St. Paul Pioneer Press, Boston Herald and dozens more; Alden controls 200+ US papers",
       "acquisition_date": "2010",
       "ownership_status": "confirmed",
       "source_url": "https://www.npr.org/2021/10/18/1046952430/the-consequences-of-when-a-hedge-fund-buys-newspapers",
@@ -1144,7 +1293,7 @@
           "tag": "Labor",
           "tier": "B",
           "alleged": false,
-          "description": "After taking over MediaNews Group out of bankruptcy in 2010, Alden cut newsroom staffing by more than 75% across its papers, and its 2016 consolidation of eight San Francisco Bay Area papers into two triggered mass layoffs. Alden's playbook — gutting newsrooms and selling off real estate — was the subject of The Atlantic's 2021 cover story 'The Men Who Are Killing America's Newspapers.'",
+          "description": "After taking over MediaNews Group out of bankruptcy in 2010, Alden cut newsroom staffing by more than 75% across its papers, and its 2016 consolidation of eight San Francisco Bay Area papers into two triggered mass layoffs. Alden's playbook (gutting newsrooms and selling off real estate) was the subject of The Atlantic's 2021 cover story 'The Men Who Are Killing America's Newspapers.'",
           "source_url": "https://www.npr.org/2021/10/18/1046952430/the-consequences-of-when-a-hedge-fund-buys-newspapers"
         }
       ]
@@ -1194,7 +1343,7 @@
           "tag": "Financial extraction",
           "tier": "B",
           "alleged": false,
-          "description": "Sycamore acquired the Jones Group in a 2014 LBO, renamed it Nine West, and moved its most valuable brands (Stuart Weitzman, Kurt Geiger, Jones Apparel) to Sycamore affiliates for below fair value — beyond creditors' reach — while loading Nine West with debt. Nine West went bankrupt in 2018; in the litigation that followed, a court found the former directors may have breached their fiduciary duty by failing to evaluate whether the LBO would render the company insolvent — a landmark warning about PE buyout structures.",
+          "description": "Sycamore acquired the Jones Group in a 2014 LBO, renamed it Nine West, and moved its most valuable brands (Stuart Weitzman, Kurt Geiger, Jones Apparel) to Sycamore affiliates for below fair value (beyond creditors' reach) while loading Nine West with debt. Nine West went bankrupt in 2018; in the litigation that followed, a court found the former directors may have breached their fiduciary duty by failing to evaluate whether the LBO would render the company insolvent, a landmark warning about PE buyout structures.",
           "source_url": "https://www.hklaw.com/en/insights/publications/2021/03/did-a-new-york-federal-court-just-burst-a-private-equity-bubble"
         }
       ]
@@ -1241,7 +1390,7 @@
       "industry": "Apartments",
       "firm_id": "thoma-bravo",
       "firm_name": "Thoma Bravo",
-      "platform_company": "Apartment revenue-management / pricing software (YieldStar, AI Revenue Management) used by landlords nationwide — not a landlord itself, but the pricing engine at the center of the DOJ rent-algorithm case",
+      "platform_company": "Apartment revenue-management / pricing software (YieldStar, AI Revenue Management) used by landlords nationwide, not a landlord itself but the pricing engine at the center of the DOJ rent-algorithm case",
       "acquisition_date": "2021",
       "ownership_status": "confirmed",
       "source_url": "https://pestakeholder.org/news/thoma-bravos-realpage-reaches-settlement-with-doj/",
@@ -1252,7 +1401,7 @@
           "tag": "Legal/regulatory",
           "tier": "A",
           "alleged": false,
-          "description": "The DOJ and eight state attorneys general sued RealPage in Aug 2024, alleging its YieldStar / AI revenue-management software let competing landlords share nonpublic, competitively sensitive pricing and occupancy data and algorithmically align their rents — an unlawful price-fixing scheme the DOJ said harmed millions of renters. RealPage settled in Nov 2025, agreeing to stop enabling the sharing of competitors' nonpublic pricing data and to stop training its pricing AI on it. Thoma Bravo acquired RealPage in 2021 for ~$10.2B.",
+          "description": "The DOJ and eight state attorneys general sued RealPage in Aug 2024, alleging its YieldStar / AI revenue-management software let competing landlords share nonpublic, competitively sensitive pricing and occupancy data and algorithmically align their rents, an unlawful price-fixing scheme the DOJ said harmed millions of renters. RealPage settled in Nov 2025, agreeing to stop enabling the sharing of competitors' nonpublic pricing data and to stop training its pricing AI on it. Thoma Bravo acquired RealPage in 2021 for ~$10.2B.",
           "source_url": "https://pestakeholder.org/news/thoma-bravos-realpage-reaches-settlement-with-doj/"
         }
       ]
@@ -1274,7 +1423,7 @@
           "tag": "Financial extraction",
           "tier": "B",
           "alleged": false,
-          "description": "To help finance its $2.1B 2014 purchase of Red Lobster from Darden, Golden Gate Capital sold the chain's real estate for ~$1.5B in a sale-leaseback — pocketing cash while saddling Red Lobster with rent obligations it couldn't sustain. That debt-and-rent burden was widely cited as a key driver of Red Lobster's May 2024 Chapter 11 bankruptcy.",
+          "description": "To help finance its $2.1B 2014 purchase of Red Lobster from Darden, Golden Gate Capital sold the chain's real estate for ~$1.5B in a sale-leaseback, pocketing cash while saddling Red Lobster with rent obligations it couldn't sustain. That debt-and-rent burden was widely cited as a key driver of Red Lobster's May 2024 Chapter 11 bankruptcy.",
           "source_url": "https://www.cnbc.com/2024/05/24/how-private-equity-rolled-red-lobster.html"
         }
       ]
@@ -1332,7 +1481,7 @@
           "tag": "Financial extraction",
           "tier": "B",
           "alleged": false,
-          "description": "Sears' post-bankruptcy estate sued Eddie Lampert and ESL alleging they stripped more than $2B of assets from the retailer via self-dealing — including the Lands' End spinoff and the 2015 Seritage sale-leaseback of 200+ Sears stores — moving value beyond creditors' reach as the company slid toward its Oct 2018 bankruptcy. The claims settled for $175M. Sears shrank from ~3,500 stores to a handful.",
+          "description": "Sears' post-bankruptcy estate sued Eddie Lampert and ESL alleging they stripped more than $2B of assets from the retailer via self-dealing (including the Lands' End spinoff and the 2015 Seritage sale-leaseback of 200+ Sears stores), moving value beyond creditors' reach as the company slid toward its Oct 2018 bankruptcy. The claims settled for $175M. Sears shrank from ~3,500 stores to a handful.",
           "source_url": "https://www.cbsnews.com/news/following-bankruptcy-sears-sues-former-chairman-eddie-lampert/"
         }
       ]
@@ -1418,14 +1567,14 @@
           "tag": "Consumer harm",
           "tier": "B",
           "alleged": false,
-          "description": "ProPublica documented how TeamHealth, under Blackstone, used out-of-network emergency-room billing to mark up patient bills — a model that generated large surprise bills for insured patients who had no choice of ER physician.",
+          "description": "ProPublica documented how TeamHealth, under Blackstone, used out-of-network emergency-room billing to mark up patient bills, a model that generated large surprise bills for insured patients who had no choice of ER physician.",
           "source_url": "https://www.propublica.org/article/how-rich-investors-not-doctors-profit-from-marking-up-er-bills"
         },
         {
           "tag": "Legal/regulatory",
           "tier": "A",
           "alleged": false,
-          "description": "US DOJ False Claims Act settlement ($60M, 2017): TeamHealth, as successor to IPC Healthcare, resolved allegations of 'upcoding' — billing Medicare, Medicaid, the Defense Health Agency and the federal employee program for higher and more expensive levels of service than were actually provided. Originated as a qui tam whistleblower suit; TeamHealth entered a 5-year Corporate Integrity Agreement.",
+          "description": "US DOJ False Claims Act settlement ($60M, 2017): TeamHealth, as successor to IPC Healthcare, resolved allegations of 'upcoding': billing Medicare, Medicaid, the Defense Health Agency and the federal employee program for higher and more expensive levels of service than were actually provided. Originated as a qui tam whistleblower suit; TeamHealth entered a 5-year Corporate Integrity Agreement.",
           "source_url": "https://www.justice.gov/archives/opa/pr/healthcare-service-provider-pay-60-million-settle-medicare-and-medicaid-false-claims-act"
         }
       ]
@@ -1461,7 +1610,7 @@
           "tag": "Financial extraction",
           "tier": "B",
           "alleged": false,
-          "description": "Bain Capital, KKR and Vornado took Toys R Us private in a 2005 $6.6B leveraged buyout, loading it with ~$5B of debt that cost ~$400M/year to service. The company filed for Chapter 11 in Sept 2017 and liquidated in 2018 — closing ~800 stores and cutting 33,000 jobs, initially with no severance — even as the PE owners collected ~$464M in fees and interest. Congress publicly confronted Bain and KKR over the collapse.",
+          "description": "Bain Capital, KKR and Vornado took Toys R Us private in a 2005 $6.6B leveraged buyout, loading it with ~$5B of debt that cost ~$400M/year to service. The company filed for Chapter 11 in Sept 2017 and liquidated in 2018 (closing ~800 stores and cutting 33,000 jobs, initially with no severance) even as the PE owners collected ~$464M in fees and interest. Congress publicly confronted Bain and KKR over the collapse.",
           "source_url": "https://pestakeholder.org/news/kkr-bain-capital-vornado-repeatedly-rewarded-themselves-for-adding-debt-to-toys-r-us/"
         }
       ]
@@ -1516,7 +1665,7 @@
       "industry": "Single-family rentals",
       "firm_id": "blackstone",
       "firm_name": "Blackstone",
-      "platform_company": "~40,000 US homes; Blackstone took Tricon private in May 2024 for ~$3.5B — its return to single-family rentals and now its primary US SFR platform (it also absorbed the wound-down Home Partners of America)",
+      "platform_company": "~40,000 US homes; Blackstone took Tricon private in May 2024 for ~$3.5B, its return to single-family rentals and now its primary US SFR platform (it also absorbed the wound-down Home Partners of America)",
       "acquisition_date": "2024",
       "ownership_status": "confirmed",
       "source_url": "https://www.blackstone.com/news/press/blackstone-real-estate-to-take-tricon-residential-private/",
@@ -1583,7 +1732,7 @@
           "tag": "Labor",
           "tier": "B",
           "alleged": false,
-          "description": "Vice Media filed for Chapter 11 in May 2023 and was sold for ~$350M to a lender group led by Fortress Investment Group (with Soros Fund Management and Monroe Capital). The new owners shuttered Vice World News, canceled the flagship Vice News Tonight, and later closed Vice.com's newsroom — cutting hundreds of jobs.",
+          "description": "Vice Media filed for Chapter 11 in May 2023 and was sold for ~$350M to a lender group led by Fortress Investment Group (with Soros Fund Management and Monroe Capital). The new owners shuttered Vice World News, canceled the flagship Vice News Tonight, and later closed Vice.com's newsroom, cutting hundreds of jobs.",
           "source_url": "https://www.cnbc.com/2023/05/15/vice-media-files-for-bankruptcy-to-enable-sale-to-lenders-including-soros-and-fortress.html"
         }
       ]

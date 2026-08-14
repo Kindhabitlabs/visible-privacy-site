@@ -31,9 +31,9 @@ const FIRM_TYPE_LABELS = {
 };
 
 const TIER_LABELS = {
-  "A": "Tier A — confirmed",
-  "B": "Tier B — reported",
-  "C": "Tier C — alleged",
+  "A": "Tier A: confirmed",
+  "B": "Tier B: reported",
+  "C": "Tier C: alleged",
 };
 
 // ── State ────────────────────────────────────────────────────────────────
@@ -269,7 +269,7 @@ function renderCards() {
     const firmType = firm ? (FIRM_TYPE_LABELS[firm.type] || firm.type) : "";
     const statusLabel = STATUS_LABELS[b.ownership_status] || b.ownership_status || "—";
     facts.innerHTML = `
-      <div class="pe-fact"><span>Owning firm</span><div>${b.firm_name || "Unknown"}${firmType ? ` <em>(${firmType})</em>` : ""}${firm && firm.headquarters ? ` — ${firm.headquarters}` : ""}</div></div>
+      <div class="pe-fact"><span>Owning firm</span><div>${b.firm_name || "Unknown"}${firmType ? ` <em>(${firmType})</em>` : ""}${firm && firm.headquarters ? ` · ${firm.headquarters}` : ""}</div></div>
       ${b.platform_company ? `<div class="pe-fact"><span>Operated under</span><div>${b.platform_company}</div></div>` : ""}
       <div class="pe-fact"><span>Acquired</span><div>${b.acquisition_date || "—"}</div></div>
       <div class="pe-fact"><span>Ownership status</span><div><span class="pe-status pe-status-${b.ownership_status || "unknown"}">${statusLabel}</span></div></div>
@@ -291,7 +291,7 @@ function renderCards() {
     if (fTags.length) {
       const head = document.createElement("div");
       head.className = "pe-tags-head";
-      head.textContent = `Firm practice record — ${b.firm_name}`;
+      head.textContent = `Firm practice record: ${b.firm_name}`;
       body.appendChild(head);
       fTags.forEach((t) => body.appendChild(renderViolation(t)));
     }

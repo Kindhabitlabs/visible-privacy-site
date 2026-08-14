@@ -12,11 +12,11 @@
     },
     {
       "firm_id": "global-growth-lindberg",
-      "firm_name": "Global Growth (Eli Global) — Greg Lindberg",
+      "firm_name": "Global Growth (Eli Global / Greg Lindberg)",
       "firm_type": "holding-company",
       "headquarters": "Durham, NC",
       "portfolio_url": "https://www.globalgrowth.com",
-      "notes": "Greg Lindberg's holding company (branded Eli Global, later Global Growth) rolled up 100+ companies, including several insurers he controlled — Colorado Bankers Life, Bankers Life Insurance Company, Southland National Insurance Corporation and Southland National Reinsurance. Lindberg pleaded guilty in Nov 2024 to a ~$2B fraud/money-laundering scheme and was sentenced May 2026 to 12 years; the insurers went into rehabilitation/liquidation.",
+      "notes": "Greg Lindberg's holding company (branded Eli Global, later Global Growth) rolled up 100+ companies, including several insurers he controlled: Colorado Bankers Life, Bankers Life Insurance Company, Southland National Insurance Corporation and Southland National Reinsurance. Lindberg pleaded guilty in Nov 2024 to a ~$2B fraud/money-laundering scheme and was sentenced May 2026 to 12 years; the insurers went into rehabilitation/liquidation.",
       "tags": []
     },
     {
@@ -76,7 +76,7 @@
       "evidence": [
         { "tag": "Legal/regulatory", "evidence_tier": "A", "description": "US DOJ: Greg Lindberg pleaded guilty in November 2024 to conspiracy to commit offenses against the United States and conspiracy to commit money laundering, in connection with a scheme prosecutors valued at roughly $2 billion to defraud insurance regulators, policyholders and others. He was sentenced in May 2026 to 12 years in federal prison and more than $1.6 billion in restitution.", "source_url": "https://www.justice.gov/archives/opa/pr/insurance-mogul-pleads-guilty-2b-fraud-and-money-laundering-scheme", "publish": true },
         { "tag": "Financial extraction", "evidence_tier": "A", "description": "Per DOJ, from no later than 2016 through at least 2019 Lindberg caused the insurance companies he controlled to invest more than $2 billion in loans and other securities with his own affiliated companies, evading regulatory requirements meant to protect policyholders and concealing the insurers' true financial condition; he personally benefited by 'forgiving' more than $125 million in loans to himself from the insurers.", "source_url": "https://www.justice.gov/criminal/criminal-vns/case/united-states-v-greg-e-lindberg", "publish": true },
-        { "tag": "Consumer harm", "evidence_tier": "B", "description": "Colorado Bankers Life was placed into court-ordered liquidation effective November 30, 2024. A moratorium continues to apply to obligations not covered by guaranty associations — including cash surrenders, transfers, policy loans and interest on annuity accounts — and no interest has been credited on annuity accounts since the liquidation date. Lindberg's collapsed insurers left more than 200,000 policyholders, with claims paid out by state guaranty associations.", "source_url": "https://www.insurancejournal.com/news/southeast/2024/08/28/790191.htm", "publish": true }
+        { "tag": "Consumer harm", "evidence_tier": "B", "description": "Colorado Bankers Life was placed into court-ordered liquidation effective November 30, 2024. A moratorium continues to apply to obligations not covered by guaranty associations (including cash surrenders, transfers, policy loans and interest on annuity accounts), and no interest has been credited on annuity accounts since the liquidation date. Lindberg's collapsed insurers left more than 200,000 policyholders, with claims paid out by state guaranty associations.", "source_url": "https://www.insurancejournal.com/news/southeast/2024/08/28/790191.htm", "publish": true }
       ]
     },
     {
@@ -84,13 +84,13 @@
       "business_name": "Athene",
       "industry": "Insurance",
       "owning_firm_id": "apollo-global-management",
-      "platform_company": "Athene Holding Ltd. (Bermuda) — largest US annuity provider and a leading pension-risk-transfer (PRT) writer; wholly owned by Apollo since their 2022 merger",
+      "platform_company": "Athene Holding Ltd. (Bermuda): largest US annuity provider and a leading pension-risk-transfer (PRT) writer; wholly owned by Apollo since their 2022 merger",
       "acquisition_date": "2022",
       "ownership_status": "confirmed",
       "source_url": "https://ir.apollo.com/news-events/press-releases/detail/143/apollo-announces-further-expansion-of-its-insurance-asset",
       "last_verified": "2026-08-14",
       "evidence": [
-        { "tag": "Financial extraction", "evidence_tier": "B", "description": "Investigative and policy reporting documents concern about the Apollo/Athene model: annuity and pension-risk-transfer premiums are invested through Apollo's own credit platforms and risk is ceded to Bermuda-based reinsurance. Athene has reached at least 49 pension-risk-transfer deals with companies including Alcoa, AT&T and Lockheed Martin, converting roughly $53 billion of pensions covering about 535,000 people into annuities — moving retirement savings that retirees, regulators and economists say are exposed to higher and more opaque risk.", "source_url": "https://cepr.net/publications/you-bet-your-life-insurance-private-equity-comes-for-your-annuity/", "publish": true },
+        { "tag": "Financial extraction", "evidence_tier": "B", "description": "Investigative and policy reporting documents concern about the Apollo/Athene model: annuity and pension-risk-transfer premiums are invested through Apollo's own credit platforms and risk is ceded to Bermuda-based reinsurance. Athene has reached at least 49 pension-risk-transfer deals with companies including Alcoa, AT&T and Lockheed Martin, converting roughly $53 billion of pensions covering about 535,000 people into annuities, moving retirement savings that retirees, regulators and economists say are exposed to higher and more opaque risk.", "source_url": "https://cepr.net/publications/you-bet-your-life-insurance-private-equity-comes-for-your-annuity/", "publish": true },
         { "tag": "Legal/regulatory", "evidence_tier": "C", "description": "ALLEGED / PENDING: putative ERISA class actions (led by Schlichter Bogard LLP) allege that plan sponsors which transferred employee pensions to Athene annuities failed to select the safest available annuity provider, exposing retirees to added risk. The suits are pending and the allegations are unproven; the ERISA Advisory Council has heard comment on the fiduciary criteria used to vet PRT annuity providers.", "source_url": "https://retirementincomejournal.com/article/of-private-equity-and-pension-risk-transfers/", "publish": true }
       ]
     },
@@ -99,7 +99,7 @@
       "business_name": "Fortitude Re",
       "industry": "Insurance",
       "owning_firm_id": "carlyle-group",
-      "platform_company": "Bermuda-based reinsurer of AIG's legacy life & retirement and general-insurance run-off (~$30B+ of reserves); acquired Prudential's PALAC in-force variable-annuity block (~$31B). Recorded as an ownership fact — 'who really owns your legacy annuity.'",
+      "platform_company": "Bermuda-based reinsurer of AIG's legacy life & retirement and general-insurance run-off (~$30B+ of reserves); acquired Prudential's PALAC in-force variable-annuity block (~$31B). Recorded as an ownership fact: 'who really owns your legacy annuity.'",
       "acquisition_date": "2020",
       "ownership_status": "confirmed",
       "source_url": "https://www.insurancejournal.com/news/international/2020/06/03/570831.htm",
@@ -110,7 +110,7 @@
       "business_name": "Hub International",
       "industry": "Insurance",
       "owning_firm_id": "hellman-friedman",
-      "platform_company": "One of the largest US insurance brokerages; a buy-and-build rollup that has acquired hundreds of agencies. Recorded as an ownership fact — 'who really owns your insurance broker.'",
+      "platform_company": "One of the largest US insurance brokerages; a buy-and-build rollup that has acquired hundreds of agencies. Recorded as an ownership fact: 'who really owns your insurance broker.'",
       "acquisition_date": "2013",
       "ownership_status": "confirmed",
       "source_url": "https://www.hubinternational.com/media-center/press-releases/2025/05/hub-secures-significant-minority-investment-and-reaches-new-milestone/",
