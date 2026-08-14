@@ -1,0 +1,120 @@
+{
+  "_note": "Batch 14 — insurance (best mix across segments: health, life & annuity, brokerage). Imported via import-to-airtable.mjs; businesses land review_status=pending, spot-check then flip to verified. Evidence rows land publish=true but still need the 'publish' checkbox verified before they survive the export gate. All tags here are business-level (the Business Tags channel) — NO firm-level tags, so nothing bleeds across verticals (annuity/insurance entries must not inherit vet/HVAC-context firm tags). Industry facet kept as a single 'Insurance' label for a clean v1 facet. Strongest anchors: Benefytt (FTC $100M, Tier A) and Colorado Bankers Life / Greg Lindberg (DOJ $2B fraud, Tier A). Athene/Apollo carries a Tier B model-risk note plus a Tier C alleged/pending PRT-litigation row (shown with an 'alleged' label). Fortitude Re (Carlyle) and Hub International (Hellman & Friedman) are recorded as ownership facts only — no evidence attached, because their concerns are industry-level / valuation-story, not chain-specific documented harm. EXCLUDED: AssuredPartners (Arthur J. Gallagher, a public company, closed the buyout Aug 18 2025 — GTCR/Apax exited; excluded by the no-public-companies rule). DEFERRED: Global Atlantic — KKR is its sole owner but KKR already carries a 'Financial extraction' firm tag from the vet batch, which would bleed a vet-context tag onto an annuity company; add later only if that inheritance is acceptable or a neutral routing is set up.",
+  "firms": [
+    {
+      "firm_id": "madison-dearborn",
+      "firm_name": "Madison Dearborn Partners",
+      "firm_type": "PE",
+      "headquarters": "Chicago, IL",
+      "portfolio_url": "https://www.mdcp.com",
+      "notes": "Took Benefytt Technologies (formerly Health Insurance Innovations) private in an all-cash tender offer completed August 21, 2020 (~$410M, $31.00/share).",
+      "tags": []
+    },
+    {
+      "firm_id": "global-growth-lindberg",
+      "firm_name": "Global Growth (Eli Global) — Greg Lindberg",
+      "firm_type": "holding-company",
+      "headquarters": "Durham, NC",
+      "portfolio_url": "https://www.globalgrowth.com",
+      "notes": "Greg Lindberg's holding company (branded Eli Global, later Global Growth) rolled up 100+ companies, including several insurers he controlled — Colorado Bankers Life, Bankers Life Insurance Company, Southland National Insurance Corporation and Southland National Reinsurance. Lindberg pleaded guilty in Nov 2024 to a ~$2B fraud/money-laundering scheme and was sentenced May 2026 to 12 years; the insurers went into rehabilitation/liquidation.",
+      "tags": []
+    },
+    {
+      "firm_id": "apollo",
+      "firm_name": "Apollo Global Management",
+      "firm_type": "PE",
+      "headquarters": "New York, NY",
+      "portfolio_url": "https://www.apollo.com",
+      "notes": "Co-founded Athene in 2009 and completed a full merger with it in 2022 (announced 2021). Athene is the largest US annuity provider and a leading pension-risk-transfer (PRT) writer; its assets are managed within Apollo's credit platforms.",
+      "tags": []
+    },
+    {
+      "firm_id": "carlyle",
+      "firm_name": "The Carlyle Group",
+      "firm_type": "PE",
+      "headquarters": "Washington, DC",
+      "portfolio_url": "https://www.carlyle.com",
+      "notes": "With Japan's T&D Holdings, acquired a 76.6% interest in Fortitude Group Holdings from AIG (closed June 2020); Carlyle-managed funds hold ~71.5%.",
+      "tags": []
+    },
+    {
+      "firm_id": "hellman-friedman",
+      "firm_name": "Hellman & Friedman",
+      "firm_type": "PE",
+      "headquarters": "San Francisco, CA",
+      "portfolio_url": "https://www.hf.com",
+      "notes": "Controlling owner of Hub International since 2013; Hub reached a $29B valuation in 2025. Leonard Green & Partners and Altas Partners hold minority stakes.",
+      "tags": []
+    }
+  ],
+  "businesses": [
+    {
+      "business_id": "benefytt-technologies",
+      "business_name": "Benefytt Technologies (formerly Health Insurance Innovations)",
+      "industry": "Insurance",
+      "owning_firm_id": "madison-dearborn",
+      "platform_company": "Online marketer of short-term / limited-benefit health plans and supplemental insurance products; renamed from Health Insurance Innovations in March 2020, taken private by Madison Dearborn in August 2020",
+      "acquisition_date": "2020",
+      "ownership_status": "confirmed",
+      "source_url": "https://www.globenewswire.com/news-release/2020/07/13/2061108/0/en/Benefytt-Technologies-Inc-to-be-Acquired-by-Madison-Dearborn-Partners.html",
+      "last_verified": "2026-08-14",
+      "evidence": [
+        { "tag": "Legal/regulatory", "evidence_tier": "A", "description": "FTC v. Benefytt Technologies: under a 2022 settlement, Benefytt was required to pay $100 million for consumer refunds, was barred from lying about its products and from charging illegal junk fees, and former CEO Gavin Southwell and former VP Amy Brady were permanently banned from selling or marketing health-care-related products. In March 2024 the FTC distributed $99,307,988 in refunds to 463,629 consumers who had paid Benefytt $1,000 or more between 2017 and 2022.", "source_url": "https://www.ftc.gov/news-events/news/press-releases/2024/03/ftc-sends-nearly-100-million-refunds-consumers-harmed-benefytt-technologies-sham-health-plans", "publish": true },
+        { "tag": "Consumer harm", "evidence_tier": "A", "description": "Per the FTC, Benefytt (operating under names such as Health Insurance Innovations) and its partners ran deceptive websites targeting consumers searching for comprehensive, ACA-qualified health insurance, then charged them hundreds of dollars a month for products and services that often left them unprotected in a medical emergency.", "source_url": "https://www.ftc.gov/legal-library/browse/cases-proceedings/192-3141-benefytt-technologies-et-al-ftc-v", "publish": true }
+      ]
+    },
+    {
+      "business_id": "colorado-bankers-life",
+      "business_name": "Colorado Bankers Life Insurance Company",
+      "industry": "Insurance",
+      "owning_firm_id": "global-growth-lindberg",
+      "platform_company": "Largest of several life/annuity insurers controlled by Greg Lindberg (with Bankers Life Insurance Company, Southland National Insurance Corporation and Southland National Reinsurance); placed into court-ordered liquidation effective November 30, 2024",
+      "acquisition_date": "mid-2010s",
+      "ownership_status": "confirmed",
+      "source_url": "https://www.justice.gov/archives/opa/pr/insurance-mogul-pleads-guilty-2b-fraud-and-money-laundering-scheme",
+      "last_verified": "2026-08-14",
+      "evidence": [
+        { "tag": "Legal/regulatory", "evidence_tier": "A", "description": "US DOJ: Greg Lindberg pleaded guilty in November 2024 to conspiracy to commit offenses against the United States and conspiracy to commit money laundering, in connection with a scheme prosecutors valued at roughly $2 billion to defraud insurance regulators, policyholders and others. He was sentenced in May 2026 to 12 years in federal prison and more than $1.6 billion in restitution.", "source_url": "https://www.justice.gov/archives/opa/pr/insurance-mogul-pleads-guilty-2b-fraud-and-money-laundering-scheme", "publish": true },
+        { "tag": "Financial extraction", "evidence_tier": "A", "description": "Per DOJ, from no later than 2016 through at least 2019 Lindberg caused the insurance companies he controlled to invest more than $2 billion in loans and other securities with his own affiliated companies, evading regulatory requirements meant to protect policyholders and concealing the insurers' true financial condition; he personally benefited by 'forgiving' more than $125 million in loans to himself from the insurers.", "source_url": "https://www.justice.gov/criminal/criminal-vns/case/united-states-v-greg-e-lindberg", "publish": true },
+        { "tag": "Consumer harm", "evidence_tier": "B", "description": "Colorado Bankers Life was placed into court-ordered liquidation effective November 30, 2024. A moratorium continues to apply to obligations not covered by guaranty associations — including cash surrenders, transfers, policy loans and interest on annuity accounts — and no interest has been credited on annuity accounts since the liquidation date. Lindberg's collapsed insurers left more than 200,000 policyholders, with claims paid out by state guaranty associations.", "source_url": "https://www.insurancejournal.com/news/southeast/2024/08/28/790191.htm", "publish": true }
+      ]
+    },
+    {
+      "business_id": "athene",
+      "business_name": "Athene",
+      "industry": "Insurance",
+      "owning_firm_id": "apollo",
+      "platform_company": "Athene Holding Ltd. (Bermuda) — largest US annuity provider and a leading pension-risk-transfer (PRT) writer; wholly owned by Apollo since their 2022 merger",
+      "acquisition_date": "2022",
+      "ownership_status": "confirmed",
+      "source_url": "https://ir.apollo.com/news-events/press-releases/detail/143/apollo-announces-further-expansion-of-its-insurance-asset",
+      "last_verified": "2026-08-14",
+      "evidence": [
+        { "tag": "Financial extraction", "evidence_tier": "B", "description": "Investigative and policy reporting documents concern about the Apollo/Athene model: annuity and pension-risk-transfer premiums are invested through Apollo's own credit platforms and risk is ceded to Bermuda-based reinsurance. Athene has reached at least 49 pension-risk-transfer deals with companies including Alcoa, AT&T and Lockheed Martin, converting roughly $53 billion of pensions covering about 535,000 people into annuities — moving retirement savings that retirees, regulators and economists say are exposed to higher and more opaque risk.", "source_url": "https://cepr.net/publications/you-bet-your-life-insurance-private-equity-comes-for-your-annuity/", "publish": true },
+        { "tag": "Legal/regulatory", "evidence_tier": "C", "description": "ALLEGED / PENDING: putative ERISA class actions (led by Schlichter Bogard LLP) allege that plan sponsors which transferred employee pensions to Athene annuities failed to select the safest available annuity provider, exposing retirees to added risk. The suits are pending and the allegations are unproven; the ERISA Advisory Council has heard comment on the fiduciary criteria used to vet PRT annuity providers.", "source_url": "https://retirementincomejournal.com/article/of-private-equity-and-pension-risk-transfers/", "publish": true }
+      ]
+    },
+    {
+      "business_id": "fortitude-re",
+      "business_name": "Fortitude Re",
+      "industry": "Insurance",
+      "owning_firm_id": "carlyle",
+      "platform_company": "Bermuda-based reinsurer of AIG's legacy life & retirement and general-insurance run-off (~$30B+ of reserves); acquired Prudential's PALAC in-force variable-annuity block (~$31B). Recorded as an ownership fact — 'who really owns your legacy annuity.'",
+      "acquisition_date": "2020",
+      "ownership_status": "confirmed",
+      "source_url": "https://www.insurancejournal.com/news/international/2020/06/03/570831.htm",
+      "last_verified": "2026-08-14"
+    },
+    {
+      "business_id": "hub-international",
+      "business_name": "Hub International",
+      "industry": "Insurance",
+      "owning_firm_id": "hellman-friedman",
+      "platform_company": "One of the largest US insurance brokerages; a buy-and-build rollup that has acquired hundreds of agencies. Recorded as an ownership fact — 'who really owns your insurance broker.'",
+      "acquisition_date": "2013",
+      "ownership_status": "confirmed",
+      "source_url": "https://www.hubinternational.com/media-center/press-releases/2025/05/hub-secures-significant-minority-investment-and-reaches-new-milestone/",
+      "last_verified": "2026-08-14"
+    }
+  ]
+}
