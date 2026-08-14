@@ -20,7 +20,7 @@
       "tags": []
     },
     {
-      "firm_id": "apollo",
+      "firm_id": "apollo-global-management",
       "firm_name": "Apollo Global Management",
       "firm_type": "PE",
       "headquarters": "New York, NY",
@@ -29,7 +29,7 @@
       "tags": []
     },
     {
-      "firm_id": "carlyle",
+      "firm_id": "carlyle-group",
       "firm_name": "The Carlyle Group",
       "firm_type": "PE",
       "headquarters": "Washington, DC",
@@ -83,7 +83,7 @@
       "business_id": "athene",
       "business_name": "Athene",
       "industry": "Insurance",
-      "owning_firm_id": "apollo",
+      "owning_firm_id": "apollo-global-management",
       "platform_company": "Athene Holding Ltd. (Bermuda) — largest US annuity provider and a leading pension-risk-transfer (PRT) writer; wholly owned by Apollo since their 2022 merger",
       "acquisition_date": "2022",
       "ownership_status": "confirmed",
@@ -98,7 +98,7 @@
       "business_id": "fortitude-re",
       "business_name": "Fortitude Re",
       "industry": "Insurance",
-      "owning_firm_id": "carlyle",
+      "owning_firm_id": "carlyle-group",
       "platform_company": "Bermuda-based reinsurer of AIG's legacy life & retirement and general-insurance run-off (~$30B+ of reserves); acquired Prudential's PALAC in-force variable-annuity block (~$31B). Recorded as an ownership fact — 'who really owns your legacy annuity.'",
       "acquisition_date": "2020",
       "ownership_status": "confirmed",
