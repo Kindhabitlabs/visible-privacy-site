@@ -916,12 +916,23 @@
     }
 
     /* ---- FLOCK TEASER (home page) ---- */
-    .flock-teaser {
+    /* The Graphene teaser shares every rule in this block. The two sit back to
+       back on the home page, so they are kept on one set of selectors rather
+       than two copies that can drift apart. Only the artwork differs. */
+    .flock-teaser,
+    .graphene-teaser {
       background: var(--surface);
       border-top: 1px solid var(--border);
       border-bottom: 1px solid var(--border);
     }
-    .flock-teaser-inner {
+    /* Two identical surfaces in a row would read as one very tall section, so
+       the second drops the doubled hairline and takes the page background. */
+    .graphene-teaser {
+      background: var(--bg);
+      border-top: none;
+    }
+    .flock-teaser-inner,
+    .graphene-teaser-inner {
       max-width: 1200px;
       margin: 0 auto;
       display: grid;
@@ -929,8 +940,10 @@
       gap: 56px;
       align-items: center;
     }
-    .flock-teaser-art { color: var(--accent); }
-    .flock-teaser-art svg { width: 100%; height: auto; display: block; }
+    .flock-teaser-art,
+    .graphene-teaser-art { color: var(--accent); }
+    .flock-teaser-art svg,
+    .graphene-teaser-art svg { width: 100%; height: auto; display: block; }
 
     /* Plates drift, each on its own timing, so the frame never repeats
        exactly. Amplitude is capped by the cone: the nearest plate has about
@@ -957,22 +970,26 @@
     @media (prefers-reduced-motion: reduce) {
       .alpr-plate-1, .alpr-plate-2, .alpr-plate-3 { animation: none; }
     }
-    .flock-teaser h2 { margin-bottom: 28px; }
-    .flock-teaser p {
+    .flock-teaser h2,
+    .graphene-teaser h2 { margin-bottom: 28px; }
+    .flock-teaser p,
+    .graphene-teaser p {
       color: var(--muted);
       font-size: 17px;
       line-height: 1.75;
       margin-bottom: 20px;
       max-width: 760px;
     }
-    .flock-teaser p strong { color: var(--text); font-weight: 500; }
+    .flock-teaser p strong,
+    .graphene-teaser p strong { color: var(--text); font-weight: 500; }
     .flock-civic-line {
       border-left: 2px solid var(--gold);
       padding-left: 22px;
       color: var(--text) !important;
       font-size: 16px !important;
     }
-    .flock-teaser-cta {
+    .flock-teaser-cta,
+    .graphene-teaser-cta {
       margin-top: 16px;
       font-size: 15px;
       letter-spacing: 0.04em;
@@ -1227,6 +1244,131 @@
       font-style: italic;
       line-height: 1.7;
       max-width: 760px;
+    }
+
+    /* ---- GRAPHENE PAGE ---- */
+    /* The page reuses .flock-body / .flock-block / .flock-list / .flock-cards
+       for its reading column, which are generic despite the prefix. Only the
+       artwork layer is specific, because the phone mark hangs at different
+       heights than the cameras and does not stand on the section rules. */
+    .graphene-main { position: relative; }
+    .graphene-main > .dossier-header,
+    .graphene-main > .flock-body { position: relative; z-index: 1; }
+
+    /* Subheads inside a section, clearly subordinate to the .flock-block h2. */
+    .flock-block h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(22px, 2.4vw, 30px);
+      font-weight: 600;
+      line-height: 1.2;
+      margin: 44px 0 20px;
+    }
+    .flock-block code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 0.88em;
+      color: var(--gold);
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      border-radius: 2px;
+      padding: 1px 6px;
+      white-space: nowrap;
+    }
+
+    /* A phone standing beside the text, alternating sides, echoing the camera
+       scenes on the Flock page. */
+    .graphene-sig-layer {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .graphene-sig-scene {
+      position: absolute;
+      width: 230px;
+      /* Same circularity trap as the Flock scenes: an absolutely positioned
+         box takes its height from its content while height:auto on the SVG
+         wants its height from the box. aspect-ratio pins one end and breaks
+         the loop. Without it the mark collapses to nothing. */
+      aspect-ratio: 280 / 250;
+      color: var(--accent);
+      opacity: 0.45;
+    }
+    .graphene-sig-scene svg { width: 100%; height: 100%; display: block; }
+    .graphene-sig-scene.side-right { right: 16px; }
+    /* Mirrored so the left-hand phones radiate into the page, not off it. */
+    .graphene-sig-scene.side-left { left: 16px; transform: scaleX(-1); }
+    .sig-scene-1 { top: 5%; }
+    .sig-scene-2 { top: 29%; }
+    .sig-scene-3 { top: 53%; }
+    .sig-scene-4 { top: 76%; }
+    .sig-scene-5 { bottom: 24px; }
+
+    /* The small mark sits on the section rule, like the divider cameras. */
+    .graphene-divider-sig {
+      position: absolute;
+      bottom: -1px;
+      width: 56px;
+      /* Explicit height for the 56x52 viewBox, same reason as above. */
+      height: 52px;
+      color: var(--accent);
+      opacity: 0.5;
+      pointer-events: none;
+    }
+    .graphene-divider-sig svg { width: 100%; height: 100%; display: block; }
+    .graphene-divider-sig.sig-right { right: 8px; }
+    .graphene-divider-sig.sig-left { left: 8px; transform: scaleX(-1); }
+
+    /* Packets drift away from the handset on non-harmonic periods so the five
+       scenes never line up. Amplitude stays small so the three stay grouped
+       along the arc they were thrown from. */
+    @keyframes sig-drift-a {
+      0%, 100% { transform: translate(0, 0); }
+      32%      { transform: translate(-6px, -3px); }
+      68%      { transform: translate(3px, 4px); }
+    }
+    @keyframes sig-drift-b {
+      0%, 100% { transform: translate(0, 0); }
+      38%      { transform: translate(-4px, 5px); }
+      72%      { transform: translate(5px, -3px); }
+    }
+    @keyframes sig-drift-c {
+      0%, 100% { transform: translate(0, 0); }
+      42%      { transform: translate(-5px, -4px); }
+      76%      { transform: translate(4px, 3px); }
+    }
+    .sig-packet-1 { animation: sig-drift-a 6.5s ease-in-out infinite; }
+    .sig-packet-2 { animation: sig-drift-b 8s ease-in-out infinite; }
+    .sig-packet-3 { animation: sig-drift-c 10s ease-in-out infinite; }
+    @media (prefers-reduced-motion: reduce) {
+      .sig-packet-1, .sig-packet-2, .sig-packet-3 { animation: none; }
+    }
+
+    /* Offset each scene so the five do not pulse in lockstep. */
+    .sig-scene-2 .sig-packet-1 { animation-delay: -2.6s; }
+    .sig-scene-2 .sig-packet-2 { animation-delay: -3.4s; }
+    .sig-scene-2 .sig-packet-3 { animation-delay: -1.8s; }
+    .sig-scene-3 .sig-packet-1 { animation-delay: -4.4s; }
+    .sig-scene-3 .sig-packet-2 { animation-delay: -1.9s; }
+    .sig-scene-3 .sig-packet-3 { animation-delay: -5.7s; }
+    .sig-scene-4 .sig-packet-1 { animation-delay: -1.5s; }
+    .sig-scene-4 .sig-packet-2 { animation-delay: -6.1s; }
+    .sig-scene-4 .sig-packet-3 { animation-delay: -4.2s; }
+    .sig-scene-5 .sig-packet-1 { animation-delay: -3.7s; }
+    .sig-scene-5 .sig-packet-2 { animation-delay: -6.8s; }
+    .sig-scene-5 .sig-packet-3 { animation-delay: -7.6s; }
+
+    /* Below ~1280px the gutters are gone and the scenes pass behind the
+       reading column, so the opacity drops to keep body text legible. */
+    @media (max-width: 1280px) {
+      .graphene-sig-scene { opacity: 0.22; }
+      .graphene-sig-scene.side-right { right: -60px; }
+      .graphene-sig-scene.side-left { left: -60px; }
+    }
+    @media (max-width: 1000px) {
+      .graphene-sig-scene { width: 200px; opacity: 0.18; }
+      .graphene-sig-scene.side-right { right: -85px; }
+      .graphene-sig-scene.side-left { left: -85px; }
     }
 
     /* ---- ANIMATIONS ---- */
@@ -1510,9 +1652,12 @@
       .consequence-icon { width: 40px; height: 40px; }
       .consequence-icon svg { width: 20px; height: 20px; }
       .civic-split { grid-template-columns: 1fr; gap: 56px; }
-      .flock-teaser-inner { display: block; position: relative; }
-      .flock-teaser-copy { position: relative; z-index: 1; }
-      .flock-teaser-art {
+      .flock-teaser-inner,
+      .graphene-teaser-inner { display: block; position: relative; }
+      .flock-teaser-copy,
+      .graphene-teaser-copy { position: relative; z-index: 1; }
+      .flock-teaser-art,
+      .graphene-teaser-art {
         position: absolute;
         top: 50%;
         right: -40px;
@@ -1525,6 +1670,10 @@
         z-index: 0;
         pointer-events: none;
       }
+      /* The Graphene teaser sits on --bg, where the same stroke reads harder,
+         so it comes down a step to hold the same contrast under the copy. */
+      .graphene-teaser-art { opacity: 0.18; }
+      .flock-block h3 { margin-top: 34px; }
       .manifesto-actions { flex-direction: column; align-items: center; }
       .eu-stat-row { grid-template-columns: 1fr; }
       footer.site-footer { flex-direction: column; gap: 16px; text-align: center; padding: 32px 24px; }
