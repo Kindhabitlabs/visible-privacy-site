@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Car: The Camera Congress Ordered | Visable</title>
+  <meta property="og:title" content="Your Car: The Camera Congress Ordered | Visable">
+  <meta property="og:description" content="Safety law is putting a camera on the driver's face in every new car. Europe wrote down what that camera may never do. Congress did not. What Ford filed for shows why that gap matters.">
+  <meta property="og:image" content="/social-share.svg">
+  <meta name="twitter:image" content="/social-share.svg">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Visable">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Your Car: The Camera Congress Ordered | Visable">
+  <meta name="twitter:description" content="Safety law is putting a camera on the driver's face in every new car. Europe wrote down what that camera may never do. Congress did not. What Ford filed for shows why that gap matters.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+</head>
+<body>
+  <canvas id="binary-canvas" class="binary-canvas" aria-hidden="true"></canvas>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="index.html" class="nav-logo">Visable<span>.</span></a>
+  <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <ul id="nav-menu">
+    <li><a href="tracker.html">Corporate Dossier</a></li>
+    <li><a href="pe-tracker.html">PE Ownership</a></li>
+    <li><a href="flock.html">Flock Cameras</a></li>
+    <li><a href="graphene.html">Your Phone</a></li>
+    <li><a href="cars.html" class="active">Your Car</a></li>
+    <li><a href="donate.html">Donate</a></li>
+    <li><a href="index.html#tools" class="nav-cta">Honest Mitigation</a></li>
+  </ul>
+</nav>
+
+<main class="flock-main">
+
+  <div class="cars-dash-layer" aria-hidden="true">
+    <div class="cars-dash-scene side-right dash-scene-1">
+      <svg viewBox="0 0 280 250" fill="none">
+      <g stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <!-- steering wheel -->
+      <circle cx="76" cy="140" r="62" />
+      <circle cx="76" cy="140" r="52" />
+      <rect x="46" y="122" width="60" height="36" rx="14" />
+      <ellipse cx="76" cy="140" rx="15" ry="8.5" />
+      <path d="M24 140h22M106 140h22" />
+      <path d="M76 158v34" />
+      <rect x="20" y="128" width="20" height="24" rx="4" />
+      <rect x="112" y="128" width="20" height="24" rx="4" />
+      <g opacity=".65">
+      <path d="M26 136h8M26 144h8" />
+      <path d="M118 136h8M118 144h8" />
+      </g>
+      <!-- dash top edge -->
+      <path d="M152 34h124" opacity=".55" />
+      <!-- centre stack -->
+      <rect x="196" y="42" width="52" height="13" rx="2" opacity=".65" />
+      <rect x="180" y="66" width="84" height="52" rx="3" />
+      <!-- vents -->
+      <rect x="160" y="68" width="13" height="48" rx="2" />
+      <rect x="266" y="68" width="12" height="48" rx="2" />
+      <g opacity=".6">
+      <path d="M163.5 74v36M166.5 74v36M169.5 74v36" />
+      <path d="M269.5 74v36M272.5 74v36M275.5 74v36" />
+      </g>
+      <!-- controls -->
+      <rect x="188" y="134" width="68" height="24" rx="4" />
+      <g opacity=".7">
+      <circle cx="200" cy="146" r="5" />
+      <circle cx="222" cy="146" r="5" />
+      <circle cx="244" cy="146" r="5" />
+      </g>
+      <path d="M196 172h52" opacity=".5" />
+      </g>
+      <g class="cars-ad-stack" text-anchor="middle" font-family="'Space Grotesk', sans-serif" font-size="13" fill="currentColor">
+      <g class="ad-slot ad-slot-1"><text x="222" y="88">Selected</text><text x="222" y="105">Ad</text></g>
+      <g class="ad-slot ad-slot-2"><text x="222" y="88">URGENT</text><text x="222" y="105">CARE 2 MI</text></g>
+      <g class="ad-slot ad-slot-3"><text x="222" y="88">COFFEE</text><text x="222" y="105">NEXT EXIT</text></g>
+      <g class="ad-slot ad-slot-4"><text x="222" y="88">HOTEL</text><text x="222" y="105">12 MILES</text></g>
+      </g>
+      </svg>
+    </div>
+    <div class="cars-dash-scene side-left dash-scene-2">
+      <svg viewBox="0 0 280 250" fill="none">
+      <g stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <!-- steering wheel -->
+      <circle cx="76" cy="140" r="62" />
+      <circle cx="76" cy="140" r="52" />
+      <rect x="46" y="122" width="60" height="36" rx="14" />
+      <ellipse cx="76" cy="140" rx="15" ry="8.5" />
+      <path d="M24 140h22M106 140h22" />
+      <path d="M76 158v34" />
+      <rect x="20" y="128" width="20" height="24" rx="4" />
+      <rect x="112" y="128" width="20" height="24" rx="4" />
+      <g opacity=".65">
+      <path d="M26 136h8M26 144h8" />
+      <path d="M118 136h8M118 144h8" />
+      </g>
+      <!-- dash top edge -->
+      <path d="M152 34h124" opacity=".55" />
+      <!-- centre stack -->
+      <rect x="196" y="42" width="52" height="13" rx="2" opacity=".65" />
+      <rect x="180" y="66" width="84" height="52" rx="3" />
+      <!-- vents -->
+      <rect x="160" y="68" width="13" height="48" rx="2" />
+      <rect x="266" y="68" width="12" height="48" rx="2" />
+      <g opacity=".6">
+      <path d="M163.5 74v36M166.5 74v36M169.5 74v36" />
+      <path d="M269.5 74v36M272.5 74v36M275.5 74v36" />
+      </g>
+      <!-- controls -->
+      <rect x="188" y="134" width="68" height="24" rx="4" />
+      <g opacity=".7">
+      <circle cx="200" cy="146" r="5" />
+      <circle cx="222" cy="146" r="5" />
+      <circle cx="244" cy="146" r="5" />
+      </g>
+      <path d="M196 172h52" opacity=".5" />
+      </g>
+      <g class="cars-ad-stack" text-anchor="middle" font-family="'Space Grotesk', sans-serif" font-size="13" fill="currentColor">
+      <g class="ad-slot ad-slot-1"><text x="222" y="88">Selected</text><text x="222" y="105">Ad</text></g>
+      <g class="ad-slot ad-slot-2"><text x="222" y="88">URGENT</text><text x="222" y="105">CARE 2 MI</text></g>
+      <g class="ad-slot ad-slot-3"><text x="222" y="88">COFFEE</text><text x="222" y="105">NEXT EXIT</text></g>
+      <g class="ad-slot ad-slot-4"><text x="222" y="88">HOTEL</text><text x="222" y="105">12 MILES</text></g>
+      </g>
+      </svg>
+    </div>
+    <div class="cars-dash-scene side-right dash-scene-3">
+      <svg viewBox="0 0 280 250" fill="none">
+      <g stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <!-- steering wheel -->
+      <circle cx="76" cy="140" r="62" />
+      <circle cx="76" cy="140" r="52" />
+      <rect x="46" y="122" width="60" height="36" rx="14" />
+      <ellipse cx="76" cy="140" rx="15" ry="8.5" />
+      <path d="M24 140h22M106 140h22" />
+      <path d="M76 158v34" />
+      <rect x="20" y="128" width="20" height="24" rx="4" />
+      <rect x="112" y="128" width="20" height="24" rx="4" />
+      <g opacity=".65">
+      <path d="M26 136h8M26 144h8" />
+      <path d="M118 136h8M118 144h8" />
+      </g>
+      <!-- dash top edge -->
+      <path d="M152 34h124" opacity=".55" />
+      <!-- centre stack -->
+      <rect x="196" y="42" width="52" height="13" rx="2" opacity=".65" />
+      <rect x="180" y="66" width="84" height="52" rx="3" />
+      <!-- vents -->
+      <rect x="160" y="68" width="13" height="48" rx="2" />
+      <rect x="266" y="68" width="12" height="48" rx="2" />
+      <g opacity=".6">
+      <path d="M163.5 74v36M166.5 74v36M169.5 74v36" />
+      <path d="M269.5 74v36M272.5 74v36M275.5 74v36" />
+      </g>
+      <!-- controls -->
+      <rect x="188" y="134" width="68" height="24" rx="4" />
+      <g opacity=".7">
+      <circle cx="200" cy="146" r="5" />
+      <circle cx="222" cy="146" r="5" />
+      <circle cx="244" cy="146" r="5" />
+      </g>
+      <path d="M196 172h52" opacity=".5" />
+      </g>
+      <g class="cars-ad-stack" text-anchor="middle" font-family="'Space Grotesk', sans-serif" font-size="13" fill="currentColor">
+      <g class="ad-slot ad-slot-1"><text x="222" y="88">Selected</text><text x="222" y="105">Ad</text></g>
+      <g class="ad-slot ad-slot-2"><text x="222" y="88">URGENT</text><text x="222" y="105">CARE 2 MI</text></g>
+      <g class="ad-slot ad-slot-3"><text x="222" y="88">COFFEE</text><text x="222" y="105">NEXT EXIT</text></g>
+      <g class="ad-slot ad-slot-4"><text x="222" y="88">HOTEL</text><text x="222" y="105">12 MILES</text></g>
+      </g>
+      </svg>
+    </div>
+    <div class="cars-dash-scene side-left dash-scene-4">
+      <svg viewBox="0 0 280 250" fill="none">
+      <g stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <!-- steering wheel -->
+      <circle cx="76" cy="140" r="62" />
+      <circle cx="76" cy="140" r="52" />
+      <rect x="46" y="122" width="60" height="36" rx="14" />
+      <ellipse cx="76" cy="140" rx="15" ry="8.5" />
+      <path d="M24 140h22M106 140h22" />
+      <path d="M76 158v34" />
+      <rect x="20" y="128" width="20" height="24" rx="4" />
+      <rect x="112" y="128" width="20" height="24" rx="4" />
+      <g opacity=".65">
+      <path d="M26 136h8M26 144h8" />
+      <path d="M118 136h8M118 144h8" />
+      </g>
+      <!-- dash top edge -->
+      <path d="M152 34h124" opacity=".55" />
+      <!-- centre stack -->
+      <rect x="196" y="42" width="52" height="13" rx="2" opacity=".65" />
+      <rect x="180" y="66" width="84" height="52" rx="3" />
+      <!-- vents -->
+      <rect x="160" y="68" width="13" height="48" rx="2" />
+      <rect x="266" y="68" width="12" height="48" rx="2" />
+      <g opacity=".6">
+      <path d="M163.5 74v36M166.5 74v36M169.5 74v36" />
+      <path d="M269.5 74v36M272.5 74v36M275.5 74v36" />
+      </g>
+      <!-- controls -->
+      <rect x="188" y="134" width="68" height="24" rx="4" />
+      <g opacity=".7">
+      <circle cx="200" cy="146" r="5" />
+      <circle cx="222" cy="146" r="5" />
+      <circle cx="244" cy="146" r="5" />
+      </g>
+      <path d="M196 172h52" opacity=".5" />
+      </g>
+      <g class="cars-ad-stack" text-anchor="middle" font-family="'Space Grotesk', sans-serif" font-size="13" fill="currentColor">
+      <g class="ad-slot ad-slot-1"><text x="222" y="88">Selected</text><text x="222" y="105">Ad</text></g>
+      <g class="ad-slot ad-slot-2"><text x="222" y="88">URGENT</text><text x="222" y="105">CARE 2 MI</text></g>
+      <g class="ad-slot ad-slot-3"><text x="222" y="88">COFFEE</text><text x="222" y="105">NEXT EXIT</text></g>
+      <g class="ad-slot ad-slot-4"><text x="222" y="88">HOTEL</text><text x="222" y="105">12 MILES</text></g>
+      </g>
+      </svg>
+    </div>
+  </div>
+
+
+  <div class="dossier-header">
+    <div class="section-label">Inside The Cabin</div>
+    <h1>Congress ordered the camera.<br />It forgot <em>the rules.</em></h1>
+    <p class="dossier-sub">A federal statute requires new cars to watch the driver and shut the car down. It says nothing about what may be recorded, kept, or sold. Europe mandated the same camera and wrote the limits in binding law. That gap is the whole story, and Ford's patent filings are what it looks like when nobody fills it.</p>
+  </div>
+
+  <div class="flock-body">
+
+    <!-- a) THE MANDATE -->
+    <section class="flock-block" aria-labelledby="mandate-h">
+      <h2 id="mandate-h">What the law actually says</h2>
+      <p>In November 2021, Congress passed the Infrastructure Investment and Jobs Act. Buried at <strong>Section 24220</strong> is a requirement that has nothing to do with roads and bridges. It orders the Secretary of Transportation to write a Federal Motor Vehicle Safety Standard requiring new passenger vehicles to carry "advanced drunk and impaired driving prevention technology."</p>
+      <p>Read the definition the statute gives, because the first branch of it is the one that matters. Such a system is one that <a href="https://www.govinfo.gov/content/pkg/PLAW-117publ58/html/PLAW-117publ58.htm" target="_blank" rel="noopener noreferrer">can</a>:</p>
+      <ul class="flock-list">
+        <li><strong>"(A)(i) passively monitor the performance of a driver of a motor vehicle to accurately identify whether that driver may be impaired; and (ii) prevent or limit motor vehicle operation if an impairment is detected"</strong>; or</li>
+        <li><strong>(B)</strong> passively detect blood alcohol concentration at or above the legal limit and prevent or limit operation; or</li>
+        <li><strong>(C)</strong> a combination of the two.</li>
+      </ul>
+      <p>Branch (A) does not mention alcohol. It does not mention a breathalyzer, a touch sensor, or a steering input. It describes a system that continuously assesses the person behind the wheel and can stop the car. Congress wrote a functional requirement and left the method open, and the cheapest way to satisfy it is a camera pointed at your face.</p>
+      <p>The statute set a hard deadline: a final rule <strong>not later than 15 November 2024</strong>, with compliance two to three years after that. Nothing in Section 24220 places a single condition on what the monitoring system may record, how long it may keep it, or who may ask for it.</p>
+      <div class="flock-caveat">One clarification, because the internet gets this wrong constantly. "Prevent or limit motor vehicle operation" is a real disable-the-car provision and it is worth arguing about on its merits. It is <em>not</em> a remote law-enforcement kill switch. Nothing in Section 24220 gives any third party the ability to stop your vehicle. The actual problem with this law is not the one going around.</div>
+    </section>
+
+    <!-- b) WHERE THE CAMERA ENTERS -->
+    <section class="flock-block" aria-labelledby="camera-h">
+      <h2 id="camera-h">Where the camera enters</h2>
+      <p>Congress did not specify a camera. The regulator did the specifying. In January 2024, NHTSA published an <a href="https://www.govinfo.gov/content/pkg/FR-2024-01-05/html/2023-27665.htm" target="_blank" rel="noopener noreferrer">Advance Notice of Proposed Rulemaking</a> (89 FR 830, Docket NHTSA-2022-0079) laying out how it might be done. The document is where the abstraction becomes hardware.</p>
+      <p>NHTSA describes reviewing camera-based driver monitoring systems that can track "driver's eye gaze, eyelid/eye closure, pupil size, head/neck position, posture, hand/foot position, and facial emotion during the driving task." Elsewhere it lists the specific signals such a system reads:</p>
+      <ul class="flock-list">
+        <li><strong>Head pose</strong> and <strong>gaze activity</strong>, meaning the number and distribution of your glances.</li>
+        <li><strong>PERCLOS</strong>, the percentage of time your eyes are closed.</li>
+        <li><strong>Blink speed</strong> and <strong>eye closure duration</strong>.</li>
+        <li><strong>Yawns and other facial expressions.</strong></li>
+      </ul>
+      <p>To establish that this is not speculative, NHTSA cites systems already on the road. In a footnote supporting its point about camera-based monitoring in vehicles with Level 2 automation, it names four by name, and one of them is <strong>Ford BlueCruise</strong>. The regulator's own document treats Ford's shipping hardware as the proof that the sensing platform already exists.</p>
+      <p>Then, in its section on privacy, NHTSA asks the public a question. It is the most revealing sentence in the entire proceeding:</p>
+      <div class="myth-card">
+        <div class="myth-quote">"Are there strategies or requirements (e.g., prohibitions on camera-based DMS from recording certain types of imagery) to protect privacy?"</div>
+        <div class="myth-reframe-label">What that means</div>
+        <p>The agency charged with writing this standard is asking whether it should perhaps consider prohibiting the camera from recording. Not how to enforce such a prohibition. Whether to have one at all. That question was posed in January 2024 and the comment period closed that March.</p>
+        <p>It has not been answered. As of August 2026 the rulemaking is roughly <strong>21 months past its statutory deadline</strong>. No proposed rule has issued. The government's own <a href="https://www.reginfo.gov/public/do/eAgendaViewRule?pubId=202510&amp;RIN=2127-AM50" target="_blank" rel="noopener noreferrer">Unified Agenda</a> still lists it at the <strong>prerule stage</strong>, and the only scheduled next action is "analyzing comments" in October 2026.</p>
+      </div>
+      <p>The rulemaking has not been withdrawn, and NHTSA is still doing work on it: a <a href="https://www.govinfo.gov/content/pkg/FR-2026-07-28/html/2026-15189.htm" target="_blank" rel="noopener noreferrer">notice published in July 2026</a> covers research into the dashboard warning light such a system would use, including driving-simulator studies with participants dosed to roughly the legal limit. The mandate is alive. The rules about the data are not.</p>
+      <div class="cars-divider-screen cam-right" aria-hidden="true">
+        <svg viewBox="0 0 88 52" fill="none">
+          <g stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="8" y="6" width="72" height="40" rx="3" />
+            <path d="M30 50h28" />
+            <path d="M44 46v4" />
+          </g>
+          <g class="cars-ad-stack" text-anchor="middle" font-family="'Space Grotesk', sans-serif" font-size="9" fill="currentColor">
+            <g class="ad-slot ad-slot-1"><text x="44" y="24">Selected</text><text x="44" y="36">Ad</text></g>
+            <g class="ad-slot ad-slot-2"><text x="44" y="24">URGENT</text><text x="44" y="36">CARE 2 MI</text></g>
+            <g class="ad-slot ad-slot-3"><text x="44" y="24">COFFEE</text><text x="44" y="36">NEXT EXIT</text></g>
+            <g class="ad-slot ad-slot-4"><text x="44" y="24">HOTEL</text><text x="44" y="36">12 MILES</text></g>
+          </g>
+        </svg>
+      </div>
+    </section>
+
+    <!-- c) EUROPE ANSWERED FIRST -->
+    <section class="flock-block" aria-labelledby="eu-h">
+      <h2 id="eu-h">Europe answered that question first</h2>
+      <p>The European Union mandated the same hardware, earlier, and more comprehensively. <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32019R2144" target="_blank" rel="noopener noreferrer">Regulation (EU) 2019/2144</a>, the General Safety Regulation, requires every new car to carry intelligent speed assistance, an event data recorder, a standardised interface for fitting an aftermarket alcohol interlock, and two systems that watch the driver directly:</p>
+      <ul class="flock-list">
+        <li><strong>Driver Drowsiness and Attention Warning (DDAW)</strong>, required on every new car sold in the EU since <strong>7 July 2024</strong>.</li>
+        <li><strong>Advanced Driver Distraction Warning (ADDW)</strong>, required on every new car sold since <strong>7 July 2026</strong>.</li>
+      </ul>
+      <p>So Europe is further along than the United States, not behind it. The difference is what came attached. Article 6(3) of that regulation is binding law, and it reads:</p>
+      <div class="myth-card">
+        <div class="myth-quote">"Driver drowsiness and attention warning and advanced driver distraction warning systems shall be designed in such a way that those systems do not continuously record nor retain any data other than what is necessary&hellip; Furthermore, those data shall not be accessible or made available to third parties at any time and shall be immediately deleted after processing."</div>
+        <div class="myth-reframe-label">Read that again</div>
+        <p><strong>Not accessible to third parties at any time. Immediately deleted after processing.</strong> This is not a policy, a setting, or a promise in a privacy notice. It is a type-approval requirement. A car that fails it cannot be sold.</p>
+      </div>
+      <p>The detailed rules go further. The <a href="https://eur-lex.europa.eu/eli/reg_del/2023/2590/oj/eng" target="_blank" rel="noopener noreferrer">delegated regulation governing distraction warning</a> is explicit that a camera is expected, and equally explicit about its limit: the requirement "does not forbid the ADDW system to use data from the camera(s) equipped in the vehicle, it forbids the identification of the person by the ADDW system." The <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32021R1341" target="_blank" rel="noopener noreferrer">drowsiness regulation</a> says the system "shall function in normal operation mode without the use of biometric information, including facial recognition, of any vehicle occupants." The parent regulation separately bars event data recorders from storing anything that could identify the vehicle or its owner.</p>
+      <p>That is a coherent position, and it is worth naming plainly: <strong>surveil the function, not the person.</strong> The camera may measure whether eyes are open. It may not work out whose eyes they are, it may not keep the footage, and it may never hand it to anyone else. Whatever else one thinks of European regulation, somebody sat down and answered the question NHTSA is still asking.</p>
+    </section>
+
+    <!-- d) THE BODY THAT ACTUALLY SETS THE RULES -->
+    <section class="flock-block" aria-labelledby="ncap-h">
+      <h2 id="ncap-h">The body setting the rules is not a legislature</h2>
+      <p>There is a third actor here, and it is neither Congress nor the European Commission. <strong>Euro NCAP</strong> is a private consumer-testing programme. It cannot compel anything. But a rating below five stars is commercially unacceptable in Europe, so its protocols function as a mandate that no one voted on.</p>
+      <p>Its <a href="https://cdn.euroncap.com/cars/assets/euro_ncap_protocol_safe_driving_driver_engagement_v11_a30e874152.pdf" target="_blank" rel="noopener noreferrer">2026 driver engagement protocol</a> awards 30 points for driver monitoring, scoring separately for long distraction, short distraction, phone use, impairment, microsleep, sleep, and unresponsiveness. To score at all, a system must meet conditions stated in the protocol itself:</p>
+      <ul class="flock-list">
+        <li>The system "<strong>shall be default ON at the start of every journey</strong> and deactivation of the system shall not be possible with a momentary single push on a button."</li>
+        <li>"The driver state detection <strong>sensitivity shall not be manually adjustable</strong>."</li>
+      </ul>
+      <p>A separate <a href="https://cdn.euroncap.com/cars/assets/euro_ncap_protocol_safe_driving_occupant_monitoring_v11_ebc73d0a10.pdf" target="_blank" rel="noopener noreferrer">occupant monitoring protocol</a> adds 30 more points for detecting seatbelt routing, rear seat occupancy and occupant classification, and requires child presence detection by "direct sensing," which it defines as detecting a human in the vehicle "by means of tracking <strong>heartbeat, respiration, movement</strong>, or any other sign of life."</p>
+      <p>This is the part worth sitting with. The strictest requirement that your car sense the people inside it, always on, not adjustable, not easily disabled, comes from a testing body accountable to no electorate. It is not in any statute. There is no comment period, and no one to vote out.</p>
+      <div class="cars-divider-screen cam-left" aria-hidden="true">
+        <svg viewBox="0 0 88 52" fill="none">
+          <g stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="8" y="6" width="72" height="40" rx="3" />
+            <path d="M30 50h28" />
+            <path d="M44 46v4" />
+          </g>
+          <g class="cars-ad-stack" text-anchor="middle" font-family="'Space Grotesk', sans-serif" font-size="9" fill="currentColor">
+            <g class="ad-slot ad-slot-1"><text x="44" y="24">Selected</text><text x="44" y="36">Ad</text></g>
+            <g class="ad-slot ad-slot-2"><text x="44" y="24">URGENT</text><text x="44" y="36">CARE 2 MI</text></g>
+            <g class="ad-slot ad-slot-3"><text x="44" y="24">COFFEE</text><text x="44" y="36">NEXT EXIT</text></g>
+            <g class="ad-slot ad-slot-4"><text x="44" y="24">HOTEL</text><text x="44" y="36">12 MILES</text></g>
+          </g>
+        </svg>
+      </div>
+    </section>
+
+    <!-- e) WHAT FORD FILED FOR -->
+    <section class="flock-block" aria-labelledby="patents-h">
+      <h2 id="patents-h">What Ford filed for</h2>
+      <p>Here is where care matters. Ford Global Technologies is Ford's patent-holding subsidiary and it files applications in the low thousands per year. A published application is a disclosure of an idea. It is not a product, not a roadmap, and not evidence that anyone intends to ship it. Ford's standard response to coverage of these filings is fair, and worth quoting: "The ideas described within a patent application should not be viewed as an indication of our business or product plans."</p>
+      <p>Several of the documents below were also <strong>abandoned</strong>, meaning Ford stopped paying to pursue them. That does not make them meaningless. It makes them evidence of what Ford's engineers thought was worth claiming, which is a narrower and more honest thing to say than most coverage has said.</p>
+      <div class="hm-table-wrap">
+        <table class="hm-table">
+          <caption class="visually-hidden">Ford patent filings relating to in-cabin sensing, listed with legal status, dates and what each document actually discloses.</caption>
+          <thead>
+            <tr>
+              <th scope="col">Document</th>
+              <th scope="col">Status</th>
+              <th scope="col">What it actually discloses</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row" data-label="Document"><a href="https://patents.google.com/patent/US11751784B2/en" target="_blank" rel="noopener noreferrer">US 11,751,784 B2</a><br />Detecting drowsiness in a driver</th>
+              <td data-label="Status"><span class="hm-cadence hm-ongoing">Granted</span> Filed 18 Mar 2020, granted 12 Sep 2023</td>
+              <td data-label="What it actually discloses">The strongest document here, and the one nobody covered. It combines "a camera directed upon the driver's eyes" with a motor cortex signal from a brain activity monitoring element which "can be <strong>a cortical implant</strong>, for example," and from the two it "<strong>assigns a sleep risk score</strong>." A camera on your eyes, a signal from your brain, and a number about you at the end of it. This one is granted and in force.</td>
+            </tr>
+            <tr>
+              <th scope="row" data-label="Document"><a href="https://patents.google.com/patent/US20240289844A1/en" target="_blank" rel="noopener noreferrer">US 2024/0289844 A1</a><br />In-vehicle advertisement presentation</th>
+              <td data-label="Status"><span class="hm-cadence hm-once">Application, abandoned</span> Published 29 Aug 2024</td>
+              <td data-label="What it actually discloses">The controller "may monitor user dialogue to detect when individuals are in a conversation," and "when the individuals are not in conversation, <strong>the number of ads presented can be increased</strong>." It determines who is present "from <strong>in-cabin cameras, voice signatures, or other means</strong>" and tailors accordingly, distinguishing a "long drive versus trip to <strong>medical care facility</strong>." Stated goal: "maximized or optimized opportunities for ads-based monetization." The word <em>privacy</em> does not appear anywhere in the document.</td>
+            </tr>
+            <tr>
+              <th scope="row" data-label="Document"><a href="https://patents.google.com/patent/US20230055958A1/en" target="_blank" rel="noopener noreferrer">US 2023/0055958 A1</a><br />Systems and methods to repossess a vehicle</th>
+              <td data-label="Status"><span class="hm-cadence hm-once">Application, abandoned</span> Filed 20 Aug 2021, published 23 Feb 2023</td>
+              <td data-label="What it actually discloses">Escalating punishment for missed payments. An audio component set to "emit an <strong>incessant and unpleasant sound</strong> every time the owner is present in the vehicle." Then disabling cruise control, windows and seats, which "may cause a certain level of discomfort." Then "<strong>the air conditioning system</strong>" and the door locks, for "an additional level of discomfort." Then a lockout preventing entry to the cabin. Then, for autonomous vehicles, driving itself "from the premises of the owner" to a repossession agency, an impound lot, or a junkyard.</td>
+            </tr>
+            <tr>
+              <th scope="row" data-label="Document"><a href="https://patents.google.com/patent/US20240239352A1/en" target="_blank" rel="noopener noreferrer">US 2024/0239352 A1</a><br />Detecting speeding violations</th>
+              <td data-label="Status"><span class="hm-cadence hm-once">Application, abandoned</span> Filed 12 Jan 2023, published 18 Jul 2024</td>
+              <td data-label="What it actually discloses">Widely reported as your Ford reporting you to the police. That is not what it says. The abstract scopes it to "a first vehicle (<strong>a law-enforcement vehicle</strong>, for example)": radar finds a speeding car, lidar narrows onto it, a camera captures an image, and the record "may be transmitted to another law-enforcement vehicle&hellip; and/or to an <strong>Internet-of-Things roadside unit for tracking</strong> the second vehicle." Ford says it is meant for the Police Interceptor, and the document supports that.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Two corrections that most coverage of these filings got wrong, and that this page will not repeat.</p>
+      <ul class="flock-list">
+        <li><strong>The repossession patent's cameras are not pointed at you.</strong> The document is specific: one camera "is arranged to capture images of objects located <em>in front of</em> the vehicle," another captures objects "located <em>behind</em> the vehicle." Their job is checking whether the car can drive itself out of your garage. A separate clause uses them to detect a medical emergency and lift the lockout. A car that drives itself to the impound lot is troubling enough without inventing a driver-facing camera that is not in the text.</li>
+        <li><strong>The speeding patent is a police-car patent.</strong> The fair criticism is narrower: the application never states the technology is limited to law-enforcement vehicles, and the boundary between "police car" and "any car" is a policy line rather than a hardware one. The roadside tracking units it describes are the same infrastructure documented on our <a href="flock.html">page about Flock cameras</a>.</li>
+      </ul>
+    </section>
+
+    <!-- f) WHAT IS ALREADY TRUE -->
+    <section class="flock-block" aria-labelledby="today-h">
+      <h2 id="today-h">What is already true, with no patent required</h2>
+      <p>Ford BlueCruise ships today with a driver-facing camera and infrared illuminators that track eye gaze and head position. This is not a filing. It is in the car, and NHTSA cites it by name as a working example of the sensing platform a future federal standard could ride on.</p>
+      <p>Ford's position is that the camera is active only while the hands-free system is engaged, and that no images or video leave the vehicle in normal use. Take that at face value. It is a reasonable design and, if accurate, a better one than the law requires of Ford in the United States. Note precisely what it is: <strong>a policy, not an architecture.</strong> The camera is installed. The compute is installed. What governs the footage is a company's current decision about what to do with it.</p>
+
+      <h3>What Ford's own privacy notice says</h3>
+      <p>Ford's <a href="https://www.ford.com/help/privacy/" target="_blank" rel="noopener noreferrer">US Privacy Notice</a>, effective 1 July 2026, is a more useful document than any of the patent filings, because it describes what the company does rather than what it once considered. Three passages bear on this page.</p>
+      <p>The first settles the question the patents only gesture at. A driver-facing image exists, and there is a process for obtaining it:</p>
+      <div class="myth-card">
+        <div class="myth-quote">"Ford may also, in limited situations, and with proper consent or legal or regulatory authority such as a safety investigation, collect or obtain data that has been recorded on the vehicle through physical access to the vehicle. This may include data generated or captured by the vehicle and <strong>may include a driver-facing camera image</strong>."</div>
+        <div class="myth-reframe-label">Read the qualifiers fairly</div>
+        <p>This is not wireless off-boarding and it is not routine. It requires physical access to the car, plus consent or legal authority. It is entirely consistent with Ford's separate claim that images do not leave the vehicle in normal use, and Ford deserves credit for disclosing it plainly.</p>
+        <p>It also settles the architecture. <strong>A driver-facing camera image is recorded on the vehicle</strong>, it persists long enough to be collected later, and a documented route exists for obtaining it. Everything past that point is a question of who asks, and under what authority. Note that the federal mandate discussed above would put this camera in every new car, and says nothing about any of it.</p>
+      </div>
+      <p>The second concerns location, and it is what makes the abandoned repossession patent look less like a thought experiment:</p>
+      <ul class="flock-list">
+        <li>"In limited situations, we may collect <strong>Vehicle Location, regardless of location settings</strong>. We do this to protect and defend our rights or property (<strong>including repossessing a vehicle in the event of a delinquency</strong>) or to comply with applicable law, to respond to valid legal process (including from law enforcement or other government agencies)&hellip;"</li>
+        <li>"if you are financing your purchase or lease with Ford Credit and <strong>Ford Credit asks us to locate your vehicle due to default</strong> of your agreement with Ford Credit, we may disclose Vehicle Location to Ford Credit."</li>
+      </ul>
+      <p>Ford abandoned the patent that would have disabled your air conditioning. It did not abandon the underlying business need. Repossession appears in the live notice twice more, as a stated purpose for both geolocation data and for precise geolocation, which the notice itself classifies as sensitive. The mechanism that matters was never the unpleasant noise. It was knowing where the car is, whatever the location setting says.</p>
+      <p>The third concerns what the car hears. The notice defines a category of <strong>Sensory Data</strong> covering "audio and visual data such as voice commands and other utterances captured when the vehicle's voice recognition system is in 'active listen' state," and lists among its purposes:</p>
+      <ul class="flock-list">
+        <li>"To understand your preferences, make recommendations, and deliver personalized offers and communications."</li>
+        <li>"To promote and offer our Products, and those of our selected partners, through co-branded service offerings, joint marketing, <strong>advertising</strong>, contests, and sponsorships."</li>
+      </ul>
+      <p>That is the in-vehicle advertising patent's premise without the patent. The limit is real and worth stating: utterances are captured in an active-listen state, not continuously, which is a materially different thing from the patent's controller monitoring dialogue to decide when you have stopped talking. But the purpose to which in-cabin audio may already be put includes advertising, and that is in a document in force today rather than an application Ford walked away from.</p>
+      <p class="flock-caveat">Three smaller things worth knowing from the same notice. Ford states it may apply "artificial intelligence, machine learning, and other automated decision-making technologies" to this data. It declines to offer the right to opt out of profiling, on the basis that it does not profile in a way producing "legal or similarly significant effects." And it discloses that it does not use personal data to train large language models &mdash; but makes that disclosure for Connecticut residents only, because Connecticut is the only state that requires it.</p>
+      <p>One last detail, and it is the tell. Who does the notice make responsible for telling your passengers any of this? You do. Its second paragraph asks owners to "inform others who drive the vehicle, and passengers who connect their mobile devices to the vehicle, about the information in this Notice."</p>
+      <p>How much weight that decision carries is a fair question, and there is evidence to answer it with. In March 2026 the California Privacy Protection Agency fined Ford $375,703 over its connected-vehicle privacy practices, after finding that an email confirmation step silently voided opt-out requests from anyone who did not click the link. The agency accepted that the step appeared to be a misconfiguration rather than an intentional barrier. That is rather the point: a single unnecessary click, added by accident, nullified a legal right at scale. The details are in our <a href="tracker.html?company=Ford%20Motor%20Company">Corporate Dossier</a>.</p>
+      <p>Meanwhile the American courts have been clear about how little help they will be. In <a href="https://cdn.ca9.uscourts.gov/datastore/opinions/2023/10/27/22-35447.pdf" target="_blank" rel="noopener noreferrer"><em>Jones v. Ford Motor Co.</em></a> (9th Cir. 2023), drivers alleged that Ford infotainment systems copied and permanently stored the call logs and text messages of any connected phone. The Ninth Circuit held they had standing to sue, then affirmed dismissal anyway, because Washington's privacy statute requires injury to "business&hellip; person, or&hellip; reputation" and, in the court's words, "<strong>an invasion of privacy, without more, is insufficient</strong>." The court never reached whether the allegation was true. Having your private communications copied and kept simply was not, by itself, a harm the statute would remedy.</p>
+    </section>
+
+    <!-- g) THE INDUSTRY -->
+    <section class="flock-block" aria-labelledby="industry-h">
+      <h2 id="industry-h">Ford is not the outlier</h2>
+      <p>When the Mozilla Foundation reviewed 25 car brands for privacy in September 2023, <strong>all 25 failed</strong>. It was the first time an entire product category failed in the guide's history. Nineteen of the 25 said they could sell personal data. Fourteen said they share information with government or law enforcement. Ford's badge was "Super creepy," and Mozilla could not determine whether Ford encrypts the data it collects, because Ford did not respond to repeated requests.</p>
+      <div class="hm-table-wrap">
+        <table class="hm-table">
+          <caption class="visually-hidden">Documented enforcement actions and disclosures involving automaker data practices.</caption>
+          <thead>
+            <tr>
+              <th scope="col">Company</th>
+              <th scope="col">What was documented</th>
+              <th scope="col">Outcome</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row" data-label="Company">General Motors / OnStar</th>
+              <td data-label="What was documented">Collected precise geolocation and driving behaviour, by the FTC's account as often as <strong>every three seconds</strong>, through an enrolment process regulators called misleading, and shared it with LexisNexis Risk and Verisk, who sold it on to insurers.</td>
+              <td data-label="Outcome">FTC order finalised January 2026: a <strong>five-year ban</strong> on sharing this data with consumer reporting agencies. Also sued by Texas over 1.8 million drivers. <a href="tracker.html?company=General%20Motors%20%2F%20OnStar">Dossier entry</a>.</td>
+            </tr>
+            <tr>
+              <th scope="row" data-label="Company">Hyundai</th>
+              <td data-label="What was documented">Sold driving data from <strong>1.7 million cars</strong> to Verisk, per a Senate investigation by Wyden and Markey.</td>
+              <td data-label="Outcome">Received $1,043,315.69. That is <strong>61 cents per car</strong>.</td>
+            </tr>
+            <tr>
+              <th scope="row" data-label="Company">Honda</th>
+              <td data-label="What was documented">Sold driving data from 97,000 cars to Verisk. Separately, made consumers give more information to opt out than to opt in.</td>
+              <td data-label="Outcome">Received $25,920, or <strong>26 cents per car</strong>. Fined $632,500 by California's privacy agency. <a href="tracker.html?company=American%20Honda%20Motor%20Co.">Dossier entry</a>.</td>
+            </tr>
+            <tr>
+              <th scope="row" data-label="Company">Ford</th>
+              <td data-label="What was documented">Required an email confirmation click before acting on opt-out requests. Requests from anyone who did not click simply expired.</td>
+              <td data-label="Outcome">Fined <strong>$375,703</strong> by the California Privacy Protection Agency, March 2026. <a href="tracker.html?company=Ford%20Motor%20Company">Dossier entry</a>.</td>
+            </tr>
+            <tr>
+              <th scope="row" data-label="Company">Allstate / Arity</th>
+              <td data-label="What was documented">Paid app developers to embed tracking code, assembling driving data on <strong>45 million-plus people</strong> from their phones rather than their cars, then selling it to insurers.</td>
+              <td data-label="Outcome">Sued by Texas in January 2025, the first state enforcement of a comprehensive state privacy law. Ongoing.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="flock-caveat">Note what this table is not. None of these cases involve footage from a driver-facing camera. Every one of them concerns location and driving-behaviour data, which is far less intimate than a video feed of your face, and it was still collected without meaningful consent and sold for pennies. The camera arrives into an industry with this record, under a federal mandate that says nothing about what may be kept.</p>
+    </section>
+
+    <!-- h) WHAT CHANGES THINGS -->
+    <section class="flock-block" aria-labelledby="civic-h">
+      <h2 id="civic-h">What actually changes things</h2>
+      <p>There is no consumer fix on this page, because there is not one. You cannot opt out of a federal safety standard, you cannot decline the camera and still buy a new car, and no setting in the infotainment menu will unsolder it. This is a law problem, and it has the unusual property of being a law problem with a working solution already drafted in another jurisdiction.</p>
+      <ul class="flock-list">
+        <li><strong>The text already exists.</strong> Article 6(3) of the EU General Safety Regulation is one sentence long: no continuous recording, no retention beyond the immediate purpose, no third-party access at any time, immediate deletion after processing. It does not have to be invented, negotiated from scratch, or tested for feasibility. Every manufacturer selling in Europe already complies with it.</li>
+        <li><strong>The docket is the pressure point.</strong> NHTSA asked in its own rulemaking whether it should prohibit camera-based monitoring from recording certain imagery. That question is still formally open at the prerule stage. Rulemaking comments are one of the few places where an ordinary submission enters the public record and has to be addressed.</li>
+        <li><strong>Insist on the distinction that matters.</strong> Not camera versus no camera. The mandate is real, drowsy driving kills people, and the safety case is genuine. The line is between a system that measures whether your eyes are open and one that keeps a record of them. Europe drew it. It can be drawn here.</li>
+        <li><strong>Watch the state route.</strong> Illinois' biometric statute is the only US law that has meaningfully constrained in-cabin face analysis, and it did so through litigation over fleet dashcams rather than anything written with passenger cars in mind. State privacy law is currently the only thing in the United States doing the job Article 6(3) does in Europe.</li>
+      </ul>
+      <p>The gap is not that the camera exists. Europe mandated the camera too, sooner and more thoroughly. The gap is that Europe wrote down what the camera may never do, and the United States has spent 21 months past its own deadline not answering the question.</p>
+    </section>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="logo">Visable<span>.</span></div>
+  <p>An independent project, built because the conversation deserves to be better.</p>
+  <p style="color: #2a2a2a; font-size: 11px;">No tracking. No analytics. No ads. Ever.</p>
+</footer>
+
+<script src="binary-background.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

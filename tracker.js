@@ -1696,6 +1696,7 @@ function renderCards() {
   list.forEach((company) => {
     const card = document.createElement("div");
     card.className = "company-card";
+    card.dataset.company = company.name;
 
     const header = document.createElement("div");
     header.className = "card-header";
@@ -1788,5 +1789,43 @@ document.getElementById("stat-companies").textContent = COMPANIES.length;
 const totalFinesSum = COMPANIES.reduce((sum, c) => sum + c.fineRaw, 0);
 document.getElementById("stat-total-fines").textContent = "$" + Math.round(totalFinesSum) + "B+";
 
+/* Deep links from the article pages: tracker.html?company=Ford%20Motor%20Company
+   opens that company's card directly, rather than dropping the reader into an
+   unfiltered list of a hundred-plus entries to go hunting. Matching is loose on
+   purpose, so a prose page does not have to reproduce a legal name character
+   for character ("Honda" finds "American Honda Motor Co."). An unmatched or
+   missing parameter is ignored and the page loads normally. */
+function findCompany(query) {
+  const norm = (s) => s.toLowerCase().replace(/[^a-z0-9]+/g, "");
+  const q = norm(query);
+  if (!q) return null;
+  return (
+    COMPANIES.find((c) => norm(c.name) === q) ||
+    COMPANIES.find((c) => norm(c.name).startsWith(q)) ||
+    COMPANIES.find((c) => norm(c.name).includes(q)) ||
+    null
+  );
+}
+
+const requestedCompany = new URLSearchParams(location.search).get("company");
+const linkedCompany = requestedCompany ? findCompany(requestedCompany) : null;
+if (linkedCompany) {
+  /* Filtering as well as expanding, so the search box shows the reader why
+     they are looking at one company and how to get back to the full list. */
+  openCards.add(linkedCompany.name);
+  searchTerm = linkedCompany.name;
+  document.getElementById("search-input").value = linkedCompany.name;
+}
+
 renderFilters();
 renderCards();
+
+if (linkedCompany) {
+  const card = document.querySelector(
+    `.company-card[data-company="${CSS.escape(linkedCompany.name)}"]`
+  );
+  if (card) {
+    const still = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    card.scrollIntoView({ behavior: still ? "auto" : "smooth", block: "center" });
+  }
+}

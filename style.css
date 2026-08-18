@@ -1008,6 +1008,7 @@
     /* The Graphene teaser shares every rule in this block. The two sit back to
        back on the home page, so they are kept on one set of selectors rather
        than two copies that can drift apart. Only the artwork differs. */
+    .cars-teaser,
     .flock-teaser,
     .graphene-teaser {
       background: var(--surface);
@@ -1020,6 +1021,7 @@
       background: var(--bg);
       border-top: none;
     }
+    .cars-teaser-inner,
     .flock-teaser-inner,
     .graphene-teaser-inner {
       max-width: 1200px;
@@ -1029,8 +1031,10 @@
       gap: 56px;
       align-items: center;
     }
+    .cars-teaser-art,
     .flock-teaser-art,
     .graphene-teaser-art { color: var(--accent); }
+    .cars-teaser-art svg,
     .flock-teaser-art svg,
     .graphene-teaser-art svg { width: 100%; height: auto; display: block; }
 
@@ -1059,8 +1063,10 @@
     @media (prefers-reduced-motion: reduce) {
       .alpr-plate-1, .alpr-plate-2, .alpr-plate-3 { animation: none; }
     }
+    .cars-teaser h2,
     .flock-teaser h2,
     .graphene-teaser h2 { margin-bottom: 28px; }
+    .cars-teaser p,
     .flock-teaser p,
     .graphene-teaser p {
       color: var(--muted);
@@ -1069,6 +1075,7 @@
       margin-bottom: 20px;
       max-width: 760px;
     }
+    .cars-teaser p strong,
     .flock-teaser p strong,
     .graphene-teaser p strong { color: var(--text); font-weight: 500; }
     .flock-civic-line {
@@ -1077,6 +1084,7 @@
       color: var(--text) !important;
       font-size: 16px !important;
     }
+    .cars-teaser-cta,
     .flock-teaser-cta,
     .graphene-teaser-cta {
       margin-top: 16px;
@@ -1387,7 +1395,11 @@
     .graphene-sig-scene.side-right { right: 16px; }
     /* Mirrored so the left-hand phones radiate into the page, not off it. */
     .graphene-sig-scene.side-left { left: 16px; transform: scaleX(-1); }
-    .sig-scene-1 { top: 5%; }
+    /* Pinned in pixels rather than per cent so it sits beside the h1 instead
+       of drifting with page length, and high enough to clear the rule that
+       .section-label trails behind it. Matches .dash-scene-1 on the Cars
+       page; the offset differs because the phone sits lower in its viewBox. */
+    .sig-scene-1 { top: 180px; }
     .sig-scene-2 { top: 29%; }
     .sig-scene-3 { top: 53%; }
     .sig-scene-4 { top: 76%; }
@@ -1741,10 +1753,13 @@
       .consequence-icon { width: 40px; height: 40px; }
       .consequence-icon svg { width: 20px; height: 20px; }
       .civic-split { grid-template-columns: 1fr; gap: 56px; }
+      .cars-teaser-inner,
       .flock-teaser-inner,
       .graphene-teaser-inner { display: block; position: relative; }
+      .cars-teaser-copy,
       .flock-teaser-copy,
       .graphene-teaser-copy { position: relative; z-index: 1; }
+      .cars-teaser-art,
       .flock-teaser-art,
       .graphene-teaser-art {
         position: absolute;
@@ -1955,4 +1970,129 @@
       .pe-facet, .pe-facet select { width: 100%; }
       .pe-owner { max-width: none; text-align: left; }
       .pe-facts { padding: 20px; }
+    }
+
+    /* ---- CARS PAGE ---- */
+    /* The reading column reuses .flock-body / .flock-block / .flock-list /
+       .myth-card / .hm-table wholesale, the same way the Graphene page does.
+       Only the artwork is new. */
+
+    /* Third teaser in the run. Flock sits on --surface, Graphene drops to --bg
+       and loses its top rule so the pair does not read as one tall block, and
+       this one returns to --surface. The colour change is the divider, so the
+       top hairline would only double up Graphene's bottom one. */
+    .cars-teaser { border-top: none; }
+
+    /* The infotainment screen cycles ads, which is the whole point of the
+       drawing: it is redrawn from Figure 2 of Ford's own in-vehicle
+       advertising application, where the screen is captioned "Selected Ad".
+       Four slots share one 12s cycle, each visible for a quarter of it. The
+       negative delays are (cycle - start), so slot 2 appears at 3s, slot 3 at
+       6s and slot 4 at 9s. */
+    .ad-slot { opacity: 0; }
+    /* Static fallback: the patent's own caption. Also what shows if the
+       animation never runs. */
+    .ad-slot-1 { opacity: 1; }
+    @keyframes ad-flash {
+      0%   { opacity: 1; }
+      22%  { opacity: 1; }
+      25%  { opacity: 0; }
+      97%  { opacity: 0; }
+      100% { opacity: 1; }
+    }
+    .ad-slot { animation: ad-flash 12s steps(1, end) infinite; }
+    .ad-slot-2 { animation-delay: -9s; }
+    .ad-slot-3 { animation-delay: -6s; }
+    .ad-slot-4 { animation-delay: -3s; }
+    @media (prefers-reduced-motion: reduce) {
+      .ad-slot { animation: none; opacity: 0; }
+      .ad-slot-1 { opacity: 1; }
+    }
+
+    /* A dashboard standing beside the text, alternating sides, echoing the
+       camera scenes on the Flock page and the phones on the Graphene page. */
+    .cars-dash-layer {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .cars-dash-scene {
+      position: absolute;
+      width: 250px;
+      /* Same circularity trap as the Flock and Graphene scenes: aspect-ratio
+         pins one end so the box does not collapse to nothing. */
+      aspect-ratio: 280 / 250;
+      color: var(--accent);
+      opacity: 0.45;
+    }
+    .cars-dash-scene svg { width: 100%; height: 100%; display: block; }
+    .cars-dash-scene.side-right { right: 16px; }
+    /* Deliberately not mirrored, unlike the phones. The screen carries text,
+       and scaleX(-1) would render it backwards. */
+    .cars-dash-scene.side-left { left: 16px; }
+    /* The first scene is pinned in pixels, not per cent, so it always lands
+       beside the page header. This page runs about twice the length of the
+       Flock page, and a percentage that sits next to the masthead there falls
+       most of a screen below it here. The rest stay proportional.
+
+       The offset clears two horizontal lines it would otherwise be cut by:
+       the top border of the page, and the rule that .section-label trails
+       behind it. It parks in the empty column beside the h1 instead. */
+    .dash-scene-1 { top: 190px; }
+    .dash-scene-2 { top: 28%; }
+    .dash-scene-3 { top: 54%; }
+    .dash-scene-4 { top: 79%; }
+    /* The reading column has to sit above the artwork. */
+    .flock-body { position: relative; z-index: 1; }
+    /* Offset each scene within the 12s cycle so the page does not read as a
+       wall of screens changing in unison. */
+    .dash-scene-2 .ad-slot-1 { animation-delay: -1.5s; }
+    .dash-scene-2 .ad-slot-2 { animation-delay: -10.5s; }
+    .dash-scene-2 .ad-slot-3 { animation-delay: -7.5s; }
+    .dash-scene-2 .ad-slot-4 { animation-delay: -4.5s; }
+    .dash-scene-3 .ad-slot-1 { animation-delay: -4s; }
+    .dash-scene-3 .ad-slot-2 { animation-delay: -1s; }
+    .dash-scene-3 .ad-slot-3 { animation-delay: -10s; }
+    .dash-scene-3 .ad-slot-4 { animation-delay: -7s; }
+    .dash-scene-4 .ad-slot-1 { animation-delay: -7.5s; }
+    .dash-scene-4 .ad-slot-2 { animation-delay: -4.5s; }
+    .dash-scene-4 .ad-slot-3 { animation-delay: -1.5s; }
+    .dash-scene-4 .ad-slot-4 { animation-delay: -10.5s; }
+
+    /* Section-divider mark: the screen alone, still cycling. Same explicit
+       width/height pairing as .flock-divider-cam, and for the same reason —
+       an absolutely positioned box cannot take its height from an SVG that
+       wants its height from the box. */
+    .cars-divider-screen {
+      position: absolute;
+      bottom: -1px;
+      width: 88px;
+      height: 52px;
+      color: var(--accent);
+      opacity: 0.5;
+      pointer-events: none;
+    }
+    .cars-divider-screen svg { width: 100%; height: 100%; display: block; }
+    .cars-divider-screen.cam-right { right: 8px; }
+    /* No scaleX(-1) here, unlike the camera marks: the screen carries text,
+       which a mirror would render backwards. */
+    .cars-divider-screen.cam-left { left: 8px; }
+
+    @media (max-width: 768px) {
+      /* The divider marks crowd the reading column once it loses its side
+         padding, and the teaser art already carries the motif on mobile. */
+      .cars-divider-screen { display: none; }
+    }
+
+    @media (max-width: 1200px) {
+      .cars-dash-scene { opacity: 0.22; }
+      .cars-dash-scene.side-right { right: -70px; }
+      .cars-dash-scene.side-left { left: -70px; }
+    }
+    @media (max-width: 1000px) {
+      .cars-dash-scene { width: 210px; opacity: 0.16; }
+      .cars-dash-scene.side-right { right: -95px; }
+      .cars-dash-scene.side-left { left: -95px; }
     }
