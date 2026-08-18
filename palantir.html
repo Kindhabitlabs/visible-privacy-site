@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Palantir: You Were Never the Customer | Visable</title>
+  <meta property="og:title" content="Palantir: You Were Never the Customer | Visable">
+  <meta property="og:description" content="Palantir does not collect your data, sell it, or own it. All true. What it sells is the layer that turns data the government already holds into one searchable object, and the order that removed the last legal barrier.">
+  <meta property="og:image" content="/social-share.svg">
+  <meta name="twitter:image" content="/social-share.svg">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Visable">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Palantir: You Were Never the Customer | Visable">
+  <meta name="twitter:description" content="Palantir does not collect your data, sell it, or own it. All true. What it sells is the layer that turns data the government already holds into one searchable object, and the order that removed the last legal barrier.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+</head>
+<body>
+  <canvas id="binary-canvas" class="binary-canvas" aria-hidden="true"></canvas>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="index.html" class="nav-logo">Visable<span>.</span></a>
+  <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <ul id="nav-menu">
+    <li><a href="tracker.html">Corporate Dossier</a></li>
+    <li><a href="pe-tracker.html">PE Ownership</a></li>
+    <li class="nav-group">
+      <button type="button" class="nav-group-btn active" id="nav-group-btn" aria-expanded="false" aria-controls="nav-investigations" aria-haspopup="true">Investigations<span class="nav-group-caret" aria-hidden="true">&#9662;</span></button>
+      <ul class="nav-submenu" id="nav-investigations">
+        <li><a href="flock.html">Flock Cameras</a></li>
+        <li><a href="graphene.html">Your Phone</a></li>
+        <li><a href="cars.html">Your Car</a></li>
+        <li><a href="palantir.html" class="active">Palantir</a></li>
+      </ul>
+    </li>
+    <li><a href="donate.html">Donate</a></li>
+    <li><a href="index.html#tools" class="nav-cta">Honest Mitigation</a></li>
+  </ul>
+</nav>
+
+<main class="flock-main">
+
+  <div class="palantir-node-layer" aria-hidden="true">
+    <div class="palantir-node-scene side-right node-scene-1">
+      <svg viewBox="0 0 280 250" fill="none">
+      <g stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <g opacity=".45">
+      <rect x="18" y="30" width="52" height="30" rx="3" />
+      <rect x="18" y="82" width="52" height="30" rx="3" />
+      <rect x="18" y="134" width="52" height="30" rx="3" />
+      <rect x="18" y="186" width="52" height="30" rx="3" />
+      <path d="M26 40h26M26 48h16" />
+      <path d="M26 92h26M26 100h16" />
+      <path d="M26 144h26M26 152h16" />
+      <path d="M26 196h26M26 204h16" />
+      </g>
+      <g class="pal-link">
+      <path d="M70 45h44l22 66" />
+      <path d="M70 97h30l36 14" />
+      <path d="M70 149h30l36-38" />
+      <path d="M70 201h44l22-90" />
+      </g>
+      <circle cx="146" cy="118" r="16" />
+      <circle cx="146" cy="118" r="6" />
+      <g class="pal-out">
+      <path d="M162 118h44" />
+      <path d="M158 106l48-38" />
+      <path d="M158 130l48 38" />
+      </g>
+      <g opacity=".7">
+      <circle cx="214" cy="118" r="7" />
+      <circle cx="214" cy="62" r="7" />
+      <circle cx="214" cy="174" r="7" />
+      </g>
+      </g>
+      </svg>
+    </div>
+    <div class="palantir-node-scene side-left node-scene-2">
+      <svg viewBox="0 0 280 250" fill="none">
+      <g stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <g opacity=".45">
+      <rect x="18" y="30" width="52" height="30" rx="3" />
+      <rect x="18" y="82" width="52" height="30" rx="3" />
+      <rect x="18" y="134" width="52" height="30" rx="3" />
+      <rect x="18" y="186" width="52" height="30" rx="3" />
+      <path d="M26 40h26M26 48h16" />
+      <path d="M26 92h26M26 100h16" />
+      <path d="M26 144h26M26 152h16" />
+      <path d="M26 196h26M26 204h16" />
+      </g>
+      <g class="pal-link">
+      <path d="M70 45h44l22 66" />
+      <path d="M70 97h30l36 14" />
+      <path d="M70 149h30l36-38" />
+      <path d="M70 201h44l22-90" />
+      </g>
+      <circle cx="146" cy="118" r="16" />
+      <circle cx="146" cy="118" r="6" />
+      <g class="pal-out">
+      <path d="M162 118h44" />
+      <path d="M158 106l48-38" />
+      <path d="M158 130l48 38" />
+      </g>
+      <g opacity=".7">
+      <circle cx="214" cy="118" r="7" />
+      <circle cx="214" cy="62" r="7" />
+      <circle cx="214" cy="174" r="7" />
+      </g>
+      </g>
+      </svg>
+    </div>
+    <div class="palantir-node-scene side-right node-scene-3">
+      <svg viewBox="0 0 280 250" fill="none">
+      <g stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <g opacity=".45">
+      <rect x="18" y="30" width="52" height="30" rx="3" />
+      <rect x="18" y="82" width="52" height="30" rx="3" />
+      <rect x="18" y="134" width="52" height="30" rx="3" />
+      <rect x="18" y="186" width="52" height="30" rx="3" />
+      <path d="M26 40h26M26 48h16" />
+      <path d="M26 92h26M26 100h16" />
+      <path d="M26 144h26M26 152h16" />
+      <path d="M26 196h26M26 204h16" />
+      </g>
+      <g class="pal-link">
+      <path d="M70 45h44l22 66" />
+      <path d="M70 97h30l36 14" />
+      <path d="M70 149h30l36-38" />
+      <path d="M70 201h44l22-90" />
+      </g>
+      <circle cx="146" cy="118" r="16" />
+      <circle cx="146" cy="118" r="6" />
+      <g class="pal-out">
+      <path d="M162 118h44" />
+      <path d="M158 106l48-38" />
+      <path d="M158 130l48 38" />
+      </g>
+      <g opacity=".7">
+      <circle cx="214" cy="118" r="7" />
+      <circle cx="214" cy="62" r="7" />
+      <circle cx="214" cy="174" r="7" />
+      </g>
+      </g>
+      </svg>
+    </div>
+    <div class="palantir-node-scene side-left node-scene-4">
+      <svg viewBox="0 0 280 250" fill="none">
+      <g stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <g opacity=".45">
+      <rect x="18" y="30" width="52" height="30" rx="3" />
+      <rect x="18" y="82" width="52" height="30" rx="3" />
+      <rect x="18" y="134" width="52" height="30" rx="3" />
+      <rect x="18" y="186" width="52" height="30" rx="3" />
+      <path d="M26 40h26M26 48h16" />
+      <path d="M26 92h26M26 100h16" />
+      <path d="M26 144h26M26 152h16" />
+      <path d="M26 196h26M26 204h16" />
+      </g>
+      <g class="pal-link">
+      <path d="M70 45h44l22 66" />
+      <path d="M70 97h30l36 14" />
+      <path d="M70 149h30l36-38" />
+      <path d="M70 201h44l22-90" />
+      </g>
+      <circle cx="146" cy="118" r="16" />
+      <circle cx="146" cy="118" r="6" />
+      <g class="pal-out">
+      <path d="M162 118h44" />
+      <path d="M158 106l48-38" />
+      <path d="M158 130l48 38" />
+      </g>
+      <g opacity=".7">
+      <circle cx="214" cy="118" r="7" />
+      <circle cx="214" cy="62" r="7" />
+      <circle cx="214" cy="174" r="7" />
+      </g>
+      </g>
+      </svg>
+    </div>
+  </div>
+
+  <div class="dossier-header">
+    <div class="section-label">The Layer Above</div>
+    <h1>You were never<br />the <em>customer.</em></h1>
+    <p class="dossier-sub">Palantir does not collect your data. It does not sell it. It does not own it. All three are true, and none of them help you. What the company sells is the layer that turns records the government already holds into a single searchable object. In March 2025 an executive order removed the last legal barrier standing between those records.</p>
+  </div>
+
+  <div class="flock-body">
+
+    <!-- a) THE FRAME -->
+    <section class="flock-block" aria-labelledby="frame-h">
+      <h2 id="frame-h">Nothing else on this site applies here</h2>
+      <p>Every other page here ends with something you can do. Block the trackers. Replace the phone. Find the cameras and go to the council meeting. The advice varies but the shape does not: <strong>reduce what gets collected about you.</strong></p>
+      <p>That shape breaks completely on this page. There is no Palantir product you use, no account you opened, no terms you accepted, no privacy notice with your consent recorded in it, no setting to change and no opt-out to click. You have no relationship with this company at all. Its customers are governments and corporations, and the data it operates on is data those customers already had.</p>
+      <p>So this page has no mitigation section, because there is no honest one to write. What it has instead is an argument about what actually protected you, and what happened to it.</p>
+    </section>
+
+    <!-- b) WHAT THEY SELL -->
+    <section class="flock-block" aria-labelledby="product-h">
+      <h2 id="product-h">What Palantir actually sells</h2>
+      <p>Start by granting the company its defence in full, because the argument only works once you do. Palantir says it has "never been" a surveillance company, that it does not conduct surveillance or sell software "for the purposes of enabling unlawful surveillance," and that unlike the advertising giants it has no business model based on selling data. Every one of those statements is accurate. Palantir is not a data broker. It does not have a copy of your life to sell.</p>
+      <p>What it sells is software that sits on top of records somebody else holds. Its own documentation is the clearest description available, and better than any paraphrase:</p>
+      <ul class="flock-list">
+        <li><strong>Foundry</strong> is the data platform, with "200+ prebuilt connectors" that unify "structured and unstructured data" from separate systems.</li>
+        <li><strong>The Ontology</strong> is the core idea: "an operational layer for the organization that sits on top of the digital assets integrated into the Palantir platform&hellip; and connects them to their real-world counterparts." Rows in unrelated databases become one object: a person, a vehicle, a place.</li>
+        <li><strong>Gotham</strong> is the defence and intelligence version of the same machinery.</li>
+        <li><strong>AIP</strong> is the language-model layer, built, in Palantir's words, "on top of the Ontology."</li>
+      </ul>
+      <p>Read that list again with one question in mind: what was ever actually stopping any of this?</p>
+      <div class="myth-card">
+        <div class="myth-quote">"They already have all my data anyway. Nothing has changed."</div>
+        <div class="myth-reframe-label">What changed</div>
+        <p>The government has held this material for decades. Your tax filings, your benefits claims, your immigration file, your licence, your address history. None of it is new, and none of it was ever secret from the agency that collected it.</p>
+        <p><strong>The protection was never secrecy. It was separation.</strong> The records sat in different systems, at different agencies, under different legal authorities, in incompatible formats, and joining them was slow, expensive and often unlawful. That friction was doing the work that policy was not.</p>
+        <p>Palantir sells the removal of that friction. That is not a criticism of the company so much as a plain description of the product, and the company would broadly agree with it.</p>
+      </div>
+    </section>
+
+    <!-- c) THE MONEY -->
+    <section class="flock-block" aria-labelledby="money-h">
+      <h2 id="money-h">Eighteen agencies</h2>
+      <p>The scale is not a matter of opinion. Federal contract awards are public, and the figures below come from a query run against the U.S. Treasury's <a href="https://api.usaspending.gov/" target="_blank" rel="noopener noreferrer">USAspending API</a> on <strong>18 August 2026</strong>, covering all contract obligations to Palantir on record.</p>
+      <div class="hm-table-wrap">
+        <table class="hm-table">
+          <caption class="visually-hidden">Federal contract obligations to Palantir by awarding agency, from USAspending, queried 18 August 2026.</caption>
+          <thead>
+            <tr>
+              <th scope="col">Agency</th>
+              <th scope="col">Obligated</th>
+              <th scope="col">What it is for</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row" data-label="Agency">Defense</th><td data-label="Obligated"><strong>$3.19 billion</strong></td><td data-label="What it is for">Maven Smart System and Army Vantage, the largest single line by an order of magnitude.</td></tr>
+            <tr><th scope="row" data-label="Agency">Homeland Security</th><td data-label="Obligated">$457.4 million</td><td data-label="What it is for">ICE case management, covered in detail below.</td></tr>
+            <tr><th scope="row" data-label="Agency">Health and Human Services</th><td data-label="Obligated">$416.2 million</td><td data-label="What it is for">Health data platforms.</td></tr>
+            <tr><th scope="row" data-label="Agency">Justice</th><td data-label="Obligated">$213.0 million</td><td data-label="What it is for">Investigative systems.</td></tr>
+            <tr><th scope="row" data-label="Agency">Treasury</th><td data-label="Obligated">$198.7 million</td><td data-label="What it is for">Includes the IRS.</td></tr>
+            <tr><th scope="row" data-label="Agency">Agriculture</th><td data-label="Obligated">$147.0 million</td><td data-label="What it is for">Farm production and conservation IT, under the "Landmark" platform initiative.</td></tr>
+            <tr><th scope="row" data-label="Agency">Veterans Affairs</th><td data-label="Obligated">$127.2 million</td><td data-label="What it is for">Software as a service.</td></tr>
+            <tr><th scope="row" data-label="Agency">State</th><td data-label="Obligated">$122.0 million</td><td data-label="What it is for">Not stated in the award descriptions.</td></tr>
+            <tr><th scope="row" data-label="Agency">Energy</th><td data-label="Obligated">$99.2 million</td><td data-label="What it is for">Includes the nuclear security administration's SAFER project.</td></tr>
+            <tr><th scope="row" data-label="Agency">Transportation</th><td data-label="Obligated">$71.1 million</td><td data-label="What it is for">Not stated in the award descriptions.</td></tr>
+            <tr><th scope="row" data-label="Agency">Securities and Exchange Commission</th><td data-label="Obligated">$50.4 million</td><td data-label="What it is for">Not stated in the award descriptions.</td></tr>
+            <tr><th scope="row" data-label="Agency">Seven more</th><td data-label="Obligated">$41.5 million</td><td data-label="What it is for">Development Finance Corporation, NASA, GSA, Commerce, Interior, and, at $400,000 and $80,000, <strong>Housing and Urban Development</strong> and <strong>Labor</strong>.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p><strong>$5.14 billion across eighteen agencies.</strong> The headline number is Defense, and the Defense work is the part with the clearest public justification. But the interesting entries are the small ones. A company with $80,000 of business at the Department of Labor and $400,000 at Housing and Urban Development is not a defence contractor that also does other things. It is a general-purpose government contractor whose product happens to be the joining of records.</p>
+      <p class="flock-caveat">These are obligations recorded against contract awards, not revenue received, and the total moves as new task orders land. Re-run the query rather than trusting this figure indefinitely. The largest single awards on the day of the query: $545.6M and $292.7M to the Army for the Maven Smart System, $150.7M to ICE for Investigative Case Management running from September 2022, $145.0M and $103.4M for Army Vantage, $94.7M to Agriculture, and $86.3M to ICE for Enforcement and Removal Operations case management.</p>
+    </section>
+
+    <!-- d) THE ORDER -->
+    <section class="flock-block" aria-labelledby="eo-h">
+      <h2 id="eo-h">The order that removed the barrier</h2>
+      <p>On 20 March 2025 the President signed <a href="https://www.govinfo.gov/content/pkg/FR-2025-03-25/html/2025-05214.htm" target="_blank" rel="noopener noreferrer">Executive Order 14243</a>, "Stopping Waste, Fraud, and Abuse by Eliminating Information Silos" (90 FR 13681). Its stated purpose is efficiency: "Removing unnecessary barriers to Federal employees accessing Government data and promoting inter-agency data sharing are important steps toward eliminating bureaucratic duplication and inefficiency."</p>
+      <p>Read what it actually directs.</p>
+      <div class="myth-card">
+        <div class="myth-quote">"Agency Heads shall take all necessary steps, to the maximum extent consistent with law, to ensure the Federal Government has <strong>unfettered access to comprehensive data from all State programs that receive Federal funding</strong>."</div>
+        <div class="myth-reframe-label">Executive Order 14243, section 3(c)</div>
+        <p>Section 3(a) is the same instrument turned inward: agency heads shall ensure designated officials have "full and prompt access to all unclassified agency records, data, software systems, and information technology systems," and shall authorise "inter- and intra-agency sharing and consolidation of unclassified agency records." Section 3(d) gives the Secretary of Labor "unfettered access to all unemployment data and related payment records."</p>
+        <p>The separation described earlier on this page is not being eroded by accident or by technology. It is being dismantled on purpose, in writing, as policy.</p>
+      </div>
+      <p class="flock-caveat">One thing this order does not do: name a contractor. Palantir does not appear in it, and anyone telling you the order was written for Palantir is going beyond the document. What the order does is create the conditions. Removing a legal barrier to consolidation raises an immediate practical question. Consolidate them <em>how</em>, and with what? There is a company whose entire product is the answer.</p>
+    </section>
+
+    <!-- e) IN PRACTICE -->
+    <section class="flock-block" aria-labelledby="practice-h">
+      <h2 id="practice-h">What it looks like in practice</h2>
+      <p>Palantir's largest civilian customer is immigration enforcement, and the relationship is much older than the current administration. The Investigative Case Management system, built on the Gotham platform for Homeland Security Investigations, has been running on ICE contracts since well before 2025. The current award dates from September 2022. In April 2025 ICE was reported to have added roughly $30 million for a platform called <strong>ImmigrationOS</strong>, with a prototype due that September, intended to streamline identification of removal targets and give "near real-time visibility" into self-deportations.</p>
+      <p>But the clearest picture of what data consolidation means in practice comes from a case Palantir is not party to at all, and it is worth following precisely, because most coverage got the outcome backwards.</p>
+      <p>In February 2025 the New York Times reported that Homeland Security officials were pressing the IRS for the addresses of 700,000 immigrants. Community organisations sued. On 7 April 2025 the IRS and DHS signed a memorandum of understanding governing ICE requests for "addresses of persons subject to criminal investigation."</p>
+      <p>The plaintiffs' argument was the intuitive one: tax records are confidential, and Congress said so. The IRS itself had long read the statute that way. Its own <cite>Disclosure &amp; Privacy Law Reference Guide</cite> stated that addresses could not be handed over on their own.</p>
+      <div class="myth-card">
+        <div class="myth-quote">"Addresses are thus not 'taxpayer return information,' so they do not receive any special protection from disclosure under &sect; 6103(i)(2)."</div>
+        <div class="myth-reframe-label">Centro de Trabajadores Unidos v. Bessent, D.C. Circuit, 24 February 2026</div>
+        <p>The court of appeals <a href="https://media.cadc.uscourts.gov/opinions/docs/2026/02/25-5181-2160705.pdf" target="_blank" rel="noopener noreferrer">affirmed the denial of an injunction</a>. The plaintiffs likely had standing, it held, but were unlikely to win, because section 6103(i)(2)(C) says in terms that "a taxpayer's identity shall not be treated as taxpayer return information." Identity includes your mailing address. The IRS guidance saying otherwise was "nonbinding" and "lacked legal effect."</p>
+        <p>So the protection people believed they had was not a law. It was an agency's reading of a law, maintained for years by institutional habit. When it was finally tested, the statute turned out to permit exactly what everyone assumed it forbade.</p>
+      </div>
+      <p>A parallel case reached a different posture on different facts: on 21 November 2025, in <em>Center for Taxpayer Rights v. IRS</em>, Judge Colleen Kollar-Kotelly stayed address-sharing over how the agreements were actually being implemented. That litigation continues. But on the central legal question of whether the statute permits it, the appellate answer is on the record.</p>
+      <p>This is the whole argument in one case. Nobody hacked anything. No new data was collected. Two agencies with lawful possession of their own records were permitted to join them, and a boundary that people had relied on for decades turned out never to have existed in the first place.</p>
+    </section>
+
+    <!-- f) THE NHS -->
+    <section class="flock-block" aria-labelledby="nhs-h">
+      <h2 id="nhs-h">The control case</h2>
+      <p>It is worth knowing what happens when a country tries to draw the line, because one did. In 2023 NHS England awarded Palantir a <strong>£330 million</strong> seven-year contract for a Federated Data Platform covering the health records of the population of England.</p>
+      <p>The most instructive fact about that contract is not in it. When it was first published, <strong>417 of its 586 pages were blanked out</strong>. It took a legal challenge from the Good Law Project to force the release of a less redacted version. A further challenge was brought by Foxglove together with Just Treatment, the Doctors' Association UK and the National Pensioners Convention. In June 2025 the British Medical Association voted to lobby against the company's involvement in the health service. The contract carries a break clause available from February 2027, and the UK government is reported to be weighing whether to use it.</p>
+      <p>The lesson is not that Britain did better. It is that even in a system with a statutory data protection regime, an information commissioner, an active professional body and a litigious civil society, the terms on which national health records were handed to a private platform had to be prised out through the courts. The public still got a redacted copy.</p>
+    </section>
+
+    <!-- g) THEIR ANSWER -->
+    <section class="flock-block" aria-labelledby="answer-h">
+      <h2 id="answer-h">Their answer, taken seriously</h2>
+      <p>Palantir's response to all of this is not evasive, and it deserves to be engaged with rather than waved away. The company's position is that its software makes abuse <em>harder</em> than the alternative. Alex Karp has put it bluntly: "We are the single worst technology to use to abuse civil liberties, which is by the way the reason why we could never get the NSA or the FBI to actually buy our product." The argument rests on real engineering: immutable audit logs, granular access controls, purpose limitation, and a record of every query and who ran it. In its most recent <a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&amp;CIK=0001321655&amp;type=8-K&amp;dateb=&amp;owner=include&amp;count=40" target="_blank" rel="noopener noreferrer">quarterly filing</a> the company put it this way: "Our customers trust us to provide them with maximal control over their operations, data, and decisions."</p>
+      <p>Take it at face value. It is probably true, and it is more than most vendors offer.</p>
+      <p>Now notice what it answers. Audit logs and access controls govern <strong>who inside an authorised system did what</strong>. They are a defence against the rogue analyst looking up an ex-partner. They are excellent at that.</p>
+      <p>They say nothing whatever about the two questions that matter here: whether the system should have been built, and whether the access it grants is lawful in the first place. An immutable log of a lawful query is still a lawful query. The IRS-ICE case was not about a rogue employee. It was about whether an entire category of disclosure was permitted, argued by government lawyers in open court, and decided on the text of a statute. No amount of query logging is responsive to that.</p>
+      <p class="flock-caveat">One more thing the frame misses. In the quarter ending June 2026 Palantir reported revenue of $1.935 billion, up 93% year on year, with US government revenue of $809 million and US commercial revenue of $764 million growing faster still at 149%. Full-year guidance was raised to roughly $8.15 billion. Calling this a government surveillance contractor is becoming an incomplete description: the commercial half is about to be the larger one, and the customers there are employers, insurers, hospitals and banks.</p>
+    </section>
+
+    <!-- h) WHAT CHANGES -->
+    <section class="flock-block" aria-labelledby="civic-h">
+      <h2 id="civic-h">What actually changes things</h2>
+      <p>There is no personal mitigation, and pretending otherwise would insult you. What exists instead are the four places where this has actually been slowed down, all of them collective and none of them fast.</p>
+      <ul class="flock-list">
+        <li><strong>Procurement is public, and almost nobody reads it.</strong> Every figure in the table above came from a free government API in a single query. Contract descriptions state what a system is for in plain language, months before anyone reports on it. This is the single most underused accountability tool in existence.</li>
+        <li><strong>Statutes, not agency guidance.</strong> The central lesson of the IRS case is that the protection people relied on was an interpretation, and interpretations are free to change. A safeguard that lives in a manual is not a safeguard. Only text in a statute survives a change of administration.</li>
+        <li><strong>Records requests, then litigation.</strong> The NHS contract became public because someone sued for it. The IRS memorandum became public because someone sued. Redaction is the default, and the default only moves when it is challenged.</li>
+        <li><strong>The comment period on the next order.</strong> Executive orders do not have comment periods, but the rules agencies write to implement them usually do. That is the point at which "unfettered access" either acquires limits or does not.</li>
+      </ul>
+      <p>The uncomfortable conclusion of this page is that the thing protecting you was never a right, a setting, or a company's good intentions. It was friction: the sheer difficulty of joining one government database to another. Friction is not a principle and it was never going to hold. It has now been removed deliberately, by order, and sold back to the government as a service. Whatever replaces it has to be written down.</p>
+      <p class="flock-caveat">Palantir now has an entry in our <a href="tracker.html?company=Palantir%20Technologies">Corporate Dossier</a>, and it is the only one with no fines against it. That is not an oversight. Nothing described on this page is a violation of anything, which is the part worth being uncomfortable about.</p>
+    </section>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="logo">Visable<span>.</span></div>
+  <p>An independent project, built because the conversation deserves to be better.</p>
+  <p style="color: #2a2a2a; font-size: 11px;">No tracking. No analytics. No ads. Ever.</p>
+</footer>
+
+<script src="binary-background.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

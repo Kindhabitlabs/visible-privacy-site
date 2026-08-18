@@ -1102,6 +1102,24 @@ const COMPANIES = [
     ],
   },
   {
+    name: "Palantir Technologies",
+    ticker: "PLTR",
+    industry: "Data Analytics / Government Contracting",
+    totalFines: "$0",
+    fineRaw: 0,
+    categories: ["privacy"],
+    violations: [
+      {
+        title: "No Fines. $5.14 Billion in Federal Contracts Across 18 Agencies.",
+        amount: "$0",
+        year: "2026",
+        detail:
+          "Palantir is in this dossier for the opposite reason to every other entry: there are no fines to report. It has not been penalised by the FTC, the CPPA, or any state attorney general, and on its own account it has done nothing to warrant it. The company does not collect personal data, does not sell it, and does not own the records it processes. All of that is accurate. What it sells is the layer that turns records a customer already holds into a single searchable object, which its documentation calls the Ontology. A query against the U.S. Treasury's USAspending system on 18 August 2026 records $5,138,021,998 in federal contract obligations across 18 agencies, from $3.19 billion at Defense down to $400,000 at Housing and Urban Development and $80,000 at Labor. The enforcement record is empty because nothing here is a violation. Executive Order 14243, signed 20 March 2025, directs agencies to ensure the federal government has 'unfettered access to comprehensive data from all State programs that receive Federal funding.' The protection that mattered was never secrecy about this data, which the government has held for decades. It was the friction of joining one agency's records to another's, and that friction is being removed deliberately, as policy, and purchased as a service.",
+        source: "USAspending.gov; Executive Order 14243, 90 FR 13681",
+      },
+    ],
+  },
+  {
     name: "LexisNexis Risk Solutions",
     ticker: "Private (RELX subsidiary)",
     industry: "Data Broker / Background Checks",

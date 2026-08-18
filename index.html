@@ -32,9 +32,15 @@
   <ul id="nav-menu">
     <li><a href="tracker.html">Corporate Dossier</a></li>
     <li><a href="pe-tracker.html">PE Ownership</a></li>
-    <li><a href="flock.html">Flock Cameras</a></li>
-    <li><a href="graphene.html">Your Phone</a></li>
-    <li><a href="cars.html">Your Car</a></li>
+    <li class="nav-group">
+      <button type="button" class="nav-group-btn" id="nav-group-btn" aria-expanded="false" aria-controls="nav-investigations" aria-haspopup="true">Investigations<span class="nav-group-caret" aria-hidden="true">&#9662;</span></button>
+      <ul class="nav-submenu" id="nav-investigations">
+        <li><a href="flock.html">Flock Cameras</a></li>
+        <li><a href="graphene.html">Your Phone</a></li>
+        <li><a href="cars.html">Your Car</a></li>
+        <li><a href="palantir.html">Palantir</a></li>
+      </ul>
+    </li>
     <li><a href="donate.html">Donate</a></li>
     <li><a href="#tools" class="nav-cta">Honest Mitigation</a></li>
   </ul>
@@ -456,6 +462,53 @@
   </div>
 </section>
 
+
+<!-- PALANTIR TEASER -->
+<section class="palantir-teaser" id="palantir-teaser">
+  <div class="palantir-teaser-inner fade-up">
+    <div class="palantir-teaser-copy">
+      <div class="section-label">The Layer Above</div>
+      <h2>The company you have<br /><em>no relationship with.</em></h2>
+      <p>Palantir does not collect your data, sell it, or own it. All three are true, and none of them help you. It sells the layer that turns records the government already holds, covering tax, benefits, immigration and licensing, into one searchable object. <strong>$5.14 billion across eighteen federal agencies</strong>, from $3.19 billion at Defense down to $80,000 at the Department of Labor.</p>
+      <p class="flock-civic-line">What protected you was never secrecy. It was the friction of joining one database to another, and in March 2025 an executive order removed it on purpose.</p>
+      <a href="palantir.html" class="btn-ghost palantir-teaser-cta">Read the contracts →</a>
+    </div>
+    <div class="palantir-teaser-art" aria-hidden="true">
+      <svg viewBox="0 0 280 250" fill="none">
+        <g stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <g opacity=".45">
+            <rect x="18" y="30" width="52" height="30" rx="3" />
+            <rect x="18" y="82" width="52" height="30" rx="3" />
+            <rect x="18" y="134" width="52" height="30" rx="3" />
+            <rect x="18" y="186" width="52" height="30" rx="3" />
+            <path d="M26 40h26M26 48h16" />
+            <path d="M26 92h26M26 100h16" />
+            <path d="M26 144h26M26 152h16" />
+            <path d="M26 196h26M26 204h16" />
+          </g>
+          <g class="pal-link">
+            <path d="M70 45h44l22 66" />
+            <path d="M70 97h30l36 14" />
+            <path d="M70 149h30l36-38" />
+            <path d="M70 201h44l22-90" />
+          </g>
+          <circle cx="146" cy="118" r="16" />
+          <circle cx="146" cy="118" r="6" />
+          <g class="pal-out">
+            <path d="M162 118h44" />
+            <path d="M158 106l48-38" />
+            <path d="M158 130l48 38" />
+          </g>
+          <g opacity=".7">
+            <circle cx="214" cy="118" r="7" />
+            <circle cx="214" cy="62" r="7" />
+            <circle cx="214" cy="174" r="7" />
+          </g>
+        </g>
+      </svg>
+    </div>
+  </div>
+</section>
 <!-- CIVIC -->
 <section id="civic">
   <div class="civic fade-up">

@@ -32,9 +32,15 @@
   <ul id="nav-menu">
     <li><a href="tracker.html">Corporate Dossier</a></li>
     <li><a href="pe-tracker.html">PE Ownership</a></li>
-    <li><a href="flock.html">Flock Cameras</a></li>
-    <li><a href="graphene.html">Your Phone</a></li>
-    <li><a href="cars.html" class="active">Your Car</a></li>
+    <li class="nav-group">
+      <button type="button" class="nav-group-btn active" id="nav-group-btn" aria-expanded="false" aria-controls="nav-investigations" aria-haspopup="true">Investigations<span class="nav-group-caret" aria-hidden="true">&#9662;</span></button>
+      <ul class="nav-submenu" id="nav-investigations">
+        <li><a href="flock.html">Flock Cameras</a></li>
+        <li><a href="graphene.html">Your Phone</a></li>
+        <li><a href="cars.html" class="active">Your Car</a></li>
+        <li><a href="palantir.html">Palantir</a></li>
+      </ul>
+    </li>
     <li><a href="donate.html">Donate</a></li>
     <li><a href="index.html#tools" class="nav-cta">Honest Mitigation</a></li>
   </ul>
@@ -405,7 +411,7 @@
         <li>"To promote and offer our Products, and those of our selected partners, through co-branded service offerings, joint marketing, <strong>advertising</strong>, contests, and sponsorships."</li>
       </ul>
       <p>That is the in-vehicle advertising patent's premise without the patent. The limit is real and worth stating: utterances are captured in an active-listen state, not continuously, which is a materially different thing from the patent's controller monitoring dialogue to decide when you have stopped talking. But the purpose to which in-cabin audio may already be put includes advertising, and that is in a document in force today rather than an application Ford walked away from.</p>
-      <p class="flock-caveat">Three smaller things worth knowing from the same notice. Ford states it may apply "artificial intelligence, machine learning, and other automated decision-making technologies" to this data. It declines to offer the right to opt out of profiling, on the basis that it does not profile in a way producing "legal or similarly significant effects." And it discloses that it does not use personal data to train large language models &mdash; but makes that disclosure for Connecticut residents only, because Connecticut is the only state that requires it.</p>
+      <p class="flock-caveat">Three smaller things worth knowing from the same notice. Ford states it may apply "artificial intelligence, machine learning, and other automated decision-making technologies" to this data. It declines to offer the right to opt out of profiling, on the basis that it does not profile in a way producing "legal or similarly significant effects." And it discloses that it does not use personal data to train large language models, but makes that disclosure for Connecticut residents only, because Connecticut is the only state that requires it.</p>
       <p>One last detail, and it is the tell. Who does the notice make responsible for telling your passengers any of this? You do. Its second paragraph asks owners to "inform others who drive the vehicle, and passengers who connect their mobile devices to the vehicle, about the information in this Notice."</p>
       <p>How much weight that decision carries is a fair question, and there is evidence to answer it with. In March 2026 the California Privacy Protection Agency fined Ford $375,703 over its connected-vehicle privacy practices, after finding that an email confirmation step silently voided opt-out requests from anyone who did not click the link. The agency accepted that the step appeared to be a misconfiguration rather than an intentional barrier. That is rather the point: a single unnecessary click, added by accident, nullified a legal right at scale. The details are in our <a href="tracker.html?company=Ford%20Motor%20Company">Corporate Dossier</a>.</p>
       <p>Meanwhile the American courts have been clear about how little help they will be. In <a href="https://cdn.ca9.uscourts.gov/datastore/opinions/2023/10/27/22-35447.pdf" target="_blank" rel="noopener noreferrer"><em>Jones v. Ford Motor Co.</em></a> (9th Cir. 2023), drivers alleged that Ford infotainment systems copied and permanently stored the call logs and text messages of any connected phone. The Ninth Circuit held they had standing to sue, then affirmed dismissal anyway, because Washington's privacy statute requires injury to "business&hellip; person, or&hellip; reputation" and, in the court's words, "<strong>an invasion of privacy, without more, is insufficient</strong>." The court never reached whether the allegation was true. Having your private communications copied and kept simply was not, by itself, a harm the statute would remedy.</p>
