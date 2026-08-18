@@ -91,8 +91,8 @@ const COMPANIES = [
     name: "Walmart",
     ticker: "WMT",
     industry: "Retail",
-    totalFines: "$1.4B+",
-    fineRaw: 1.4,
+    totalFines: "$1.5B+",
+    fineRaw: 1.5,
     categories: ["labor", "financial"],
     violations: [
       {
@@ -110,6 +110,14 @@ const COMPANIES = [
         detail:
           "Walmart agreed to pay $3.1 billion to settle claims that its pharmacies illegally dispensed opioids without proper oversight, contributing to the addiction crisis.",
         source: "DOJ / State AGs",
+      },
+      {
+        title: "Deceiving Its Own Delivery Drivers About Pay and Tips",
+        amount: "$100M",
+        year: "2026",
+        detail:
+          "Walmart agreed to a $100 million judgment with the FTC and a coalition of states in February 2026 over its Spark Driver program, which uses independent contractors to make deliveries. Regulators alleged Walmart misled nearly one million drivers who completed more than 272 million deliveries about how much they would earn, including advertising tip amounts it had not preauthorized and failing to tell drivers when those advertised tips did not materialize.",
+        source: "FTC / State AGs",
       },
     ],
   },
@@ -195,8 +203,8 @@ const COMPANIES = [
     name: "Google / Alphabet",
     ticker: "GOOGL",
     industry: "Technology",
-    totalFines: "$10B+",
-    fineRaw: 10,
+    totalFines: "$11.4B+",
+    fineRaw: 11.375,
     categories: ["antitrust", "privacy"],
     violations: [
       {
@@ -222,6 +230,14 @@ const COMPANIES = [
         detail:
           "Google settled with 40 state AGs over secretly tracking user location even after users explicitly turned off location history — a documented, intentional deception.",
         source: "State AGs Coalition",
+      },
+      {
+        title: "Largest State Privacy Recovery in US History",
+        amount: "$1.375B",
+        year: "2025",
+        detail:
+          "Google paid Texas $1.375 billion to settle claims that it unlawfully tracked users' geolocation after they turned tracking off, logged searches made in Incognito mode that the browser told users were private, and collected biometric face and voiceprint data from Texans without consent. It is the largest amount any state has ever recovered from Google for a privacy violation, roughly triple the $391.5M that 40 states obtained together in 2022, and it covers conduct Google continued after those earlier settlements.",
+        source: "Texas Attorney General",
       },
     ],
   },
@@ -256,6 +272,14 @@ const COMPANIES = [
         detail:
           "Internal emails revealed Zuckerberg explicitly bought Instagram and WhatsApp to eliminate competition rather than compete with them. 'It is better to buy than compete,' he wrote. The FTC filed suit alleging illegal monopolization.",
         source: "FTC / House Judiciary Subcommittee",
+      },
+      {
+        title: "Texas Lawsuit Over WhatsApp Privacy Claims",
+        amount: "Litigation pending",
+        year: "2026",
+        detail:
+          "Texas sued Meta and WhatsApp in May 2026, alleging the company misrepresented how private the messaging app actually is and collected user data in ways its own privacy promises ruled out. WhatsApp is marketed on end-to-end encryption, and the suit turns on the gap between that promise and the metadata and account information Meta still collects and uses.",
+        source: "Texas Attorney General",
       },
     ],
   },
@@ -298,7 +322,7 @@ const COMPANIES = [
     ticker: "AMZN",
     industry: "E-Commerce / Technology",
     totalFines: "$1.3B+",
-    fineRaw: 1.3,
+    fineRaw: 1.30225,
     categories: ["antitrust", "labor"],
     violations: [
       {
@@ -325,15 +349,23 @@ const COMPANIES = [
           "Amazon structures its delivery network through 'Delivery Service Partners' to deny driver status — and thus benefits — to tens of thousands of drivers who operate under Amazon's direct control.",
         source: "Good Jobs First / State Courts",
       },
+      {
+        title: "Knowingly Violating the Fair Credit Reporting Act",
+        amount: "$2.25M",
+        year: "2026",
+        detail:
+          "Amazon paid $2.25 million in June 2026 to resolve FTC charges that it knowingly violated the Fair Credit Reporting Act. The FCRA governs how background and consumer reports may be obtained and used about job applicants and workers, and requires disclosure and consent before a report is pulled and notice before it is used against someone.",
+        source: "FTC",
+      },
     ],
   },
   {
     name: "Disney",
     ticker: "DIS",
     industry: "Entertainment / Media",
-    totalFines: "$233M",
-    fineRaw: 0.233,
-    categories: ["labor"],
+    totalFines: "$236M",
+    fineRaw: 0.23575,
+    categories: ["labor", "privacy"],
     violations: [
       {
         title: "Largest Wage Theft Settlement in California History",
@@ -342,6 +374,14 @@ const COMPANIES = [
         detail:
           "Disney agreed to pay $233M — the largest wage-and-hour settlement in California history — after 50,000+ Disneyland employees sued for being paid below the living wage guaranteed by a voter-approved city ordinance that Disney lobbied against.",
         source: "Anaheim Superior Court",
+      },
+      {
+        title: "Largest CCPA Settlement to Date for Ignoring Opt-Outs",
+        amount: "$2.75M",
+        year: "2026",
+        detail:
+          "California's attorney general announced a $2.75 million settlement with Disney, the largest under the California Consumer Privacy Act, after finding the company failed to honor consumers' requests to opt out of the sale or sharing of their personal information across its devices and streaming services. Opting out on one Disney service did not stop the sharing on the others, which meant the request people made was recorded but not actually carried out.",
+        source: "California Attorney General",
       },
     ],
   },
@@ -1061,6 +1101,14 @@ const COMPANIES = [
           "LexisNexis compiles a database on over 200 million Americans, called Accurint, built from everyday consumer interactions like setting up a utility account or taking out a car loan, then sells access to that database to third parties including federal immigration authorities and debt collectors. A 2022 lawsuit from immigration advocacy groups alleged the company's data directly enabled ICE enforcement actions against immigrants, calling it a grave threat to civil liberties. Separately, LexisNexis settled a class action for $13.5 million after selling Accurint reports to debt collectors while claiming the reports weren't subject to federal consumer protection law, a legal workaround that let it skip disclosures normally required when selling data used to make decisions about people's lives. The company disclosed a further breach in December 2024 affecting over 364,000 people, exposing Social Security numbers and driver's license data.",
         source: "D.N.J. Federal Court / Cook County Lawsuit / Company Disclosures",
       },
+      {
+        title: "Buying Drivers' Behavior Data From GM and Selling It to Insurers",
+        amount: "Litigation pending",
+        year: "2019-2024",
+        detail:
+          "Under a data deal signed in August 2019, LexisNexis bought granular driving behavior collected by General Motors' internet-connected vehicles, including hard braking, rapid acceleration and speeding events, and turned it into risk reports it sold to auto insurers. Drivers had no practical way to know their own car was reporting on them, and many learned of it only when their premiums rose or coverage was denied. GM says it stopped sharing in April 2024, and Texas has sued GM over the arrangement. This is the same Accurint business model applied to the inside of a car.",
+        source: "Texas Attorney General / Class Action (E.D. Tex.)",
+      },
     ],
   },
   {
@@ -1150,6 +1198,368 @@ const COMPANIES = [
         detail:
           "Sephora installed tracking software from third-party companies on its website and app that shared customers' shopping activity and precise identity in exchange for free or discounted analytics services, a practice California's attorney general classified as a 'sale' of personal data under the state's new privacy law. When customers used their browser's Global Privacy Control signal, an industry-standard tool that broadcasts 'do not sell my data' automatically, Sephora didn't honor it. This became the first enforcement action ever brought under the California Consumer Privacy Act, and the case was explicitly framed by regulators as a warning shot to the broader retail industry about ignoring consumer opt-out signals.",
         source: "California Attorney General",
+      },
+    ],
+  },
+  {
+    name: "General Motors / OnStar",
+    ticker: "GM",
+    industry: "Automotive / Connected Vehicles",
+    totalFines: "No fine — FTC ban + state suit",
+    fineRaw: 0,
+    categories: ["privacy"],
+    violations: [
+      {
+        title: "Selling Drivers' Second-by-Second Driving Data to Insurers",
+        amount: "No fine — 5-year FTC ban",
+        year: "2019-2024",
+        detail:
+          "GM collected granular driving behavior from its internet-connected vehicles, including hard braking, rapid acceleration, speeding and trip-by-trip mileage, and sold it to LexisNexis Risk Solutions and Verisk Analytics, who repackaged it into risk scores that insurers used to raise premiums or deny coverage. Drivers found out only when their rates jumped. GM enrolled customers through its OnStar Smart Driver product and, according to Texas, told buyers that certain vehicle safety features would be disabled unless they signed up — without clearly disclosing that enrollment also meant consenting to the sale of their driving data. The FTC banned GM from disclosing driver data to consumer reporting agencies for five years and required affirmative consent going forward. GM says it stopped sharing with LexisNexis and Verisk in April 2024.",
+        source: "FTC Consent Order / Texas Attorney General",
+      },
+      {
+        title: "Texas Lawsuit Over 1.8 Million Drivers",
+        amount: "Litigation pending",
+        year: "2024-present",
+        detail:
+          "Texas sued GM and OnStar under the state's Deceptive Trade Practices Act, alleging the companies unlawfully collected and sold driving data on more than 1.8 million Texas drivers without meaningful consent. The suit was the opening action of the Texas attorney general's data privacy initiative and remains pending.",
+        source: "Texas Attorney General",
+      },
+    ],
+  },
+  {
+    name: "LG Electronics USA",
+    ticker: "Private (LG Corp, KRX: 003550)",
+    industry: "Consumer Electronics / Smart TVs",
+    totalFines: "No fine — injunctive settlement",
+    fineRaw: 0,
+    categories: ["privacy"],
+    violations: [
+      {
+        title: "Smart TVs Fingerprinting Everything on Screen Without Consent",
+        amount: "No fine — injunctive relief",
+        year: "2025-2026",
+        detail:
+          "LG televisions ran Automated Content Recognition, a technology that captures a screenshot of the display roughly every 500 milliseconds and matches it against a catalog of known media, building a record of everything a household watches regardless of whether it came from cable, a streaming app, a game console or a DVD. Texas alleged LG did this without informed consent and monetized the resulting viewing profiles. Under the May 2026 agreement LG must stop using ACR without informed consent, ship a pop-up disclosure explaining what is collected, publish the same disclosure on its website, and give users a clear way to opt out. LG also agreed to bar transfers of viewing data to the Chinese government. The settlement is the second in a suit Texas filed in December 2025 against five television manufacturers; Samsung settled on similar terms first, and cases against Sony, Hisense and TCL remain pending.",
+        source: "Texas Attorney General",
+      },
+    ],
+  },
+  {
+    name: "Hims & Hers Health",
+    ticker: "HIMS",
+    industry: "Telehealth",
+    totalFines: "Litigation pending",
+    fineRaw: 0,
+    categories: ["privacy", "health"],
+    violations: [
+      {
+        title: "Sending Patients' Medical Conditions to Meta and Snap",
+        amount: "Litigation pending",
+        year: "2026",
+        detail:
+          "The FTC, joined by Utah and by California through the Los Angeles County Counsel, sued Hims & Hers in July 2026 alleging it shared consumers' sensitive health information, including the specific conditions they sought treatment for, with third-party advertising platforms including Meta and Snap. The company had marketed itself to patients as private and discreet, which is the entire premise of a telehealth service built around erectile dysfunction, hair loss, mental health and weight loss. Regulators brought the claims under Section 5 of the FTC Act.",
+        source: "FTC / Utah AG / LA County Counsel",
+      },
+      {
+        title: "Subscription Traps and Early Refill Charges",
+        amount: "Litigation pending",
+        year: "2026",
+        detail:
+          "The same complaint alleges Hims advertised monthly or quarterly refill schedules but processed the charges roughly ten days earlier than customers would reasonably expect, then required cancellation two days before that early date, and made cancelling unreasonably difficult. The FTC charged the conduct under the Restore Online Shoppers' Confidence Act.",
+        source: "FTC / Federal Court",
+      },
+    ],
+  },
+  {
+    name: "Match Group / OkCupid",
+    ticker: "MTCH",
+    industry: "Dating Apps",
+    totalFines: "$14M+",
+    fineRaw: 0.014,
+    categories: ["privacy", "financial"],
+    violations: [
+      {
+        title: "Handing Millions of Dating Profiles to an Unauthorized Third Party",
+        amount: "Litigation pending",
+        year: "2026",
+        detail:
+          "The FTC alleged in March 2026 that OkCupid gave an unauthorized third party access to the personal data of millions of users, in violation of the promises in its own privacy policy. Dating profiles are among the most sensitive data any company holds, containing sexual orientation, relationship status, religion, health disclosures and location. Match Group also operates Tinder, Hinge, Match.com and Plenty of Fish, which concentrates that data under a single corporate roof.",
+        source: "FTC",
+      },
+      {
+        title: "Fake Match Notifications and a Cancellation Maze",
+        amount: "$14M",
+        year: "2025",
+        detail:
+          "Match.com agreed to a $14 million stipulated order in August 2025 resolving long-running FTC claims that it used misleading advertisements, including messages implying that another user was trying to contact the subscriber when the sender was in fact an account the company had already flagged as likely fraudulent, and that it made cancelling a subscription deliberately difficult.",
+        source: "FTC / N.D. Tex.",
+      },
+    ],
+  },
+  {
+    name: "RentGrow",
+    ticker: "Private (Yardi Systems subsidiary)",
+    industry: "Tenant Screening",
+    totalFines: "$2.25M",
+    fineRaw: 0.00225,
+    categories: ["privacy", "financial"],
+    violations: [
+      {
+        title: "Bad Tenant Screening Reports Used to Deny People Housing",
+        amount: "$2.25M",
+        year: "2026",
+        detail:
+          "RentGrow sells tenant screening reports that landlords use to decide who gets an apartment. The FTC alleged in July 2026 that the company failed to take reasonable steps to ensure those reports were accurate, producing records that wrongly attributed evictions, criminal history and debts to applicants, and that it failed to meet the Fair Credit Reporting Act obligations that let people see and dispute what is being said about them. Because tenant screening decisions happen fast and applicants rarely learn why they were rejected, errors in this industry often go uncorrected while the person loses housing.",
+        source: "FTC / Federal Court",
+      },
+    ],
+  },
+  {
+    name: "Gravy Analytics / Venntel",
+    ticker: "Private",
+    industry: "Location Data Broker",
+    totalFines: "No fine — FTC order",
+    fineRaw: 0,
+    categories: ["privacy"],
+    violations: [
+      {
+        title: "Selling Visits to Clinics, Churches, Shelters and Military Bases",
+        amount: "No fine — injunctive order",
+        year: "2024-2025",
+        detail:
+          "Gravy Analytics and its subsidiary Venntel bought precise smartphone location data from other suppliers and packaged it for sale to private companies and to government agencies. The FTC alleged Gravy purchased from suppliers that gave vague confirmation or none at all that the people being tracked had ever consented, and that the resulting data was precise enough to identify individual visits to medical facilities, religious institutions, domestic violence shelters and military installations. The final order, issued January 2025, bars the companies from selling sensitive location data, restricts national security and law enforcement disclosures, and requires them to build and maintain a list of sensitive locations to be excluded.",
+        source: "FTC Final Order",
+      },
+    ],
+  },
+  {
+    name: "Mobilewalla",
+    ticker: "Private",
+    industry: "Adtech / Data Broker",
+    totalFines: "No fine — FTC order",
+    fineRaw: 0,
+    categories: ["privacy"],
+    violations: [
+      {
+        title: "Harvesting Location Data Out of Ad Auctions It Was Not Buying",
+        amount: "No fine — injunctive order",
+        year: "2024-2025",
+        detail:
+          "Mobilewalla collected consumers' mobile advertising identifiers and precise geolocation from real-time bidding exchanges, the millisecond auctions that decide which ad loads on a phone. The mechanism matters: bid requests broadcast a user's location and device ID to every potential bidder, and the FTC alleged Mobilewalla retained and resold that data from auctions it did not win, meaning the data was taken from a process the user never knew was happening and that the app itself did not authorize. The January 2025 final order bars the sale of sensitive location data and requires deletion of data collected this way.",
+        source: "FTC Final Order",
+      },
+    ],
+  },
+  {
+    name: "Tractor Supply Company",
+    ticker: "TSCO",
+    industry: "Rural Lifestyle Retail",
+    totalFines: "$1.35M",
+    fineRaw: 0.00135,
+    categories: ["privacy"],
+    violations: [
+      {
+        title: "Largest California Privacy Agency Fine to Date",
+        amount: "$1.35M",
+        year: "2025",
+        detail:
+          "The California Privacy Protection Agency fined Tractor Supply $1.35 million in September 2025, its largest administrative penalty ever, after finding the retailer failed to tell consumers and job applicants what data it collected and what rights they had, failed to put required contracts in place with the service providers it handed data to, and failed to provide opt-out mechanisms that actually worked. The investigation began with a complaint from a single consumer, which the agency has since cited as proof that one person's report can trigger a full enforcement action.",
+        source: "California Privacy Protection Agency",
+      },
+    ],
+  },
+  {
+    name: "PlayOn Sports / GoFan",
+    ticker: "Private",
+    industry: "Youth Sports Media / Ticketing",
+    totalFines: "$1.1M",
+    fineRaw: 0.0011,
+    categories: ["privacy"],
+    violations: [
+      {
+        title: "Making High School Students Accept Tracking to Open Their Own Tickets",
+        amount: "$1.1M",
+        year: "2026",
+        detail:
+          "GoFan, PlayOn's digital ticketing platform used by roughly 1,400 California schools, required students to agree to tracking before they could access tickets they had already purchased, then fed that student data into targeted advertising. The California Privacy Protection Agency found in March 2026 that conditioning access to an already-bought ticket on consent was an illegal dark pattern that coerced agreement rather than obtaining it, and ordered PlayOn to pay $1.1 million and change the practice. The people affected were minors attending school events.",
+        source: "California Privacy Protection Agency",
+      },
+    ],
+  },
+  {
+    name: "Norfolk Southern",
+    ticker: "NSC",
+    industry: "Rail Freight",
+    totalFines: "$910M+",
+    fineRaw: 0.91,
+    categories: ["environmental", "health"],
+    violations: [
+      {
+        title: "East Palestine Derailment and Vinyl Chloride Burn",
+        amount: "$310M+",
+        year: "2023-2024",
+        detail:
+          "A Norfolk Southern train carrying hazardous materials derailed in East Palestine, Ohio in February 2023. Responders then conducted a controlled burn of five tank cars of vinyl chloride, sending a plume of hydrogen chloride and phosgene over the town. The United States reached a settlement of more than $310 million in May 2024 requiring the railroad to pay a $15 million Clean Water Act civil penalty, reimburse the EPA roughly $57 million in response costs plus all subsequent costs, fund long-term medical monitoring and drinking water monitoring, and improve rail safety practices.",
+        source: "DOJ / EPA Consent Decree",
+      },
+      {
+        title: "$600M Residents' Class Settlement",
+        amount: "$600M",
+        year: "2024",
+        detail:
+          "Norfolk Southern separately agreed to a $600 million class settlement covering residents and businesses within 20 miles of the derailment. The railroad's total disclosed cost from the incident has passed $1.7 billion. The National Transportation Safety Board later found the controlled burn was unnecessary and that Norfolk Southern had withheld information from the officials who authorized it.",
+        source: "N.D. Ohio Federal Court / NTSB",
+      },
+    ],
+  },
+  {
+    name: "Bayer / Monsanto",
+    ticker: "BAYRY",
+    industry: "Agrochemical / Pharmaceutical",
+    totalFines: "$19B+",
+    fineRaw: 19,
+    categories: ["environmental", "health"],
+    violations: [
+      {
+        title: "Roundup Cancer Litigation",
+        amount: "$18.1B+",
+        year: "2020-2026",
+        detail:
+          "Bayer, which bought Monsanto in 2018 for $63 billion, agreed in 2020 to pay between $10.1 billion and $10.9 billion to resolve roughly 75 percent of claims from an estimated 125,000 people who said exposure to Roundup weedkiller caused their non-Hodgkin lymphoma. In February 2026 it announced a further $7.25 billion class settlement covering current and future claims. Internal Monsanto documents surfaced in the litigation showed the company ghostwriting scientific papers and working to discredit researchers who linked glyphosate to cancer.",
+        source: "N.D. Cal. Federal Court / Company Disclosures",
+      },
+      {
+        title: "PCB Water Contamination",
+        amount: "$2.65B+",
+        year: "2020-present",
+        detail:
+          "Monsanto manufactured polychlorinated biphenyls for decades after its own studies showed they were toxic and accumulating in the environment. Bayer set aside $650 million for a PCB class settlement and has agreed to pay roughly $2 billion more to states, cities and counties whose waterways and school buildings were contaminated. PCBs were banned in the US in 1979 and still persist in sediment and in human tissue.",
+        source: "State AGs / Municipal Litigation",
+      },
+      {
+        title: "Dicamba Drift Damage",
+        amount: "$400M",
+        year: "2020",
+        detail:
+          "Bayer paid $400 million to settle claims from farmers whose crops were destroyed when dicamba herbicide drifted off neighboring fields, a known volatility problem with a product marketed for widespread use.",
+        source: "Federal Multidistrict Litigation",
+      },
+    ],
+  },
+  {
+    name: "Live Nation / Ticketmaster",
+    ticker: "LYV",
+    industry: "Live Entertainment / Ticketing",
+    totalFines: "$280M+",
+    fineRaw: 0.28,
+    categories: ["antitrust", "financial"],
+    violations: [
+      {
+        title: "Monopoly Over Live Music, Settled With DOJ",
+        amount: "$280M",
+        year: "2024-2026",
+        detail:
+          "The DOJ and a coalition of states sued to break up Live Nation, alleging it used its control of concert promotion, artist management and the venues themselves to force artists and venues into using Ticketmaster. Live Nation settled in March 2026 without admitting wrongdoing, agreeing to open its amphitheaters to all promoters, let promoters control distribution of up to half the tickets, cap ticketing service fees at 15 percent, divest 13 exclusive amphitheater booking agreements, and extend its 2020 modified consent decree by eight years. It created a $280 million fund for the states' damages claims.",
+        source: "DOJ Antitrust Division / State AGs",
+      },
+      {
+        title: "Working With Scalpers and Hiding the Real Price",
+        amount: "Litigation pending",
+        year: "2025-present",
+        detail:
+          "The FTC and seven states sued Live Nation and Ticketmaster in September 2025 under the Better Online Ticket Sales Act and Section 5 of the FTC Act, alleging the company knowingly allowed brokers to use bots to sweep up tickets far beyond posted purchase limits, then earned fees again when those tickets were resold at markups on its own resale platform, while advertising prices that concealed mandatory fees until checkout.",
+        source: "FTC / 7 State AGs",
+      },
+    ],
+  },
+  {
+    name: "Samsung Electronics America",
+    ticker: "Private (Samsung Electronics, KRX: 005930)",
+    industry: "Consumer Electronics / Smart TVs",
+    totalFines: "No fine — injunctive settlement",
+    fineRaw: 0,
+    categories: ["privacy"],
+    violations: [
+      {
+        title: "Screenshotting the Television Twice a Second",
+        amount: "No fine — injunctive relief",
+        year: "2025-2026",
+        detail:
+          "Texas alleged that Samsung smart TVs ran Automated Content Recognition that captured a screenshot of whatever was on screen roughly every 500 milliseconds, matched it against a media catalog to identify what the household was watching, and fed the resulting viewing profile to advertisers, all without informed consent. Samsung settled in February 2026, the first of five manufacturers named in the December 2025 suit to do so, agreeing to stop collecting ACR data from Texans without explicit informed consent and to rewrite its on-screen privacy prompts so the choice is presented clearly rather than buried in setup. LG settled on similar terms in May 2026; Sony, Hisense and TCL remain in litigation.",
+        source: "Texas Attorney General",
+      },
+    ],
+  },
+  {
+    name: "Illuminate Education",
+    ticker: "Private",
+    industry: "Education Technology",
+    totalFines: "No fine — FTC order",
+    fineRaw: 0,
+    categories: ["privacy"],
+    violations: [
+      {
+        title: "Breach Exposing 10 Million Students, Notified Up to Two Years Late",
+        amount: "No fine — injunctive order",
+        year: "2021-2026",
+        detail:
+          "A hacker used a former employee's credentials to get into Illuminate's cloud environment in December 2021, exposing personal information on more than 10 million students. The FTC alleged the company stored student data in plain text until at least January 2022, ignored a third-party vendor's warnings about its vulnerabilities, and lacked basic access controls, threat detection and patch management. It then delayed telling its customers: school districts covering more than 380,000 students were not notified until nearly two years after the breach. The final order, approved June 5 2026, requires a security program, limits on what Illuminate may collect and keep, deletion of unnecessary data, and a publicly posted retention schedule. The people whose records leaked were schoolchildren who never chose this vendor.",
+        source: "FTC Final Order",
+      },
+    ],
+  },
+  {
+    name: "American Honda Motor Co.",
+    ticker: "HMC",
+    industry: "Automotive / Connected Vehicles",
+    totalFines: "$632.5K",
+    fineRaw: 0.0006325,
+    categories: ["privacy"],
+    violations: [
+      {
+        title: "Demanding ID From People Just Trying to Opt Out",
+        amount: "$632,500",
+        year: "2025",
+        detail:
+          "The California Privacy Protection Agency's first enforcement order fined Honda $632,500 in March 2025. Honda made consumers hand over their name, full address, phone number and email before it would process a request to opt out of the sale of their data or to limit use of sensitive data. California's rules deliberately forbid that: opt-out and limitation requests are the two rights that carry no identity verification requirement, precisely so that exercising them costs nothing. Regulators also found Honda made opting out of cookie tracking harder than opting in, mishandled requests submitted by authorized agents, and could not produce the required contracts for the ad tech vendors it was sharing data with. The penalty was calculated in part at $2,500 per affected consumer. The case came out of a 2023 sweep of connected-vehicle manufacturers.",
+        source: "California Privacy Protection Agency",
+      },
+    ],
+  },
+  {
+    name: "Ford Motor Company",
+    ticker: "F",
+    industry: "Automotive / Connected Vehicles",
+    totalFines: "$375.7K",
+    fineRaw: 0.000375703,
+    categories: ["privacy"],
+    violations: [
+      {
+        title: "An Extra Click That Quietly Voided Opt-Out Requests",
+        amount: "$375,703",
+        year: "2026",
+        detail:
+          "Ford required consumers to confirm their email address before it would act on a request to opt out of the sale or sharing of their personal information. Anyone who did not click the confirmation link had their request expire, and Ford kept selling or sharing their data as though they had never asked. California's privacy agency fined Ford $375,703 in March 2026 for conduct between July 2023 and March 2024, finding the extra step unlawful even though it concluded Ford had not intended to impose a verification standard and the confirmation prompt appeared to be a misconfiguration. That is the point of the case: a single unnecessary step in a rights process silently nullifies the right at scale. It is the second action from the agency's connected-vehicle sweep, after Honda.",
+        source: "California Privacy Protection Agency",
+      },
+    ],
+  },
+  {
+    name: "Todd Snyder, Inc.",
+    ticker: "Private (American Eagle Outfitters)",
+    industry: "Apparel Retail",
+    totalFines: "$345.2K",
+    fineRaw: 0.000345178,
+    categories: ["privacy"],
+    violations: [
+      {
+        title: "A Privacy Request Portal Left Broken for 40 Days",
+        amount: "$345,178",
+        year: "2025",
+        detail:
+          "The California Privacy Protection Agency fined the menswear retailer $345,178 in May 2025. Todd Snyder had outsourced its consumer privacy request portal to a third party and then failed to oversee or configure it, leaving the mechanism broken for 40 days so that requests submitted during that window simply did not go through. The company also demanded far more information than necessary to process a request, including sensitive personal information such as photographs of government identification, and applied an unlawful verification standard to opt-out requests. The case is a reminder that outsourcing a compliance obligation does not outsource responsibility for it.",
+        source: "California Privacy Protection Agency",
       },
     ],
   },
