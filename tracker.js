@@ -1053,17 +1053,33 @@ const COMPANIES = [
     name: "Grindr",
     ticker: "GRND",
     industry: "Dating App",
-    totalFines: "$20M+ (US) / $11.7M (Norway)",
-    fineRaw: 0.032,
+    totalFines: "NOK 65M (~$6.5M, Norway)",
+    fineRaw: 0.0065,
     categories: ["privacy"],
     violations: [
       {
-        title: "Selling HIV Status and Sexual Orientation to Advertisers",
-        amount: "$20M",
-        year: "2026",
+        title: "Disclosing Location and Sexual Orientation to Ad Partners",
+        amount: "NOK 65M",
+        year: "2021-2025",
         detail:
-          "Grindr shared users' precise location, HIV status, and sexual orientation with ad-tech companies without meaningful consent, data sensitive enough that its exposure has led directly to people being outed. In one documented case, a religious advocacy group purchased a user's Grindr data for years and passed it to a publication that used it to out him publicly, causing severe reputational harm. Norway's data protection authority separately fined Grindr $11.7 million for the same underlying practice, finding it let advertisers effectively label users as LGBTQ+ without their knowledge. The FTC settlement requires Grindr to obtain affirmative consent before sharing any health or sexual orientation data going forward.",
-        source: "FTC / Norway Data Protection Authority",
+          "Norway's data protection authority issued its largest ever fine, NOK 65 million, after finding that Grindr disclosed users' GPS location, IP address, mobile advertising ID, age and gender to third parties for behavioural advertising without a valid legal basis. Critically, the regulator held that the mere fact of being a Grindr user is itself data about sexual orientation or sex life, a special category under the GDPR. Grindr's consents were found to be neither voluntary, specific nor informed. The fine covers practices from the GDPR's start until April 2020, when Grindr changed its consent mechanism, and it has been upheld through three rounds of appeals: the Privacy Appeals Board in 2023, the District Court, and Borgarting Court of Appeal on 21 October 2025.",
+        source: "Norway Data Protection Authority (Datatilsynet)",
+      },
+      {
+        title: "Regulator Complaint Over HIV Status and Sensitive Data",
+        amount: "No fine — complaint pending",
+        year: "2023",
+        detail:
+          "The Electronic Privacy Information Center asked the FTC to investigate Grindr, arguing its handling of highly sensitive data — HIV and vaccination status, sexual preference, app usage and location — is an unfair and deceptive practice under Section 5 and may violate the Health Breach Notification Rule. The complaint drew on allegations from Grindr's former chief privacy officer, Ronald De Jesus, in his June 2023 wrongful termination suit. This is a request for investigation, not a finding or a settlement; no FTC enforcement action against Grindr has been announced.",
+        source: "EPIC complaint to the FTC",
+      },
+      {
+        title: "Location Data Resold Through Brokers to Out a Named Individual",
+        amount: "No fine — documented harm",
+        year: "2021",
+        detail:
+          "The Pillar, a Catholic newsletter, bought commercially available location data from an unnamed vendor and correlated it to the phone of Monsignor Jeffrey Burrill, general secretary of the US Conference of Catholic Bishops, to assert he had used Grindr and visited gay bars between 2018 and 2020. Burrill resigned. Grindr denied being the source of the data and called the report an unethical witch hunt; privacy researchers noted the data most plausibly reached the broker chain through a third-party ad network. The episode is the clearest public demonstration of what the ad-tech pipeline around dating apps makes possible, regardless of which app the records originated in.",
+        source: "The Pillar / NBC News / Slate",
       },
     ],
   },
@@ -1281,11 +1297,11 @@ const COMPANIES = [
     violations: [
       {
         title: "Handing Millions of Dating Profiles to an Unauthorized Third Party",
-        amount: "Litigation pending",
+        amount: "No fine — FTC order",
         year: "2026",
         detail:
-          "The FTC alleged in March 2026 that OkCupid gave an unauthorized third party access to the personal data of millions of users, in violation of the promises in its own privacy policy. Dating profiles are among the most sensitive data any company holds, containing sexual orientation, relationship status, religion, health disclosures and location. Match Group also operates Tinder, Hinge, Match.com and Plenty of Fish, which concentrates that data under a single corporate roof.",
-        source: "FTC",
+          "The FTC found that OkCupid gave nearly three million user photos, plus location and other data, to a company that was not a service provider, business partner or affiliate — the categories its own privacy policy named — and never told users or offered them a chance to opt out. Per the complaint, the recipient had no business relationship with OkCupid at all; it asked for the datasets because OkCupid's founders were financial investors in it, and no contractual restrictions were placed on how the data could be used. The FTC further alleged that since September 2014 Match and OkCupid took extensive steps to conceal the sharing, including obstructing the FTC's investigation and publicly denying any involvement with the recipient after a news story exposed it. The agency had to enforce its Civil Investigative Demand in federal court to get the records. The March 30, 2026 stipulated order permanently bars both companies from misrepresenting their data practices, but carries no monetary penalty. Press reporting identified the recipient as the AI firm Clarifai. Dating profiles are among the most sensitive data any company holds, and Match Group also operates Tinder, Hinge, Match.com and Plenty of Fish, which concentrates that data under a single corporate roof.",
+        source: "FTC / N.D. Tex., Dallas Division",
       },
       {
         title: "Fake Match Notifications and a Cancellation Maze",
@@ -1294,6 +1310,14 @@ const COMPANIES = [
         detail:
           "Match.com agreed to a $14 million stipulated order in August 2025 resolving long-running FTC claims that it used misleading advertisements, including messages implying that another user was trying to contact the subscriber when the sender was in fact an account the company had already flagged as likely fraudulent, and that it made cancelling a subscription deliberately difficult.",
         source: "FTC / N.D. Tex.",
+      },
+      {
+        title: "Registered Sex Offenders Left Unscreened on the Free Apps",
+        amount: "No fine — investigation",
+        year: "2019-2020",
+        detail:
+          "A 16-month investigation by Columbia Journalism Investigations, ProPublica and BuzzFeed News, which analysed more than 150 incidents of sexual assault involving dating apps drawn from a decade of news reports, civil suits and criminal records, found that Match Group checked users against state sex-offender registries only on its paid platforms. Its free products — Tinder, OkCupid and Plenty of Fish among them — were left unscreened, and the company acknowledged that registered sex offenders use them. The chair of a House Oversight subcommittee, Rep. Raja Krishnamoorthi, opened an inquiry into underage users, the sale and dissemination of users' personal information, and the presence of registered sex offenders on free dating sites.",
+        source: "Columbia Journalism Investigations / ProPublica / House Oversight",
       },
     ],
   },
@@ -1560,6 +1584,24 @@ const COMPANIES = [
         detail:
           "The California Privacy Protection Agency fined the menswear retailer $345,178 in May 2025. Todd Snyder had outsourced its consumer privacy request portal to a third party and then failed to oversee or configure it, leaving the mechanism broken for 40 days so that requests submitted during that window simply did not go through. The company also demanded far more information than necessary to process a request, including sensitive personal information such as photographs of government identification, and applied an unlawful verification standard to opt-out requests. The case is a reminder that outsourcing a compliance obligation does not outsource responsibility for it.",
         source: "California Privacy Protection Agency",
+      },
+    ],
+  },
+  {
+    name: "Care.com",
+    ticker: "Private (IAC Inc. subsidiary)",
+    industry: "Caregiver Marketplace",
+    totalFines: "$8.5M",
+    fineRaw: 0.0085,
+    categories: ["financial", "labor"],
+    violations: [
+      {
+        title: "Inflated Job Counts, Baseless Pay Claims, and a Cancellation Maze",
+        amount: "$8.5M",
+        year: "2024-2025",
+        detail:
+          "The FTC charged that Care.com lured caregivers into paid subscriptions by advertising millions of jobs that included listings nobody could actually be hired for — a job poster who has not paid cannot even see an application — and by touting hourly and weekly earnings it had no data to support. One 2021 ad campaign promoted \"Childcare jobs from $18/hr\" while Care's own site put the national babysitting rate at $13 to $14.25. The company kept making the earnings claims after receiving an FTC Notice of Penalty Offenses about exactly that in 2021. The complaint also charged dark patterns on cancellation: unrelated links to click through, multi-page questionnaires, confusing language and warnings, with cancelling a paid subscription made materially harder than the two-step process for a free one. Care turned over $8.5 million; the FTC distributed more than $8.1 million to 194,207 consumers in June 2025.",
+        source: "FTC / W.D. Tex.",
       },
     ],
   },

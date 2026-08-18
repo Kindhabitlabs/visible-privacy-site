@@ -28,7 +28,6 @@ const FIRM_TYPE_LABELS = {
   "PE": "Private equity",
   "growth-equity": "Growth equity",
   "holding-company": "Holding company",
-  "public-company": "Publicly traded",
 };
 
 const TIER_LABELS = {

@@ -9,17 +9,18 @@ private-equity / holding companies — with defensible, tiered evidence. Live at
 **visableprivacy.com/pe-tracker.html**.
 
 ## Current status (LIVE on `main`)
-- **52 firms / 76 businesses / 10 firm tags / 70 business evidence / 15 industries.**
+- **50 firms / 68 businesses / 10 firm tags / 57 business evidence / 14 industries.**
 - Industries: Veterinary, Home Services (HVAC), Dental, Emergency medicine, Nursing homes,
   Hospice, Single-family rentals, Apartments, Mobile home parks, Newspapers,
-  Broadcast & digital media, Retail & restaurants, Insurance, Dating apps,
-  Care marketplaces.
-- **Batch 16 added a scoped exception to the no-public-companies rule.** Match Group and
-  IAC are entered with `firm_type: "public-company"` (renders as "Publicly traded")
-  because the story there is concentration: one company holds Tinder, Hinge, Match.com,
-  OkCupid and Plenty of Fish. The exception does NOT reopen Nexstar, Chemed, Amedisys,
-  DR Horton or AssuredPartners. Note: IAC has not owned Match Group since the separation
-  completed June 30, 2020.
+  Broadcast & digital media, Retail & restaurants, Insurance, Dating apps.
+- **This page records OWNERSHIP. The Corporate Dossier (`tracker.html` + `tracker.js`)
+  records VIOLATIONS.** They are complementary, and it is easy to put something in the
+  wrong one. A company with a documented fine but no PE owner belongs in the dossier, not
+  here. Batch 16 briefly added Match Group and IAC here under a `public-company` firm type;
+  that was reversed on 2026-08-17 and the material moved to the dossier. Those 8 business
+  records are retained in Airtable with `review_status="excluded"` so the export gates them
+  out; see `batches/batch-16-match-iac.json` for the full reasoning. The
+  no-public-companies rule stands unqualified.
 - Everything pushed; branch is `main`, fully synced with origin.
 - Only held-back record: **Blue River PetCare** (`reported-unverified`, kept pending).
 
