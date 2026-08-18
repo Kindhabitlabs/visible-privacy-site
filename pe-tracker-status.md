@@ -9,10 +9,17 @@ private-equity / holding companies — with defensible, tiered evidence. Live at
 **visableprivacy.com/pe-tracker.html**.
 
 ## Current status (LIVE on `main`)
-- **44 firms / 59 businesses / 10 firm tags / 42 business evidence / 12 industries.**
+- **52 firms / 76 businesses / 10 firm tags / 70 business evidence / 15 industries.**
 - Industries: Veterinary, Home Services (HVAC), Dental, Emergency medicine, Nursing homes,
   Hospice, Single-family rentals, Apartments, Mobile home parks, Newspapers,
-  Broadcast & digital media, Retail & restaurants.
+  Broadcast & digital media, Retail & restaurants, Insurance, Dating apps,
+  Care marketplaces.
+- **Batch 16 added a scoped exception to the no-public-companies rule.** Match Group and
+  IAC are entered with `firm_type: "public-company"` (renders as "Publicly traded")
+  because the story there is concentration: one company holds Tinder, Hinge, Match.com,
+  OkCupid and Plenty of Fish. The exception does NOT reopen Nexstar, Chemed, Amedisys,
+  DR Horton or AssuredPartners. Note: IAC has not owned Match Group since the separation
+  completed June 30, 2020.
 - Everything pushed; branch is `main`, fully synced with origin.
 - Only held-back record: **Blue River PetCare** (`reported-unverified`, kept pending).
 
