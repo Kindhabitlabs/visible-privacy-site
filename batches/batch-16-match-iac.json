@@ -1,0 +1,142 @@
+{
+  "_note": "Batch 16 — Match Group and IAC. DELIBERATE, LABELLED EXCEPTION to the tracker's no-public-companies rule (see pe-tracker-status.md). Both are publicly traded on Nasdaq and neither has a private equity owner, so they are entered with a NEW firm_type value 'public-company', which renders on the page as 'Publicly traded'. The exception is scoped to concentrated consumer-app ownership, where the point is that one company holds the apps; it does NOT reopen Nexstar, Chemed, Amedisys, DR Horton or AssuredPartners, which stay excluded. FACTUAL CORRECTION recorded here so a future session does not reintroduce it: IAC has NOT owned Match Group since June 30, 2020, when the full separation completed and the two became independent public companies. IAC also spun off Angi on April 1, 2025. The Match Group lineage is carried in each app's platform_company field, which the page renders as 'Operated under'; no separate 'Match Group' business card is created under IAC, because it would collide with the Match Group, Inc. firm record. All evidence is business-level; NO firm-level tags, so nothing bleeds. Activist hedge-fund stakes in Match Group are not ownership and are not recorded.",
+  "firms": [
+    {
+      "firm_id": "match-group-inc",
+      "firm_name": "Match Group, Inc.",
+      "firm_type": "public-company",
+      "headquarters": "Dallas, TX",
+      "portfolio_url": "https://mtch.com",
+      "notes": "Publicly traded (Nasdaq: MTCH), no controlling owner. Spun out of IAC in a tax-free separation completed June 30, 2020, in which IAC holders received 2.1584 Match Group shares per IAC share. Operates roughly 45 dating brands, including Tinder, Hinge, Match.com, OkCupid, Plenty of Fish, Archer, The League, BLK, Chispa, Azar and Pairs.",
+      "tags": []
+    },
+    {
+      "firm_id": "iac-inc",
+      "firm_name": "IAC Inc.",
+      "firm_type": "public-company",
+      "headquarters": "New York, NY",
+      "portfolio_url": "https://iac.com",
+      "notes": "Publicly traded holding company (Nasdaq: IAC), chaired by Barry Diller, which builds or buys consumer internet businesses and periodically spins them off to its own shareholders. Completed the separation of Match Group on June 30, 2020, Vimeo in 2021, and Angi on April 1, 2025. Current holdings include Dotdash Meredith and Care.com.",
+      "tags": []
+    }
+  ],
+  "businesses": [
+    {
+      "business_id": "match-com",
+      "business_name": "Match.com",
+      "industry": "Dating apps",
+      "owning_firm_id": "match-group-inc",
+      "platform_company": "Match Group, Inc. (Nasdaq: MTCH), spun out of IAC in the June 2020 separation",
+      "acquisition_date": "1995",
+      "ownership_status": "confirmed",
+      "source_url": "https://www.ftc.gov/legal-library/browse/cases-proceedings/172-3013-match-group-inc",
+      "last_verified": "2026-08-17",
+      "evidence": [
+        { "tag": "Legal/regulatory", "evidence_tier": "A", "description": "FTC v. Match Group: a stipulated order for permanent injunction and monetary judgment was filed in the US District Court for the Northern District of Texas on August 12, 2025, ending a nearly six-year case. Match Group agreed to pay $14 million, to permanently stop misrepresenting its guarantees and locking consumers out of accounts they had paid for, and to simplify Match.com's cancellation process. The Commission vote approving the order was 3 to 0.", "source_url": "https://www.ftc.gov/news-events/news/press-releases/2025/08/match-group-agrees-pay-14-million-permanently-stop-deceptive-advertising-cancellation-billing", "publish": true },
+        { "tag": "Consumer harm", "evidence_tier": "A", "description": "The FTC's September 2019 complaint alleged that Match advertised a free six-month subscription for users who did not 'meet someone special' without disclosing the stringent conditions attached, made cancellation confusing enough that subscribers were charged for renewals they did not want, and cut off paying customers who disputed charges with their banks.", "source_url": "https://www.ftc.gov/legal-library/browse/cases-proceedings/172-3013-match-group-inc", "publish": true }
+      ]
+    },
+    {
+      "business_id": "tinder",
+      "business_name": "Tinder",
+      "industry": "Dating apps",
+      "owning_firm_id": "match-group-inc",
+      "platform_company": "Match Group, Inc. (Nasdaq: MTCH), spun out of IAC in the June 2020 separation",
+      "acquisition_date": "2012",
+      "ownership_status": "confirmed",
+      "source_url": "https://www.propublica.org/article/tinder-lets-known-sex-offenders-use-the-app-its-not-the-only-one",
+      "last_verified": "2026-08-17",
+      "evidence": [
+        { "tag": "Consumer harm", "evidence_tier": "B", "description": "A 16-month investigation by Columbia Journalism Investigations, ProPublica and BuzzFeed News, which analyzed more than 150 incidents of sexual assault involving dating apps drawn from a decade of news reports, civil suits and criminal records, found that Match Group screened users against state sex-offender registries only on its paid products. Its free products, including Tinder, were left unscreened; the company acknowledged that registered sex offenders use them.", "source_url": "https://www.propublica.org/article/tinder-lets-known-sex-offenders-use-the-app-its-not-the-only-one", "publish": true },
+        { "tag": "Data privacy", "evidence_tier": "B", "description": "The Norwegian Consumer Council's January 2020 'Out of Control' report found that the ten apps it tested, Tinder among them, transmitted user data to at least 135 different third-party advertising and behavioural-profiling services, and concluded that the advertising industry was systematically breaking the GDPR.", "source_url": "https://www.forbes.com/sites/janetwburns/2020/01/14/data-sharing-grindr-twitter-tinder-other-apps-is-out-of-control-violates-gdpr-report-says/", "publish": true },
+        { "tag": "Legal/regulatory", "evidence_tier": "B", "description": "Following the investigation, the chair of a House Oversight subcommittee, Rep. Raja Krishnamoorthi, opened a broad inquiry into the safety of online dating platforms, seeking information on underage users, the sale and dissemination of users' personal information, and the presence of registered sex offenders on free dating sites.", "source_url": "https://gizmodo.com/sex-offenders-on-tinder-other-dating-apps-spur-probe-1841835266", "publish": true }
+      ]
+    },
+    {
+      "business_id": "hinge",
+      "business_name": "Hinge",
+      "industry": "Dating apps",
+      "owning_firm_id": "match-group-inc",
+      "platform_company": "Match Group, Inc. (Nasdaq: MTCH), spun out of IAC in the June 2020 separation",
+      "acquisition_date": "2019",
+      "ownership_status": "confirmed",
+      "source_url": "https://www.washingtonpost.com/technology/2024/02/19/tinder-hinge-dating-app-lawsuit/",
+      "last_verified": "2026-08-17",
+      "evidence": [
+        { "tag": "Consumer harm", "evidence_tier": "C", "description": "ALLEGED / UNPROVEN: a putative class action filed February 14, 2024 in the Northern District of California by six plaintiffs alleged that Tinder, Hinge and The League are deliberately designed to be addictive, that their features keep users searching for rewards made elusive on purpose, and that Match Group failed to warn users of the risk. The allegations were never tested on the merits: in December 2024 US Magistrate Judge Laurel Beeler compelled the claims into individual arbitration under the apps' terms of service, halting the nationwide case.", "source_url": "https://www.washingtonpost.com/technology/2024/02/19/tinder-hinge-dating-app-lawsuit/", "publish": true }
+      ]
+    },
+    {
+      "business_id": "okcupid",
+      "business_name": "OkCupid",
+      "industry": "Dating apps",
+      "owning_firm_id": "match-group-inc",
+      "platform_company": "Match Group, Inc. (Nasdaq: MTCH), spun out of IAC in the June 2020 separation",
+      "acquisition_date": "2011",
+      "ownership_status": "confirmed",
+      "source_url": "https://www.forbes.com/sites/janetwburns/2020/01/14/data-sharing-grindr-twitter-tinder-other-apps-is-out-of-control-violates-gdpr-report-says/",
+      "last_verified": "2026-08-17",
+      "evidence": [
+        { "tag": "Data privacy", "evidence_tier": "B", "description": "The Norwegian Consumer Council's January 2020 'Out of Control' report found that OkCupid shared details about users' sexuality, drug use and political views with the analytics company Braze. The Council filed formal GDPR complaints with Norway's data protection authority over the practices the report documented.", "source_url": "https://www.forbes.com/sites/janetwburns/2020/01/14/data-sharing-grindr-twitter-tinder-other-apps-is-out-of-control-violates-gdpr-report-says/", "publish": true }
+      ]
+    },
+    {
+      "business_id": "plenty-of-fish",
+      "business_name": "Plenty of Fish",
+      "industry": "Dating apps",
+      "owning_firm_id": "match-group-inc",
+      "platform_company": "Match Group, Inc. (Nasdaq: MTCH), spun out of IAC in the June 2020 separation",
+      "acquisition_date": "2015",
+      "ownership_status": "confirmed",
+      "source_url": "https://www.propublica.org/article/tinder-lets-known-sex-offenders-use-the-app-its-not-the-only-one",
+      "last_verified": "2026-08-17",
+      "evidence": [
+        { "tag": "Consumer harm", "evidence_tier": "B", "description": "Plenty of Fish is one of the free Match Group products covered by the Columbia Journalism Investigations and ProPublica finding that the company checked users against state sex-offender registries only on its paid platforms, leaving its free apps unscreened.", "source_url": "https://www.propublica.org/article/tinder-lets-known-sex-offenders-use-the-app-its-not-the-only-one", "publish": true }
+      ]
+    },
+    {
+      "business_id": "care-com",
+      "business_name": "Care.com",
+      "industry": "Care marketplaces",
+      "owning_firm_id": "iac-inc",
+      "platform_company": "Care.com, the childcare, eldercare and pet-care marketplace, taken private by IAC in February 2020 for about $500 million",
+      "acquisition_date": "2020",
+      "ownership_status": "confirmed",
+      "source_url": "https://www.ftc.gov/news-events/news/press-releases/2024/08/ftc-takes-action-against-carecom-deceiving-caregivers-about-wages-availability-jobs-its-site",
+      "last_verified": "2026-08-17",
+      "evidence": [
+        { "tag": "Legal/regulatory", "evidence_tier": "A", "description": "The FTC took action against Care.com, a unit of IAC Inc., in August 2024 for deceiving caregivers about the number of jobs available on the site and the pay those jobs offered, and for obstructing cancellation of paid family memberships. The settlement, filed in federal court in Austin, Texas, required Care.com to pay $8.5 million and to provide a simple cancellation method.", "source_url": "https://www.ftc.gov/news-events/news/press-releases/2024/08/ftc-takes-action-against-carecom-deceiving-caregivers-about-wages-availability-jobs-its-site", "publish": true },
+        { "tag": "Consumer harm", "evidence_tier": "A", "description": "The FTC described a cancellation flow built as a dark pattern: a 'Submit' button that misled members into believing they had cancelled, and a 'Cancel' button that actually stopped the cancellation process, alongside multi-page questionnaires and warnings. The action followed tens of thousands of consumer complaints, many from people who believed they had cancelled and were billed again. In June 2025 the FTC distributed more than $8.1 million to 194,207 harmed consumers.", "source_url": "https://www.ftc.gov/news-events/news/press-releases/2025/06/ftc-sends-more-81-million-consumers-harmed-carecoms-deceptive-claims-about-earnings-job-listings", "publish": true }
+      ]
+    },
+    {
+      "business_id": "dotdash-meredith",
+      "business_name": "Dotdash Meredith",
+      "industry": "Broadcast & digital media",
+      "owning_firm_id": "iac-inc",
+      "platform_company": "IAC's publishing arm, formed when Dotdash acquired Meredith Corporation in November 2021 for $2.7 billion. Titles include People, Better Homes & Gardens, Southern Living, Investopedia, Allrecipes, InStyle and Entertainment Weekly",
+      "acquisition_date": "2021",
+      "ownership_status": "confirmed",
+      "source_url": "https://www.forbes.com/sites/marisadellatto/2022/02/09/iac-scrapping-print-editions-of-instyle-entertainment-weekly-and-other-magazines/",
+      "last_verified": "2026-08-17",
+      "evidence": [
+        { "tag": "Financial extraction", "evidence_tier": "B", "description": "Three months after closing the $2.7 billion Meredith purchase, IAC's Dotdash Meredith announced in February 2022 that it would end the print editions of six magazines: InStyle, Entertainment Weekly, EatingWell, Health, Parents and People en Español. The last print issues ran in April 2022 and the brands continued as digital only. CEO Neil Vogel's memo to staff said 'buying Meredith was about buying brands, not magazines or websites.'", "source_url": "https://www.forbes.com/sites/marisadellatto/2022/02/09/iac-scrapping-print-editions-of-instyle-entertainment-weekly-and-other-magazines/", "publish": true },
+        { "tag": "Labor", "evidence_tier": "B", "description": "The February 2022 print shutdown eliminated about 200 jobs, which the company described as under 5 percent of Dotdash Meredith's total staff.", "source_url": "https://www.mediapost.com/publications/article/371056/print-editions-of-6-meredith-brands-including-in.html", "publish": true }
+      ]
+    },
+    {
+      "business_id": "angi",
+      "business_name": "Angi (Angie's List, HomeAdvisor)",
+      "industry": "Home Services",
+      "owning_firm_id": "iac-inc",
+      "platform_company": "Home-services marketplace formed from HomeAdvisor and Angie's List. IAC controlled it through a high-vote share class until it distributed its entire stake to IAC shareholders on April 1, 2025, which also eliminated Angi's dual-class voting structure",
+      "acquisition_date": "2017",
+      "ownership_status": "former",
+      "source_url": "https://ir.iac.com/news-releases/news-release-details/iac-completes-spin-angi-now-independent-company",
+      "last_verified": "2026-08-17",
+      "evidence": [
+        { "tag": "Financial extraction", "evidence_tier": "B", "description": "IAC completed the spin-off of its full ownership stake in Angi on April 1, 2025, converting all of its high-vote shares to low-vote shares before the distribution so that Angi emerged with one share, one vote. Recorded as an ownership fact: the third consumer business, after Match Group in 2020 and Vimeo in 2021, that IAC assembled and then distributed away.", "source_url": "https://ir.iac.com/news-releases/news-release-details/iac-completes-spin-angi-now-independent-company", "publish": true }
+      ]
+    }
+  ]
+}
