@@ -100,7 +100,7 @@ const COMPANIES = [
         amount: "$1.4B",
         year: "2000-present",
         detail:
-          "Walmart has paid more in wage theft settlements and fines than any other company in the US — 98 documented cases. Violations include off-the-clock work, denied breaks, overtime theft, and misclassifying workers.",
+          "Walmart has paid more in wage theft settlements and fines than any other company in the US, across 98 documented cases. Violations include off-the-clock work, denied breaks, overtime theft, and misclassifying workers.",
         source: "Good Jobs First / DOL",
       },
       {
@@ -134,7 +134,7 @@ const COMPANIES = [
         amount: "$8.5B",
         year: "2022",
         detail:
-          "McKesson, the largest US pharmaceutical distributor, settled for $8.5B over allegations it shipped hundreds of millions of opioid pills to pharmacies and doctors it knew — or should have known — were fueling addiction and death.",
+          "McKesson, the largest US pharmaceutical distributor, settled for $8.5B over allegations it shipped hundreds of millions of opioid pills to pharmacies and doctors it knew, or should have known, were fueling addiction and death.",
         source: "DOJ / State AGs",
       },
     ],
@@ -194,7 +194,7 @@ const COMPANIES = [
         amount: "$205M",
         year: "2000-present",
         detail:
-          "205 million dollars in documented wage theft settlements — including forcing financial advisors to work unpaid hours and denying overtime.",
+          "205 million dollars in documented wage theft settlements, including forcing financial advisors to work unpaid hours and denying overtime.",
         source: "Good Jobs First / DOL",
       },
     ],
@@ -212,7 +212,7 @@ const COMPANIES = [
         amount: "Ongoing",
         year: "2024",
         detail:
-          "A federal judge ruled in 2024 that Google maintained an illegal monopoly in search by paying Apple ~$18B/year to be the default search engine on iPhones — locking out competitors and charging advertisers monopoly prices.",
+          "A federal judge ruled in 2024 that Google maintained an illegal monopoly in search by paying Apple ~$18B/year to be the default search engine on iPhones, locking out competitors and charging advertisers monopoly prices.",
         source: "DOJ / US District Court (Judge Mehta)",
       },
       {
@@ -228,7 +228,7 @@ const COMPANIES = [
         amount: "$391.5M",
         year: "2022",
         detail:
-          "Google settled with 40 state AGs over secretly tracking user location even after users explicitly turned off location history — a documented, intentional deception.",
+          "Google settled with 40 state AGs over secretly tracking user location even after users explicitly turned off location history: a documented, intentional deception.",
         source: "State AGs Coalition",
       },
       {
@@ -304,7 +304,7 @@ const COMPANIES = [
         amount: "$1.2B+ annually",
         year: "Ongoing",
         detail:
-          "Apple forces all iOS app purchases through its App Store and takes a 30% cut — a toll that costs developers and consumers billions and has been ruled anticompetitive in multiple jurisdictions including the EU and South Korea.",
+          "Apple forces all iOS app purchases through its App Store and takes a 30% cut, a toll that costs developers and consumers billions and has been ruled anticompetitive in multiple jurisdictions including the EU and South Korea.",
         source: "Epic v. Apple / EU DMA",
       },
       {
@@ -312,7 +312,7 @@ const COMPANIES = [
         amount: "Ongoing",
         year: "2020-present",
         detail:
-          "Apple's iPhone manufacturing partner in India was caught committing wage theft against workers, who staged protests. Apple investigated and confirmed multiple violations of its own supplier code — but continued the relationship.",
+          "Apple's iPhone manufacturing partner in India was caught committing wage theft against workers, who staged protests. Apple investigated and confirmed multiple violations of its own supplier code, but continued the relationship.",
         source: "BBC / Apple Investigation",
       },
     ],
@@ -330,7 +330,7 @@ const COMPANIES = [
         amount: "Ongoing",
         year: "2023-present",
         detail:
-          "FTC + 17 state AGs sued Amazon for illegally maintaining a monopoly — charging sellers inflated fees they can't escape, using seller data to undercut them with Amazon-branded products, and punishing sellers who offer lower prices elsewhere.",
+          "FTC + 17 state AGs sued Amazon for illegally maintaining a monopoly: charging sellers inflated fees they can't escape, using seller data to undercut them with Amazon-branded products, and punishing sellers who offer lower prices elsewhere.",
         source: "FTC / 17 State AGs",
       },
       {
@@ -346,7 +346,7 @@ const COMPANIES = [
         amount: "$100M+",
         year: "Ongoing",
         detail:
-          "Amazon structures its delivery network through 'Delivery Service Partners' to deny driver status — and thus benefits — to tens of thousands of drivers who operate under Amazon's direct control.",
+          "Amazon structures its delivery network through 'Delivery Service Partners' to deny driver status, and thus benefits, to tens of thousands of drivers who operate under Amazon's direct control.",
         source: "Good Jobs First / State Courts",
       },
       {
@@ -372,7 +372,7 @@ const COMPANIES = [
         amount: "$233M",
         year: "2024",
         detail:
-          "Disney agreed to pay $233M — the largest wage-and-hour settlement in California history — after 50,000+ Disneyland employees sued for being paid below the living wage guaranteed by a voter-approved city ordinance that Disney lobbied against.",
+          "Disney agreed to pay $233M, the largest wage-and-hour settlement in California history, after 50,000+ Disneyland employees sued for being paid below the living wage guaranteed by a voter-approved city ordinance that Disney lobbied against.",
         source: "Anaheim Superior Court",
       },
       {
@@ -398,7 +398,7 @@ const COMPANIES = [
         amount: "$240M",
         year: "2015-2019",
         detail:
-          "FedEx settled in 20 states over misclassifying ground delivery drivers as independent contractors to deny them overtime pay and benefits — a practice that saved the company hundreds of millions while costing workers their basic rights.",
+          "FedEx settled in 20 states over misclassifying ground delivery drivers as independent contractors to deny them overtime pay and benefits, a practice that saved the company hundreds of millions while costing workers their basic rights.",
         source: "State Courts / DOL",
       },
       {
@@ -450,7 +450,7 @@ const COMPANIES = [
         amount: "$13B",
         year: "2013",
         detail:
-          "JPMorgan paid the largest bank settlement in US history at the time for misleading investors about the quality of mortgage-backed securities it sold before the 2008 financial crisis — knowingly offloading garbage assets onto pension funds and ordinary investors.",
+          "JPMorgan paid the largest bank settlement in US history at the time for misleading investors about the quality of mortgage-backed securities it sold before the 2008 financial crisis, knowingly offloading garbage assets onto pension funds and ordinary investors.",
         source: "DOJ",
       },
       {
@@ -458,7 +458,7 @@ const COMPANIES = [
         amount: "$920M",
         year: "2020",
         detail:
-          "JPMorgan's traders engaged in years of 'spoofing' — placing fake orders to manipulate gold, silver, and US Treasury markets. The DOJ charged it with running a racketeering enterprise inside one of America's largest banks.",
+          "JPMorgan's traders engaged in years of 'spoofing': placing fake orders to manipulate gold, silver, and US Treasury markets. The DOJ charged it with running a racketeering enterprise inside one of America's largest banks.",
         source: "DOJ / CFTC",
       },
     ],
@@ -476,7 +476,7 @@ const COMPANIES = [
         amount: "Ongoing Harm",
         year: "1970s-present",
         detail:
-          "Exxon's own scientists confirmed man-made climate change internally by the late 1970s. The company then spent decades and hundreds of millions of dollars funding climate denial to protect profits — while coastal communities, farmers, and future generations paid the price.",
+          "Exxon's own scientists confirmed man-made climate change internally by the late 1970s. The company then spent decades and hundreds of millions of dollars funding climate denial to protect profits, while coastal communities, farmers, and future generations paid the price.",
         source: "Harvard / Columbia Investigations / State AG Suits",
       },
       {
@@ -502,7 +502,7 @@ const COMPANIES = [
         amount: "$15.75M",
         year: "2024",
         detail:
-          "The FCC fined T-Mobile $15.75M for security failures across three separate data breaches (2021, 2022, 2023) exposing tens of millions of customers. T-Mobile must invest an equal amount to finally fix its security — after years of ignoring it.",
+          "The FCC fined T-Mobile $15.75M for security failures across three separate data breaches (2021, 2022, 2023) exposing tens of millions of customers. T-Mobile must invest an equal amount to finally fix its security, after years of ignoring it.",
         source: "FCC",
       },
       {
@@ -510,7 +510,7 @@ const COMPANIES = [
         amount: "$200M",
         year: "2020",
         detail:
-          "T-Mobile (along with AT&T, Verizon, Sprint) sold real-time customer location data to third-party aggregators who resold it to bounty hunters and others with zero legitimate need — a practice exposed by Motherboard's reporting.",
+          "T-Mobile (along with AT&T, Verizon, Sprint) sold real-time customer location data to third-party aggregators who resold it to bounty hunters and others with zero legitimate need, a practice exposed by Motherboard's reporting.",
         source: "FCC / Motherboard Investigation",
       },
     ],
@@ -528,7 +528,7 @@ const COMPANIES = [
         amount: "$60M",
         year: "2019",
         detail:
-          "AT&T was caught selling 'unlimited' data plans while secretly throttling customers' speeds after they used a certain amount — misleading millions of consumers who were paying full price for a service they weren't receiving.",
+          "AT&T was caught selling 'unlimited' data plans while secretly throttling customers' speeds after they used a certain amount, misleading millions of consumers who were paying full price for a service they weren't receiving.",
         source: "FTC",
       },
       {
@@ -536,7 +536,7 @@ const COMPANIES = [
         amount: "$13M",
         year: "2024",
         detail:
-          "AT&T settled with the FCC over a supply chain breach that led to criminals stealing customer personal information — part of a broader industry pattern of treating customer data as a product.",
+          "AT&T settled with the FCC over a supply chain breach that led to criminals stealing customer personal information, part of a broader industry pattern of treating customer data as a product.",
         source: "FCC",
       },
     ],
@@ -572,7 +572,7 @@ const COMPANIES = [
         amount: "607 violations",
         year: "2020-2024",
         detail:
-          "Union Pacific leads all US companies in total regulatory violation count — 607 documented violations including workplace safety failures, environmental spills, and labor law breaches. Workers have been killed by preventable accidents.",
+          "Union Pacific leads all US companies in total regulatory violation count, with 607 documented violations including workplace safety failures, environmental spills, and labor law breaches. Workers have been killed by preventable accidents.",
         source: "Protecht / Good Jobs First",
       },
     ],
@@ -590,7 +590,7 @@ const COMPANIES = [
         amount: "$5.1B",
         year: "2020",
         detail:
-          "Goldman Sachs's subsidiary pleaded guilty and the parent entered a deferred prosecution agreement after admitting its executives paid $1.6B in bribes to foreign officials to secure bond deals for Malaysia's 1MDB state fund. The scandal involved the theft of at least $2.7B — money that funded a luxury yacht, fine art, and even the Hollywood film 'The Wolf of Wall Street.' The DOJ penalty was the largest ever under the Foreign Corrupt Practices Act.",
+          "Goldman Sachs's subsidiary pleaded guilty and the parent entered a deferred prosecution agreement after admitting its executives paid $1.6B in bribes to foreign officials to secure bond deals for Malaysia's 1MDB state fund. The scandal involved the theft of at least $2.7B, money that funded a luxury yacht, fine art, and even the Hollywood film 'The Wolf of Wall Street.' The DOJ penalty was the largest ever under the Foreign Corrupt Practices Act.",
         source: "DOJ / SEC / Multiple International Regulators",
       },
       {
@@ -598,7 +598,7 @@ const COMPANIES = [
         amount: "$125M",
         year: "2022",
         detail:
-          "Goldman Sachs paid $125M to the SEC for allowing employees to conduct firm business on personal phones and messaging apps — deliberately evading recordkeeping rules that exist to detect fraud and market manipulation.",
+          "Goldman Sachs paid $125M to the SEC for allowing employees to conduct firm business on personal phones and messaging apps, deliberately evading recordkeeping rules that exist to detect fraud and market manipulation.",
         source: "SEC / CFTC",
       },
     ],
@@ -616,7 +616,7 @@ const COMPANIES = [
         amount: "$2.5B+",
         year: "2021-2025",
         detail:
-          "Boeing admitted its employees concealed a dangerous flight-control system (MCAS) from FAA regulators to avoid costly pilot retraining. Two 737 MAX crashes — Lion Air (2018) and Ethiopian Airlines (2019) — killed 346 people. Internal messages showed a pilot boasting about 'Jedi-mind tricking' regulators. Boeing entered a deferred prosecution agreement in 2021, violated it, then negotiated repeated settlements to avoid criminal trial. In 2025, the DOJ ultimately allowed Boeing to avoid prosecution with a non-prosecution agreement.",
+          "Boeing admitted its employees concealed a dangerous flight-control system (MCAS) from FAA regulators to avoid costly pilot retraining. Two 737 MAX crashes, Lion Air (2018) and Ethiopian Airlines (2019), killed 346 people. Internal messages showed a pilot boasting about 'Jedi-mind tricking' regulators. Boeing entered a deferred prosecution agreement in 2021, violated it, then negotiated repeated settlements to avoid criminal trial. In 2025, the DOJ ultimately allowed Boeing to avoid prosecution with a non-prosecution agreement.",
         source: "DOJ / FAA / Federal Criminal Court",
       },
       {
@@ -624,7 +624,7 @@ const COMPANIES = [
         amount: "Ongoing",
         year: "2024",
         detail:
-          "A door plug blew out of a 737 MAX 9 shortly after takeoff in January 2024 — the bolts had never been installed at Boeing's factory. The incident revealed Boeing had violated its own 2021 compliance agreement and was still failing basic quality control, triggering a new DOJ criminal investigation and FAA production caps.",
+          "A door plug blew out of a 737 MAX 9 shortly after takeoff in January 2024. The bolts had never been installed at Boeing's factory. The incident revealed Boeing had violated its own 2021 compliance agreement and was still failing basic quality control, triggering a new DOJ criminal investigation and FAA production caps.",
         source: "NTSB / FAA / DOJ",
       },
     ],
@@ -642,7 +642,7 @@ const COMPANIES = [
         amount: "$290M",
         year: "2023",
         detail:
-          "The New York AG secured a $290M settlement — the largest of its kind — after finding Uber had systematically withheld pay from drivers for years, violating state wage laws. Uber took fees from drivers' earnings before calculating their legally required pay floor, effectively skimming wages from tens of thousands of workers.",
+          "The New York AG secured a $290M settlement, the largest of its kind, after finding Uber had systematically withheld pay from drivers for years, violating state wage laws. Uber took fees from drivers' earnings before calculating their legally required pay floor, effectively skimming wages from tens of thousands of workers.",
         source: "NY Attorney General",
       },
       {
@@ -650,7 +650,7 @@ const COMPANIES = [
         amount: "$148M",
         year: "2018",
         detail:
-          "Uber suffered a massive 2016 data breach affecting 57 million users and drivers — then paid hackers $100,000 to delete the data and stay quiet, concealing the breach from regulators and victims for over a year. Uber paid $148M to all 50 states to settle the cover-up.",
+          "Uber suffered a massive 2016 data breach affecting 57 million users and drivers, then paid hackers $100,000 to delete the data and stay quiet, concealing the breach from regulators and victims for over a year. Uber paid $148M to all 50 states to settle the cover-up.",
         source: "State AGs / FTC",
       },
       {
@@ -658,7 +658,7 @@ const COMPANIES = [
         amount: "Lawsuit pending",
         year: "2025",
         detail:
-          "The FTC sued Uber in 2025 for charging consumers for its Uber One subscription without consent, and making cancellation intentionally difficult — a classic 'dark pattern' designed to trap customers into recurring charges they didn't want.",
+          "The FTC sued Uber in 2025 for charging consumers for its Uber One subscription without consent, and making cancellation intentionally difficult, a classic 'dark pattern' designed to trap customers into recurring charges they didn't want.",
         source: "FTC",
       },
     ],
@@ -676,7 +676,7 @@ const COMPANIES = [
         amount: "Potentially billions",
         year: "2024-present",
         detail:
-          "A 2024 federal watchdog report found UnitedHealth received $3.7B from Medicare in 2023 for in-home patient visits where no follow-up treatment was ever provided — a practice critics call 'upcoding.' The DOJ launched a civil fraud investigation, and multiple whistleblower suits allege the company systematically inflated diagnosis codes to extract higher government payments. If proven, penalties could exceed those of any previous healthcare fraud case.",
+          "A 2024 federal watchdog report found UnitedHealth received $3.7B from Medicare in 2023 for in-home patient visits where no follow-up treatment was ever provided, a practice critics call 'upcoding.' The DOJ launched a civil fraud investigation, and multiple whistleblower suits allege the company systematically inflated diagnosis codes to extract higher government payments. If proven, penalties could exceed those of any previous healthcare fraud case.",
         source: "HHS Inspector General / DOJ / Wall Street Journal",
       },
       {
@@ -684,7 +684,7 @@ const COMPANIES = [
         amount: "$1.1B+ in losses",
         year: "2024",
         detail:
-          "UnitedHealth's Change Healthcare subsidiary — which processes 15 billion healthcare transactions per year — was hacked in February 2024 in the largest known healthcare data breach in US history, exposing data on 190 million Americans. UnitedHealth paid the hackers a $22M ransom. Hospitals and pharmacies were unable to process claims for weeks, disrupting care nationwide.",
+          "UnitedHealth's Change Healthcare subsidiary, which processes 15 billion healthcare transactions per year, was hacked in February 2024 in the largest known healthcare data breach in US history, exposing data on 190 million Americans. UnitedHealth paid the hackers a $22M ransom. Hospitals and pharmacies were unable to process claims for weeks, disrupting care nationwide.",
         source: "HHS / Senate Judiciary Committee",
       },
       {
@@ -710,7 +710,7 @@ const COMPANIES = [
         amount: "Ongoing",
         year: "2023-present",
         detail:
-          "Investigative reporting and DOL probes revealed migrant children as young as 13 working overnight shifts in Tyson-supplier processing plants — cleaning dangerous equipment and working in conditions that violate federal child labor law. Between 2012 and 2021, Tyson plants also experienced 47 ammonia leaks injuring nearly 150 workers — accounting for 60% of all meatpacker ammonia injuries reported to the EPA.",
+          "Investigative reporting and DOL probes revealed migrant children as young as 13 working overnight shifts in Tyson-supplier processing plants, cleaning dangerous equipment and working in conditions that violate federal child labor law. Between 2012 and 2021, Tyson plants also experienced 47 ammonia leaks injuring nearly 150 workers, accounting for 60% of all meatpacker ammonia injuries reported to the EPA.",
         source: "DOL / EPA / NYT Investigation",
       },
       {
@@ -718,7 +718,7 @@ const COMPANIES = [
         amount: "$2M+",
         year: "Ongoing",
         detail:
-          "Tyson has faced repeated federal and state penalties for discharging contaminated wastewater into rivers and streams — including a Missouri incident that killed over 100,000 fish and triggered an EPA criminal investigation. In Virginia, the company was fined multiple times for discharges exceeding permitted limits for ammonia, E. coli, and fecal coliform.",
+          "Tyson has faced repeated federal and state penalties for discharging contaminated wastewater into rivers and streams, including a Missouri incident that killed over 100,000 fish and triggered an EPA criminal investigation. In Virginia, the company was fined multiple times for discharges exceeding permitted limits for ammonia, E. coli, and fecal coliform.",
         source: "EPA / State Environmental Agencies",
       },
       {
@@ -726,7 +726,7 @@ const COMPANIES = [
         amount: "$1.6M",
         year: "2016",
         detail:
-          "Tyson settled DOL charges of systemic race and gender discrimination in hiring at multiple facilities, agreeing to pay $1.6M in back wages to affected workers — part of a broader pattern of labor violations at its processing plants.",
+          "Tyson settled DOL charges of systemic race and gender discrimination in hiring at multiple facilities, agreeing to pay $1.6M in back wages to affected workers, part of a broader pattern of labor violations at its processing plants.",
         source: "DOL / OFCCP",
       },
     ],
@@ -744,7 +744,7 @@ const COMPANIES = [
         amount: "$33M+",
         year: "2017-present",
         detail:
-          "Dollar General has racked up over $33M in OSHA fines since 2017 — more than any other retailer — for persistently dangerous conditions across its 19,000+ stores: blocked fire exits, cluttered emergency aisles, inaccessible fire extinguishers, and dangerous inventory piles. In 2024, the DOL reached a settlement requiring the company to correct hazards within 48 hours of detection or face $100,000-per-day fines — a level of oversight typically reserved for repeat criminal violators.",
+          "Dollar General has racked up over $33M in OSHA fines since 2017, more than any other retailer, for persistently dangerous conditions across its 19,000+ stores: blocked fire exits, cluttered emergency aisles, inaccessible fire extinguishers, and dangerous inventory piles. In 2024, the DOL reached a settlement requiring the company to correct hazards within 48 hours of detection or face $100,000-per-day fines, a level of oversight typically reserved for repeat criminal violators.",
         source: "OSHA / DOL",
       },
       {
@@ -752,7 +752,7 @@ const COMPANIES = [
         amount: "Multiple settlements",
         year: "Ongoing",
         detail:
-          "Dollar General stores have faced repeated state and federal wage complaints for scheduling practices that deny workers required break periods and for pressuring employees to work off the clock to keep labor costs down — a structural feature of its ultra-lean business model.",
+          "Dollar General stores have faced repeated state and federal wage complaints for scheduling practices that deny workers required break periods and for pressuring employees to work off the clock to keep labor costs down, a structural feature of its ultra-lean business model.",
         source: "DOL / State Labor Agencies",
       },
     ],
@@ -770,7 +770,7 @@ const COMPANIES = [
         amount: "$172M",
         year: "2023",
         detail:
-          "Cigna paid $172M to settle False Claims Act allegations that it submitted fraudulent and inaccurate diagnosis codes to Medicare to inflate government payments. A federal whistleblower alleged Cigna ordered doctors to add new diagnoses during in-home visits — then submitted those codes to CMS without verifying them — in a deliberate scheme to capture higher risk-adjustment payments.",
+          "Cigna paid $172M to settle False Claims Act allegations that it submitted fraudulent and inaccurate diagnosis codes to Medicare to inflate government payments. A federal whistleblower alleged Cigna ordered doctors to add new diagnoses during in-home visits, then submitted those codes to CMS without verifying them, in a deliberate scheme to capture higher risk-adjustment payments.",
         source: "DOJ / HHS-OIG",
       },
       {
@@ -778,7 +778,7 @@ const COMPANIES = [
         amount: "Class action pending",
         year: "2023-present",
         detail:
-          "A ProPublica investigation found Cigna doctors were rejecting claims in bulk using an automated system — spending an average of 1.2 seconds per claim denial — without reviewing patient records. Some doctors denied over 300 claims per day. Patients were left without coverage for treatments their doctors prescribed.",
+          "A ProPublica investigation found Cigna doctors were rejecting claims in bulk using an automated system, spending an average of 1.2 seconds per claim denial, without reviewing patient records. Some doctors denied over 300 claims per day. Patients were left without coverage for treatments their doctors prescribed.",
         source: "ProPublica Investigation / Class Action Suits",
       },
     ],
@@ -875,7 +875,7 @@ const COMPANIES = [
     name: "Zoom Video Communications",
     ticker: "ZM",
     industry: "Video Conferencing",
-    totalFines: "No fine — compliance order",
+    totalFines: "No fine (compliance order)",
     fineRaw: 0,
     categories: ["privacy"],
     violations: [
@@ -973,7 +973,7 @@ const COMPANIES = [
     name: "Kochava",
     ticker: "Private",
     industry: "Location Data Broker",
-    totalFines: "No fine — injunctive relief",
+    totalFines: "No fine (injunctive relief)",
     fineRaw: 0,
     categories: ["privacy"],
     violations: [
@@ -1067,15 +1067,15 @@ const COMPANIES = [
       },
       {
         title: "Regulator Complaint Over HIV Status and Sensitive Data",
-        amount: "No fine — complaint pending",
+        amount: "No fine (complaint pending)",
         year: "2023",
         detail:
-          "The Electronic Privacy Information Center asked the FTC to investigate Grindr, arguing its handling of highly sensitive data — HIV and vaccination status, sexual preference, app usage and location — is an unfair and deceptive practice under Section 5 and may violate the Health Breach Notification Rule. The complaint drew on allegations from Grindr's former chief privacy officer, Ronald De Jesus, in his June 2023 wrongful termination suit. This is a request for investigation, not a finding or a settlement; no FTC enforcement action against Grindr has been announced.",
+          "The Electronic Privacy Information Center asked the FTC to investigate Grindr, arguing its handling of highly sensitive data (HIV and vaccination status, sexual preference, app usage and location) is an unfair and deceptive practice under Section 5 and may violate the Health Breach Notification Rule. The complaint drew on allegations from Grindr's former chief privacy officer, Ronald De Jesus, in his June 2023 wrongful termination suit. This is a request for investigation, not a finding or a settlement; no FTC enforcement action against Grindr has been announced.",
         source: "EPIC complaint to the FTC",
       },
       {
         title: "Location Data Resold Through Brokers to Out a Named Individual",
-        amount: "No fine — documented harm",
+        amount: "No fine (documented harm)",
         year: "2021",
         detail:
           "The Pillar, a Catholic newsletter, bought commercially available location data from an unnamed vendor and correlated it to the phone of Monsignor Jeffrey Burrill, general secretary of the US Conference of Catholic Bishops, to assert he had used Grindr and visited gay bars between 2018 and 2020. Burrill resigned. Grindr denied being the source of the data and called the report an unethical witch hunt; privacy researchers noted the data most plausibly reached the broker chain through a third-party ad network. The episode is the clearest public demonstration of what the ad-tech pipeline around dating apps makes possible, regardless of which app the records originated in.",
@@ -1093,7 +1093,7 @@ const COMPANIES = [
     violations: [
       {
         title: "Sharing Period and Pregnancy Data With Facebook and Google",
-        amount: "No fine — compliance order",
+        amount: "No fine (compliance order)",
         year: "2021",
         detail:
           "Flo promised over 100 million users it would keep their menstrual cycle, symptom, and pregnancy intention data private, using that promise as a core selling point for an app built around some of the most intimate health information a person can share. Instead, Flo told Facebook's and Google's analytics divisions exactly when a user was on their period or had indicated an intention to get pregnant. The app only stopped after a Wall Street Journal investigation and resulting press coverage forced its hand, not proactively. A subsequent class action against Flo, Google, and Meta over the same conduct settled directly with users.",
@@ -1185,7 +1185,7 @@ const COMPANIES = [
     name: "Rite Aid",
     ticker: "Private (post-bankruptcy)",
     industry: "Pharmacy Retail",
-    totalFines: "No fine — 5-year technology ban",
+    totalFines: "No fine (5-year technology ban)",
     fineRaw: 0,
     categories: ["privacy"],
     violations: [
@@ -1209,7 +1209,7 @@ const COMPANIES = [
     violations: [
       {
         title: "Selling Children's and Families' Precise Locations to Data Brokers",
-        amount: "No fine — litigation pending",
+        amount: "No fine (litigation pending)",
         year: "2021-present",
         detail:
           "Life360 markets itself as a family safety app that gives parents peace of mind by tracking their kids' whereabouts, used by over 33 million people worldwide. A 2021 investigation found the company was quietly one of the largest suppliers to the entire location-data-broker industry, selling precise GPS coordinates on millions of users, many of them minors, to roughly a dozen data brokers who then resold the data to virtually anyone willing to pay. Unlike apps that leak data through detectable third-party code, Life360 routed the data through its own servers, making the transfer invisible to the privacy researchers and app-store reviewers who normally catch this kind of practice. A later investigation found Life360 continued selling location-based advertising 'segments,' like which specific businesses a user visited, through a separate data marketplace years after publicly promising to scale back.",
@@ -1239,16 +1239,16 @@ const COMPANIES = [
     name: "General Motors / OnStar",
     ticker: "GM",
     industry: "Automotive / Connected Vehicles",
-    totalFines: "No fine — FTC ban + state suit",
+    totalFines: "No fine (FTC ban + state suit)",
     fineRaw: 0,
     categories: ["privacy"],
     violations: [
       {
         title: "Selling Drivers' Second-by-Second Driving Data to Insurers",
-        amount: "No fine — 5-year FTC ban",
+        amount: "No fine (5-year FTC ban)",
         year: "2019-2024",
         detail:
-          "GM collected granular driving behavior from its internet-connected vehicles, including hard braking, rapid acceleration, speeding and trip-by-trip mileage, and sold it to LexisNexis Risk Solutions and Verisk Analytics, who repackaged it into risk scores that insurers used to raise premiums or deny coverage. Drivers found out only when their rates jumped. GM enrolled customers through its OnStar Smart Driver product and, according to Texas, told buyers that certain vehicle safety features would be disabled unless they signed up — without clearly disclosing that enrollment also meant consenting to the sale of their driving data. The FTC banned GM from disclosing driver data to consumer reporting agencies for five years and required affirmative consent going forward. GM says it stopped sharing with LexisNexis and Verisk in April 2024.",
+          "GM collected granular driving behavior from its internet-connected vehicles, including hard braking, rapid acceleration, speeding and trip-by-trip mileage, and sold it to LexisNexis Risk Solutions and Verisk Analytics, who repackaged it into risk scores that insurers used to raise premiums or deny coverage. Drivers found out only when their rates jumped. GM enrolled customers through its OnStar Smart Driver product and, according to Texas, told buyers that certain vehicle safety features would be disabled unless they signed up, without clearly disclosing that enrollment also meant consenting to the sale of their driving data. The FTC banned GM from disclosing driver data to consumer reporting agencies for five years and required affirmative consent going forward. GM says it stopped sharing with LexisNexis and Verisk in April 2024.",
         source: "FTC Consent Order / Texas Attorney General",
       },
       {
@@ -1265,13 +1265,13 @@ const COMPANIES = [
     name: "LG Electronics USA",
     ticker: "Private (LG Corp, KRX: 003550)",
     industry: "Consumer Electronics / Smart TVs",
-    totalFines: "No fine — injunctive settlement",
+    totalFines: "No fine (injunctive settlement)",
     fineRaw: 0,
     categories: ["privacy"],
     violations: [
       {
         title: "Smart TVs Fingerprinting Everything on Screen Without Consent",
-        amount: "No fine — injunctive relief",
+        amount: "No fine (injunctive relief)",
         year: "2025-2026",
         detail:
           "LG televisions ran Automated Content Recognition, a technology that captures a screenshot of the display roughly every 500 milliseconds and matches it against a catalog of known media, building a record of everything a household watches regardless of whether it came from cable, a streaming app, a game console or a DVD. Texas alleged LG did this without informed consent and monetized the resulting viewing profiles. Under the May 2026 agreement LG must stop using ACR without informed consent, ship a pop-up disclosure explaining what is collected, publish the same disclosure on its website, and give users a clear way to opt out. LG also agreed to bar transfers of viewing data to the Chinese government. The settlement is the second in a suit Texas filed in December 2025 against five television manufacturers; Samsung settled on similar terms first, and cases against Sony, Hisense and TCL remain pending.",
@@ -1315,10 +1315,10 @@ const COMPANIES = [
     violations: [
       {
         title: "Handing Millions of Dating Profiles to an Unauthorized Third Party",
-        amount: "No fine — FTC order",
+        amount: "No fine (FTC order)",
         year: "2026",
         detail:
-          "The FTC found that OkCupid gave nearly three million user photos, plus location and other data, to a company that was not a service provider, business partner or affiliate — the categories its own privacy policy named — and never told users or offered them a chance to opt out. Per the complaint, the recipient had no business relationship with OkCupid at all; it asked for the datasets because OkCupid's founders were financial investors in it, and no contractual restrictions were placed on how the data could be used. The FTC further alleged that since September 2014 Match and OkCupid took extensive steps to conceal the sharing, including obstructing the FTC's investigation and publicly denying any involvement with the recipient after a news story exposed it. The agency had to enforce its Civil Investigative Demand in federal court to get the records. The March 30, 2026 stipulated order permanently bars both companies from misrepresenting their data practices, but carries no monetary penalty. Press reporting identified the recipient as the AI firm Clarifai. Dating profiles are among the most sensitive data any company holds, and Match Group also operates Tinder, Hinge, Match.com and Plenty of Fish, which concentrates that data under a single corporate roof.",
+          "The FTC found that OkCupid gave nearly three million user photos, plus location and other data, to a company that was not a service provider, business partner or affiliate (the categories its own privacy policy named) and never told users or offered them a chance to opt out. Per the complaint, the recipient had no business relationship with OkCupid at all; it asked for the datasets because OkCupid's founders were financial investors in it, and no contractual restrictions were placed on how the data could be used. The FTC further alleged that since September 2014 Match and OkCupid took extensive steps to conceal the sharing, including obstructing the FTC's investigation and publicly denying any involvement with the recipient after a news story exposed it. The agency had to enforce its Civil Investigative Demand in federal court to get the records. The March 30, 2026 stipulated order permanently bars both companies from misrepresenting their data practices, but carries no monetary penalty. Press reporting identified the recipient as the AI firm Clarifai. Dating profiles are among the most sensitive data any company holds, and Match Group also operates Tinder, Hinge, Match.com and Plenty of Fish, which concentrates that data under a single corporate roof.",
         source: "FTC / N.D. Tex., Dallas Division",
       },
       {
@@ -1331,10 +1331,10 @@ const COMPANIES = [
       },
       {
         title: "Registered Sex Offenders Left Unscreened on the Free Apps",
-        amount: "No fine — investigation",
+        amount: "No fine (investigation)",
         year: "2019-2020",
         detail:
-          "A 16-month investigation by Columbia Journalism Investigations, ProPublica and BuzzFeed News, which analysed more than 150 incidents of sexual assault involving dating apps drawn from a decade of news reports, civil suits and criminal records, found that Match Group checked users against state sex-offender registries only on its paid platforms. Its free products — Tinder, OkCupid and Plenty of Fish among them — were left unscreened, and the company acknowledged that registered sex offenders use them. The chair of a House Oversight subcommittee, Rep. Raja Krishnamoorthi, opened an inquiry into underage users, the sale and dissemination of users' personal information, and the presence of registered sex offenders on free dating sites.",
+          "A 16-month investigation by Columbia Journalism Investigations, ProPublica and BuzzFeed News, which analysed more than 150 incidents of sexual assault involving dating apps drawn from a decade of news reports, civil suits and criminal records, found that Match Group checked users against state sex-offender registries only on its paid platforms. Its free products (Tinder, OkCupid and Plenty of Fish among them) were left unscreened, and the company acknowledged that registered sex offenders use them. The chair of a House Oversight subcommittee, Rep. Raja Krishnamoorthi, opened an inquiry into underage users, the sale and dissemination of users' personal information, and the presence of registered sex offenders on free dating sites.",
         source: "Columbia Journalism Investigations / ProPublica / House Oversight",
       },
     ],
@@ -1361,13 +1361,13 @@ const COMPANIES = [
     name: "Gravy Analytics / Venntel",
     ticker: "Private",
     industry: "Location Data Broker",
-    totalFines: "No fine — FTC order",
+    totalFines: "No fine (FTC order)",
     fineRaw: 0,
     categories: ["privacy"],
     violations: [
       {
         title: "Selling Visits to Clinics, Churches, Shelters and Military Bases",
-        amount: "No fine — injunctive order",
+        amount: "No fine (injunctive order)",
         year: "2024-2025",
         detail:
           "Gravy Analytics and its subsidiary Venntel bought precise smartphone location data from other suppliers and packaged it for sale to private companies and to government agencies. The FTC alleged Gravy purchased from suppliers that gave vague confirmation or none at all that the people being tracked had ever consented, and that the resulting data was precise enough to identify individual visits to medical facilities, religious institutions, domestic violence shelters and military installations. The final order, issued January 2025, bars the companies from selling sensitive location data, restricts national security and law enforcement disclosures, and requires them to build and maintain a list of sensitive locations to be excluded.",
@@ -1379,13 +1379,13 @@ const COMPANIES = [
     name: "Mobilewalla",
     ticker: "Private",
     industry: "Adtech / Data Broker",
-    totalFines: "No fine — FTC order",
+    totalFines: "No fine (FTC order)",
     fineRaw: 0,
     categories: ["privacy"],
     violations: [
       {
         title: "Harvesting Location Data Out of Ad Auctions It Was Not Buying",
-        amount: "No fine — injunctive order",
+        amount: "No fine (injunctive order)",
         year: "2024-2025",
         detail:
           "Mobilewalla collected consumers' mobile advertising identifiers and precise geolocation from real-time bidding exchanges, the millisecond auctions that decide which ad loads on a phone. The mechanism matters: bid requests broadcast a user's location and device ID to every potential bidder, and the FTC alleged Mobilewalla retained and resold that data from auctions it did not win, meaning the data was taken from a process the user never knew was happening and that the app itself did not authorize. The January 2025 final order bars the sale of sensitive location data and requires deletion of data collected this way.",
@@ -1527,13 +1527,13 @@ const COMPANIES = [
     name: "Samsung Electronics America",
     ticker: "Private (Samsung Electronics, KRX: 005930)",
     industry: "Consumer Electronics / Smart TVs",
-    totalFines: "No fine — injunctive settlement",
+    totalFines: "No fine (injunctive settlement)",
     fineRaw: 0,
     categories: ["privacy"],
     violations: [
       {
         title: "Screenshotting the Television Twice a Second",
-        amount: "No fine — injunctive relief",
+        amount: "No fine (injunctive relief)",
         year: "2025-2026",
         detail:
           "Texas alleged that Samsung smart TVs ran Automated Content Recognition that captured a screenshot of whatever was on screen roughly every 500 milliseconds, matched it against a media catalog to identify what the household was watching, and fed the resulting viewing profile to advertisers, all without informed consent. Samsung settled in February 2026, the first of five manufacturers named in the December 2025 suit to do so, agreeing to stop collecting ACR data from Texans without explicit informed consent and to rewrite its on-screen privacy prompts so the choice is presented clearly rather than buried in setup. LG settled on similar terms in May 2026; Sony, Hisense and TCL remain in litigation.",
@@ -1545,13 +1545,13 @@ const COMPANIES = [
     name: "Illuminate Education",
     ticker: "Private",
     industry: "Education Technology",
-    totalFines: "No fine — FTC order",
+    totalFines: "No fine (FTC order)",
     fineRaw: 0,
     categories: ["privacy"],
     violations: [
       {
         title: "Breach Exposing 10 Million Students, Notified Up to Two Years Late",
-        amount: "No fine — injunctive order",
+        amount: "No fine (injunctive order)",
         year: "2021-2026",
         detail:
           "A hacker used a former employee's credentials to get into Illuminate's cloud environment in December 2021, exposing personal information on more than 10 million students. The FTC alleged the company stored student data in plain text until at least January 2022, ignored a third-party vendor's warnings about its vulnerabilities, and lacked basic access controls, threat detection and patch management. It then delayed telling its customers: school districts covering more than 380,000 students were not notified until nearly two years after the breach. The final order, approved June 5 2026, requires a security program, limits on what Illuminate may collect and keep, deletion of unnecessary data, and a publicly posted retention schedule. The people whose records leaked were schoolchildren who never chose this vendor.",
@@ -1626,7 +1626,7 @@ const COMPANIES = [
         amount: "$8.5M",
         year: "2024-2025",
         detail:
-          "The FTC charged that Care.com lured caregivers into paid subscriptions by advertising millions of jobs that included listings nobody could actually be hired for — a job poster who has not paid cannot even see an application — and by touting hourly and weekly earnings it had no data to support. One 2021 ad campaign promoted \"Childcare jobs from $18/hr\" while Care's own site put the national babysitting rate at $13 to $14.25. The company kept making the earnings claims after receiving an FTC Notice of Penalty Offenses about exactly that in 2021. The complaint also charged dark patterns on cancellation: unrelated links to click through, multi-page questionnaires, confusing language and warnings, with cancelling a paid subscription made materially harder than the two-step process for a free one. Care turned over $8.5 million; the FTC distributed more than $8.1 million to 194,207 consumers in June 2025.",
+          "The FTC charged that Care.com lured caregivers into paid subscriptions by advertising millions of jobs that included listings nobody could actually be hired for (a job poster who has not paid cannot even see an application) and by touting hourly and weekly earnings it had no data to support. One 2021 ad campaign promoted \"Childcare jobs from $18/hr\" while Care's own site put the national babysitting rate at $13 to $14.25. The company kept making the earnings claims after receiving an FTC Notice of Penalty Offenses about exactly that in 2021. The complaint also charged dark patterns on cancellation: unrelated links to click through, multi-page questionnaires, confusing language and warnings, with cancelling a paid subscription made materially harder than the two-step process for a free one. Care turned over $8.5 million; the FTC distributed more than $8.1 million to 194,207 consumers in June 2025.",
         source: "FTC / W.D. Tex.",
       },
     ],

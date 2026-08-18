@@ -1,4 +1,4 @@
-// PE Ownership Tracker — reads pe-data.json (generated from Airtable by
+// PE Ownership Tracker. Reads pe-data.json (generated from Airtable by
 // export-pe-data.mjs) and renders a faceted, filterable list of businesses.
 //
 // Two-layer model: businesses carry facts + a firm_id; firms carry the
@@ -65,17 +65,17 @@ function firmTags(b) {
   return f && Array.isArray(f.tags) ? f.tags : [];
 }
 // Evidence documented against this specific business (DOJ/AG actions, etc.),
-// which may predate the current owner — rendered only on this business.
+// which may predate the current owner. Rendered only on this business.
 function bizEvidence(b) {
   return Array.isArray(b.evidence) ? b.evidence : [];
 }
 // Subtitle under a business name: industry, plus the acquisition year if known.
 function cardMeta(b) {
-  const bits = [b.industry || "—"];
+  const bits = [b.industry || "Industry unknown"];
   if (b.acquisition_date) bits.push(`acquired ${b.acquisition_date}`);
   return bits.join(" · ");
 }
-// Combined firm + business tags — used for filtering and the tag facet.
+// Combined firm + business tags, used for filtering and the tag facet.
 function allTags(b) {
   return [...firmTags(b), ...bizEvidence(b)];
 }
@@ -200,7 +200,7 @@ function renderViolation(t) {
       </div>
     </div>
     <div class="violation-detail">${t.description || ""}</div>
-    <div class="violation-source">SOURCE: ${t.source_url ? `<a href="${t.source_url}" target="_blank" rel="noopener">${t.source_url}</a>` : "—"}</div>
+    <div class="violation-source">SOURCE: ${t.source_url ? `<a href="${t.source_url}" target="_blank" rel="noopener">${t.source_url}</a>` : "Not recorded"}</div>
   `;
   return v;
 }
@@ -267,18 +267,18 @@ function renderCards() {
     const facts = document.createElement("div");
     facts.className = "pe-facts";
     const firmType = firm ? (FIRM_TYPE_LABELS[firm.type] || firm.type) : "";
-    const statusLabel = STATUS_LABELS[b.ownership_status] || b.ownership_status || "—";
+    const statusLabel = STATUS_LABELS[b.ownership_status] || b.ownership_status || "Unknown";
     facts.innerHTML = `
       <div class="pe-fact"><span>Owning firm</span><div>${b.firm_name || "Unknown"}${firmType ? ` <em>(${firmType})</em>` : ""}${firm && firm.headquarters ? ` · ${firm.headquarters}` : ""}</div></div>
       ${b.platform_company ? `<div class="pe-fact"><span>Operated under</span><div>${b.platform_company}</div></div>` : ""}
-      <div class="pe-fact"><span>Acquired</span><div>${b.acquisition_date || "—"}</div></div>
+      <div class="pe-fact"><span>Acquired</span><div>${b.acquisition_date || "Unknown"}</div></div>
       <div class="pe-fact"><span>Ownership status</span><div><span class="pe-status pe-status-${b.ownership_status || "unknown"}">${statusLabel}</span></div></div>
-      <div class="pe-fact"><span>Source</span><div>${b.source_url ? `<a href="${b.source_url}" target="_blank" rel="noopener">View source &#8599;</a>` : "—"}</div></div>
+      <div class="pe-fact"><span>Source</span><div>${b.source_url ? `<a href="${b.source_url}" target="_blank" rel="noopener">View source &#8599;</a>` : "Not recorded"}</div></div>
       ${b.last_verified ? `<div class="pe-fact"><span>Last verified</span><div>${b.last_verified}</div></div>` : ""}
     `;
     body.appendChild(facts);
 
-    // Business-specific evidence first — most specific to this chain.
+    // Business-specific evidence first, being most specific to this chain.
     if (evid.length) {
       const head = document.createElement("div");
       head.className = "pe-tags-head pe-evidence-head";
@@ -357,8 +357,8 @@ function showLoadError(err) {
 }
 
 // Load is kept separate from render: a genuine fetch/parse failure shows the
-// "couldn't load" message (and retries once), while a rendering hiccup — e.g. a
-// missing DOM node from a stale cached page — is logged but never masquerades
+// "couldn't load" message (and retries once), while a rendering hiccup
+// (e.g. a missing DOM node from a stale cached page) is logged but never masquerades
 // as a data-load failure, so the content still comes up.
 function loadData(attempt = 0) {
   fetch("pe-data.json", attempt > 0 ? { cache: "reload" } : undefined)
@@ -376,7 +376,7 @@ function loadData(attempt = 0) {
         renderCards();
       } catch (renderErr) {
         // Data is fine; a render step threw (likely a version-skewed cached
-        // page). Log it — don't tell the user the dataset failed to load.
+        // page). Log it, but don't tell the user the dataset failed to load.
         console.error("PE tracker render error:", renderErr);
       }
     })

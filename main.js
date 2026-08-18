@@ -27,7 +27,7 @@ if (hamburger && navMenu) {
 // Investigations dropdown. The site's first interactive nav: the article pages
 // outgrew a flat row, so they sit behind one top-level item. On mobile the
 // whole nav is already a stacked column, so the submenu renders inline there
-// and this toggle is inert — see the media query in style.css.
+// and this toggle is inert. See the media query in style.css.
 const navGroupBtn = document.getElementById('nav-group-btn');
 const navSubmenu = document.getElementById('nav-investigations');
 if (navGroupBtn && navSubmenu) {

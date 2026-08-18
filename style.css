@@ -87,7 +87,7 @@
     /* ---- INVESTIGATIONS DROPDOWN ---- */
     /* The article pages outgrew a flat row at seven items, so they sit behind
        one top-level entry. The button is styled to be indistinguishable from
-       the sibling links — it is a <button> rather than an <a> because it goes
+       the sibling links. It is a <button> rather than an <a> because it goes
        nowhere, which is also what makes it announce correctly to a screen
        reader. */
     .nav-group { position: relative; }
@@ -2051,7 +2051,7 @@
     }
     .pe-no-tags { padding: 18px 24px 24px; font-size: 13px; color: var(--muted); font-style: italic; }
 
-    /* Business-specific evidence header — set apart from the inherited firm record */
+    /* Business-specific evidence header, set apart from the inherited firm record */
     .pe-evidence-head {
       color: var(--gold);
       font-weight: 600;
@@ -2156,7 +2156,7 @@
     .dash-scene-4 .ad-slot-4 { animation-delay: -10.5s; }
 
     /* Section-divider mark: the screen alone, still cycling. Same explicit
-       width/height pairing as .flock-divider-cam, and for the same reason —
+       width/height pairing as .flock-divider-cam, and for the same reason:
        an absolutely positioned box cannot take its height from an SVG that
        wants its height from the box. */
     .cars-divider-screen {
