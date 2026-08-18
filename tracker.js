@@ -1488,6 +1488,14 @@ const COMPANIES = [
         source: "DOJ Antitrust Division / State AGs",
       },
       {
+        title: "Jury Verdict for 33 States and DC on Every Claim",
+        amount: "Damages phase pending",
+        year: "2026",
+        detail:
+          "The DOJ's mid-trial settlement did not end the case. Thirty-three states and the District of Columbia declined to settle and carried the trial to a verdict. On 15 April 2026 a jury in the Southern District of New York found for the states on all federal and state law claims against Live Nation Entertainment and its wholly owned subsidiary Ticketmaster. Unlike the DOJ deal, which left Ticketmaster intact, the states had sought structural relief.",
+        source: "S.D.N.Y. Jury Verdict / State AGs",
+      },
+      {
         title: "Working With Scalpers and Hiding the Real Price",
         amount: "Litigation pending",
         year: "2025-present",
@@ -1602,6 +1610,24 @@ const COMPANIES = [
         detail:
           "The FTC charged that Care.com lured caregivers into paid subscriptions by advertising millions of jobs that included listings nobody could actually be hired for — a job poster who has not paid cannot even see an application — and by touting hourly and weekly earnings it had no data to support. One 2021 ad campaign promoted \"Childcare jobs from $18/hr\" while Care's own site put the national babysitting rate at $13 to $14.25. The company kept making the earnings claims after receiving an FTC Notice of Penalty Offenses about exactly that in 2021. The complaint also charged dark patterns on cancellation: unrelated links to click through, multi-page questionnaires, confusing language and warnings, with cancelling a paid subscription made materially harder than the two-step process for a free one. Care turned over $8.5 million; the FTC distributed more than $8.1 million to 194,207 consumers in June 2025.",
         source: "FTC / W.D. Tex.",
+      },
+    ],
+  },
+  {
+    name: "Sony, Hisense & TCL",
+    ticker: "SONY / 600060.SS / 000100.SZ",
+    industry: "Smart TV Manufacturers",
+    totalFines: "Litigation pending",
+    fineRaw: 0,
+    categories: ["privacy"],
+    violations: [
+      {
+        title: "Screenshotting the Living Room Every Half Second",
+        amount: "Litigation pending",
+        year: "2025-present",
+        detail:
+          "Texas sued five television makers on 15 December 2025 over Automated Content Recognition, software that can capture a screenshot of the screen every 500 milliseconds, track viewing in real time, and transmit it back to the manufacturer without the viewer's knowledge, to be sold on to advertisers. Two defendants have since settled and agreed to stop collecting ACR data without express consent: Samsung on 26 February 2026 and LG on 11 May 2026. The cases against Sony, Hisense and TCL remain open. The state placed particular weight on Hisense and TCL being headquartered in China, where the National Security Law can compel companies to hand government authorities access to data. These are allegations that have not been tested at trial.",
+        source: "Texas Attorney General",
       },
     ],
   },

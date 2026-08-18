@@ -427,6 +427,95 @@
       line-height: 1.65;
     }
 
+    /* ---- ORWELL ---- */
+    .orwell {
+      border-top: 1px solid var(--border);
+    }
+    .orwell-inner { max-width: 1200px; margin: 0 auto; }
+    .orwell h2 { margin-bottom: 16px; }
+    .orwell .intro {
+      color: var(--muted);
+      font-size: 17px;
+      max-width: 720px;
+      margin-bottom: 64px;
+      line-height: 1.75;
+    }
+    .orwell .intro em { color: var(--text); font-style: italic; }
+    .orwell-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-bottom: 64px;
+    }
+    .orwell-col {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 32px;
+    }
+    .orwell-col:last-child { border-left: 2px solid var(--accent); }
+    .orwell-tag {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 18px;
+    }
+    .orwell-col:last-child .orwell-tag { color: var(--accent); }
+    .orwell-col h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 26px;
+      font-weight: 600;
+      line-height: 1.25;
+      color: var(--text);
+      margin-bottom: 16px;
+    }
+    .orwell-col p {
+      font-size: 15px;
+      line-height: 1.75;
+      color: var(--muted);
+    }
+    .orwell-points {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+      padding-top: 48px;
+      border-top: 1px solid var(--border);
+    }
+    .orwell-point h4 {
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--text);
+      line-height: 1.4;
+      margin-bottom: 12px;
+    }
+    .orwell-point p {
+      font-size: 14px;
+      line-height: 1.75;
+      color: var(--muted);
+    }
+    .orwell-link {
+      display: inline-block;
+      margin-top: 14px;
+      font-size: 13px;
+      color: var(--accent-warm);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s ease;
+    }
+    .orwell-link:hover { border-bottom-color: var(--accent-warm); }
+    .orwell-close {
+      max-width: 780px;
+      margin: 64px auto 0;
+      padding-top: 40px;
+      border-top: 1px solid var(--border);
+      font-size: 17px;
+      line-height: 1.8;
+      color: var(--text);
+      text-align: center;
+    }
+    .orwell-close em { color: var(--gold); font-style: italic; }
+
     /* ---- CONSEQUENCES ---- */
     .consequences {
       background: var(--surface);
@@ -1675,6 +1764,9 @@
       .graphene-teaser-art { opacity: 0.18; }
       .flock-block h3 { margin-top: 34px; }
       .manifesto-actions { flex-direction: column; align-items: center; }
+      .orwell-grid { grid-template-columns: 1fr; }
+      .orwell-points { grid-template-columns: 1fr; gap: 32px; }
+      .orwell-close { margin-top: 48px; text-align: left; }
       .eu-stat-row { grid-template-columns: 1fr; }
       footer.site-footer { flex-direction: column; gap: 16px; text-align: center; padding: 32px 24px; }
       .dossier-header { padding: 48px 24px 40px; }
