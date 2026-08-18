@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-08-14T16:48:55.763Z",
+  "generated_at": "2026-08-18T04:24:24.227Z",
   "counts": {
-    "firms": 47,
-    "businesses": 64,
+    "firms": 52,
+    "businesses": 76,
     "tags": 10,
-    "evidence": 49
+    "evidence": 70
   },
   "firms": [
     {
@@ -169,6 +169,15 @@
       "tags": []
     },
     {
+      "id": "general-atlantic",
+      "name": "General Atlantic",
+      "type": "PE",
+      "headquarters": "New York, NY",
+      "portfolio_url": "https://www.generalatlantic.com",
+      "notes": "Held a minority interest in ProSiebenSat.1's NuCom Group, the vehicle that took The Meet Group private in 2020 and folded it into ParshipMeet Group. ProSiebenSat.1 agreed on March 20, 2025 to buy out General Atlantic's minority stakes in both NuCom and ParshipMeet, ending the investment.",
+      "tags": []
+    },
+    {
       "id": "gi-partners",
       "name": "GI Partners",
       "type": "PE",
@@ -265,6 +274,15 @@
       "tags": []
     },
     {
+      "id": "iac-inc",
+      "name": "IAC Inc.",
+      "type": "public-company",
+      "headquarters": "New York, NY",
+      "portfolio_url": "https://iac.com",
+      "notes": "Publicly traded holding company (Nasdaq: IAC), chaired by Barry Diller, which builds or buys consumer internet businesses and periodically spins them off to its own shareholders. Completed the separation of Match Group on June 30, 2020, Vimeo in 2021, and Angi on April 1, 2025. Current holdings include Dotdash Meredith and Care.com.",
+      "tags": []
+    },
+    {
       "id": "jab-holding",
       "name": "JAB Holding Company",
       "type": "holding-company",
@@ -348,6 +366,24 @@
       ]
     },
     {
+      "id": "match-group-inc",
+      "name": "Match Group, Inc.",
+      "type": "public-company",
+      "headquarters": "Dallas, TX",
+      "portfolio_url": "https://mtch.com",
+      "notes": "Publicly traded (Nasdaq: MTCH), no controlling owner. Spun out of IAC in a tax-free separation completed June 30, 2020, in which IAC holders received 2.1584 Match Group shares per IAC share. Operates roughly 45 dating brands, including Tinder, Hinge, Match.com, OkCupid, Plenty of Fish, Archer, The League, BLK, Chispa, Azar and Pairs.",
+      "tags": []
+    },
+    {
+      "id": "mgg-investment-group",
+      "name": "MGG Investment Group",
+      "type": "PE",
+      "headquarters": "New York, NY",
+      "portfolio_url": "https://www.mgginv.com",
+      "notes": "Private credit manager. Already a principal creditor of Spark Networks SE, MGG-managed funds took 100 percent of the equity in January 2024 through a German StaRUG restructuring (the first such plan recognized in a US Chapter 15 proceeding), wiping out the existing shareholders.",
+      "tags": []
+    },
+    {
       "id": "mhp-funds",
       "name": "MHP Funds (Frank Rolfe & Dave Reynolds)",
       "type": "PE",
@@ -408,6 +444,15 @@
       "headquarters": "New York, NY",
       "portfolio_url": "https://www.pretium.com",
       "notes": "Founded and owns Progress Residential, the largest US institutional single-family landlord. Led by former Goldman Sachs executive Don Mullen.",
+      "tags": []
+    },
+    {
+      "id": "san-vicente-acquisition",
+      "name": "San Vicente Acquisition (Ray Zage / Tiga, James Lu / Joffre Capital)",
+      "type": "holding-company",
+      "headquarters": "West Hollywood, CA",
+      "portfolio_url": "https://www.grindr.com",
+      "notes": "Vehicle formed by James Fu Bin Lu (co-founder of buyout firm Joffre Capital), George Raymond Zage III (Tiga Investments) and J. Michael Gearon Jr. to buy Grindr out of Chinese ownership in 2020 for about $608 million, after CFIUS ordered Beijing Kunlun Tech to divest. Took Grindr public via a SPAC merger with Tiga Acquisition Corp on November 18, 2022 (NYSE: GRND) while retaining control; Zage and Lu together held more than 60 percent of the shares as of June 2025.",
       "tags": []
     },
     {
@@ -542,6 +587,28 @@
           "alleged": false,
           "description": "Investigative reporting (Axios, The New Yorker, Washington Post) documented steep staffing cuts and declining care after Portopiccolo acquisitions, including a Richmond-area (Henrico) nursing home where deaths doubled following the takeover, and a facility where some shifts had as few as two staff for 72 beds, with residents going days without care.",
           "source_url": "https://www.axios.com/local/richmond/2022/08/26/private-equity-firm-henrico-nursing-home"
+        }
+      ]
+    },
+    {
+      "id": "angi",
+      "name": "Angi (Angie's List, HomeAdvisor)",
+      "industry": "Home Services",
+      "firm_id": "iac-inc",
+      "firm_name": "IAC Inc.",
+      "platform_company": "Home-services marketplace formed from HomeAdvisor and Angie's List. IAC controlled it through a high-vote share class until it distributed its entire stake to IAC shareholders on April 1, 2025, which also eliminated Angi's dual-class voting structure",
+      "acquisition_date": "2017",
+      "ownership_status": "former",
+      "source_url": "https://ir.iac.com/news-releases/news-release-details/iac-completes-spin-angi-now-independent-company",
+      "last_verified": "2026-08-17",
+      "locations": [],
+      "evidence": [
+        {
+          "tag": "Financial extraction",
+          "tier": "B",
+          "alleged": false,
+          "description": "IAC completed the spin-off of its full ownership stake in Angi on April 1, 2025, converting all of its high-vote shares to low-vote shares before the distribution so that Angi emerged with one share, one vote. Recorded as an ownership fact: the third consumer business, after Match Group in 2020 and Vimeo in 2021, that IAC assembled and then distributed away.",
+          "source_url": "https://ir.iac.com/news-releases/news-release-details/iac-completes-spin-angi-now-independent-company"
         }
       ]
     },
@@ -719,6 +786,57 @@
       "evidence": []
     },
     {
+      "id": "bumble",
+      "name": "Bumble",
+      "industry": "Dating apps",
+      "firm_id": "blackstone",
+      "firm_name": "Blackstone",
+      "platform_company": "Bumble Inc. (Nasdaq: BMBL), which also operates Badoo. Blackstone bought a majority of the Badoo/Bumble group in November 2019 and controlled it through the February 2021 IPO; its stake has since fallen to a minority. Recorded as an ownership fact",
+      "acquisition_date": "2019",
+      "ownership_status": "minority-stake",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1830043/000119312521041904/d20761d424b4.htm",
+      "last_verified": "2026-08-17",
+      "locations": [],
+      "evidence": [
+        {
+          "tag": "Financial extraction",
+          "tier": "B",
+          "alleged": false,
+          "description": "At the completion of Bumble's February 2021 IPO, Blackstone beneficially owned roughly 57 percent of the outstanding economic interests and about 80 percent of the outstanding voting power. Blackstone entities have sold down since then; by mid-2026 they held about 22.4 million Class A shares, roughly 17.2 percent of the class, and had pledged shares against borrowings. Recorded as an ownership and control fact, not an allegation of harm.",
+          "source_url": "https://www.stocktitan.net/sec-filings/BMBL/schedule-13d-a-bumble-inc-amended-major-shareholder-report-b8f609150f3c.html"
+        }
+      ]
+    },
+    {
+      "id": "care-com",
+      "name": "Care.com",
+      "industry": "Care marketplaces",
+      "firm_id": "iac-inc",
+      "firm_name": "IAC Inc.",
+      "platform_company": "Care.com, the childcare, eldercare and pet-care marketplace, taken private by IAC in February 2020 for about $500 million",
+      "acquisition_date": "2020",
+      "ownership_status": "confirmed",
+      "source_url": "https://www.ftc.gov/news-events/news/press-releases/2024/08/ftc-takes-action-against-carecom-deceiving-caregivers-about-wages-availability-jobs-its-site",
+      "last_verified": "2026-08-17",
+      "locations": [],
+      "evidence": [
+        {
+          "tag": "Consumer harm",
+          "tier": "A",
+          "alleged": false,
+          "description": "The FTC described a cancellation flow built as a dark pattern: a 'Submit' button that misled members into believing they had cancelled, and a 'Cancel' button that actually stopped the cancellation process, alongside multi-page questionnaires and warnings. The action followed tens of thousands of consumer complaints, many from people who believed they had cancelled and were billed again. In June 2025 the FTC distributed more than $8.1 million to 194,207 harmed consumers.",
+          "source_url": "https://www.ftc.gov/news-events/news/press-releases/2025/06/ftc-sends-more-81-million-consumers-harmed-carecoms-deceptive-claims-about-earnings-job-listings"
+        },
+        {
+          "tag": "Legal/regulatory",
+          "tier": "A",
+          "alleged": false,
+          "description": "The FTC took action against Care.com, a unit of IAC Inc., in August 2024 for deceiving caregivers about the number of jobs available on the site and the pay those jobs offered, and for obstructing cancellation of paid family memberships. The settlement, filed in federal court in Austin, Texas, required Care.com to pay $8.5 million and to provide a simple cancellation method.",
+          "source_url": "https://www.ftc.gov/news-events/news/press-releases/2024/08/ftc-takes-action-against-carecom-deceiving-caregivers-about-wages-availability-jobs-its-site"
+        }
+      ]
+    },
+    {
       "id": "colorado-bankers-life",
       "name": "Colorado Bankers Life Insurance Company",
       "industry": "Insurance",
@@ -838,6 +956,35 @@
           "alleged": false,
           "description": "Apollo's 2019 acquisition of Cox Media Group's TV and radio stations was accompanied by rounds of layoffs across the stations, both around the deal's close and in the years after under PE ownership.",
           "source_url": "https://radioinsight.com/headlines/213217/large-round-of-layoffs-hit-cox-media-group-stations/"
+        }
+      ]
+    },
+    {
+      "id": "dotdash-meredith",
+      "name": "Dotdash Meredith",
+      "industry": "Broadcast & digital media",
+      "firm_id": "iac-inc",
+      "firm_name": "IAC Inc.",
+      "platform_company": "IAC's publishing arm, formed when Dotdash acquired Meredith Corporation in November 2021 for $2.7 billion. Titles include People, Better Homes & Gardens, Southern Living, Investopedia, Allrecipes, InStyle and Entertainment Weekly",
+      "acquisition_date": "2021",
+      "ownership_status": "confirmed",
+      "source_url": "https://www.forbes.com/sites/marisadellatto/2022/02/09/iac-scrapping-print-editions-of-instyle-entertainment-weekly-and-other-magazines/",
+      "last_verified": "2026-08-17",
+      "locations": [],
+      "evidence": [
+        {
+          "tag": "Financial extraction",
+          "tier": "B",
+          "alleged": false,
+          "description": "Three months after closing the $2.7 billion Meredith purchase, IAC's Dotdash Meredith announced in February 2022 that it would end the print editions of six magazines: InStyle, Entertainment Weekly, EatingWell, Health, Parents and People en Español. The last print issues ran in April 2022 and the brands continued as digital only. CEO Neil Vogel's memo to staff said 'buying Meredith was about buying brands, not magazines or websites.'",
+          "source_url": "https://www.forbes.com/sites/marisadellatto/2022/02/09/iac-scrapping-print-editions-of-instyle-entertainment-weekly-and-other-magazines/"
+        },
+        {
+          "tag": "Labor",
+          "tier": "B",
+          "alleged": false,
+          "description": "The February 2022 print shutdown eliminated about 200 jobs, which the company described as under 5 percent of Dotdash Meredith's total staff.",
+          "source_url": "https://www.mediapost.com/publications/article/371056/print-editions-of-6-meredith-brands-including-in.html"
         }
       ]
     },
@@ -1052,6 +1199,49 @@
       ]
     },
     {
+      "id": "grindr",
+      "name": "Grindr",
+      "industry": "Dating apps",
+      "firm_id": "san-vicente-acquisition",
+      "firm_name": "San Vicente Acquisition (Ray Zage / Tiga, James Lu / Joffre Capital)",
+      "platform_company": "Grindr Inc. (NYSE: GRND). Bought out of Beijing Kunlun Tech ownership in 2020 under a CFIUS divestiture order, taken public via SPAC in November 2022, still majority-controlled by Ray Zage and James Lu",
+      "acquisition_date": "2020",
+      "ownership_status": "confirmed",
+      "source_url": "https://www.cnbc.com/2020/03/06/grindrs-chinese-owner-says-to-sell-social-media-app-for-608-million.html",
+      "last_verified": "2026-08-17",
+      "locations": [],
+      "evidence": [
+        {
+          "tag": "Legal/regulatory",
+          "tier": "B",
+          "alleged": false,
+          "description": "The Committee on Foreign Investment in the United States determined in 2019 that Beijing Kunlun Tech's ownership of Grindr was a national security risk, on the reasoning that the app's data on users, including location and health information, could be used for blackmail or coercion, and ordered a divestiture. Kunlun sold its stake for about $608 million in 2020 under a June 2020 CFIUS deadline.",
+          "source_url": "https://techcrunch.com/2020/03/06/grindr-sold-china-national-security/"
+        },
+        {
+          "tag": "Data privacy",
+          "tier": "A",
+          "alleged": false,
+          "description": "Norway's Datatilsynet fined Grindr NOK 65 million in December 2021, its largest fine ever, for unlawfully disclosing user data to advertising partners. The regulator found the consents Grindr collected were neither voluntary, specific nor informed, and that because being a Grindr user implicitly reveals sexual orientation, the disclosures involved a special category of personal data. The Privacy Appeals Board upheld the decision in 2023 and the Court of Appeal upheld it again in 2025.",
+          "source_url": "https://www.datatilsynet.no/en/news/news-2025/the-court-of-appeal-upholds-the-fine-against-grindr/"
+        },
+        {
+          "tag": "Data privacy",
+          "tier": "B",
+          "alleged": false,
+          "description": "The Norwegian Consumer Council's January 2020 'Out of Control' report found Grindr transmitted GPS location, IP address, age and gender to a large number of advertising and behavioural-profiling third parties. The report was the basis for the complaint that produced the Datatilsynet fine.",
+          "source_url": "https://www.forbes.com/sites/janetwburns/2020/01/14/data-sharing-grindr-twitter-tinder-other-apps-is-out-of-control-violates-gdpr-report-says/"
+        },
+        {
+          "tag": "Financial extraction",
+          "tier": "B",
+          "alleged": false,
+          "description": "In October 2025 majority holders Ray Zage and James Lu explored taking Grindr private at a roughly $3 billion valuation, after a lender called loans the two had taken against their shares, and later raised the offer to $18.00 per share. Grindr's special committee ceased engagement with the proposal on November 26, 2025, citing uncertainty over the financing.",
+          "source_url": "https://www.prnewswire.com/news-releases/george-raymond-zage-ill-and-james-fu-bin-lu-respond-to-grindr-special-committee-decision-to-cease-engagement-on-proposed-take-private-transaction-302626792.html"
+        }
+      ]
+    },
+    {
       "id": "havenpark-communities",
       "name": "Havenpark Communities",
       "industry": "Mobile home parks",
@@ -1115,6 +1305,28 @@
       "last_verified": "2026-08-05",
       "locations": [],
       "evidence": []
+    },
+    {
+      "id": "hinge",
+      "name": "Hinge",
+      "industry": "Dating apps",
+      "firm_id": "match-group-inc",
+      "firm_name": "Match Group, Inc.",
+      "platform_company": "Match Group, Inc. (Nasdaq: MTCH), spun out of IAC in the June 2020 separation",
+      "acquisition_date": "2019",
+      "ownership_status": "confirmed",
+      "source_url": "https://www.washingtonpost.com/technology/2024/02/19/tinder-hinge-dating-app-lawsuit/",
+      "last_verified": "2026-08-17",
+      "locations": [],
+      "evidence": [
+        {
+          "tag": "Consumer harm",
+          "tier": "C",
+          "alleged": true,
+          "description": "ALLEGED / UNPROVEN: a putative class action filed February 14, 2024 in the Northern District of California by six plaintiffs alleged that Tinder, Hinge and The League are deliberately designed to be addictive, that their features keep users searching for rewards made elusive on purpose, and that Match Group failed to warn users of the risk. The allegations were never tested on the merits: in December 2024 US Magistrate Judge Laurel Beeler compelled the claims into individual arbitration under the apps' terms of service, halting the nationwide case.",
+          "source_url": "https://www.washingtonpost.com/technology/2024/02/19/tinder-hinge-dating-app-lawsuit/"
+        }
+      ]
     },
     {
       "id": "homes-of-america",
@@ -1255,6 +1467,35 @@
       "evidence": []
     },
     {
+      "id": "match-com",
+      "name": "Match.com",
+      "industry": "Dating apps",
+      "firm_id": "match-group-inc",
+      "firm_name": "Match Group, Inc.",
+      "platform_company": "Match Group, Inc. (Nasdaq: MTCH), spun out of IAC in the June 2020 separation",
+      "acquisition_date": "1995",
+      "ownership_status": "confirmed",
+      "source_url": "https://www.ftc.gov/legal-library/browse/cases-proceedings/172-3013-match-group-inc",
+      "last_verified": "2026-08-17",
+      "locations": [],
+      "evidence": [
+        {
+          "tag": "Consumer harm",
+          "tier": "A",
+          "alleged": false,
+          "description": "The FTC's September 2019 complaint alleged that Match advertised a free six-month subscription for users who did not 'meet someone special' without disclosing the stringent conditions attached, made cancellation confusing enough that subscribers were charged for renewals they did not want, and cut off paying customers who disputed charges with their banks.",
+          "source_url": "https://www.ftc.gov/legal-library/browse/cases-proceedings/172-3013-match-group-inc"
+        },
+        {
+          "tag": "Legal/regulatory",
+          "tier": "A",
+          "alleged": false,
+          "description": "FTC v. Match Group: a stipulated order for permanent injunction and monetary judgment was filed in the US District Court for the Northern District of Texas on August 12, 2025, ending a nearly six-year case. Match Group agreed to pay $14 million, to permanently stop misrepresenting its guarantees and locking consumers out of accounts they had paid for, and to simplify Match.com's cancellation process. The Commission vote approving the order was 3 to 0.",
+          "source_url": "https://www.ftc.gov/news-events/news/press-releases/2025/08/match-group-agrees-pay-14-million-permanently-stop-deceptive-advertising-cancellation-billing"
+        }
+      ]
+    },
+    {
       "id": "mcclatchy",
       "name": "McClatchy",
       "industry": "Newspapers",
@@ -1349,6 +1590,50 @@
       ]
     },
     {
+      "id": "okcupid",
+      "name": "OkCupid",
+      "industry": "Dating apps",
+      "firm_id": "match-group-inc",
+      "firm_name": "Match Group, Inc.",
+      "platform_company": "Match Group, Inc. (Nasdaq: MTCH), spun out of IAC in the June 2020 separation",
+      "acquisition_date": "2011",
+      "ownership_status": "confirmed",
+      "source_url": "https://www.forbes.com/sites/janetwburns/2020/01/14/data-sharing-grindr-twitter-tinder-other-apps-is-out-of-control-violates-gdpr-report-says/",
+      "last_verified": "2026-08-17",
+      "locations": [],
+      "evidence": [
+        {
+          "tag": "Data privacy",
+          "tier": "B",
+          "alleged": false,
+          "description": "The Norwegian Consumer Council's January 2020 'Out of Control' report found that OkCupid shared details about users' sexuality, drug use and political views with the analytics company Braze. The Council filed formal GDPR complaints with Norway's data protection authority over the practices the report documented.",
+          "source_url": "https://www.forbes.com/sites/janetwburns/2020/01/14/data-sharing-grindr-twitter-tinder-other-apps-is-out-of-control-violates-gdpr-report-says/"
+        }
+      ]
+    },
+    {
+      "id": "parshipmeet-group",
+      "name": "ParshipMeet Group / The Meet Group (MeetMe, Skout, Tagged, LOVOO)",
+      "industry": "Dating apps",
+      "firm_id": "general-atlantic",
+      "firm_name": "General Atlantic",
+      "platform_company": "The Meet Group (MeetMe, Skout, Tagged, growlr) was taken private in 2020 for about $500 million by NuCom Group, the joint venture between ProSiebenSat.1 and General Atlantic, and merged with Parship Group to form ParshipMeet Group. ProSiebenSat.1 agreed in March 2025 to buy out General Atlantic's minority stakes, making it the sole owner",
+      "acquisition_date": "2020",
+      "ownership_status": "former",
+      "source_url": "https://www.businesswire.com/news/home/20200304005887/en/The-Meet-Group-Announces-Definitive-Agreement-to-be-Acquired-by-ProSiebenSat.1-and-General-Atlantic",
+      "last_verified": "2026-08-17",
+      "locations": [],
+      "evidence": [
+        {
+          "tag": "Financial extraction",
+          "tier": "B",
+          "alleged": false,
+          "description": "General Atlantic's five-year investment ended on March 20, 2025, when ProSiebenSat.1 approved an agreement to acquire General Atlantic's minority stakes in both NuCom Group and ParshipMeet Group, alongside an intended sale of Verivox. Recorded as an ownership fact: the apps changed hands twice without their users being party to either transaction.",
+          "source_url": "https://www.prosiebensat1.com/en/newsroom/prosiebensat1-approves-proposed-agreement-with-general-atlantic-on-the-acquisition-of-its-minority-stakes-in-nucom-group-and-parshipmeet-group-together-with-an-intended-sale-of-verivox-513739"
+        }
+      ]
+    },
+    {
       "id": "petvet-care-centers",
       "name": "PetVet",
       "industry": "Veterinary",
@@ -1361,6 +1646,28 @@
       "last_verified": "2026-08-05",
       "locations": [],
       "evidence": []
+    },
+    {
+      "id": "plenty-of-fish",
+      "name": "Plenty of Fish",
+      "industry": "Dating apps",
+      "firm_id": "match-group-inc",
+      "firm_name": "Match Group, Inc.",
+      "platform_company": "Match Group, Inc. (Nasdaq: MTCH), spun out of IAC in the June 2020 separation",
+      "acquisition_date": "2015",
+      "ownership_status": "confirmed",
+      "source_url": "https://www.propublica.org/article/tinder-lets-known-sex-offenders-use-the-app-its-not-the-only-one",
+      "last_verified": "2026-08-17",
+      "locations": [],
+      "evidence": [
+        {
+          "tag": "Consumer harm",
+          "tier": "B",
+          "alleged": false,
+          "description": "Plenty of Fish is one of the free Match Group products covered by the Columbia Journalism Investigations and ProPublica finding that the company checked users against state sex-offender registries only on its paid platforms, leaving its free apps unscreened.",
+          "source_url": "https://www.propublica.org/article/tinder-lets-known-sex-offenders-use-the-app-its-not-the-only-one"
+        }
+      ]
     },
     {
       "id": "progress-residential",
@@ -1529,6 +1836,35 @@
       "evidence": []
     },
     {
+      "id": "spark-networks",
+      "name": "Spark Networks (Zoosk, JDate, ChristianMingle, EliteSingles)",
+      "industry": "Dating apps",
+      "firm_id": "mgg-investment-group",
+      "firm_name": "MGG Investment Group",
+      "platform_company": "Spark Networks SE / Spark Networks Services GmbH, operator of Zoosk, JDate, ChristianMingle, EliteSingles and SilverSingles. Taken over in full by funds managed by private credit manager MGG Investment Group in a January 2024 German StaRUG restructuring",
+      "acquisition_date": "2024",
+      "ownership_status": "confirmed",
+      "source_url": "https://www.noerr.com/en/press/2024_01_08-mgg---spark-networks",
+      "last_verified": "2026-08-17",
+      "locations": [],
+      "evidence": [
+        {
+          "tag": "Financial extraction",
+          "tier": "B",
+          "alleged": false,
+          "description": "MGG Investment Group, already a principal creditor, became Spark Networks' sole equity owner in January 2024 after a German court approved a StaRUG restructuring plan that eliminated more than $45 million of debt and wiped out the existing shareholders. It was the first StaRUG plan recognized by a US court under Chapter 15.",
+          "source_url": "https://www.jonesday.com/en/practices/experience/2024/01/spark-networks-german-starug-plan-confirmed-in-firstever-crossborder-restructuring-under-german-starug-and-us-chapter-15"
+        },
+        {
+          "tag": "Consumer harm",
+          "tier": "B",
+          "alleged": false,
+          "description": "The 2024 restructuring did not hold. After MGG, its main lender, withdrew funding, a Berlin court placed Spark Networks Services GmbH under preliminary insolvency administration in mid-January 2026, and the company filed for Chapter 15 in the United States to have the German proceeding recognized. Spark said it intends to sell its assets while continuing to operate, leaving paying subscribers of Zoosk, JDate and ChristianMingle exposed to an asset sale.",
+          "source_url": "https://onlinepersonalswatch.com/2026/04/christian-mingle-jdate-owner-brings-german-insolvency-to-us/"
+        }
+      ]
+    },
+    {
       "id": "sports-authority",
       "name": "Sports Authority",
       "industry": "Retail & restaurants",
@@ -1592,6 +1928,42 @@
       "last_verified": "2026-08-05",
       "locations": [],
       "evidence": []
+    },
+    {
+      "id": "tinder",
+      "name": "Tinder",
+      "industry": "Dating apps",
+      "firm_id": "match-group-inc",
+      "firm_name": "Match Group, Inc.",
+      "platform_company": "Match Group, Inc. (Nasdaq: MTCH), spun out of IAC in the June 2020 separation",
+      "acquisition_date": "2012",
+      "ownership_status": "confirmed",
+      "source_url": "https://www.propublica.org/article/tinder-lets-known-sex-offenders-use-the-app-its-not-the-only-one",
+      "last_verified": "2026-08-17",
+      "locations": [],
+      "evidence": [
+        {
+          "tag": "Data privacy",
+          "tier": "B",
+          "alleged": false,
+          "description": "The Norwegian Consumer Council's January 2020 'Out of Control' report found that the ten apps it tested, Tinder among them, transmitted user data to at least 135 different third-party advertising and behavioural-profiling services, and concluded that the advertising industry was systematically breaking the GDPR.",
+          "source_url": "https://www.forbes.com/sites/janetwburns/2020/01/14/data-sharing-grindr-twitter-tinder-other-apps-is-out-of-control-violates-gdpr-report-says/"
+        },
+        {
+          "tag": "Legal/regulatory",
+          "tier": "B",
+          "alleged": false,
+          "description": "Following the investigation, the chair of a House Oversight subcommittee, Rep. Raja Krishnamoorthi, opened a broad inquiry into the safety of online dating platforms, seeking information on underage users, the sale and dissemination of users' personal information, and the presence of registered sex offenders on free dating sites.",
+          "source_url": "https://gizmodo.com/sex-offenders-on-tinder-other-dating-apps-spur-probe-1841835266"
+        },
+        {
+          "tag": "Consumer harm",
+          "tier": "B",
+          "alleged": false,
+          "description": "A 16-month investigation by Columbia Journalism Investigations, ProPublica and BuzzFeed News, which analyzed more than 150 incidents of sexual assault involving dating apps drawn from a decade of news reports, civil suits and criminal records, found that Match Group screened users against state sex-offender registries only on its paid products. Its free products, including Tinder, were left unscreened; the company acknowledged that registered sex offenders use them.",
+          "source_url": "https://www.propublica.org/article/tinder-lets-known-sex-offenders-use-the-app-its-not-the-only-one"
+        }
+      ]
     },
     {
       "id": "toys-r-us",
