@@ -1,5 +1,5 @@
 {
-  "_note": "Batch 7 — hospice (and home-health/hospice) operators. Imported via import-to-airtable.mjs; businesses land review_status=pending, evidence lands publish=true but still needs the publish checkbox verified. Scope: PE-owned only — VITAS (Chemed) and Amedisys are publicly traded and excluded. Two Tier A DOJ False Claims Act settlements as business-level evidence: Gentiva ($19.4M, 2024) and Elara Caring ($4.2M, 2024). Gentiva's fraud conduct (2010–2020) largely predates CD&R's 2022 acquisition (Kindred at Home / Humana era) — noted in the evidence. Compassus and AccentCare are ownership-only. NOT attached: the CEPR 'Preying on the Dying' industry report (industry-level, no single-firm home). AccentCare was bought from Oak Hill Capital (already a firm in the base) — cross-reference, but owning_firm is the current owner, Advent.",
+  "_note": "Batch 7: hospice (and home-health/hospice) operators. Imported via import-to-airtable.mjs; businesses land review_status=pending, evidence lands publish=true but still needs the publish checkbox verified. Scope: PE-owned only, VITAS (Chemed) and Amedisys are publicly traded and excluded. Two Tier A DOJ False Claims Act settlements as business-level evidence: Gentiva ($19.4M, 2024) and Elara Caring ($4.2M, 2024). Gentiva's fraud conduct (2010–2020) largely predates CD&R's 2022 acquisition (Kindred at Home / Humana era), noted in the evidence. Compassus and AccentCare are ownership-only. NOT attached: the CEPR 'Preying on the Dying' industry report (industry-level, no single-firm home). AccentCare was bought from Oak Hill Capital (already a firm in the base), cross-reference, but owning_firm is the current owner, Advent.",
   "firms": [
     {
       "firm_id": "clayton-dubilier-rice",
@@ -25,7 +25,7 @@
       "firm_type": "PE",
       "headquarters": "Boston, MA",
       "portfolio_url": "https://www.adventinternational.com",
-      "notes": "Acquired AccentCare from Oak Hill Capital in 2019 — its first move into home health and hospice.",
+      "notes": "Acquired AccentCare from Oak Hill Capital in 2019, its first move into home health and hospice.",
       "tags": []
     },
     {

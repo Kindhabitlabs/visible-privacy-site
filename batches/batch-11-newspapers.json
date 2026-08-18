@@ -1,5 +1,5 @@
 {
-  "_note": "Batch 11 — newspapers / local news. Imported via import-to-airtable.mjs; businesses land review_status=pending, evidence lands publish=true but still needs the publish checkbox verified. Evidence here is all Tier B — this is a journalism + Senate-oversight story, not a DOJ/FTC one (newspapers aren't regulated that way). Tags lean Labor (newsroom layoffs) and Financial extraction (debt/bankruptcy). Alden Global Capital already exists as a firm (from Batch 10, Homes of America / mobile homes) with no firm tags — so its two newspaper businesses inherit nothing and don't bleed onto Homes of America. Alden now spans two industries. Gannett is entered as ownership_status=former: Fortress assembled and managed it via the 2019 GateHouse merger, but Gannett internalized management ~2020 and is now publicly traded (NYSE: GCI). Industry-level 'news deserts' academic work is not attached (no single-firm home).",
+  "_note": "Batch 11: newspapers / local news. Imported via import-to-airtable.mjs; businesses land review_status=pending, evidence lands publish=true but still needs the publish checkbox verified. Evidence here is all Tier B. This is a journalism + Senate-oversight story, not a DOJ/FTC one (newspapers aren't regulated that way). Tags lean Labor (newsroom layoffs) and Financial extraction (debt/bankruptcy). Alden Global Capital already exists as a firm (from Batch 10, Homes of America / mobile homes) with no firm tags, so its two newspaper businesses inherit nothing and don't bleed onto Homes of America. Alden now spans two industries. Gannett is entered as ownership_status=former: Fortress assembled and managed it via the 2019 GateHouse merger, but Gannett internalized management ~2020 and is now publicly traded (NYSE: GCI). Industry-level 'news deserts' academic work is not attached (no single-firm home).",
   "firms": [
     {
       "firm_id": "chatham-asset-management",
@@ -26,13 +26,13 @@
       "business_name": "MediaNews Group",
       "industry": "Newspapers",
       "owning_firm_id": "alden-global",
-      "platform_company": "Alden's flagship newspaper group (formerly Digital First Media) — Denver Post, San Jose Mercury News, St. Paul Pioneer Press, Boston Herald and dozens more; Alden controls 200+ US papers",
+      "platform_company": "Alden's flagship newspaper group (formerly Digital First Media), Denver Post, San Jose Mercury News, St. Paul Pioneer Press, Boston Herald and dozens more; Alden controls 200+ US papers",
       "acquisition_date": "2010",
       "ownership_status": "confirmed",
       "source_url": "https://www.npr.org/2021/10/18/1046952430/the-consequences-of-when-a-hedge-fund-buys-newspapers",
       "last_verified": "2026-08-06",
       "evidence": [
-        { "tag": "Labor", "evidence_tier": "B", "description": "After taking over MediaNews Group out of bankruptcy in 2010, Alden cut newsroom staffing by more than 75% across its papers, and its 2016 consolidation of eight San Francisco Bay Area papers into two triggered mass layoffs. Alden's playbook — gutting newsrooms and selling off real estate — was the subject of The Atlantic's 2021 cover story 'The Men Who Are Killing America's Newspapers.'", "source_url": "https://www.npr.org/2021/10/18/1046952430/the-consequences-of-when-a-hedge-fund-buys-newspapers", "publish": true }
+        { "tag": "Labor", "evidence_tier": "B", "description": "After taking over MediaNews Group out of bankruptcy in 2010, Alden cut newsroom staffing by more than 75% across its papers, and its 2016 consolidation of eight San Francisco Bay Area papers into two triggered mass layoffs. Alden's playbook, gutting newsrooms and selling off real estate, was the subject of The Atlantic's 2021 cover story 'The Men Who Are Killing America's Newspapers.'", "source_url": "https://www.npr.org/2021/10/18/1046952430/the-consequences-of-when-a-hedge-fund-buys-newspapers", "publish": true }
       ]
     },
     {
@@ -54,13 +54,13 @@
       "business_name": "McClatchy",
       "industry": "Newspapers",
       "owning_firm_id": "chatham-asset-management",
-      "platform_company": "2nd-largest US newspaper chain — 30 papers including the Miami Herald, Sacramento Bee, Kansas City Star and Charlotte Observer",
+      "platform_company": "2nd-largest US newspaper chain, 30 papers including the Miami Herald, Sacramento Bee, Kansas City Star and Charlotte Observer",
       "acquisition_date": "2020",
       "ownership_status": "confirmed",
       "source_url": "https://www.poynter.org/local-news/2020/hedge-fund-chatham-asset-management-buy-the-mcclatchy-newspaper-chain/",
       "last_verified": "2026-08-06",
       "evidence": [
-        { "tag": "Financial extraction", "evidence_tier": "B", "description": "McClatchy carried heavy debt from its $4.5B 2006 purchase of Knight-Ridder and filed for Chapter 11 in Feb 2020. Hedge fund Chatham Asset Management, its longtime lead lender, won the bankruptcy auction in July 2020 — ending 163 years of family control and handing the chain to its creditors.", "source_url": "https://www.poynter.org/local-news/2020/hedge-fund-chatham-asset-management-buy-the-mcclatchy-newspaper-chain/", "publish": true }
+        { "tag": "Financial extraction", "evidence_tier": "B", "description": "McClatchy carried heavy debt from its $4.5B 2006 purchase of Knight-Ridder and filed for Chapter 11 in Feb 2020. Hedge fund Chatham Asset Management, its longtime lead lender, won the bankruptcy auction in July 2020, ending 163 years of family control and handing the chain to its creditors.", "source_url": "https://www.poynter.org/local-news/2020/hedge-fund-chatham-asset-management-buy-the-mcclatchy-newspaper-chain/", "publish": true }
       ]
     },
     {
@@ -68,13 +68,13 @@
       "business_name": "Gannett / GateHouse",
       "industry": "Newspapers",
       "owning_firm_id": "fortress-investment-group",
-      "platform_company": "Largest US newspaper company — 260+ dailies including USA Today; assembled via the 2019 GateHouse–Gannett merger. Now publicly traded (NYSE: GCI) after internalizing management ~2020",
+      "platform_company": "Largest US newspaper company, 260+ dailies including USA Today; assembled via the 2019 GateHouse–Gannett merger. Now publicly traded (NYSE: GCI) after internalizing management ~2020",
       "acquisition_date": "2019",
       "ownership_status": "former",
       "source_url": "https://www.spokesman.com/stories/2019/aug/26/as-gannett-gatehouse-merge-newspaper-cost-cutting-/",
       "last_verified": "2026-08-06",
       "evidence": [
-        { "tag": "Financial extraction", "evidence_tier": "B", "description": "Fortress-managed New Media Investment Group (owner of GateHouse) merged with Gannett in 2019 to form the largest US newspaper chain — a ~$1.4B deal funded partly by a ~$1.79B loan from Apollo Global at ~11.5% interest. GateHouse cut roughly 200 staff in the first half of 2019, and cost-cutting and layoffs continued across the merged papers.", "source_url": "https://www.spokesman.com/stories/2019/aug/26/as-gannett-gatehouse-merge-newspaper-cost-cutting-/", "publish": true }
+        { "tag": "Financial extraction", "evidence_tier": "B", "description": "Fortress-managed New Media Investment Group (owner of GateHouse) merged with Gannett in 2019 to form the largest US newspaper chain, a ~$1.4B deal funded partly by a ~$1.79B loan from Apollo Global at ~11.5% interest. GateHouse cut roughly 200 staff in the first half of 2019, and cost-cutting and layoffs continued across the merged papers.", "source_url": "https://www.spokesman.com/stories/2019/aug/26/as-gannett-gatehouse-merge-newspaper-cost-cutting-/", "publish": true }
       ]
     }
   ]

@@ -1,5 +1,5 @@
 {
-  "_note": "Batch 2 — HVAC / home-services rollups. Imported via import-to-airtable.mjs. Businesses import as review_status=pending; spot-check in Airtable, then flip to verified. Ownership-focused batch: HVAC has far less firm-specific regulatory/litigation paper than veterinary, so only Alpine (Apex) and Goldman Sachs (Sila) carry defensible Tier B tags; Wrench, ARS, and TurnPoint are ownership-only. The 2011 Arizona AG action against ARS was deliberately NOT attached to GI Partners — it was business-level conduct under prior ownership (pre-2020). Reused firms already in the base (TSG Consumer Partners, Oak Hill, Partners Group) are co-owners noted in platform_company but the owning_firm_id points to each platform's lead/majority sponsor. National chains have no locations enumerated (deferred; map view out of v1 scope).",
+  "_note": "Batch 2: HVAC / home-services rollups. Imported via import-to-airtable.mjs. Businesses import as review_status=pending; spot-check in Airtable, then flip to verified. Ownership-focused batch: HVAC has far less firm-specific regulatory/litigation paper than veterinary, so only Alpine (Apex) and Goldman Sachs (Sila) carry defensible Tier B tags; Wrench, ARS, and TurnPoint are ownership-only. The 2011 Arizona AG action against ARS was deliberately NOT attached to GI Partners. It was business-level conduct under prior ownership (pre-2020). Reused firms already in the base (TSG Consumer Partners, Oak Hill, Partners Group) are co-owners noted in platform_company but the owning_firm_id points to each platform's lead/majority sponsor. National chains have no locations enumerated (deferred; map view out of v1 scope).",
   "firms": [
     {
       "firm_id": "leonard-green",
@@ -18,7 +18,7 @@
       "portfolio_url": "https://alpineinvestors.com",
       "notes": "Founder and lead sponsor of Apex Service Partners (est. 2019), the largest US residential HVAC/plumbing/electrical platform.",
       "tags": [
-        { "tag": "Financial extraction", "evidence_tier": "B", "description": "Oct 2023 ~$3.4B single-asset continuation-fund transaction for Apex — among the largest in PE history — let Alpine return capital to investors while retaining the asset; in May 2026 Apollo Funds took a ~$2B minority stake at a $10B valuation, capitalizing the rollup further.", "source_url": "https://alpineinvestors.com/resource/single-asset-continuation-transaction-apex-service-partners/", "publish": true }
+        { "tag": "Financial extraction", "evidence_tier": "B", "description": "Oct 2023 ~$3.4B single-asset continuation-fund transaction for Apex, among the largest in PE history, let Alpine return capital to investors while retaining the asset; in May 2026 Apollo Funds took a ~$2B minority stake at a $10B valuation, capitalizing the rollup further.", "source_url": "https://alpineinvestors.com/resource/single-asset-continuation-transaction-apex-service-partners/", "publish": true }
       ]
     },
     {
@@ -29,8 +29,8 @@
       "portfolio_url": "https://www.goldmansachs.com/what-we-do/asset-management/private-equity",
       "notes": "Goldman Sachs Alternatives (the firm's private-equity business). Acquired Sila Services in early 2025.",
       "tags": [
-        { "tag": "Financial extraction", "evidence_tier": "B", "description": "Acquired Sila Services from Morgan Stanley Capital Partners in early 2025 in a roughly $1.5B sponsor-to-sponsor deal including debt — a leveraged continuation of the HVAC roll-up.", "source_url": "https://www.businesswire.com/news/home/20241110227672/en/Sila-Services-Announces-Equity-Investment-From-Goldman-Sachs-Alternatives-Private-Equity-Business", "publish": true },
-        { "tag": "Consumer harm", "evidence_tier": "B", "description": "In Sept 2025 the Nexstar Network — the largest plumbing/HVAC trade group — severed ties with all PE-backed members (~1/3 of its 800 members) over the roll-up model; Forbes cited Sila's 28-acquisition consolidation as a leading example of the consolidation the group rejected.", "source_url": "https://www.forbes.com/sites/brandonkochkodin/2025/09/16/a-group-for-small-building-trade-businesses-tells-private-equity-to-get-lost/", "publish": true }
+        { "tag": "Financial extraction", "evidence_tier": "B", "description": "Acquired Sila Services from Morgan Stanley Capital Partners in early 2025 in a roughly $1.5B sponsor-to-sponsor deal including debt, a leveraged continuation of the HVAC roll-up.", "source_url": "https://www.businesswire.com/news/home/20241110227672/en/Sila-Services-Announces-Equity-Investment-From-Goldman-Sachs-Alternatives-Private-Equity-Business", "publish": true },
+        { "tag": "Consumer harm", "evidence_tier": "B", "description": "In Sept 2025 the Nexstar Network, the largest plumbing/HVAC trade group, severed ties with all PE-backed members (~1/3 of its 800 members) over the roll-up model; Forbes cited Sila's 28-acquisition consolidation as a leading example of the consolidation the group rejected.", "source_url": "https://www.forbes.com/sites/brandonkochkodin/2025/09/16/a-group-for-small-building-trade-businesses-tells-private-equity-to-get-lost/", "publish": true }
       ]
     },
     {

@@ -1,5 +1,5 @@
 {
-  "_note": "Batch 1 — veterinary rollups. Imported via import-to-airtable.mjs. KKR + PetVet already exist in Airtable and will be skipped by the dedup. Businesses import as review_status=pending; spot-check in Airtable, then flip to verified. National chains have no locations enumerated (deferred; map view is out of v1 scope).",
+  "_note": "Batch 1: veterinary rollups. Imported via import-to-airtable.mjs. KKR + PetVet already exist in Airtable and will be skipped by the dedup. Businesses import as review_status=pending; spot-check in Airtable, then flip to verified. National chains have no locations enumerated (deferred; map view is out of v1 scope).",
   "firms": [
     {
       "firm_id": "kkr",

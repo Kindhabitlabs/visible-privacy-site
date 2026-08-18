@@ -1,5 +1,5 @@
 {
-  "_note": "Batch 8 — single-family rentals (institutional 'Wall Street landlord' operators). Imported via import-to-airtable.mjs; businesses land review_status=pending, evidence lands publish=true but still needs the publish checkbox verified. Scope: PE-owned landlords only. DR Horton and other homebuilders are publicly traded and excluded (relevant only as builders that sell build-to-rent communities in bulk to these landlords). Blackstone appears twice: Invitation Homes (ownership_status=former — Blackstone created it in 2012 and exited by ~2019, now NYSE:INVH) and Tricon Residential (confirmed — Blackstone took it private in 2024). Tier A evidence: FTC $48M settlement vs Invitation Homes (2024). Blackstone already exists as a firm (Batch 5) with no firm tags, so its two SFR businesses inherit nothing. NOT attached: the 2022 House Financial Services Committee report on institutional landlords (industry-level, names multiple firms — no single-firm home).",
+  "_note": "Batch 8: single-family rentals (institutional 'Wall Street landlord' operators). Imported via import-to-airtable.mjs; businesses land review_status=pending, evidence lands publish=true but still needs the publish checkbox verified. Scope: PE-owned landlords only. DR Horton and other homebuilders are publicly traded and excluded (relevant only as builders that sell build-to-rent communities in bulk to these landlords). Blackstone appears twice: Invitation Homes (ownership_status=former, since Blackstone created it in 2012 and exited by ~2019, now NYSE:INVH) and Tricon Residential (confirmed, Blackstone took it private in 2024). Tier A evidence: FTC $48M settlement vs Invitation Homes (2024). Blackstone already exists as a firm (Batch 5) with no firm tags, so its two SFR businesses inherit nothing. NOT attached: the 2022 House Financial Services Committee report on institutional landlords (industry-level, names multiple firms, no single-firm home).",
   "firms": [
     {
       "firm_id": "pretium-partners",
@@ -41,7 +41,7 @@
       "source_url": "https://www.housingwire.com/articles/blackstone-cashes-out-on-invitation-homes/",
       "last_verified": "2026-08-05",
       "evidence": [
-        { "tag": "Legal/regulatory", "evidence_tier": "A", "description": "FTC settlement ($48M, Sept 2024): the FTC charged Invitation Homes with deceiving renters on price, charging undisclosed 'junk fees' (mandatory monthly charges for smart-home tech and air-filter delivery costing up to ~$1,700/yr), withholding security deposits (returned in only ~40% of cases vs. a ~64% norm), and unfair eviction practices — including steering pandemic-era renters away from the CDC declaration that would have protected them from eviction. Invitation paid $48M in consumer refunds (no admission of wrongdoing). Blackstone founded and ran the company 2012–2019; the FTC's conduct period spans 2018–2023.", "source_url": "https://www.ftc.gov/news-events/news/press-releases/2024/09/ftc-takes-action-against-invitation-homes-deceiving-renters-charging-junk-fees-withholding-security", "publish": true }
+        { "tag": "Legal/regulatory", "evidence_tier": "A", "description": "FTC settlement ($48M, Sept 2024): the FTC charged Invitation Homes with deceiving renters on price, charging undisclosed 'junk fees' (mandatory monthly charges for smart-home tech and air-filter delivery costing up to ~$1,700/yr), withholding security deposits (returned in only ~40% of cases vs. a ~64% norm), and unfair eviction practices, including steering pandemic-era renters away from the CDC declaration that would have protected them from eviction. Invitation paid $48M in consumer refunds (no admission of wrongdoing). Blackstone founded and ran the company 2012–2019; the FTC's conduct period spans 2018–2023.", "source_url": "https://www.ftc.gov/news-events/news/press-releases/2024/09/ftc-takes-action-against-invitation-homes-deceiving-renters-charging-junk-fees-withholding-security", "publish": true }
       ]
     },
     {
@@ -63,7 +63,7 @@
       "business_name": "Tricon Residential",
       "industry": "Single-family rentals",
       "owning_firm_id": "blackstone",
-      "platform_company": "~40,000 US homes; Blackstone took Tricon private in May 2024 for ~$3.5B — its return to single-family rentals and now its primary US SFR platform (it also absorbed the wound-down Home Partners of America)",
+      "platform_company": "~40,000 US homes; Blackstone took Tricon private in May 2024 for ~$3.5B, its return to single-family rentals and now its primary US SFR platform (it also absorbed the wound-down Home Partners of America)",
       "acquisition_date": "2024",
       "ownership_status": "confirmed",
       "source_url": "https://www.blackstone.com/news/press/blackstone-real-estate-to-take-tricon-residential-private/",
@@ -85,7 +85,7 @@
       "business_name": "Main Street Renewal",
       "industry": "Single-family rentals",
       "owning_firm_id": "amherst-holdings",
-      "platform_company": "Amherst's single-family rental platform — roughly 16,000 homes across the Midwest and Sunbelt",
+      "platform_company": "Amherst's single-family rental platform, roughly 16,000 homes across the Midwest and Sunbelt",
       "acquisition_date": "2018",
       "ownership_status": "confirmed",
       "source_url": "https://pestakeholder.org/wp-content/uploads/2019/04/Private-Equity-Single-Family-Rental-4-2019.pdf",

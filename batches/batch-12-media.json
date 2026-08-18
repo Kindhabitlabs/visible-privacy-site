@@ -1,5 +1,5 @@
 {
-  "_note": "Batch 12 — broadcast & digital media (radio, local TV, national digital). Distinct from Batch 11 (local newspapers). Imported via import-to-airtable.mjs; businesses land review_status=pending, evidence lands publish=true but still needs the publish checkbox verified. Scope: PE-owned only — the big cable/network conglomerates (Warner Bros. Discovery/CNN, Fox, NBC/Comcast, Paramount) are publicly traded and excluded. Evidence all Tier B (LBO/bankruptcy financial extraction + layoffs) — media PE harm is documented via journalism and bankruptcy filings, not regulatory enforcement. Fortress Investment Group already exists (Batch 11, Gannett) and now spans a second industry via Vice; Apollo enters the base as a firm (it appeared as a co-lender in earlier batches). iHeartMedia entered as ownership_status=former (Bain/THL exited via the 2018 bankruptcy/2019 IPO; now public). Industry-level media-consolidation research not attached (no single-firm home).",
+  "_note": "Batch 12: broadcast & digital media (radio, local TV, national digital). Distinct from Batch 11 (local newspapers). Imported via import-to-airtable.mjs; businesses land review_status=pending, evidence lands publish=true but still needs the publish checkbox verified. Scope: PE-owned only, the big cable/network conglomerates (Warner Bros. Discovery/CNN, Fox, NBC/Comcast, Paramount) are publicly traded and excluded. Evidence all Tier B (LBO/bankruptcy financial extraction + layoffs), media PE harm is documented via journalism and bankruptcy filings, not regulatory enforcement. Fortress Investment Group already exists (Batch 11, Gannett) and now spans a second industry via Vice; Apollo enters the base as a firm (it appeared as a co-lender in earlier batches). iHeartMedia entered as ownership_status=former (Bain/THL exited via the 2018 bankruptcy/2019 IPO; now public). Industry-level media-consolidation research not attached (no single-firm home).",
   "firms": [
     {
       "firm_id": "bain-capital",
@@ -41,7 +41,7 @@
       "source_url": "https://fortune.com/2018/03/15/iheart-media-bankruptcy-radio-chapter-11",
       "last_verified": "2026-08-06",
       "evidence": [
-        { "tag": "Financial extraction", "evidence_tier": "B", "description": "Bain Capital and Thomas H. Lee Partners took Clear Channel (later iHeartMedia) private in a 2008 leveraged buyout valued at ~$26.7B, loading the largest US radio company with debt that ballooned from ~$8B to more than $20B. Unable to service it, iHeartMedia filed for Chapter 11 in 2018 — one of the largest media bankruptcies ever — while the PE firms nearly broke even through discounted debt purchases and management fees.", "source_url": "https://fortune.com/2018/03/15/iheart-media-bankruptcy-radio-chapter-11", "publish": true }
+        { "tag": "Financial extraction", "evidence_tier": "B", "description": "Bain Capital and Thomas H. Lee Partners took Clear Channel (later iHeartMedia) private in a 2008 leveraged buyout valued at ~$26.7B, loading the largest US radio company with debt that ballooned from ~$8B to more than $20B. Unable to service it, iHeartMedia filed for Chapter 11 in 2018, one of the largest media bankruptcies ever, while the PE firms nearly broke even through discounted debt purchases and management fees.", "source_url": "https://fortune.com/2018/03/15/iheart-media-bankruptcy-radio-chapter-11", "publish": true }
       ]
     },
     {
@@ -83,7 +83,7 @@
       "source_url": "https://www.cnbc.com/2023/05/15/vice-media-files-for-bankruptcy-to-enable-sale-to-lenders-including-soros-and-fortress.html",
       "last_verified": "2026-08-06",
       "evidence": [
-        { "tag": "Labor", "evidence_tier": "B", "description": "Vice Media filed for Chapter 11 in May 2023 and was sold for ~$350M to a lender group led by Fortress Investment Group (with Soros Fund Management and Monroe Capital). The new owners shuttered Vice World News, canceled the flagship Vice News Tonight, and later closed Vice.com's newsroom — cutting hundreds of jobs.", "source_url": "https://www.cnbc.com/2023/05/15/vice-media-files-for-bankruptcy-to-enable-sale-to-lenders-including-soros-and-fortress.html", "publish": true }
+        { "tag": "Labor", "evidence_tier": "B", "description": "Vice Media filed for Chapter 11 in May 2023 and was sold for ~$350M to a lender group led by Fortress Investment Group (with Soros Fund Management and Monroe Capital). The new owners shuttered Vice World News, canceled the flagship Vice News Tonight, and later closed Vice.com's newsroom, cutting hundreds of jobs.", "source_url": "https://www.cnbc.com/2023/05/15/vice-media-files-for-bankruptcy-to-enable-sale-to-lenders-including-soros-and-fortress.html", "publish": true }
       ]
     }
   ]

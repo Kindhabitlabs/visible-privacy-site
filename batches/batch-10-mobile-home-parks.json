@@ -1,5 +1,5 @@
 {
-  "_note": "Batch 10 — mobile home parks / manufactured-housing communities. Imported via import-to-airtable.mjs; businesses land review_status=pending, evidence lands publish=true but still needs the publish checkbox verified. Evidence here skews Tier B (congressional inquiries + investigative journalism) — this vertical has less final-judgment litigation than the RealPage/DOJ apartments batch. The core harm pattern: residents own their homes but not the land, so PE owners raise lot rents on a captive population. Havenpark is the most firm-specific. Ownership is layered as usual; each business is tied to its best-documented PE owner. Blackstone already exists as a firm (no firm tags). Alden Global Capital is a hedge fund (closest firm_type is PE). Industry-level context (lot rents +45% in a decade; PE owns the majority of US manufactured-housing communities) is NOT attached (no single-firm home).",
+  "_note": "Batch 10: mobile home parks / manufactured-housing communities. Imported via import-to-airtable.mjs; businesses land review_status=pending, evidence lands publish=true but still needs the publish checkbox verified. Evidence here skews Tier B (congressional inquiries + investigative journalism). This vertical has less final-judgment litigation than the RealPage/DOJ apartments batch. The core harm pattern: residents own their homes but not the land, so PE owners raise lot rents on a captive population. Havenpark is the most firm-specific. Ownership is layered as usual; each business is tied to its best-documented PE owner. Blackstone already exists as a firm (no firm tags). Alden Global Capital is a hedge fund (closest firm_type is PE). Industry-level context (lot rents +45% in a decade; PE owns the majority of US manufactured-housing communities) is NOT attached (no single-firm home).",
   "firms": [
     {
       "firm_id": "havenpark-capital",
@@ -56,7 +56,7 @@
       "source_url": "https://iowastartingline.com/2026/01/23/havenpark-mobile-home-park-water-erosion-problems-lake-ridge-estates/",
       "last_verified": "2026-08-06",
       "evidence": [
-        { "tag": "Consumer harm", "evidence_tier": "B", "description": "In 2019 Havenpark raised lot rents 24–69% at its Iowa parks (one resident's rent rose ~60%), prompting Sen. Elizabeth Warren and Rep. Dave Loebsack to write the company calling the practices predatory. Residents have since reported neglected conditions — including a park sinking due to water erosion — and Havenpark has been selling off its Iowa parks amid ongoing complaints.", "source_url": "https://iowastartingline.com/2026/01/23/havenpark-mobile-home-park-water-erosion-problems-lake-ridge-estates/", "publish": true }
+        { "tag": "Consumer harm", "evidence_tier": "B", "description": "In 2019 Havenpark raised lot rents 24–69% at its Iowa parks (one resident's rent rose ~60%), prompting Sen. Elizabeth Warren and Rep. Dave Loebsack to write the company calling the practices predatory. Residents have since reported neglected conditions, including a park sinking due to water erosion, and Havenpark has been selling off its Iowa parks amid ongoing complaints.", "source_url": "https://iowastartingline.com/2026/01/23/havenpark-mobile-home-park-water-erosion-problems-lake-ridge-estates/", "publish": true }
       ]
     },
     {
@@ -110,7 +110,7 @@
       "source_url": "https://pestakeholder.org/pesp-private-equity-manufactured-housing-tracker/",
       "last_verified": "2026-08-06",
       "evidence": [
-        { "tag": "Consumer harm", "evidence_tier": "B", "description": "Impact Communities — run by Frank Rolfe and Dave Reynolds, who teach investors via 'Mobile Home University' to buy parks and raise lot rents on residents who own their homes but not the land — was named in Sen. Warren's March 2026 corporate-landlord probe.", "source_url": "https://www.banking.senate.gov/newsroom/minority/warren-probes-biggest-corporate-landlords-on-predatory-rental-practices-across-housing-sector", "publish": true }
+        { "tag": "Consumer harm", "evidence_tier": "B", "description": "Impact Communities, run by Frank Rolfe and Dave Reynolds, who teach investors via 'Mobile Home University' to buy parks and raise lot rents on residents who own their homes but not the land, was named in Sen. Warren's March 2026 corporate-landlord probe.", "source_url": "https://www.banking.senate.gov/newsroom/minority/warren-probes-biggest-corporate-landlords-on-predatory-rental-practices-across-housing-sector", "publish": true }
       ]
     },
     {
