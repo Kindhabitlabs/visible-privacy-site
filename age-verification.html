@@ -179,7 +179,7 @@
   <div class="dossier-header">
     <div class="section-label">Age Verification</div>
     <h1>The device becomes<br />the <em>papers.</em></h1>
-    <p class="dossier-sub">Three jurisdictions built age verification three different ways. Britain uploads your passport to each website. Texas moved the check into the app store. The European Union built the version that leaks nothing at all. All three end in the same place, and that is the part worth understanding.</p>
+    <p class="dossier-sub">Three jurisdictions built age verification three different ways. Britain uploads your passport to each website. Texas moved the check into the app store. The European Union built the version that leaks nothing at all. All three end in the same place.</p>
   </div>
 
   <div class="flock-body">
@@ -200,15 +200,15 @@
 
     <!-- b) VERIFICATION VS ESTIMATION -->
     <section class="flock-block" aria-labelledby="methods-h">
-      <h2 id="methods-h">Not all of these laws ask for the same thing</h2>
-      <p>This is where most writing on the subject falls apart, so it is worth being slow. "Age verification" covers at least four techniques with completely different consequences.</p>
+      <h2 id="methods-h">Four different techniques, four different costs</h2>
+      <p>This is where most writing on the subject falls apart, so slow down. "Age verification" covers at least four techniques with completely different consequences.</p>
       <ul class="flock-list">
         <li><strong>Age estimation.</strong> A model looks at your face through the camera and guesses a range. No document, no name. It is also the least accurate, and it fails unevenly across ages and skin tones.</li>
         <li><strong>Document verification.</strong> You photograph a passport or driving licence and upload it, usually with a selfie. This is the one people picture, and the one that creates a database of identity documents.</li>
         <li><strong>Third-party attestation.</strong> A bank, mobile carrier or credit card confirms you are an adult without the site seeing why.</li>
         <li><strong>Cryptographic proof.</strong> Your device answers a yes or no question about you and reveals nothing else. This is the best available design, and the European Union has built it.</li>
       </ul>
-      <p>A page that treats these as one thing gets the story wrong. The interesting finding is not that one of them is bad. It is that the good one and the bad one converge.</p>
+      <p>A page that treats these as one thing gets the story wrong. The interesting finding is not about which one is worst, but that the best design and the worst end up converging.</p>
     </section>
 
     <!-- c) TEXAS AND UTAH -->
@@ -217,7 +217,7 @@
       <p>Verifying age site by site is expensive, unpopular and easy to route around. The obvious fix is to do it once, somewhere upstream, and let everything else ask. In 2025 Utah and Texas wrote that idea into law.</p>
       <p>Texas <strong>SB 2420</strong>, the App Store Accountability Act, was signed on 27 May 2025. It requires app store operators to verify a user's age at account creation and sort every account into one of four brackets: <strong>under 13, 13 to 15, 16 to 17, and 18 or older</strong>. Accounts belonging to minors must be linked to a verified parent, and that parent must consent before an app is downloaded or a purchase is made. The age and consent signals are passed through to developers.</p>
       <p>Utah's version was signed first, taking effect 7 May 2025, with the obligations on app stores and developers arriving 6 May 2026 and enforcement from 31 December 2026. Louisiana follows on 1 July 2026.</p>
-      <p>Note what changed. The subject of the law is no longer a website that publishes something. It is the store that installs everything.</p>
+      <p>Note what changed. The law's subject shifted from the website that publishes something to the store that installs everything.</p>
       <div class="myth-card">
         <div class="myth-quote">"A court blocked it, so it is not really happening."</div>
         <div class="myth-reframe-label">It is happening</div>
@@ -231,17 +231,17 @@
     <section class="flock-block" aria-labelledby="platform-h">
       <h2 id="platform-h">What Apple and Google actually built</h2>
       <p>Apple's answer is the <strong>Declared Age Range API</strong>, introduced in iOS 26. An app asks, and the system returns a bracket: under 13, 13 to 15, or 16 and older. The birth date itself never leaves Apple. For children in Family Sharing a guardian sets the range; adults set their own. Every user picks Always Share, Ask First, or Don't Share.</p>
-      <p><strong>That is good design, and it should be said plainly.</strong> Ranges instead of dates, resolved on the device, disclosure under the user's control, no document anywhere in the flow. It is close to what someone who cared about privacy would draw on a whiteboard. Google's equivalent, the Play Age Signals API, passes developers an age range and supervision status rather than an identity.</p>
+      <p><strong>That is good design, full stop.</strong> Ranges instead of dates, resolved on the device, disclosure under the user's control, no document anywhere in the flow. It is close to what someone who cared about privacy would draw on a whiteboard. Google's equivalent, the Play Age Signals API, passes developers an age range and supervision status rather than an identity.</p>
       <p>Now hold that against what Texas requires, because the two do not meet.</p>
       <div class="myth-card">
         <div class="myth-quote">Declared is not verified.</div>
-        <div class="myth-reframe-label">The gap is the whole story</div>
+        <div class="myth-reframe-label">The gap is where the ID enters</div>
         <p>Apple is explicit that the Declared Age Range API cannot stop someone entering a false age in their Apple Account, and that it exists to tailor content rather than to gate adult material. It is a <strong>declaration</strong>. It carries no proof.</p>
         <p>SB 2420 does not ask for a declaration. It requires the store to <strong>verify</strong> the age, and to <strong>verify</strong> that a consenting parent is who they say they are.</p>
         <p>A declaration cannot satisfy a verification requirement. Something has to close that gap, and there are only so many things it can be: a document, a face scan, a credit card, or a carrier check. <strong>That gap is where the identity document enters the operating system.</strong></p>
       </div>
       <p>Neither company's public documentation states which method it uses, or how long anything collected is kept. Google's developer page says only that Play "will require age verification in accordance with that specific state's effective legal date." Apple's most recent public notice on Texas says it paused work during the injunction, which the Fifth Circuit stay has since overtaken.</p>
-      <p class="flock-caveat">That silence is worth stating as a fact rather than filling with a guess. Two companies are about to hold a verified age attribute, and in some cases a verified parent-child relationship, for a large share of the population of several countries. Neither has published what they collect to establish it or how long they retain it. The question is answerable only by them.</p>
+      <p class="flock-caveat">Better to state that silence as a fact than fill it with a guess. Two companies are about to hold a verified age attribute, and in some cases a verified parent-child relationship, for a large share of the population of several countries. Neither has published what they collect to establish it or how long they retain it. The question is answerable only by them.</p>
     </section>
 
     <!-- e) THE UK -->
@@ -263,15 +263,15 @@
     <!-- f) THE EU -->
     <section class="flock-block" aria-labelledby="eu-h">
       <h2 id="eu-h">Europe built the good version</h2>
-      <p>If the argument were simply that age verification means uploading your ID, Europe would refute it. So it is worth setting out how much better the European design is, in detail, because the conclusion only holds once you grant it.</p>
+      <p>If the whole argument were that age verification means uploading your ID, Europe would refute it. Their design really is better, so grant it in full first.</p>
       <p>The Commission published the second version of its <a href="https://digital-strategy.ec.europa.eu/en/policies/eu-age-verification" target="_blank" rel="noopener noreferrer">Age Verification Blueprint</a> on 10 October 2025. It lets you prove you are over 18, 15 or 13 without handing any personal data to the platform asking. The check is a cryptographic yes or no, computed <strong>on your device</strong>, and no identifying information leaves the phone. It runs as a "mini-wallet" on the same standards as the eIDAS 2.0 European Digital Identity Wallet, and the <a href="https://github.com/eu-digital-identity-wallet/av-doc-technical-specification" target="_blank" rel="noopener noreferrer">specification is public</a>. Italy, France, Denmark and Spain are piloting it against their national identity systems.</p>
-      <p>The site the user visits learns one bit. Not a name, not a birth date, not a document number, not even a persistent identifier it could use to recognise the same person twice. This is genuinely close to the best that can be done, and the people who built it deserve to be described accurately.</p>
-      <p>Now the question that makes it the most important section on this page. <strong>Where does the wallet get its confidence?</strong></p>
+      <p>The site the user visits learns one bit. Not a name, not a birth date, not a document number, not even a persistent identifier it could use to recognise the same person twice. This is close to the best that can be done.</p>
+      <p>Now the question that matters most. <strong>Where does the wallet get its confidence?</strong></p>
       <div class="myth-card">
         <div class="myth-quote">Onboarding uses passports and national identity cards.</div>
         <div class="myth-reframe-label">The document did not disappear. It moved.</div>
         <p>To hold a credential that can vouch for your age, the wallet has to be told your age by something authoritative. In the blueprint, that is your passport or national ID card, read once at setup.</p>
-        <p>After that the ID upload never happens again, which is a real improvement over Britain. But the outcome is not that you proved your identity to nobody. It is that <strong>you proved it once, permanently, to your device</strong>, which now carries a credential that answers questions about you indefinitely. Member States must offer every resident a wallet by the end of 2026.</p>
+        <p>After that the ID upload never happens again, which is a real improvement over Britain. But you did not prove your identity to nobody. <strong>You proved it once, permanently, to your device</strong>, which now carries a credential that answers questions about you indefinitely. Member States must offer every resident a wallet by the end of 2026.</p>
         <p>Europe removed the leak and kept the identity layer. That is the best case, honestly engineered, by people trying to protect users. It still ends with your phone holding your papers.</p>
       </div>
     </section>
@@ -314,7 +314,7 @@
         <li><strong>Europe already wrote the good specification and published it.</strong> Any argument that privacy-preserving age assurance is impractical is now answerable with a working implementation and a public technical standard. Deployment is the argument, not feasibility.</li>
         <li><strong>Watch the account, not the website.</strong> The meaningful line is whether a verified identity attribute may be reused for anything beyond the check that justified it. Once the operating system holds a proven fact about you, every other product in that company's catalogue is one policy change away from being able to read it.</li>
       </ul>
-      <p>The thing to hold on to is that none of this required anybody to act in bad faith. Britain chose the worst mechanism and got a breach. Texas chose the most centralised one and is running it under a stay of an injunction it lost on the merits. Europe chose the best one available and built it carefully. All three arrive at a device that carries a permanent, verified claim about who you are, because that is what the requirement produces once you take it seriously. The question was never whether they would collect your ID. It was what your phone becomes after you prove it once.</p>
+      <p>The thing to hold on to is that none of this required anybody to act in bad faith. Britain chose the worst mechanism and got a breach. Texas chose the most centralised one and is running it under a stay of an injunction it lost on the merits. Europe chose the best one available and built it carefully. All three arrive at a device that carries a permanent, verified claim about who you are, because that is what the requirement produces once you take it seriously. The question was never whether they would collect your ID, but what your phone becomes after you prove it once.</p>
     </section>
 
   </div>
