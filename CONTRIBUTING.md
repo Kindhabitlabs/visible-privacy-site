@@ -1,6 +1,6 @@
 # Contributing
 
-This is a small, independent site maintained by one person. Contributions are
+This is a small, independent site maintained by a few people. Contributions are
 welcome. This file covers how changes get in and the house rules a change has to
 respect. For the editorial rules on sourcing and on which page a company belongs
 on, see [`CONTRIBUTING-data.md`](CONTRIBUTING-data.md), which is the authority on
