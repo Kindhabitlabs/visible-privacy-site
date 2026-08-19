@@ -1073,6 +1073,7 @@
     /* The Graphene teaser shares every rule in this block. The two sit back to
        back on the home page, so they are kept on one set of selectors rather
        than two copies that can drift apart. Only the artwork differs. */
+    .av-teaser,
     .palantir-teaser,
     .cars-teaser,
     .flock-teaser,
@@ -1087,6 +1088,7 @@
       background: var(--bg);
       border-top: none;
     }
+    .av-teaser-inner,
     .palantir-teaser-inner,
     .cars-teaser-inner,
     .flock-teaser-inner,
@@ -1098,10 +1100,12 @@
       gap: 56px;
       align-items: center;
     }
+    .av-teaser-art,
     .palantir-teaser-art,
     .cars-teaser-art,
     .flock-teaser-art,
     .graphene-teaser-art { color: var(--accent); }
+    .av-teaser-art svg,
     .palantir-teaser-art svg,
     .cars-teaser-art svg,
     .flock-teaser-art svg,
@@ -1132,10 +1136,12 @@
     @media (prefers-reduced-motion: reduce) {
       .alpr-plate-1, .alpr-plate-2, .alpr-plate-3 { animation: none; }
     }
+    .av-teaser h2,
     .palantir-teaser h2,
     .cars-teaser h2,
     .flock-teaser h2,
     .graphene-teaser h2 { margin-bottom: 28px; }
+    .av-teaser p,
     .palantir-teaser p,
     .cars-teaser p,
     .flock-teaser p,
@@ -1146,6 +1152,7 @@
       margin-bottom: 20px;
       max-width: 760px;
     }
+    .av-teaser p strong,
     .palantir-teaser p strong,
     .cars-teaser p strong,
     .flock-teaser p strong,
@@ -1156,6 +1163,7 @@
       color: var(--text) !important;
       font-size: 16px !important;
     }
+    .av-teaser-cta,
     .palantir-teaser-cta,
     .cars-teaser-cta,
     .flock-teaser-cta,
@@ -1844,14 +1852,17 @@
       .consequence-icon { width: 40px; height: 40px; }
       .consequence-icon svg { width: 20px; height: 20px; }
       .civic-split { grid-template-columns: 1fr; gap: 56px; }
+      .av-teaser-inner,
       .palantir-teaser-inner,
       .cars-teaser-inner,
       .flock-teaser-inner,
       .graphene-teaser-inner { display: block; position: relative; }
+      .av-teaser-copy,
       .palantir-teaser-copy,
       .cars-teaser-copy,
       .flock-teaser-copy,
       .graphene-teaser-copy { position: relative; z-index: 1; }
+      .av-teaser-art,
       .palantir-teaser-art,
       .cars-teaser-art,
       .flock-teaser-art,
@@ -2255,4 +2266,77 @@
     .pal-out  { animation: pal-pulse 4.5s ease-in-out infinite; animation-delay: -2.25s; }
     @media (prefers-reduced-motion: reduce) {
       .pal-link, .pal-out { animation: none; opacity: 0.6; }
+    }
+
+    /* ---- AGE VERIFICATION PAGE ---- */
+    /* Reading column reuses .flock-body / .flock-block / .flock-list /
+       .myth-card / .hm-table, as the three pages before it do. */
+
+    /* Fifth teaser in the run. Palantir sits on --bg, so this one returns to
+       --surface and drops the top rule, continuing the alternation. */
+    .av-teaser { background: var(--surface); border-top: none; }
+    .av-teaser-art { color: var(--accent); }
+
+    /* A phone holding a credential, answering queries from both sides. The
+       document is inside the device, not travelling to the services: that is
+       the argument the page makes about where verification ended up. */
+    @keyframes av-verify {
+      0%, 44%   { opacity: 0; transform: scale(0.9); }
+      54%, 92%  { opacity: 0.85; transform: scale(1); }
+      100%      { opacity: 0; transform: scale(0.9); }
+    }
+    @keyframes av-ping {
+      0%, 100% { opacity: 0.25; }
+      50%      { opacity: 0.75; }
+    }
+    .av-check {
+      animation: av-verify 7s ease-in-out infinite;
+      transform-origin: 152px 162px;
+    }
+    .av-query { animation: av-ping 5.5s ease-in-out infinite; }
+    @media (prefers-reduced-motion: reduce) {
+      .av-check { animation: none; opacity: 0.85; }
+      .av-query { animation: none; opacity: 0.55; }
+    }
+
+    /* Scene layer, following .palantir-node-layer and .cars-dash-layer. */
+    .av-doc-layer {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .av-doc-scene {
+      position: absolute;
+      width: 235px;
+      /* aspect-ratio pins the height; without it the absolutely positioned box
+         collapses, the same trap as every other scene layer here. */
+      aspect-ratio: 280 / 250;
+      color: var(--accent);
+      opacity: 0.45;
+    }
+    .av-doc-scene svg { width: 100%; height: 100%; display: block; }
+    .av-doc-scene.side-right { right: 16px; }
+    /* Not mirrored: the drawing is symmetrical about the device, so flipping
+       it would only reverse the query arrows for no gain. */
+    .av-doc-scene.side-left { left: 16px; }
+    /* Pinned in pixels so it lands beside the h1 rather than drifting with page
+       length, and clear of the rule that .section-label trails behind it. */
+    .doc-scene-1 { top: 190px; }
+    .doc-scene-2 { top: 29%; }
+    .doc-scene-3 { top: 55%; }
+    .doc-scene-4 { top: 80%; }
+    .doc-scene-2 .av-check { animation-delay: -1.8s; }
+    .doc-scene-3 .av-check { animation-delay: -3.5s; }
+    .doc-scene-4 .av-check { animation-delay: -5.2s; }
+    @media (max-width: 1200px) {
+      .av-doc-scene { opacity: 0.2; }
+      .av-doc-scene.side-right { right: -70px; }
+      .av-doc-scene.side-left { left: -70px; }
+    }
+    @media (max-width: 1000px) {
+      .av-doc-scene { width: 200px; opacity: 0.15; }
+      .av-doc-scene.side-right { right: -95px; }
+      .av-doc-scene.side-left { left: -95px; }
     }

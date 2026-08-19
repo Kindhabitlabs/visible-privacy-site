@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your ID: The Device Becomes the Papers | Visable</title>
+  <meta property="og:title" content="Your ID: The Device Becomes the Papers | Visable">
+  <meta property="og:description" content="Three jurisdictions built age verification three different ways. The most privacy-protective one ends in the same place as the worst one: a permanent verified claim about your legal identity, living on your device.">
+  <meta property="og:image" content="/social-share.svg">
+  <meta name="twitter:image" content="/social-share.svg">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Visable">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Your ID: The Device Becomes the Papers | Visable">
+  <meta name="twitter:description" content="Three jurisdictions built age verification three different ways. The most privacy-protective one ends in the same place as the worst one: a permanent verified claim about your legal identity, living on your device.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+</head>
+<body>
+  <canvas id="binary-canvas" class="binary-canvas" aria-hidden="true"></canvas>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="index.html" class="nav-logo">Visable<span>.</span></a>
+  <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <ul id="nav-menu">
+    <li><a href="tracker.html">Corporate Dossier</a></li>
+    <li><a href="pe-tracker.html">PE Ownership</a></li>
+    <li class="nav-group">
+      <button type="button" class="nav-group-btn active" id="nav-group-btn" aria-expanded="false" aria-controls="nav-investigations" aria-haspopup="true">Investigations<span class="nav-group-caret" aria-hidden="true">&#9662;</span></button>
+      <ul class="nav-submenu" id="nav-investigations">
+        <li><a href="flock.html">Flock Cameras</a></li>
+        <li><a href="graphene.html">Your Phone</a></li>
+        <li><a href="cars.html">Your Car</a></li>
+        <li><a href="palantir.html">Palantir</a></li>
+        <li><a href="age-verification.html" class="active">Your ID</a></li>
+      </ul>
+    </li>
+    <li><a href="donate.html">Donate</a></li>
+    <li><a href="index.html#tools" class="nav-cta">Honest Mitigation</a></li>
+  </ul>
+</nav>
+
+<main class="flock-main">
+
+  <div class="av-doc-layer" aria-hidden="true">
+    <div class="av-doc-scene side-right doc-scene-1">
+      <svg viewBox="0 0 280 250" fill="none">
+      <g stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="96" y="34" width="112" height="182" rx="14" />
+      <path d="M132 48h40" />
+      <path d="M138 204h28" />
+      <g class="av-card">
+      <rect x="118" y="86" width="68" height="44" rx="4" />
+      <circle cx="136" cy="102" r="7" />
+      <path d="M126 118c3-6 17-6 20 0" />
+      <path d="M152 96h24M152 104h24M152 112h16" opacity=".7" />
+      </g>
+      <g class="av-check" opacity=".85">
+      <circle cx="152" cy="162" r="16" />
+      <path d="M145 162l5 6 11-13" />
+      </g>
+      <g class="av-query" opacity=".6">
+      <path d="M96 118H44" />
+      <path d="M96 140H58" />
+      <path d="M208 118h50" />
+      <path d="M208 140h38" />
+      <rect x="14" y="106" width="26" height="24" rx="3" />
+      <rect x="26" y="130" width="28" height="22" rx="3" />
+      <rect x="240" y="106" width="26" height="24" rx="3" />
+      <rect x="228" y="130" width="26" height="22" rx="3" />
+      </g>
+      </g>
+      </svg>
+    </div>
+    <div class="av-doc-scene side-left doc-scene-2">
+      <svg viewBox="0 0 280 250" fill="none">
+      <g stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="96" y="34" width="112" height="182" rx="14" />
+      <path d="M132 48h40" />
+      <path d="M138 204h28" />
+      <g class="av-card">
+      <rect x="118" y="86" width="68" height="44" rx="4" />
+      <circle cx="136" cy="102" r="7" />
+      <path d="M126 118c3-6 17-6 20 0" />
+      <path d="M152 96h24M152 104h24M152 112h16" opacity=".7" />
+      </g>
+      <g class="av-check" opacity=".85">
+      <circle cx="152" cy="162" r="16" />
+      <path d="M145 162l5 6 11-13" />
+      </g>
+      <g class="av-query" opacity=".6">
+      <path d="M96 118H44" />
+      <path d="M96 140H58" />
+      <path d="M208 118h50" />
+      <path d="M208 140h38" />
+      <rect x="14" y="106" width="26" height="24" rx="3" />
+      <rect x="26" y="130" width="28" height="22" rx="3" />
+      <rect x="240" y="106" width="26" height="24" rx="3" />
+      <rect x="228" y="130" width="26" height="22" rx="3" />
+      </g>
+      </g>
+      </svg>
+    </div>
+    <div class="av-doc-scene side-right doc-scene-3">
+      <svg viewBox="0 0 280 250" fill="none">
+      <g stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="96" y="34" width="112" height="182" rx="14" />
+      <path d="M132 48h40" />
+      <path d="M138 204h28" />
+      <g class="av-card">
+      <rect x="118" y="86" width="68" height="44" rx="4" />
+      <circle cx="136" cy="102" r="7" />
+      <path d="M126 118c3-6 17-6 20 0" />
+      <path d="M152 96h24M152 104h24M152 112h16" opacity=".7" />
+      </g>
+      <g class="av-check" opacity=".85">
+      <circle cx="152" cy="162" r="16" />
+      <path d="M145 162l5 6 11-13" />
+      </g>
+      <g class="av-query" opacity=".6">
+      <path d="M96 118H44" />
+      <path d="M96 140H58" />
+      <path d="M208 118h50" />
+      <path d="M208 140h38" />
+      <rect x="14" y="106" width="26" height="24" rx="3" />
+      <rect x="26" y="130" width="28" height="22" rx="3" />
+      <rect x="240" y="106" width="26" height="24" rx="3" />
+      <rect x="228" y="130" width="26" height="22" rx="3" />
+      </g>
+      </g>
+      </svg>
+    </div>
+    <div class="av-doc-scene side-left doc-scene-4">
+      <svg viewBox="0 0 280 250" fill="none">
+      <g stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="96" y="34" width="112" height="182" rx="14" />
+      <path d="M132 48h40" />
+      <path d="M138 204h28" />
+      <g class="av-card">
+      <rect x="118" y="86" width="68" height="44" rx="4" />
+      <circle cx="136" cy="102" r="7" />
+      <path d="M126 118c3-6 17-6 20 0" />
+      <path d="M152 96h24M152 104h24M152 112h16" opacity=".7" />
+      </g>
+      <g class="av-check" opacity=".85">
+      <circle cx="152" cy="162" r="16" />
+      <path d="M145 162l5 6 11-13" />
+      </g>
+      <g class="av-query" opacity=".6">
+      <path d="M96 118H44" />
+      <path d="M96 140H58" />
+      <path d="M208 118h50" />
+      <path d="M208 140h38" />
+      <rect x="14" y="106" width="26" height="24" rx="3" />
+      <rect x="26" y="130" width="28" height="22" rx="3" />
+      <rect x="240" y="106" width="26" height="24" rx="3" />
+      <rect x="228" y="130" width="26" height="22" rx="3" />
+      </g>
+      </g>
+      </svg>
+    </div>
+  </div>
+
+  <div class="dossier-header">
+    <div class="section-label">Age Verification</div>
+    <h1>The device becomes<br />the <em>papers.</em></h1>
+    <p class="dossier-sub">Three jurisdictions built age verification three different ways. Britain uploads your passport to each website. Texas moved the check into the app store. The European Union built the version that leaks nothing at all. All three end in the same place, and that is the part worth understanding.</p>
+  </div>
+
+  <div class="flock-body">
+
+    <!-- a) WHAT WAS SETTLED -->
+    <section class="flock-block" aria-labelledby="settled-h">
+      <h2 id="settled-h">What was settled, and what was not</h2>
+      <p>On 27 June 2025 the Supreme Court decided <a href="https://www.supremecourt.gov/opinions/24pdf/23-1122_3e04.pdf" target="_blank" rel="noopener noreferrer"><em>Free Speech Coalition, Inc. v. Paxton</em></a>, upholding a Texas law requiring age verification on sites publishing material obscene to minors. The vote was 6 to 3, Justice Thomas writing. The law "triggers, and survives, review under intermediate scrutiny because it only incidentally burdens the protected speech of adults."</p>
+      <p>One sentence in that opinion is doing more work than the rest of the case combined:</p>
+      <div class="myth-card">
+        <div class="myth-quote">"Adults have the right to access speech obscene only to minors, and submitting to age verification burdens the exercise of that right. <strong>But adults have no First Amendment right to avoid age verification.</strong>"</div>
+        <div class="myth-reframe-label">What that resolves, and what it leaves open</div>
+        <p>The Court answered one question: can adults be required to prove their age before seeing lawful material? Yes, at least for this category of content.</p>
+        <p>It did not answer, and was not asked, any of the questions that decide what this costs you. <strong>Who holds the proof. For how long. Attached to which account. Queried by whom, and how often.</strong> Those are engineering and procurement decisions, and they are being made now, mostly by two companies.</p>
+      </div>
+      <p class="flock-caveat">Read the holding narrowly, because it is narrow. This was a case about material obscene to minors, and the Court reasoned by analogy to buying alcohol or a firearm. It is not a ruling that the internet may be identity-checked in general, and anyone telling you it is has skipped the opinion. What makes it matter here is the architecture built on top of it, not the holding itself.</p>
+    </section>
+
+    <!-- b) VERIFICATION VS ESTIMATION -->
+    <section class="flock-block" aria-labelledby="methods-h">
+      <h2 id="methods-h">Not all of these laws ask for the same thing</h2>
+      <p>This is where most writing on the subject falls apart, so it is worth being slow. "Age verification" covers at least four techniques with completely different consequences.</p>
+      <ul class="flock-list">
+        <li><strong>Age estimation.</strong> A model looks at your face through the camera and guesses a range. No document, no name. It is also the least accurate, and it fails unevenly across ages and skin tones.</li>
+        <li><strong>Document verification.</strong> You photograph a passport or driving licence and upload it, usually with a selfie. This is the one people picture, and the one that creates a database of identity documents.</li>
+        <li><strong>Third-party attestation.</strong> A bank, mobile carrier or credit card confirms you are an adult without the site seeing why.</li>
+        <li><strong>Cryptographic proof.</strong> Your device answers a yes or no question about you and reveals nothing else. This is the best available design, and the European Union has built it.</li>
+      </ul>
+      <p>A page that treats these as one thing gets the story wrong. The interesting finding is not that one of them is bad. It is that the good one and the bad one converge.</p>
+    </section>
+
+    <!-- c) TEXAS AND UTAH -->
+    <section class="flock-block" aria-labelledby="appstore-h">
+      <h2 id="appstore-h">Texas and Utah moved the check into the operating system</h2>
+      <p>Verifying age site by site is expensive, unpopular and easy to route around. The obvious fix is to do it once, somewhere upstream, and let everything else ask. In 2025 Utah and Texas wrote that idea into law.</p>
+      <p>Texas <strong>SB 2420</strong>, the App Store Accountability Act, was signed on 27 May 2025. It requires app store operators to verify a user's age at account creation and sort every account into one of four brackets: <strong>under 13, 13 to 15, 16 to 17, and 18 or older</strong>. Accounts belonging to minors must be linked to a verified parent, and that parent must consent before an app is downloaded or a purchase is made. The age and consent signals are passed through to developers.</p>
+      <p>Utah's version was signed first, taking effect 7 May 2025, with the obligations on app stores and developers arriving 6 May 2026 and enforcement from 31 December 2026. Louisiana follows on 1 July 2026.</p>
+      <p>Note what changed. The subject of the law is no longer a website that publishes something. It is the store that installs everything.</p>
+      <div class="myth-card">
+        <div class="myth-quote">"A court blocked it, so it is not really happening."</div>
+        <div class="myth-reframe-label">It is happening</div>
+        <p>A federal district court did block SB 2420. On 23 December 2025 it granted a preliminary injunction, holding that the law triggers <strong>strict scrutiny</strong> and <strong>fails it</strong>. On the merits, so far, the challengers have won.</p>
+        <p>Texas moved for a stay. The Fifth Circuit granted it on <strong>4 June 2026</strong>, finding Texas likely to succeed on appeal, which put the law into force. The industry went to the Supreme Court on an emergency application. On <strong>6 July 2026 the Court declined to intervene.</strong></p>
+        <p>So the position today is that a law a federal judge found unconstitutional is being complied with by Apple and Google while the appeal is heard. Compliance is not reversible in any practical sense. The verification infrastructure is being built now, and it will still exist whatever the Fifth Circuit decides.</p>
+      </div>
+    </section>
+
+    <!-- d) WHAT APPLE AND GOOGLE BUILT -->
+    <section class="flock-block" aria-labelledby="platform-h">
+      <h2 id="platform-h">What Apple and Google actually built</h2>
+      <p>Apple's answer is the <strong>Declared Age Range API</strong>, introduced in iOS 26. An app asks, and the system returns a bracket: under 13, 13 to 15, or 16 and older. The birth date itself never leaves Apple. For children in Family Sharing a guardian sets the range; adults set their own. Every user picks Always Share, Ask First, or Don't Share.</p>
+      <p><strong>That is good design, and it should be said plainly.</strong> Ranges instead of dates, resolved on the device, disclosure under the user's control, no document anywhere in the flow. It is close to what someone who cared about privacy would draw on a whiteboard. Google's equivalent, the Play Age Signals API, passes developers an age range and supervision status rather than an identity.</p>
+      <p>Now hold that against what Texas requires, because the two do not meet.</p>
+      <div class="myth-card">
+        <div class="myth-quote">Declared is not verified.</div>
+        <div class="myth-reframe-label">The gap is the whole story</div>
+        <p>Apple is explicit that the Declared Age Range API cannot stop someone entering a false age in their Apple Account, and that it exists to tailor content rather than to gate adult material. It is a <strong>declaration</strong>. It carries no proof.</p>
+        <p>SB 2420 does not ask for a declaration. It requires the store to <strong>verify</strong> the age, and to <strong>verify</strong> that a consenting parent is who they say they are.</p>
+        <p>A declaration cannot satisfy a verification requirement. Something has to close that gap, and there are only so many things it can be: a document, a face scan, a credit card, or a carrier check. <strong>That gap is where the identity document enters the operating system.</strong></p>
+      </div>
+      <p>Neither company's public documentation states which method it uses, or how long anything collected is kept. Google's developer page says only that Play "will require age verification in accordance with that specific state's effective legal date." Apple's most recent public notice on Texas says it paused work during the injunction, which the Fifth Circuit stay has since overtaken.</p>
+      <p class="flock-caveat">That silence is worth stating as a fact rather than filling with a guess. Two companies are about to hold a verified age attribute, and in some cases a verified parent-child relationship, for a large share of the population of several countries. Neither has published what they collect to establish it or how long they retain it. The question is answerable only by them.</p>
+    </section>
+
+    <!-- e) THE UK -->
+    <section class="flock-block" aria-labelledby="uk-h">
+      <h2 id="uk-h">Britain already ran the experiment</h2>
+      <p>The United Kingdom did not wait. Age checks under the Online Safety Act went live on <strong>25 July 2025</strong>, with Ofcom accepting facial age estimation, photo ID matching, credit card checks and mobile network operator checks. Verification happens at each service, which means the document goes to each service.</p>
+      <p>The public response was immediate and very large. Proton reported UK VPN signups up <strong>1,400%</strong> within minutes of the deadline, sustained between 1,400 and 1,800% daily, a level the company described as one "usually associated with civil unrest." NordVPN reported roughly 1,000%.</p>
+      <p>The government's response to that is the part to pay attention to. The Technology Secretary told Parliament that ministers "will therefore not age-gate or ban" VPNs, and that platforms are expected to detect and prevent circumvention themselves. Read that as an engineering instruction rather than a political one: the burden of defeating evasion moves to the platforms, and the way a platform defeats evasion is by identifying users more confidently. The pressure runs one direction.</p>
+      <p>Then, on 3 October 2025, the predictable thing happened.</p>
+      <div class="myth-card">
+        <div class="myth-quote">"If you have nothing to hide, uploading an ID costs you nothing."</div>
+        <div class="myth-reframe-label">It cost about 70,000 people their passports</div>
+        <p>Attackers reached a third-party vendor used by <a href="https://www.theregister.com/2025/10/09/discord_photo_ids_leaked/" target="_blank" rel="noopener noreferrer">Discord</a> and took government identity photographs. Discord confirmed roughly <strong>70,000 users</strong> were affected. The attackers claimed far more, around 2.1 million ID images across 8.4 million support tickets, and that larger figure is their assertion rather than a confirmed one.</p>
+        <p>The detail that matters is what the breached system was for. It was the queue that handled <strong>age-verification appeals</strong>. It existed because of age verification, held identity documents because of age verification, and was worth attacking for exactly that reason.</p>
+        <p>You cannot lose a document you were never asked to hand over. Every verification scheme that collects one creates a target that did not previously exist, at a company that is not in the identity business and did not want to be.</p>
+      </div>
+    </section>
+
+    <!-- f) THE EU -->
+    <section class="flock-block" aria-labelledby="eu-h">
+      <h2 id="eu-h">Europe built the good version</h2>
+      <p>If the argument were simply that age verification means uploading your ID, Europe would refute it. So it is worth setting out how much better the European design is, in detail, because the conclusion only holds once you grant it.</p>
+      <p>The Commission published the second version of its <a href="https://digital-strategy.ec.europa.eu/en/policies/eu-age-verification" target="_blank" rel="noopener noreferrer">Age Verification Blueprint</a> on 10 October 2025. It lets you prove you are over 18, 15 or 13 without handing any personal data to the platform asking. The check is a cryptographic yes or no, computed <strong>on your device</strong>, and no identifying information leaves the phone. It runs as a "mini-wallet" on the same standards as the eIDAS 2.0 European Digital Identity Wallet, and the <a href="https://github.com/eu-digital-identity-wallet/av-doc-technical-specification" target="_blank" rel="noopener noreferrer">specification is public</a>. Italy, France, Denmark and Spain are piloting it against their national identity systems.</p>
+      <p>The site the user visits learns one bit. Not a name, not a birth date, not a document number, not even a persistent identifier it could use to recognise the same person twice. This is genuinely close to the best that can be done, and the people who built it deserve to be described accurately.</p>
+      <p>Now the question that makes it the most important section on this page. <strong>Where does the wallet get its confidence?</strong></p>
+      <div class="myth-card">
+        <div class="myth-quote">Onboarding uses passports and national identity cards.</div>
+        <div class="myth-reframe-label">The document did not disappear. It moved.</div>
+        <p>To hold a credential that can vouch for your age, the wallet has to be told your age by something authoritative. In the blueprint, that is your passport or national ID card, read once at setup.</p>
+        <p>After that the ID upload never happens again, which is a real improvement over Britain. But the outcome is not that you proved your identity to nobody. It is that <strong>you proved it once, permanently, to your device</strong>, which now carries a credential that answers questions about you indefinitely. Member States must offer every resident a wallet by the end of 2026.</p>
+        <p>Europe removed the leak and kept the identity layer. That is the best case, honestly engineered, by people trying to protect users. It still ends with your phone holding your papers.</p>
+      </div>
+    </section>
+
+    <!-- g) NOT A PORN-SITE STORY -->
+    <section class="flock-block" aria-labelledby="scope-h">
+      <h2 id="scope-h">This stopped being about one kind of website</h2>
+      <p>It would be reasonable to read everything above as a fight about adult content that got out of hand. The dates say otherwise. Apple's own developer documentation lists when the same age machinery switches on by jurisdiction:</p>
+      <div class="hm-table-wrap">
+        <table class="hm-table">
+          <caption class="visually-hidden">Jurisdictions where Apple applies age assurance requirements, with dates, from Apple developer documentation.</caption>
+          <thead>
+            <tr>
+              <th scope="col">Jurisdiction</th>
+              <th scope="col">Applies from</th>
+              <th scope="col">What it does</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row" data-label="Jurisdiction">Brazil</th><td data-label="Applies from"><strong>24 February 2026</strong></td><td data-label="What it does">Age category shared through the Declared Age Range API, plus a signal describing which assurance method was used.</td></tr>
+            <tr><th scope="row" data-label="Jurisdiction">Australia</th><td data-label="Applies from"><strong>24 February 2026</strong></td><td data-label="What it does">The App Store confirms adulthood automatically and blocks downloads of 18+ apps otherwise.</td></tr>
+            <tr><th scope="row" data-label="Jurisdiction">Singapore</th><td data-label="Applies from"><strong>24 February 2026</strong></td><td data-label="What it does">Same as Australia.</td></tr>
+            <tr><th scope="row" data-label="Jurisdiction">Utah</th><td data-label="Applies from"><strong>6 May 2026</strong></td><td data-label="What it does">Applies to new Apple Accounts. Enforcement provisions from 31 December 2026.</td></tr>
+            <tr><th scope="row" data-label="Jurisdiction">Louisiana</th><td data-label="Applies from"><strong>1 July 2026</strong></td><td data-label="What it does">Applies to new Apple Accounts.</td></tr>
+            <tr><th scope="row" data-label="Jurisdiction">Texas</th><td data-label="Applies from"><strong>In force since 4 June 2026</strong></td><td data-label="What it does">Verified age at account creation, four brackets, verified parent and consent for minors, signals passed to developers.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Three countries on three continents, none of them party to the American litigation, switching on the same operating-system machinery in the same month. Whatever this started as, it is now a default property of the platform rather than a rule about a category of website.</p>
+      <p>Which puts it exactly where <a href="graphene.html">our page on your phone</a> says the unfixable problems live. A content blocker cannot reach it. A VPN cannot reach it. It is not in the browser, it is not in an app, and there is no setting because it is a property of the account the device is signed into. The one identity claim the operating system holds about you is now, in an increasing number of countries, a legally mandated one.</p>
+    </section>
+
+    <!-- h) WHAT CHANGES -->
+    <section class="flock-block" aria-labelledby="civic-h">
+      <h2 id="civic-h">What actually changes things</h2>
+      <p>The honest reading is that the argument about whether adults can be made to verify is over, and was lost. What remains open is the part nobody litigated, which is the part that determines the damage.</p>
+      <ul class="flock-list">
+        <li><strong>Method is everything, and it is a policy choice.</strong> The gap between a face scan that returns a range and a passport photograph sitting in a vendor's ticket queue is the entire difference between these systems. No court has ruled on it. It is decided in procurement and in implementing regulations, which is where it can still be argued.</li>
+        <li><strong>Ask what is retained, because nobody has said.</strong> Apple and Google are about to hold verified age, and in some cases verified family relationships, across whole populations. Neither has published a retention period. That is a question a legislator or a regulator can compel an answer to, and an ordinary person cannot.</li>
+        <li><strong>Europe already wrote the good specification and published it.</strong> Any argument that privacy-preserving age assurance is impractical is now answerable with a working implementation and a public technical standard. Deployment is the argument, not feasibility.</li>
+        <li><strong>Watch the account, not the website.</strong> The meaningful line is whether a verified identity attribute may be reused for anything beyond the check that justified it. Once the operating system holds a proven fact about you, every other product in that company's catalogue is one policy change away from being able to read it.</li>
+      </ul>
+      <p>The thing to hold on to is that none of this required anybody to act in bad faith. Britain chose the worst mechanism and got a breach. Texas chose the most centralised one and is running it under a stay of an injunction it lost on the merits. Europe chose the best one available and built it carefully. All three arrive at a device that carries a permanent, verified claim about who you are, because that is what the requirement produces once you take it seriously. The question was never whether they would collect your ID. It was what your phone becomes after you prove it once.</p>
+    </section>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="logo">Visable<span>.</span></div>
+  <p>An independent project, built because the conversation deserves to be better.</p>
+  <p style="color: #2a2a2a; font-size: 11px;">No tracking. No analytics. No ads. Ever.</p>
+</footer>
+
+<script src="binary-background.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
