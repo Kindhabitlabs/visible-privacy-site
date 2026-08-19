@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-08-18T04:55:52.221Z",
+  "generated_at": "2026-08-19T19:05:19.488Z",
   "counts": {
-    "firms": 50,
-    "businesses": 68,
-    "tags": 10,
-    "evidence": 57
+    "firms": 54,
+    "businesses": 76,
+    "tags": 8,
+    "evidence": 70
   },
   "firms": [
     {
@@ -115,6 +115,15 @@
       "tags": []
     },
     {
+      "id": "charlesbank-capital",
+      "name": "Charlesbank Capital Partners",
+      "type": "PE",
+      "headquarters": "Boston, MA",
+      "portfolio_url": "https://www.charlesbank.com",
+      "notes": "Acquired Hearthside Food Solutions in 2018 alongside Partners Group. Hearthside is a contract manufacturer that packs and bakes for major grocery brands. Lenders took majority ownership through its 2024 bankruptcy.",
+      "tags": []
+    },
+    {
       "id": "chatham-asset-management",
       "name": "Chatham Asset Management",
       "type": "PE",
@@ -139,6 +148,15 @@
       "headquarters": "Atlanta, GA",
       "portfolio_url": "https://cortland.com",
       "notes": "Vertically integrated apartment owner/operator; ~80,000 units, #8 on the NMHC list of largest US apartment owners.",
+      "tags": []
+    },
+    {
+      "id": "engage-brands",
+      "name": "Engage Brands (Rohan Group, Jay Pandya)",
+      "type": "holding-company",
+      "headquarters": "",
+      "portfolio_url": "",
+      "notes": "Franchisee holding company controlled by Jay Pandya. Bought Boston Market outright in 2020. Not a conventional PE fund, but the same pattern of a financial owner acquiring an operating chain; included because the labor and vendor record is documented by a state agency and a federal court.",
       "tags": []
     },
     {
@@ -280,22 +298,7 @@
       "headquarters": "Luxembourg",
       "portfolio_url": "https://www.jabholco.com",
       "notes": "",
-      "tags": [
-        {
-          "tag": "Legal/regulatory",
-          "tier": "A",
-          "alleged": false,
-          "description": "FTC consent orders (2022) required clinic divestitures and imposed prior-approval / prior-notice conditions on JAB's future specialty/emergency vet acquisitions (SAGE and Ethos matters).",
-          "source_url": "https://www.ftc.gov/news-events/news/press-releases/2022/06/ftc-takes-second-action-against-jab-consumer-partners-protect-pet-owners-private-equity-firms-rollup-of-veterinary-services"
-        },
-        {
-          "tag": "Consumer harm",
-          "tier": "B",
-          "alleged": false,
-          "description": "Subject of a 2024 US Senate inquiry (Sens. Warren & Blumenthal) into consolidation and post-acquisition price increases at PE-owned vet clinics.",
-          "source_url": "https://www.warren.senate.gov/wp-content/uploads/media/doc/warren_blumenthal_letter_to_jab_holdings_re_veterinary_clinics.pdf"
-        }
-      ]
+      "tags": []
     },
     {
       "id": "kkr",
@@ -429,6 +432,15 @@
       "tags": []
     },
     {
+      "id": "roark-capital",
+      "name": "Roark Capital Group",
+      "type": "PE",
+      "headquarters": "Atlanta, GA",
+      "portfolio_url": "https://www.roarkcapital.com",
+      "notes": "Franchise-focused PE firm. Controls Subway, Inspire Brands (Arby's, Buffalo Wild Wings, Sonic, Jimmy John's, Dunkin', Baskin-Robbins) and GoTo Foods (Cinnabon, Auntie Anne's, Jamba, Carvel, Moe's, Schlotzsky's, McAlister's Deli), plus Driven Brands and Primrose Schools outside food.",
+      "tags": []
+    },
+    {
       "id": "san-vicente-acquisition",
       "name": "San Vicente Acquisition (Ray Zage / Tiga, James Lu / Joffre Capital)",
       "type": "holding-company",
@@ -515,6 +527,15 @@
       "headquarters": "New York, NY",
       "portfolio_url": "https://www.towerbrook.com",
       "notes": "Co-owns Compassus 50/50 with the Catholic nonprofit health system Ascension (a PE/nonprofit joint venture).",
+      "tags": []
+    },
+    {
+      "id": "triartisan-capital",
+      "name": "TriArtisan Capital Advisors",
+      "type": "PE",
+      "headquarters": "New York, NY",
+      "portfolio_url": "",
+      "notes": "Restaurant-heavy PE firm. Bought TGI Fridays with Sentinel Capital Partners in 2014 and later took full control; co-owned Hooters of America with Nord Bay Capital from 2019; also an owner of P.F. Chang's. Both TGI Fridays and Hooters filed Chapter 11 and left its hands.",
       "tags": []
     },
     {
@@ -746,6 +767,35 @@
       "evidence": []
     },
     {
+      "id": "boston-market",
+      "name": "Boston Market",
+      "industry": "Restaurants",
+      "firm_id": "engage-brands",
+      "firm_name": "Engage Brands (Rohan Group, Jay Pandya)",
+      "platform_company": "Rotisserie chicken chain bought in 2020 by Engage Brands, part of Jay Pandya's Rohan Group; store count collapsed from several hundred to a handful",
+      "acquisition_date": "2020",
+      "ownership_status": "confirmed",
+      "source_url": "https://www.nj.gov/labor/lwdhome/press/2023/20230815_stopwork.shtml",
+      "last_verified": "2026-08-19",
+      "locations": [],
+      "evidence": [
+        {
+          "tag": "Labor",
+          "tier": "A",
+          "alleged": false,
+          "description": "On August 14, 2023 the New Jersey Department of Labor and Workforce Development issued stop-work orders shutting down 27 Boston Market locations statewide. Investigators found $607,471 in back wages owed to 314 workers, and assessed $1,214,942 in liquidated damages, a $182,241.30 administrative fee and $549,500 in administrative penalties, a total of $2,554,154.30 against Boston Chicken of NJ, LLC. The violations included unpaid or late wages, failure to pay minimum wage, failure to pay earned sick leave, records violations and hindering the investigation. The investigation began with a single worker complaint in November 2022. The stores reopened after the company paid more than $630,000 to workers.",
+          "source_url": "https://www.nj.gov/labor/lwdhome/press/2023/20230815_stopwork.shtml"
+        },
+        {
+          "tag": "Financial extraction",
+          "tier": "B",
+          "alleged": false,
+          "description": "Boston Market's owner ran up hundreds of suits from vendors, landlords, franchisors and employees over unpaid bills. The largest, from the food distributor US Foods over unpaid deliveries, ended in a default judgment of about $11.9M after Boston Market failed to defend the case. Jay Pandya later filed for personal bankruptcy. The chain kept operating while the bills went unpaid, so the cost fell first on workers and suppliers.",
+          "source_url": "https://www.restaurantdive.com/news/judge-grants-us-foods-default-judgement-against-boston-market/706288/"
+        }
+      ]
+    },
+    {
       "id": "bumble",
       "name": "Bumble",
       "industry": "Dating apps",
@@ -953,7 +1003,15 @@
       "source_url": "https://www.ftc.gov/legal-library/browse/cases-proceedings/211-0174-jab-consumer-partnersvipwethos-veterinary-health-matter",
       "last_verified": "2026-08-05",
       "locations": [],
-      "evidence": []
+      "evidence": [
+        {
+          "tag": "Legal/regulatory",
+          "tier": "A",
+          "alleged": false,
+          "description": "FTC consent orders (2022) required clinic divestitures and imposed prior-approval and prior-notice conditions on JAB's future specialty and emergency vet acquisitions (the SAGE and Ethos matters).",
+          "source_url": "https://www.ftc.gov/news-events/news/press-releases/2022/06/ftc-takes-second-action-against-jab-consumer-partners-protect-pet-owners-private-equity-firms-rollup-of-veterinary-services"
+        }
+      ]
     },
     {
       "id": "firstkey-homes",
@@ -1079,6 +1137,28 @@
       ]
     },
     {
+      "id": "goto-foods",
+      "name": "GoTo Foods (Cinnabon, Auntie Anne's, Jamba, Carvel, Moe's, Schlotzsky's, McAlister's Deli)",
+      "industry": "Restaurants",
+      "firm_id": "roark-capital",
+      "firm_name": "Roark Capital Group",
+      "platform_company": "Roark's second restaurant platform, built from its 2004 purchase of Cinnabon and known as Focus Brands until it renamed itself GoTo Foods in February 2024",
+      "acquisition_date": "2004",
+      "ownership_status": "confirmed",
+      "source_url": "https://www.restaurantdive.com/news/focus-brands-renames-itself-go-to-foods/708004/",
+      "last_verified": "2026-08-19",
+      "locations": [],
+      "evidence": [
+        {
+          "tag": "Labor",
+          "tier": "A",
+          "alleged": false,
+          "description": "Two of the seven chains covered by the Washington Attorney General's July 12, 2018 no-poach assurances of discontinuance, Cinnabon and Auntie Anne's, were brands of Roark's Focus Brands, now GoTo Foods. The agreements, filed in King County Superior Court, required the franchisors to stop writing no-poach clauses into new franchise agreements and to strike them from existing ones nationwide, not only in Washington. Counting the Inspire brands in the same action, five of the seven chains in the AG's first no-poach announcement were controlled by a single private equity firm.",
+          "source_url": "https://www.atg.wa.gov/news/news-releases/ag-ferguson-announces-fast-food-chains-will-end-restrictions-low-wage-workers"
+        }
+      ]
+    },
+    {
       "id": "greystar-apartments",
       "name": "Greystar",
       "industry": "Apartments",
@@ -1195,6 +1275,35 @@
       ]
     },
     {
+      "id": "hearthside-foods",
+      "name": "Hearthside Food Solutions (now Maker's Pride)",
+      "industry": "Food processing & supply",
+      "firm_id": "charlesbank-capital",
+      "firm_name": "Charlesbank Capital Partners",
+      "platform_company": "One of the largest US contract food manufacturers, packing and baking for major grocery brands; bought in 2018 by Charlesbank Capital Partners and Partners Group, renamed Maker's Pride in March 2025 under lender owners Apollo and Oaktree",
+      "acquisition_date": "2018",
+      "ownership_status": "former",
+      "source_url": "https://www.foodbusinessnews.net/articles/27241-hearthside-food-solutions-declares-bankruptcy",
+      "last_verified": "2026-08-19",
+      "locations": [],
+      "evidence": [
+        {
+          "tag": "Labor",
+          "tier": "A",
+          "alleged": false,
+          "description": "A February 2023 New York Times investigation documented migrant children working night shifts in Hearthside plants that made granola bars and packed cereal and snacks. The Illinois Attorney General's office and the Illinois Department of Labor opened a joint investigation and Hearthside agreed to pay $4.5M to settle it, approved by the bankruptcy court on December 6, 2024. The settlement covers people who worked at an Illinois Hearthside facility under the age of 16 between March 1, 2020 and December 4, 2024, and requires state oversight and audits, a reporting hotline and manager training. Hearthside denied violating child labor laws and blamed third-party staffing agencies, whose contracts it says it cut. Federal regulators had separately cited the company for safety violations repeatedly in the preceding five years.",
+          "source_url": "https://www.foodbusinessnews.net/articles/27384-hearthside-food-solutions-settles-state-child-labor-probe"
+        },
+        {
+          "tag": "Financial extraction",
+          "tier": "B",
+          "alleged": false,
+          "description": "Hearthside filed Chapter 11 in the Southern District of Texas on November 22, 2024, unable to refinance the debt built up since the 2018 buyout. The plan eliminated more than $1.9B of debt and brought in $200M of new equity at exit, and control passed from Charlesbank and Partners Group to the company's lenders. It emerged in 2025, rebranded as Maker's Pride in March 2025, owned by Apollo and Oaktree.",
+          "source_url": "https://www.privateequitywire.co.uk/pe-owned-hearthside-files-for-bankruptcy-after-debt-struggles/"
+        }
+      ]
+    },
+    {
       "id": "heartland-dental",
       "name": "Heartland Dental",
       "industry": "Dental",
@@ -1227,6 +1336,28 @@
           "alleged": false,
           "description": "Homes of America (Alden Global Capital) was named in both Sen. Warren's March 2026 corporate-landlord probe and Sen. Maggie Hassan's Dec 2025 Joint Economic Committee investigation into manufactured-housing owners over affordability and resident living-conditions concerns.",
           "source_url": "https://www.jec.senate.gov/public/index.cfm/democrats/2025/12/senator-hassan-presses-corporate-owners-of-mobile-home-communities-for-answers-on-affordability-and-resident-living-conditions"
+        }
+      ]
+    },
+    {
+      "id": "hooters-of-america",
+      "name": "Hooters of America",
+      "industry": "Restaurants",
+      "firm_id": "triartisan-capital",
+      "firm_name": "TriArtisan Capital Advisors",
+      "platform_company": "Casual dining chain acquired in 2019 by Nord Bay Capital of Tampa and TriArtisan Capital Advisors of New York",
+      "acquisition_date": "2019",
+      "ownership_status": "former",
+      "source_url": "https://www.restaurantbusinessonline.com/financing/hooters-america-declares-bankruptcy",
+      "last_verified": "2026-08-19",
+      "locations": [],
+      "evidence": [
+        {
+          "tag": "Financial extraction",
+          "tier": "B",
+          "alleged": false,
+          "description": "After the 2019 buyout by Nord Bay Capital and TriArtisan, sales fell sharply, the pandemic deepened the decline, and the company accumulated more than $300M of debt. Hooters of America filed Chapter 11 in the Northern District of Texas on March 31, 2025 with a restructuring support agreement to sell itself. The buyers were two existing franchisee groups, including the chain's founders, who already ran more than 30 percent of domestic franchised locations. The company exited bankruptcy fully franchisee-owned, and the private equity owners were out.",
+          "source_url": "https://www.nrn.com/casual-dining/hooters-founders-reclaim-company-after-court-approves-bankruptcy-exit"
         }
       ]
     },
@@ -1285,6 +1416,28 @@
           "alleged": false,
           "description": "Impact Communities (run by Frank Rolfe and Dave Reynolds, who teach investors via 'Mobile Home University' to buy parks and raise lot rents on residents who own their homes but not the land) was named in Sen. Warren's March 2026 corporate-landlord probe.",
           "source_url": "https://www.banking.senate.gov/newsroom/minority/warren-probes-biggest-corporate-landlords-on-predatory-rental-practices-across-housing-sector"
+        }
+      ]
+    },
+    {
+      "id": "inspire-brands",
+      "name": "Inspire Brands (Arby's, Buffalo Wild Wings, Dunkin', Sonic, Jimmy John's, Baskin-Robbins)",
+      "industry": "Restaurants",
+      "firm_id": "roark-capital",
+      "firm_name": "Roark Capital Group",
+      "platform_company": "Roark's restaurant platform, formed in 2018 from the Arby's and Buffalo Wild Wings merger; added Sonic (2018), Jimmy John's (2019) and Dunkin' Brands (December 2020, $11.3B)",
+      "acquisition_date": "2018",
+      "ownership_status": "confirmed",
+      "source_url": "https://inspirebrands.com/inspire-brands-completes-acquisition-of-dunkin-brands/",
+      "last_verified": "2026-08-19",
+      "locations": [],
+      "evidence": [
+        {
+          "tag": "Labor",
+          "tier": "A",
+          "alleged": false,
+          "description": "On July 12, 2018 the Washington Attorney General announced legally binding assurances of discontinuance, filed in King County Superior Court, requiring seven fast food chains to drop no-poach clauses from their franchise agreements nationwide. No-poach clauses barred a franchisee from hiring a worker away from another franchisee of the same brand, which economists link to suppressed wages for low-paid staff. Three of the seven chains, Arby's, Buffalo Wild Wings and Jimmy John's, were Roark-controlled brands that are now inside Inspire Brands. The AG put the seven chains at more than 25,000 US locations and tens of thousands of affected workers.",
+          "source_url": "https://www.atg.wa.gov/news/news-releases/ag-ferguson-announces-fast-food-chains-will-end-restrictions-low-wage-workers"
         }
       ]
     },
@@ -1416,12 +1569,20 @@
       "source_url": "https://www.jabholco.com/documents/6/Press%20release%20NVA%20Acquisition.pdf",
       "last_verified": "2026-08-05",
       "locations": [],
-      "evidence": []
+      "evidence": [
+        {
+          "tag": "Consumer harm",
+          "tier": "B",
+          "alleged": false,
+          "description": "JAB was the subject of a 2024 US Senate inquiry by Sens. Warren and Blumenthal into consolidation and post-acquisition price increases at private equity owned veterinary clinics. NVA is JAB's largest veterinary platform.",
+          "source_url": "https://www.warren.senate.gov/wp-content/uploads/media/doc/warren_blumenthal_letter_to_jab_holdings_re_veterinary_clinics.pdf"
+        }
+      ]
     },
     {
       "id": "nine-west",
       "name": "Nine West",
-      "industry": "Retail & restaurants",
+      "industry": "Retail",
       "firm_id": "sycamore-partners",
       "firm_name": "Sycamore Partners",
       "platform_company": "Footwear/apparel maker (formerly the Jones Group); Sycamore's 2014 LBO; filed for bankruptcy in 2018",
@@ -1437,6 +1598,35 @@
           "alleged": false,
           "description": "Sycamore acquired the Jones Group in a 2014 LBO, renamed it Nine West, and moved its most valuable brands (Stuart Weitzman, Kurt Geiger, Jones Apparel) to Sycamore affiliates for below fair value (beyond creditors' reach) while loading Nine West with debt. Nine West went bankrupt in 2018; in the litigation that followed, a court found the former directors may have breached their fiduciary duty by failing to evaluate whether the LBO would render the company insolvent, a landmark warning about PE buyout structures.",
           "source_url": "https://www.hklaw.com/en/insights/publications/2021/03/did-a-new-york-federal-court-just-burst-a-private-equity-bubble"
+        }
+      ]
+    },
+    {
+      "id": "packers-sanitation",
+      "name": "Packers Sanitation Services (PSSI, now Fortrex)",
+      "industry": "Food processing & supply",
+      "firm_id": "blackstone",
+      "firm_name": "Blackstone",
+      "platform_company": "The largest US contractor for overnight sanitation inside meat and poultry plants; bought by Blackstone Core Equity Partners from Leonard Green & Partners in 2018, renamed Fortrex in January 2025",
+      "acquisition_date": "2018",
+      "ownership_status": "former",
+      "source_url": "https://www.cnn.com/2023/02/17/business/packers-sanitation-child-labor",
+      "last_verified": "2026-08-19",
+      "locations": [],
+      "evidence": [
+        {
+          "tag": "Financial extraction",
+          "tier": "B",
+          "alleged": false,
+          "description": "The child labor findings cost the company its customers and eventually its owner. PSSI lost sanitation contracts at Cargill, Tyson Foods and JBS plants in 2023, Moody's downgraded its credit rating in May 2023, and S&P recorded a 14.5 percent year over year revenue drop in the second quarter of 2025. After the company missed a debt payment in October 2025, lenders took control of the equity in an out of court restructuring completed in December 2025, wiping out the Blackstone fund's stake.",
+          "source_url": "https://pestakeholder.org/news/case-studies-the-financial-fallout-of-poor-labor-practices/"
+        },
+        {
+          "tag": "Labor",
+          "tier": "A",
+          "alleged": false,
+          "description": "A US Department of Labor investigation found at least 102 children aged 13 to 17 working overnight sanitation shifts at 13 meat processing plants in eight states, handling caustic cleaning chemicals and cleaning back saws, brisket saws and head splitters. At least three were injured, including chemical burns, and some were falling asleep in school or missing it. Under a federal consent order in Nebraska, PSSI paid $1.5M in civil money penalties, announced February 17, 2023, which was the statutory maximum of $15,138 per minor. The company was also required to hire an outside consultant to run quarterly child labor compliance training for managers. The case triggered a Senate HELP Committee inquiry.",
+          "source_url": "https://www.cnn.com/2023/02/17/business/packers-sanitation-child-labor"
         }
       ]
     },
@@ -1523,7 +1713,7 @@
     {
       "id": "red-lobster",
       "name": "Red Lobster",
-      "industry": "Retail & restaurants",
+      "industry": "Restaurants",
       "firm_id": "golden-gate-capital",
       "firm_name": "Golden Gate Capital",
       "platform_company": "Casual-dining seafood chain; Golden Gate bought it from Darden in 2014, later sold it on; filed Chapter 11 in May 2024",
@@ -1581,7 +1771,7 @@
     {
       "id": "sears",
       "name": "Sears",
-      "industry": "Retail & restaurants",
+      "industry": "Retail",
       "firm_id": "esl-investments",
       "firm_name": "ESL Investments",
       "platform_company": "Once ~3,500 stores; controlled by Eddie Lampert's ESL since the 2005 Kmart–Sears merger, now reduced to a handful under the ESL-controlled Transformco",
@@ -1674,7 +1864,7 @@
     {
       "id": "sports-authority",
       "name": "Sports Authority",
-      "industry": "Retail & restaurants",
+      "industry": "Retail",
       "firm_id": "leonard-green",
       "firm_name": "Leonard Green & Partners",
       "platform_company": "Sporting-goods retailer; Leonard Green's 2006 $1.3B LBO; liquidated ~450 stores in 2016",
@@ -1690,6 +1880,28 @@
           "alleged": false,
           "description": "Leonard Green & Partners bought Sports Authority in a 2006 LBO for ~$1.3B, loading it with debt. After missing a debt payment in early 2016, the retailer filed for Chapter 11 in March 2016 and liquidated all ~450 stores. It is one of several Leonard Green retail bankruptcies, alongside J.Crew and Joann.",
           "source_url": "https://pestakeholder.org/news/joann-store-closures-among-many-leonard-green-and-partners-bankruptcies/"
+        }
+      ]
+    },
+    {
+      "id": "subway",
+      "name": "Subway",
+      "industry": "Restaurants",
+      "firm_id": "roark-capital",
+      "firm_name": "Roark Capital Group",
+      "platform_company": "Franchised sandwich chain, the largest US restaurant chain by store count; taken private by Roark in a reported $9.55B deal",
+      "acquisition_date": "2024",
+      "ownership_status": "confirmed",
+      "source_url": "https://www.restaurantbusinessonline.com/financing/subway-completes-its-sale-roark-capital",
+      "last_verified": "2026-08-19",
+      "locations": [],
+      "evidence": [
+        {
+          "tag": "Legal/regulatory",
+          "tier": "B",
+          "alleged": false,
+          "description": "Roark agreed to buy Subway in August 2023 for a reported $9.55B. Because Roark already controlled the sandwich chains Jimmy John's, Arby's, McAlister's Deli and Schlotzsky's, the Federal Trade Commission opened an in-depth antitrust review of the deal in November 2023 rather than clearing it quickly. The FTC ultimately allowed the purchase to proceed without publicly imposed conditions, and the sale closed on April 30, 2024, roughly eight months after it was announced. The result is that one private equity firm now sets franchise terms for Subway alongside Inspire Brands and GoTo Foods.",
+          "source_url": "https://www.restaurantdive.com/news/ftc-reportedly-investigating-roarks-subway-purchase/700615/"
         }
       ]
     },
@@ -1723,6 +1935,28 @@
       ]
     },
     {
+      "id": "tgi-fridays",
+      "name": "TGI Fridays",
+      "industry": "Restaurants",
+      "firm_id": "triartisan-capital",
+      "firm_name": "TriArtisan Capital Advisors",
+      "platform_company": "Casual dining chain bought from Carlson in 2014 for about $890M by TriArtisan and Sentinel Capital Partners; TriArtisan later bought out Sentinel and was majority owner at the bankruptcy filing",
+      "acquisition_date": "2014",
+      "ownership_status": "former",
+      "source_url": "https://www.restaurantbusinessonline.com/financing/tgi-fridays-files-chapter-11-bankruptcy",
+      "last_verified": "2026-08-19",
+      "locations": [],
+      "evidence": [
+        {
+          "tag": "Financial extraction",
+          "tier": "B",
+          "alleged": false,
+          "description": "Under private equity ownership TGI Fridays shrank from 601 US locations in 2008 to 270 in 2023, a 55 percent decline in restaurants and a 63 percent decline in system-wide sales. A planned sale to the UK-listed Hostmore collapsed, and TGI Fridays Inc. filed Chapter 11 in the Northern District of Texas on November 2, 2024, by then operating only 39 company-owned restaurants and listing assets and liabilities each in the $100M to $500M range. Executive chairman Rohit Manocha attributed the failure to Covid-19 and the company's capital structure. Operating assets went to Mera Global in a Section 363 sale that closed in February 2025, leaving the chain fully franchised and ending TriArtisan's ownership.",
+          "source_url": "https://www.nbcnews.com/business/business-news/tgi-fridays-operator-files-chapter-11-bankruptcy-financial-woes-rcna178522"
+        }
+      ]
+    },
+    {
       "id": "thrive-pet-healthcare",
       "name": "Thrive Pet Healthcare",
       "industry": "Veterinary",
@@ -1739,7 +1973,7 @@
     {
       "id": "toys-r-us",
       "name": "Toys R Us",
-      "industry": "Retail & restaurants",
+      "industry": "Retail",
       "firm_id": "bain-capital",
       "firm_name": "Bain Capital",
       "platform_company": "Iconic toy retailer; taken private in a 2005 $6.6B LBO by Bain Capital, KKR and Vornado Realty Trust; liquidated in 2018",

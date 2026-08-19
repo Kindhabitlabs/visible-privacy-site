@@ -1,0 +1,32 @@
+{
+  "_note": "Batch 18: moves JAB Holding's two firm-level tags down to the vet businesses they describe, so they stop inheriting onto Panera Bread (added in batch 17). Same fix used for Aspen Dental in batch 4. Both businesses already exist, so this batch only adds business evidence; no firms or businesses are created. MANUAL STEP REQUIRED: after importing, uncheck `publish` on the two JAB rows in the Firm Tags table, otherwise the same text renders twice. The FTC consent orders are the SAGE and Ethos matters, so they attach to Ethos. The Warren/Blumenthal letter addressed JAB's veterinary clinics generally, so it attaches to NVA, JAB's largest vet platform.",
+  "firms": [],
+  "businesses": [
+    {
+      "business_id": "ethos-veterinary-health",
+      "business_name": "Ethos Veterinary Health",
+      "evidence": [
+        {
+          "tag": "Legal/regulatory",
+          "evidence_tier": "A",
+          "description": "FTC consent orders (2022) required clinic divestitures and imposed prior-approval and prior-notice conditions on JAB's future specialty and emergency vet acquisitions (the SAGE and Ethos matters).",
+          "source_url": "https://www.ftc.gov/news-events/news/press-releases/2022/06/ftc-takes-second-action-against-jab-consumer-partners-protect-pet-owners-private-equity-firms-rollup-of-veterinary-services",
+          "publish": true
+        }
+      ]
+    },
+    {
+      "business_id": "national-veterinary-associates",
+      "business_name": "National Veterinary Associates (NVA)",
+      "evidence": [
+        {
+          "tag": "Consumer harm",
+          "evidence_tier": "B",
+          "description": "JAB was the subject of a 2024 US Senate inquiry by Sens. Warren and Blumenthal into consolidation and post-acquisition price increases at private equity owned veterinary clinics. NVA is JAB's largest veterinary platform.",
+          "source_url": "https://www.warren.senate.gov/wp-content/uploads/media/doc/warren_blumenthal_letter_to_jab_holdings_re_veterinary_clinics.pdf",
+          "publish": true
+        }
+      ]
+    }
+  ]
+}
