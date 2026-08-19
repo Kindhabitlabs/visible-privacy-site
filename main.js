@@ -24,40 +24,60 @@ if (hamburger && navMenu) {
   });
 }
 
-// Investigations dropdown. The site's first interactive nav: the article pages
-// outgrew a flat row, so they sit behind one top-level item. On mobile the
-// whole nav is already a stacked column, so the submenu renders inline there
-// and this toggle is inert. See the media query in style.css.
-const navGroupBtn = document.getElementById('nav-group-btn');
-const navSubmenu = document.getElementById('nav-investigations');
-if (navGroupBtn && navSubmenu) {
-  const setOpen = (open) => {
-    navGroupBtn.setAttribute('aria-expanded', String(open));
-    navSubmenu.classList.toggle('open', open);
+// Nav dropdowns. The article pages outgrew a flat row, so they sit behind
+// top-level items. There are two groups now, Deep Dives and Why & How, so this
+// walks every .nav-group rather than one hardcoded pair. On mobile the whole
+// nav is already a stacked column, so the submenus render inline there and
+// these toggles are inert. See the media query in style.css.
+const navGroups = Array.from(document.querySelectorAll('.nav-group')).map(group => {
+  const btn = group.querySelector('.nav-group-btn');
+  const submenu = group.querySelector('.nav-submenu');
+  if (!btn || !submenu) return null;
+  return {
+    group,
+    btn,
+    isOpen: () => btn.getAttribute('aria-expanded') === 'true',
+    setOpen: (open) => {
+      btn.setAttribute('aria-expanded', String(open));
+      submenu.classList.toggle('open', open);
+    }
   };
+}).filter(Boolean);
 
-  navGroupBtn.addEventListener('click', (e) => {
+const closeGroups = (except) => {
+  navGroups.forEach(g => { if (g !== except) g.setOpen(false); });
+};
+
+navGroups.forEach(g => {
+  g.btn.addEventListener('click', (e) => {
     e.stopPropagation();
-    setOpen(navGroupBtn.getAttribute('aria-expanded') !== 'true');
+    const open = !g.isOpen();
+    // Opening one closes the other, so two panels never sit open at once.
+    closeGroups(g);
+    g.setOpen(open);
   });
 
-  // Clicking anywhere else closes it, including on another nav item.
+  // Tabbing out of a group closes it.
+  g.group.addEventListener('focusout', (e) => {
+    if (!g.group.contains(e.relatedTarget)) g.setOpen(false);
+  });
+});
+
+if (navGroups.length) {
+  // Clicking outside every group closes them all, including on another nav item.
   document.addEventListener('click', (e) => {
-    if (!navSubmenu.contains(e.target)) setOpen(false);
+    if (!navGroups.some(g => g.group.contains(e.target))) closeGroups();
   });
 
   // Escape closes and returns focus to the button, so keyboard users are not
   // stranded inside a collapsed menu.
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && navGroupBtn.getAttribute('aria-expanded') === 'true') {
-      setOpen(false);
-      navGroupBtn.focus();
+    if (e.key !== 'Escape') return;
+    const open = navGroups.find(g => g.isOpen());
+    if (open) {
+      open.setOpen(false);
+      open.btn.focus();
     }
-  });
-
-  // Tabbing out of the group closes it.
-  navSubmenu.parentElement.addEventListener('focusout', (e) => {
-    if (!navSubmenu.parentElement.contains(e.relatedTarget)) setOpen(false);
   });
 }
 
