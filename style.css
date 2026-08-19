@@ -1073,6 +1073,8 @@
     /* The Graphene teaser shares every rule in this block. The two sit back to
        back on the home page, so they are kept on one set of selectors rather
        than two copies that can drift apart. Only the artwork differs. */
+    .cg-teaser,
+    .why-teaser,
     .av-teaser,
     .palantir-teaser,
     .cars-teaser,
@@ -1088,6 +1090,8 @@
       background: var(--bg);
       border-top: none;
     }
+    .cg-teaser-inner,
+    .why-teaser-inner,
     .av-teaser-inner,
     .palantir-teaser-inner,
     .cars-teaser-inner,
@@ -1100,11 +1104,15 @@
       gap: 56px;
       align-items: center;
     }
+    .cg-teaser-art,
+    .why-teaser-art,
     .av-teaser-art,
     .palantir-teaser-art,
     .cars-teaser-art,
     .flock-teaser-art,
     .graphene-teaser-art { color: var(--accent); }
+    .cg-teaser-art svg,
+    .why-teaser-art svg,
     .av-teaser-art svg,
     .palantir-teaser-art svg,
     .cars-teaser-art svg,
@@ -1136,11 +1144,15 @@
     @media (prefers-reduced-motion: reduce) {
       .alpr-plate-1, .alpr-plate-2, .alpr-plate-3 { animation: none; }
     }
+    .cg-teaser h2,
+    .why-teaser h2,
     .av-teaser h2,
     .palantir-teaser h2,
     .cars-teaser h2,
     .flock-teaser h2,
     .graphene-teaser h2 { margin-bottom: 28px; }
+    .cg-teaser p,
+    .why-teaser p,
     .av-teaser p,
     .palantir-teaser p,
     .cars-teaser p,
@@ -1152,6 +1164,8 @@
       margin-bottom: 20px;
       max-width: 760px;
     }
+    .cg-teaser p strong,
+    .why-teaser p strong,
     .av-teaser p strong,
     .palantir-teaser p strong,
     .cars-teaser p strong,
@@ -1163,6 +1177,8 @@
       color: var(--text) !important;
       font-size: 16px !important;
     }
+    .cg-teaser-cta,
+    .why-teaser-cta,
     .av-teaser-cta,
     .palantir-teaser-cta,
     .cars-teaser-cta,
@@ -1852,16 +1868,22 @@
       .consequence-icon { width: 40px; height: 40px; }
       .consequence-icon svg { width: 20px; height: 20px; }
       .civic-split { grid-template-columns: 1fr; gap: 56px; }
+      .cg-teaser-inner,
+      .why-teaser-inner,
       .av-teaser-inner,
       .palantir-teaser-inner,
       .cars-teaser-inner,
       .flock-teaser-inner,
       .graphene-teaser-inner { display: block; position: relative; }
+      .cg-teaser-copy,
+      .why-teaser-copy,
       .av-teaser-copy,
       .palantir-teaser-copy,
       .cars-teaser-copy,
       .flock-teaser-copy,
       .graphene-teaser-copy { position: relative; z-index: 1; }
+      .cg-teaser-art,
+      .why-teaser-art,
       .av-teaser-art,
       .palantir-teaser-art,
       .cars-teaser-art,
@@ -2339,4 +2361,186 @@
       .av-doc-scene { width: 200px; opacity: 0.15; }
       .av-doc-scene.side-right { right: -95px; }
       .av-doc-scene.side-left { left: -95px; }
+    }
+
+    /* ---- WHY THIS EXISTS TEASER (home page) ---- */
+    /* Sits last on the home page, after the age verification teaser, which
+       takes --surface. This one takes the page background so the two do not
+       read as one very tall band, the same alternation the Graphene teaser
+       uses higher up. */
+    .why-teaser {
+      background: var(--bg);
+      border-top: none;
+    }
+    /* Gold rather than the accent red. The other five teasers are naming a
+       specific harm and earn the alarm colour. This one is the site arguing
+       for its own method, which is a quieter claim. */
+    .why-teaser-art { color: var(--gold); }
+    /* The racks fill on a stagger, so the drawing reads as capacity being
+       added rather than as a static diagram. */
+    @keyframes why-rack-fill {
+      0%, 100% { opacity: 0.25; }
+      50%      { opacity: 1; }
+    }
+    .why-rack-1 { animation: why-rack-fill 5s ease-in-out infinite; }
+    .why-rack-2 { animation: why-rack-fill 5s ease-in-out infinite -1.6s; }
+    .why-rack-3 { animation: why-rack-fill 5s ease-in-out infinite -3.2s; }
+    @media (prefers-reduced-motion: reduce) {
+      .why-rack-1, .why-rack-2, .why-rack-3 { animation: none; }
+    }
+
+    /* Scene layer, following .av-doc-layer and .palantir-node-layer. Same
+       drawing as the teaser, repeated down the reading column. */
+    .why-rack-layer {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .why-rack-scene {
+      position: absolute;
+      width: 235px;
+      /* aspect-ratio pins the height; without it the absolutely positioned box
+         collapses, the same trap as every other scene layer here. */
+      aspect-ratio: 280 / 250;
+      color: var(--gold);
+      opacity: 0.28;
+    }
+    .why-rack-scene svg { width: 100%; height: 100%; display: block; }
+    .why-rack-scene.side-right { right: 16px; }
+    /* Mirrored, unlike the age verification scenes. The halls read as a row
+       receding to one side, so flipping the left-hand copies points both runs
+       inward towards the column instead of marching off the page. */
+    .why-rack-scene.side-left { left: 16px; transform: scaleX(-1); }
+    /* Pinned in pixels so it lands beside the h1 rather than drifting with page
+       length, and clear of the rule that .section-label trails behind it. */
+    .rack-scene-1 { top: 190px; }
+    .rack-scene-2 { top: 31%; }
+    .rack-scene-3 { top: 57%; }
+    .rack-scene-4 { top: 81%; }
+    /* Offset per scene so the four halls are never filling in unison. */
+    .rack-scene-2 .why-rack-1 { animation-delay: -0.9s; }
+    .rack-scene-2 .why-rack-2 { animation-delay: -2.4s; }
+    .rack-scene-2 .why-rack-3 { animation-delay: -4.1s; }
+    .rack-scene-3 .why-rack-1 { animation-delay: -2.2s; }
+    .rack-scene-3 .why-rack-2 { animation-delay: -3.7s; }
+    .rack-scene-3 .why-rack-3 { animation-delay: -0.5s; }
+    .rack-scene-4 .why-rack-1 { animation-delay: -3.4s; }
+    .rack-scene-4 .why-rack-2 { animation-delay: -1.1s; }
+    .rack-scene-4 .why-rack-3 { animation-delay: -2.8s; }
+    @media (max-width: 1200px) {
+      .why-rack-scene { opacity: 0.2; }
+      .why-rack-scene.side-right { right: -70px; }
+      .why-rack-scene.side-left { left: -70px; }
+    }
+    @media (max-width: 1000px) {
+      .why-rack-scene { width: 200px; opacity: 0.15; }
+      .why-rack-scene.side-right { right: -95px; }
+      .why-rack-scene.side-left { left: -95px; }
+    }
+
+    /* ---- FOOTER SECONDARY LINKS ---- */
+    /* Why this exists and Contribute live here rather than in the nav, which is
+       already carrying eight items. The footer is the only element repeated on
+       every page, so it is the one reliable route to both. */
+    footer.site-footer .footer-links {
+      font-size: 12px;
+      margin-top: 2px;
+    }
+    footer.site-footer .footer-links a {
+      color: var(--muted);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: color 0.2s ease, border-color 0.2s ease;
+    }
+    footer.site-footer .footer-links a:hover,
+    footer.site-footer .footer-links a:focus-visible {
+      color: var(--text);
+      border-bottom-color: var(--gold);
+    }
+
+    /* ---- COMMON GROUND PAGE ---- */
+    /* Reading column reuses .flock-body / .flock-block / .flock-list /
+       .myth-card / .hm-table, as every page before it does. */
+
+    /* Seventh teaser in the run. The Why This Exists teaser sits on --bg, so
+       this one returns to --surface and drops the top rule. */
+    .cg-teaser {
+      background: var(--surface);
+      border-top: none;
+    }
+    /* Gold, matching Why This Exists rather than the accent red. Both pages
+       argue about the site's method instead of naming a specific harm. */
+    .cg-teaser-art { color: var(--gold); }
+
+    /* Two sides pushing at each other while the document neither of them is
+       reading sits underneath. The arrows never actually meet: they hold at a
+       gap, because the point is that the fight is permanent, not that it
+       resolves. */
+    @keyframes cg-push-in {
+      0%, 100% { transform: translateX(0); }
+      50%      { transform: translateX(14px); }
+    }
+    @keyframes cg-push-in-rev {
+      0%, 100% { transform: translateX(0); }
+      50%      { transform: translateX(-14px); }
+    }
+    /* The document holds steady and stays dim. It is the thing not being
+       looked at, so it does not compete for attention with the arrows. */
+    @keyframes cg-doc-hold {
+      0%, 100% { opacity: 0.3; }
+      50%      { opacity: 0.55; }
+    }
+    .cg-push-left  { animation: cg-push-in 6s ease-in-out infinite; }
+    .cg-push-right { animation: cg-push-in-rev 6s ease-in-out infinite; }
+    .cg-doc        { animation: cg-doc-hold 9s ease-in-out infinite; }
+    @media (prefers-reduced-motion: reduce) {
+      .cg-push-left, .cg-push-right, .cg-doc { animation: none; }
+      .cg-doc { opacity: 0.45; }
+    }
+
+    /* Scene layer, following .why-rack-layer and .av-doc-layer. */
+    .cg-wedge-layer {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .cg-wedge-scene {
+      position: absolute;
+      width: 235px;
+      /* aspect-ratio pins the height; without it the absolutely positioned box
+         collapses, the same trap as every other scene layer here. */
+      aspect-ratio: 280 / 250;
+      color: var(--gold);
+      opacity: 0.26;
+    }
+    .cg-wedge-scene svg { width: 100%; height: 100%; display: block; }
+    .cg-wedge-scene.side-right { right: 16px; }
+    /* Not mirrored. The drawing is already symmetrical about the document,
+       so flipping it would change nothing except which arrow leads. */
+    .cg-wedge-scene.side-left { left: 16px; }
+    /* Pinned in pixels so it lands beside the h1 rather than drifting with page
+       length, and clear of the rule that .section-label trails behind it. */
+    .wedge-scene-1 { top: 190px; }
+    .wedge-scene-2 { top: 33%; }
+    .wedge-scene-3 { top: 59%; }
+    .wedge-scene-4 { top: 83%; }
+    .wedge-scene-2 .cg-push-left, .wedge-scene-2 .cg-push-right { animation-delay: -1.5s; }
+    .wedge-scene-3 .cg-push-left, .wedge-scene-3 .cg-push-right { animation-delay: -3.1s; }
+    .wedge-scene-4 .cg-push-left, .wedge-scene-4 .cg-push-right { animation-delay: -4.4s; }
+    .wedge-scene-2 .cg-doc { animation-delay: -2.2s; }
+    .wedge-scene-3 .cg-doc { animation-delay: -4.6s; }
+    .wedge-scene-4 .cg-doc { animation-delay: -6.8s; }
+    @media (max-width: 1200px) {
+      .cg-wedge-scene { opacity: 0.18; }
+      .cg-wedge-scene.side-right { right: -70px; }
+      .cg-wedge-scene.side-left { left: -70px; }
+    }
+    @media (max-width: 1000px) {
+      .cg-wedge-scene { width: 200px; opacity: 0.14; }
+      .cg-wedge-scene.side-right { right: -95px; }
+      .cg-wedge-scene.side-left { left: -95px; }
     }

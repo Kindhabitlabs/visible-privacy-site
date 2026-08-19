@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Common Ground: The Fight Is Loud, The Contract Is Quiet | Visable</title>
+  <meta property="og:title" content="Common Ground: The Fight Is Loud, The Contract Is Quiet | Visable">
+  <meta property="og:description" content="On surveillance, the line runs through both parties rather than between them. The votes, the contracts, and the spending say so. Here are the receipts.">
+  <meta property="og:image" content="/social-share.svg">
+  <meta name="twitter:image" content="/social-share.svg">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Visable">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Common Ground: The Fight Is Loud, The Contract Is Quiet | Visable">
+  <meta name="twitter:description" content="On surveillance, the line runs through both parties rather than between them. The votes, the contracts, and the spending say so. Here are the receipts.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+</head>
+<body>
+  <canvas id="binary-canvas" class="binary-canvas" aria-hidden="true"></canvas>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="index.html" class="nav-logo">Visable<span>.</span></a>
+  <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <ul id="nav-menu">
+    <li><a href="tracker.html">Corporate Dossier</a></li>
+    <li><a href="pe-tracker.html">PE Ownership</a></li>
+    <li class="nav-group">
+      <button type="button" class="nav-group-btn" id="nav-group-btn" aria-expanded="false" aria-controls="nav-investigations" aria-haspopup="true">Investigations<span class="nav-group-caret" aria-hidden="true">&#9662;</span></button>
+      <ul class="nav-submenu" id="nav-investigations">
+        <li><a href="flock.html">Flock Cameras</a></li>
+        <li><a href="graphene.html">Your Phone</a></li>
+        <li><a href="cars.html">Your Car</a></li>
+        <li><a href="palantir.html">Palantir</a></li>
+        <li><a href="age-verification.html">Your ID</a></li>
+      </ul>
+    </li>
+    <li><a href="contribute.html">Contribute</a></li>
+    <li><a href="donate.html">Donate</a></li>
+    <li><a href="index.html#tools" class="nav-cta">Honest Mitigation</a></li>
+  </ul>
+</nav>
+
+<main class="flock-main">
+
+  <div class="cg-wedge-layer" aria-hidden="true">
+    <div class="cg-wedge-scene side-right wedge-scene-1">
+      <svg viewBox="0 0 280 250" fill="none">
+        <g stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <g class="cg-push-left">
+            <path d="M24 62h74M24 86h58M24 110h66" />
+            <path d="M98 62l-14-10M98 62l-14 10" />
+          </g>
+          <g class="cg-push-right">
+            <path d="M256 62h-74M256 86h-58M256 110h-66" />
+            <path d="M182 62l14-10M182 62l14 10" />
+          </g>
+          <g class="cg-doc">
+            <rect x="98" y="150" width="84" height="76" rx="3" />
+            <path d="M112 172h56M112 188h56M112 204h34" />
+          </g>
+        </g>
+      </svg>
+    </div>
+    <div class="cg-wedge-scene side-left wedge-scene-2">
+      <svg viewBox="0 0 280 250" fill="none">
+        <g stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <g class="cg-push-left">
+            <path d="M24 62h74M24 86h58M24 110h66" />
+            <path d="M98 62l-14-10M98 62l-14 10" />
+          </g>
+          <g class="cg-push-right">
+            <path d="M256 62h-74M256 86h-58M256 110h-66" />
+            <path d="M182 62l14-10M182 62l14 10" />
+          </g>
+          <g class="cg-doc">
+            <rect x="98" y="150" width="84" height="76" rx="3" />
+            <path d="M112 172h56M112 188h56M112 204h34" />
+          </g>
+        </g>
+      </svg>
+    </div>
+    <div class="cg-wedge-scene side-right wedge-scene-3">
+      <svg viewBox="0 0 280 250" fill="none">
+        <g stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <g class="cg-push-left">
+            <path d="M24 62h74M24 86h58M24 110h66" />
+            <path d="M98 62l-14-10M98 62l-14 10" />
+          </g>
+          <g class="cg-push-right">
+            <path d="M256 62h-74M256 86h-58M256 110h-66" />
+            <path d="M182 62l14-10M182 62l14 10" />
+          </g>
+          <g class="cg-doc">
+            <rect x="98" y="150" width="84" height="76" rx="3" />
+            <path d="M112 172h56M112 188h56M112 204h34" />
+          </g>
+        </g>
+      </svg>
+    </div>
+    <div class="cg-wedge-scene side-left wedge-scene-4">
+      <svg viewBox="0 0 280 250" fill="none">
+        <g stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <g class="cg-push-left">
+            <path d="M24 62h74M24 86h58M24 110h66" />
+            <path d="M98 62l-14-10M98 62l-14 10" />
+          </g>
+          <g class="cg-push-right">
+            <path d="M256 62h-74M256 86h-58M256 110h-66" />
+            <path d="M182 62l14-10M182 62l14 10" />
+          </g>
+          <g class="cg-doc">
+            <rect x="98" y="150" width="84" height="76" rx="3" />
+            <path d="M112 172h56M112 188h56M112 204h34" />
+          </g>
+        </g>
+      </svg>
+    </div>
+  </div>
+
+  <div class="dossier-header">
+    <div class="section-label">Common Ground</div>
+    <h1>The fight is loud.<br />The contract is <em>quiet.</em></h1>
+    <p class="dossier-sub">This is the one page here that is not about a company. It is about a pattern that shows up in every other page on this site: the surveillance gets built regardless of who wins. Not because the two sides secretly agree, but because almost nobody on either side is reading the procurement. The evidence for that is a matter of public record, so this page is the record rather than the sermon.</p>
+  </div>
+
+  <div class="flock-body">
+
+    <!-- a) THE CLAIM, AND WHAT IT IS NOT -->
+    <section class="flock-block" aria-labelledby="claim-h">
+      <h2 id="claim-h">A narrow claim, not a comfortable one</h2>
+      <p>There is a version of this argument everybody has already heard, and it is worth separating out first. That version says the two parties are identical and the real power sits with a group nobody can name. The trouble with it is not that it is cynical, because plenty of well-founded conclusions are cynical. The trouble is that it cannot be checked, which means it cannot be acted on, and it tends to end the conversation exactly where the useful part would start.</p>
+      <p>The documents show something narrower and more useful. On surveillance specifically, the disagreement does not run between the parties. It runs through them. Legislation expanding it passes with votes from both. Opposition to it comes from both. And the spending goes up under every administration, which means the thing determining the outcome is not the election.</p>
+      <p>That is a claim you can check, which is the only kind worth making. What follows is the checking.</p>
+    </section>
+
+    <!-- b) THE VOTE -->
+    <section class="flock-block" aria-labelledby="vote-h">
+      <h2 id="vote-h">The vote where the line ran the wrong way</h2>
+      <p>In April 2024 the Senate reauthorised Section 702 of the Foreign Intelligence Surveillance Act, the authority that permits warrantless collection of foreign communications and, as a consequence, sweeps in the communications of Americans those foreigners talk to.</p>
+      <p>If the parties disagreed about surveillance, the roll call would look like a party-line vote. It does not look like that at all.</p>
+
+      <div class="hm-table-wrap">
+        <table class="hm-table">
+          <caption class="visually-hidden">United States Senate Roll Call Vote 118-150, on passage of H.R. 7888, 19 April 2024.</caption>
+          <thead>
+            <tr>
+              <th scope="col">Caucus</th>
+              <th scope="col">Yea</th>
+              <th scope="col">Nay</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row" data-label="Caucus">Republicans</th><td data-label="Yea"><strong>38</strong></td><td data-label="Nay">15</td></tr>
+            <tr><th scope="row" data-label="Caucus">Democrats</th><td data-label="Yea"><strong>21</strong></td><td data-label="Nay">19</td></tr>
+            <tr><th scope="row" data-label="Caucus">Independents</th><td data-label="Yea">1</td><td data-label="Nay">1</td></tr>
+            <tr><th scope="row" data-label="Caucus">Total</th><td data-label="Yea"><strong>60</strong></td><td data-label="Nay"><strong>34</strong></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>Read the Democratic row twice. Twenty one for, nineteen against. That caucus split almost exactly in half on a surveillance authority, which is not something that happens on an issue where the party has a position. The Republican caucus split too, just less evenly.</p>
+      <div class="hm-action-links">
+        <a class="ext-link" href="https://www.senate.gov/legislative/LIS/roll_call_votes/vote1182/vote_118_2_00150.htm" target="_blank" rel="noopener noreferrer">U.S. Senate: Roll Call Vote 118-150, on passage of H.R. 7888<span class="ext-ind" aria-hidden="true">&#8599;</span><span class="visually-hidden"> (opens in a new tab)</span></a>
+      </div>
+      <p>The senators who voted against it that night did not agree with each other about very much else. That is the whole point. On this question the coalition that wanted a warrant requirement was assembled out of people who spend the rest of the year as opponents, and it lost anyway, because it was a coalition nobody was organising and nobody was covering.</p>
+      <p class="flock-caveat">One clarification, because this is the sort of thing that gets flattened in retelling. This was the vote on final passage, not on any particular amendment. The bill did contain some new restrictions on FBI querying. Reasonable people voted yes for reasons that were not cynical. The argument here is not that the yes votes were corrupt. It is that the parties did not divide on it.</p>
+    </section>
+
+    <!-- c) THREE POLITICS, ONE ENDPOINT -->
+    <section class="flock-block" aria-labelledby="three-h">
+      <h2 id="three-h">Three jurisdictions, three politics, one endpoint</h2>
+      <p>Age verification is the cleanest natural experiment available, because three governments with genuinely different politics built it at roughly the same time and arrived in the same place.</p>
+      <ul class="flock-list">
+        <li><strong>Britain</strong> legislated it through the Online Safety Act, framed around child protection, and ended up with passports uploaded to individual websites.</li>
+        <li><strong>Texas</strong> moved the check into the app store, framed around parental rights, and produced the most centralised version of the three.</li>
+        <li><strong>The European Union</strong> built the most privacy-preserving specification of the lot, carefully, with cryptography that genuinely leaks nothing about which site you are visiting.</li>
+      </ul>
+      <p>Three different political traditions. Three different stated motivations. One shared result: a device that carries a permanent, verified claim about your legal identity, because that is what the requirement produces once anybody takes it seriously. Even the good implementation ends there.</p>
+      <p><a href="age-verification.html">The full page on age verification</a> walks through all three with the statutes and the court record attached. What matters here is only that the outcome did not depend on the politics of the government that ordered it.</p>
+    </section>
+
+    <!-- d) THE NUMBER THAT GOES UP -->
+    <section class="flock-block" aria-labelledby="spend-h">
+      <h2 id="spend-h">The number that goes up no matter who wins</h2>
+      <p>Elections change a great many things. Here is one they do not appear to change.</p>
+      <p>The figures below are federal prime contract obligations to Palantir, by fiscal year, from a query run against the U.S. Treasury's <a href="https://api.usaspending.gov/" target="_blank" rel="noopener noreferrer">USAspending API<span class="ext-ind" aria-hidden="true">&#8599;</span><span class="visually-hidden"> (opens in a new tab)</span></a> on <strong>18 August 2026</strong>, matched on recipient name.</p>
+
+      <div class="hm-table-wrap">
+        <table class="hm-table">
+          <caption class="visually-hidden">Federal prime contract obligations to Palantir entities by fiscal year, from USAspending, queried 18 August 2026.</caption>
+          <thead>
+            <tr>
+              <th scope="col">Fiscal year</th>
+              <th scope="col">Obligated</th>
+              <th scope="col">Administration in office for most of it</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row" data-label="Fiscal year">2017</th><td data-label="Obligated">$132 million</td><td data-label="Administration">Trump</td></tr>
+            <tr><th scope="row" data-label="Fiscal year">2018</th><td data-label="Obligated">$117 million</td><td data-label="Administration">Trump</td></tr>
+            <tr><th scope="row" data-label="Fiscal year">2019</th><td data-label="Obligated">$163 million</td><td data-label="Administration">Trump</td></tr>
+            <tr><th scope="row" data-label="Fiscal year">2020</th><td data-label="Obligated">$269 million</td><td data-label="Administration">Trump</td></tr>
+            <tr><th scope="row" data-label="Fiscal year">2021</th><td data-label="Obligated">$229 million</td><td data-label="Administration">Transition year</td></tr>
+            <tr><th scope="row" data-label="Fiscal year">2022</th><td data-label="Obligated">$377 million</td><td data-label="Administration">Biden</td></tr>
+            <tr><th scope="row" data-label="Fiscal year">2023</th><td data-label="Obligated">$348 million</td><td data-label="Administration">Biden</td></tr>
+            <tr><th scope="row" data-label="Fiscal year">2024</th><td data-label="Obligated"><strong>$541 million</strong></td><td data-label="Administration">Biden</td></tr>
+            <tr><th scope="row" data-label="Fiscal year">2025</th><td data-label="Obligated"><strong>$1.02 billion</strong></td><td data-label="Administration">Trump</td></tr>
+            <tr><th scope="row" data-label="Fiscal year">2026</th><td data-label="Obligated"><strong>$1.53 billion</strong></td><td data-label="Administration">Trump, year incomplete</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>Roughly a fourfold increase across the first administration. Roughly a doubling across the second. Then a further doubling. The curve does not have a kink where the government changed hands, in either direction. Whatever is driving it is not the party in office.</p>
+      <p class="flock-caveat">Read this narrowly. These are obligations recorded against prime contract awards, not revenue received, and they exclude anything bought through a reseller. Fiscal years run from 1 October, so they do not line up neatly with presidential terms, and FY2021 spans both. <strong>FY2026 is incomplete</strong>, since the fiscal year does not end until 30 September, so that figure will grow. Name matching sweeps in every Palantir entity. Re-run the query rather than trusting these numbers indefinitely.</p>
+      <p>The same pattern runs through <a href="palantir.html">the Palantir page</a>, which covers Executive Order 14243 and the specific agencies involved. The order consolidating federal records across agencies is a 2025 document, but the contracts it builds on were signed under a president of the other party.</p>
+    </section>
+
+    <!-- e) THE CONSENT AGENDA -->
+    <section class="flock-block" aria-labelledby="local-h">
+      <h2 id="local-h">Where it is actually decided, nobody is arguing at all</h2>
+      <p>Congress is the visible layer and it is not where most of this happens. The cameras on your street were not authorised by a federal statute. They were approved by a city council, frequently in a single line item on a consent agenda, which is the part of the meeting reserved for items considered uncontroversial enough to pass in a block without discussion.</p>
+      <p>This is worth sitting with. A surveillance system covering an entire town routinely enters service without one minute of recorded debate, in a meeting that was open to the public, listed on an agenda published in advance, attended by nobody.</p>
+      <p>Towns that agree on nothing else have made the same purchase. There is no partisan pattern to it because there is no partisan argument about it, and there is no partisan argument about it because there is no argument about it. It is procurement. It is boring. It goes through.</p>
+      <p><a href="flock.html">The page on Flock cameras</a> covers what those contracts contain and which clauses matter. The relevant point here is the venue. The council seat, the county commission, and the utility board are where these systems are actually approved, and the people sitting on them frequently have no stated position on any of it because nobody has ever asked them. It is the level of government where one resident asking a question in writing measurably changes the outcome, and it is the level almost nobody is watching.</p>
+    </section>
+
+    <!-- f) WHY THE FIGHT IS LOUDER THAN THE CONTRACT -->
+    <section class="flock-block" aria-labelledby="loud-h">
+      <h2 id="loud-h">Why the fight is louder than the contract</h2>
+      <p>It is tempting to explain this by saying somebody arranged it. Resist that, because the honest explanation is both simpler and harder to fix.</p>
+      <p>Attention is finite and it is allocated by systems that are measured on engagement. A disagreement about identity, grievance, or who is to blame produces enormous engagement, costs nothing to produce, and never resolves, which means it can run forever. A county procurement item produces almost none, requires somebody to read a PDF, and resolves in one vote. Any system ranking by engagement will surface the first and bury the second. Nobody has to intend that outcome for it to happen every single day.</p>
+      <p>The result is a genuine asymmetry in what people know. Most people could describe the current national argument in detail. Very few could say whether their own police department runs plate readers, how long the data is kept, or which outside agencies can query it, and that second set of facts has considerably more bearing on their actual life.</p>
+      <p>The useful response to this is not to disengage from politics, and it is certainly not to conclude that everybody arguing is a dupe. It is to notice that the loudest available argument is not automatically the most consequential one, and to spend a small fraction of that attention somewhere the returns are higher.</p>
+      <p class="flock-caveat">This section is an argument about incentives, not a claim about any specific coordinated campaign. Where this site makes a factual claim it attaches a document. This is reasoning, offered as reasoning, and you are free to find it unpersuasive.</p>
+    </section>
+
+    <!-- g) WHAT THIS PAGE IS NOT SAYING -->
+    <section class="flock-block" aria-labelledby="not-h">
+      <h2 id="not-h">What this page is not saying</h2>
+      <p>Pages like this one go wrong in predictable ways, so here are the guardrails, stated plainly.</p>
+      <ul class="flock-list">
+        <li><strong>Not that the parties are the same.</strong> They differ enormously on most things. The claim is confined to surveillance and its procurement, where the record shows they do not divide.</li>
+        <li><strong>Not that anyone is coordinating this.</strong> No secret meeting is required to explain contracts that grow because each agency finds them individually useful and nobody is auditing the total.</li>
+        <li><strong>Not a verdict on electoral politics either way.</strong> Whatever you have concluded about how well any of that works, these particular decisions still get made, in council chambers and commission meetings, by people who will be there whether or not anyone is watching.</li>
+        <li><strong>Not that people who disagree with you are stupid.</strong> Someone reaching a different conclusion from the same documents is doing the thing this site exists to enable. The failure mode worth worrying about is nobody reading the documents at all.</li>
+      </ul>
+      <p>The reason to be this careful is that the argument is easy to counterfeit. There is an enormous amount of content asserting that the real enemy is above the fray, and almost none of it comes with a roll call vote attached. The difference between this page and that content is not the sentiment. It is the footnotes.</p>
+    </section>
+
+    <!-- h) CIVIC CLOSE -->
+    <section class="flock-block" aria-labelledby="civic-h">
+      <h2 id="civic-h">What actually changes things</h2>
+      <ul class="flock-list">
+        <li><strong>Ask a candidate a question nobody has asked them.</strong> Most people running for council or commission have no position on surveillance procurement because it has never come up. The first person to ask sets the terms, and the answer goes on the record.</li>
+        <li><strong>Take the retention period, not the argument about crime.</strong> Whether cameras reduce crime is contested and probably unwinnable in a public meeting. How long the footage is kept and who else can query it is concrete, answerable, and where the actual exposure lives.</li>
+        <li><strong>Bring somebody who disagrees with you.</strong> Two residents from opposite sides of the usual argument asking the same procurement question is a different political object than one activist, and everyone in the room can see it.</li>
+        <li><strong>Read the consent agenda.</strong> It is published in advance, it is short, and it is where this passes. This is the single highest-leverage boring thing available to anybody reading this page.</li>
+      </ul>
+      <p>The internet was built for the free exchange of ideas, and for a while that is roughly what it was. What it mostly does now is sort people into rooms and reward whoever is angriest in each one. That is not a conspiracy and it does not need to be one. It is what you get when attention is sold and conflict is the cheapest thing to manufacture.</p>
+      <p>The material on this site is a small argument against that arrangement. Not because surveillance is more important than everything people argue about, but because it is one of the few remaining subjects where the evidence is public, the mechanism is documented, and the people on opposite sides of every other question turn out, when they read the contract, to want roughly the same thing. That is not a call for anybody to abandon what they believe. It is an observation that there is more common ground here than either side has been told, and that the ground is made of documents anybody can go and read. Bring somebody who disagrees with you. The contract does not care which of you was right about anything else.</p>
+    </section>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="logo">Visable<span>.</span></div>
+  <p>An independent project, built because the conversation deserves to be better.</p>
+  <p class="footer-links"><a href="why-this-exists.html">Why this exists</a> &middot; <a href="common-ground.html">Common ground</a> &middot; <a href="contribute.html">Contribute</a></p>
+  <p style="color: #2a2a2a; font-size: 11px;">No tracking. No analytics. No ads. Ever.</p>
+</footer>
+
+<script src="binary-background.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

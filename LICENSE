@@ -1,0 +1,65 @@
+# Licence
+
+This repository contains two kinds of work, and they are licensed differently.
+
+## 1. Site content: CC BY 4.0
+
+All prose, page copy, research write-ups, and editorial documentation are licensed
+under the **Creative Commons Attribution 4.0 International Licence (CC BY 4.0)**.
+
+This covers the text of the `.html` pages, the `.md` documentation, the curated
+research data in `pe-data.json` and `batches/`, and the company records in
+`tracker.js`.
+
+You are free to share and adapt this material, including commercially, provided you
+give appropriate credit, link to the licence, and indicate if changes were made.
+
+Full licence text: https://creativecommons.org/licenses/by/4.0/legalcode
+Summary: https://creativecommons.org/licenses/by/4.0/
+
+Attribution should name Visable and link to https://visableprivacy.com.
+
+Note on the underlying facts: the contracts, filings, court records, and agency
+documents this site cites are public records and are not covered by this licence.
+The licence applies to the writing about them, not to the sources themselves.
+
+## 2. Code: MIT
+
+The site's implementation is licensed under the **MIT Licence**. This covers
+`main.js`, `binary-background.js`, `style.css`, `export-pe-data.mjs`,
+`import-to-airtable.mjs`, and the page templates and markup structure, as distinct
+from the editorial text they carry.
+
+```
+MIT Licence
+
+Copyright (c) 2026 Visable
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the "Software"), to deal in the
+Software without restriction, including without limitation the rights to use, copy,
+modify, merge, publish, distribute, sublicense, and/or sell copies of the Software,
+and to permit persons to whom the Software is furnished to do so, subject to the
+following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
+INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
+PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+```
+
+## 3. Contributions
+
+Contributions are accepted under these same terms: content under CC BY 4.0, code
+under MIT. See `CONTRIBUTING.md`.
+
+## 4. What is not licensed here
+
+The Visable name, the wordmark, and `favicon.svg` are not covered by either licence
+above. You may reproduce them as needed to attribute the source. You may not use
+them to imply that a derivative work is produced or endorsed by this project.

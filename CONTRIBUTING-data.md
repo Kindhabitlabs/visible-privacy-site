@@ -79,17 +79,10 @@ two-layer evidence model, and the batch workflow.
 
 ## Sourcing rules, for both pages
 
-These are not optional. Two fabricated figures have made it onto the live site.
+These are not optional.
 
 **Never write a number from a search-result summary.** Search engines will confidently
 restate a figure that exists on exactly one junk domain. Open the primary source and read it.
-
-- A dossier entry claimed a **$20M FTC settlement with Grindr in 2026**. No such settlement
-  exists. The figure traced to a single SEO content farm; EPIC's 2023 complaint asked the FTC
-  to investigate and nothing followed. The same entry cited Norway's fine as $11.7M, which was
-  the *intended* penalty announced in January 2021, not the NOK 65M actually imposed.
-- An earlier draft claimed a **$2.5B Walmart FTC subscription settlement**. Also fictional.
-  The real action is $100M over Spark Driver pay and tips.
 
 **Practical mechanics.** `ftc.gov` and most agency sites return 403 to automated fetchers but
 200 to `curl` with a browser User-Agent:
