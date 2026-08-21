@@ -5,14 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Flock: The Surveillance You Already Paid For | Visable</title>
   <meta property="og:title" content="Flock: The Surveillance You Already Paid For | Visable">
-  <meta property="og:description" content="Flock Safety ALPR cameras photograph every passing vehicle and store a searchable record of your movements. What they capture, why 'nothing to hide' fails, and the only lever that works: local.">
+  <meta property="og:description" content="Flock Safety ALPR cameras photograph every passing vehicle and store a searchable record of your movements. What they capture, why 'nothing to hide' fails, what the record already shows, and the only lever that works: local.">
   <meta property="og:image" content="/social-share.svg">
   <meta name="twitter:image" content="/social-share.svg">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Visable">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Flock: The Surveillance You Already Paid For | Visable">
-  <meta name="twitter:description" content="Flock Safety ALPR cameras photograph every passing vehicle and store a searchable record of your movements. What they capture, why 'nothing to hide' fails, and the only lever that works: local.">
+  <meta name="twitter:description" content="Flock Safety ALPR cameras photograph every passing vehicle and store a searchable record of your movements. What they capture, why 'nothing to hide' fails, what the record already shows, and the only lever that works: local.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
@@ -302,16 +302,73 @@
       </div>
     </section>
 
-    <!-- c) YOU CANNOT OPT OUT -->
-    <section class="flock-block" aria-labelledby="optout-h">
-      <h2 id="optout-h">You cannot opt out</h2>
-      <p>There is no consumer-facing exit from this system. The usual privacy playbook (adjust a setting, submit a deletion request) does not apply.</p>
+    <!-- c) THE RECORD SO FAR -->
+    <section class="flock-block" aria-labelledby="record-h">
+      <h2 id="record-h">The record so far</h2>
+      <p>Everything above is a claim about what the system makes possible. This section is what has already happened with it, drawn from criminal complaints, court opinions and a state audit. Where the source is journalism rather than a document, it says so.</p>
+
+      <h3>When the camera goes looking for a crime</h3>
+      <p>The ordinary defence of ALPR is that it is a lookup tool. A crime happens, police have a plate, they search the plate. This one ran the other direction.</p>
+      <div class="myth-card">
+        <div class="myth-quote">"The vehicle travels to Michigan frequently which is a known source State for Marijuana as it is legal there."</div>
+        <div class="myth-reframe-label">Wisconsin criminal complaint, <em>State v. Abrams-Phillips</em>, April 2025</div>
+        <p>Wisconsin police were looking for Edward Abrams-Phillips on a bail-jumping charge. Along the way they ran his plate through Flock and found a pattern: repeated trips to Michigan, where cannabis is legal, and back to Wisconsin, where it is not. That pattern went into the complaint as grounds for suspicion. When a camera logged him heading home, officers "made a coordinated effort to intercept" the car. The stop produced a claimed smell of raw marijuana, the smell produced a warrantless search, and the search produced the weed.</p>
+        <p>The bail-jumping charge that started all of it was dismissed. He was convicted of possession.</p>
+      </div>
+      <p>Notice that nothing here was a lookup. Nobody queried Flock to identify a suspect in a known crime. They read a travel history, inferred a crime from it, and went to go find one. The predicate was driving to a state where a thing is legal.</p>
+      <div class="hm-action-links">
+        <a class="ext-link" href="https://www.404media.co/cops-used-flock-to-track-a-man-across-state-lines-to-create-pretext-to-search-his-car-for-weed/" target="_blank" rel="noopener noreferrer">
+          Reporting: 404 Media, "Cops Used Flock to Track a Man Across State Lines," 5 August 2026<span class="ext-ind" aria-hidden="true">↗</span><span class="visually-hidden"> (opens in a new tab)</span>
+        </a>
+      </div>
+
+      <h3>When the operator goes looking for a person</h3>
+      <p>The second pattern is older and much better documented. It is not a department misusing the system. It is one person with a valid login.</p>
       <ul class="flock-list">
-        <li><strong>No national opt-out registry.</strong> Unlike data brokers, there is no central place to remove yourself.</li>
-        <li><strong>No consumer deletion path.</strong> You cannot ask Flock to delete your vehicle from its records.</li>
-        <li><strong>Flock calls itself a data processor, not the data owner.</strong> It redirects deletion requests to the law enforcement agency that owns the camera, an agency that has no obligation, and often no interest, in honoring them.</li>
+        <li><strong>Victor Heiar, Kechi Police Department, Kansas.</strong> A lieutenant who used Wichita's Flock system to follow his estranged wife, who had already told a friend she believed she was being tracked and did not know how. He pleaded guilty to computer crime and stalking, both misdemeanours, and was sentenced in April 2023 to 24 months in jail, suspended to 18 months' probation. Kansas revoked his law enforcement certification.</li>
+        <li><strong>Alexander Vanny, Riverside County Sheriff's Office, California.</strong> Photographed the plate of a friend of his former fiancée and ran it through the department's Flock system to find her. A jury convicted him on ten counts, including stalking and unauthorised access of electronic data. Six years.</li>
+        <li><strong>Michael Steffman, chief of police, Braselton, Georgia.</strong> Roughly 600 lookups on his former partner and her teenage daughter across eight months. She told a judge in August 2025 that he was using the cameras to track her; her request for a restraining order was denied for want of evidence. The Georgia Bureau of Investigation charged him that November with stalking, harassing communications, misuse of automated license plate recognition and violating his oath of office. He died before the case reached trial.</li>
+        <li><strong>Cristian Morales, Menasha Police Department, Wisconsin.</strong> Sentenced in August 2026 to six months in jail and three years' probation for targeted surveillance through Flock.</li>
+        <li><strong>Emily Pacheco, New Bedford Police Department, Massachusetts.</strong> Pending. Her former partner testified in court that Pacheco had been tracking her. City records put Pacheco among the heaviest users of the city's system, with her search volume climbing sharply after the breakup. A judge found she posed a credible threat and suspended her firearms licence. The department suspended its Flock system.</li>
       </ul>
-      <p>The only lever that actually works is <strong>local</strong>: the contracts your city or county signs, the councils that approve them, and the records requests that expose how the system is used.</p>
+      <p>These are not the whole list. The <em>Washington Post</em> counted more than fifty officers across a dozen states accused of this, over half of them tracking a partner or an ex, and the Institute for Justice maintains a running database of the cases.</p>
+      <p>Heiar's is the one worth sitting with, because nothing about it was a breach. He was an authorised user, running ordinary queries, on a system his own department had paid for. There was no lock to pick. The audit log did not stop him. It is only how anyone found out afterwards.</p>
+      <div class="hm-action-links">
+        <a class="ext-link" href="https://www.washingtonpost.com/technology/2026/08/02/how-police-officers-used-vast-network-cameras-spy-their-exes/" target="_blank" rel="noopener noreferrer">
+          Reporting: Washington Post, "How rogue officers turned a nationwide camera network into a tool for stalking," 2 August 2026<span class="ext-ind" aria-hidden="true">↗</span><span class="visually-hidden"> (opens in a new tab)</span>
+        </a>
+        <a class="ext-link secondary" href="https://ij.org/the-ij-database-of-alpr-abuse/" target="_blank" rel="noopener noreferrer">
+          Institute for Justice: the ALPR abuse database<span class="ext-ind" aria-hidden="true">↗</span><span class="visually-hidden"> (opens in a new tab)</span>
+        </a>
+      </div>
+
+      <h3>What the courts have said</h3>
+      <p>Less than you would hope, and so far mostly the wrong way.</p>
+      <p>Lee Schmidt and Crystal Arrington sued Norfolk, Virginia over a network of roughly 175 camera clusters that had logged each of their cars hundreds of times across about four months. Neither had been accused of anything. On 27 January 2026 Chief Judge Mark Davis granted summary judgment to the city. Norfolk's coverage has gaps, he reasoned, and Virginia caps retention at 21 days, so the network does not capture "the whole of a person's movements" in the way <em>Carpenter</em> forbids. Not yet, anyway. The case is on appeal to the Fourth Circuit.</p>
+      <p>Two days later, Washington's Court of Appeals arrived at the same place by a different route, in a case where a man had asked a trial court to suppress the Flock data that led police to him.</p>
+      <div class="myth-card">
+        <div class="myth-quote">"While the Flock system as a whole potentially provides broader tracking capabilities than an officer's manual notation of a license plate, the amount of photographs taken of a license plate is inconsequential."</div>
+        <div class="myth-reframe-label"><em>State v. Simonson</em>, Washington Court of Appeals, 29 January 2026</div>
+        <p>That sentence is the entire argument in miniature. If a single photograph of a plate on a public road is harmless, then no quantity of them adds up to a search, and the scale of the network never becomes a legal fact. The opinion is unpublished, and Simonson has petitioned the Washington Supreme Court to review it.</p>
+        <p>One detail from that record is worth carrying to your own city council. The court noted that law enforcement keeps ALPR audit logs indefinitely, showing every query run and the reason the user gave for running it. In Simonson's case the State never produced them.</p>
+      </div>
+      <p>Then the ground moved. On 29 June 2026 the Supreme Court decided <em>Chatrie v. United States</em> six to three. It is not an ALPR case, it is about a geofence warrant served on Google, but the Court held that people keep a reasonable expectation of privacy in their digital location data even when a third party holds it and even across short periods, and it weighed what the technology is capable of rather than only what the police did with it that day. That is the argument the Fourth Circuit now has in front of it. Flock's public position is that geofence warrants are "categorically different from license plate recognition technology."</p>
+      <p>Statutes have done better than the Constitution here. In August 2025 an audit by the Illinois Secretary of State found Flock in breach of state law for letting Customs and Border Protection reach data from Illinois cameras; a 2023 Illinois statute bars sharing plate data for immigration enforcement or for out-of-state abortion investigations. What prompted the audit was a Texas sheriff's office running a nationwide Flock search for a woman who had ended her own pregnancy. Forty-seven agencies lost access to Illinois data, and Flock paused its pilot programmes with the Department of Homeland Security. Still pending: a class action in San Francisco Superior Court over out-of-state sharing under California's ALPR Privacy Act, and a suit filed against Wichita in August 2026 that cites Heiar by name.</p>
+      <p>The shape of all this is worth noticing. The constitutional challenges have mostly lost, and they lost on facts a city chooses for itself: how many cameras, how long the data is kept, who else can reach it. The statutory challenges have mostly won, and those statutes came from legislatures. Both roads run back through rooms you can walk into.</p>
+      <div class="hm-action-links">
+        <a class="ext-link" href="https://www.courts.wa.gov/opinions/pdf/407322_unp.pdf" target="_blank" rel="noopener noreferrer">
+          Opinion: <em>State v. Simonson</em>, No. 40732-2-III (Wash. Ct. App. Div. III)<span class="ext-ind" aria-hidden="true">↗</span><span class="visually-hidden"> (opens in a new tab)</span>
+        </a>
+        <a class="ext-link secondary" href="https://www.supremecourt.gov/opinions/25pdf/25-112_0am4.pdf" target="_blank" rel="noopener noreferrer">
+          Opinion: <em>Chatrie v. United States</em>, No. 25-112<span class="ext-ind" aria-hidden="true">↗</span><span class="visually-hidden"> (opens in a new tab)</span>
+        </a>
+        <a class="ext-link secondary" href="https://clearinghouse.net/case/46035/" target="_blank" rel="noopener noreferrer">
+          Docket: <em>Schmidt v. City of Norfolk</em>, No. 2:24-cv-00621 (E.D. Va.)<span class="ext-ind" aria-hidden="true">↗</span><span class="visually-hidden"> (opens in a new tab)</span>
+        </a>
+        <a class="ext-link secondary" href="https://www.ilsos.gov/news/2025/august-25-2025-giannoulias-audit-finds-license-plate-reader-company-in-violation-of-state-law.html" target="_blank" rel="noopener noreferrer">
+          Illinois Secretary of State: audit findings, 25 August 2025<span class="ext-ind" aria-hidden="true">↗</span><span class="visually-hidden"> (opens in a new tab)</span>
+        </a>
+      </div>
       <div class="flock-divider-cam cam-right" aria-hidden="true">
         <svg viewBox="0 0 56 52" fill="none">
           <g stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
@@ -330,7 +387,35 @@
       </div>
     </section>
 
-    <!-- d) FIND THE CAMERAS NEAR YOU -->
+    <!-- d) YOU CANNOT OPT OUT -->
+    <section class="flock-block" aria-labelledby="optout-h">
+      <h2 id="optout-h">You cannot opt out</h2>
+      <p>There is no consumer-facing exit from this system. The usual privacy playbook (adjust a setting, submit a deletion request) does not apply.</p>
+      <ul class="flock-list">
+        <li><strong>No national opt-out registry.</strong> Unlike data brokers, there is no central place to remove yourself.</li>
+        <li><strong>No consumer deletion path.</strong> You cannot ask Flock to delete your vehicle from its records.</li>
+        <li><strong>Flock calls itself a data processor, not the data owner.</strong> It redirects deletion requests to the law enforcement agency that owns the camera, an agency that has no obligation, and often no interest, in honoring them.</li>
+      </ul>
+      <p>The only lever that actually works is <strong>local</strong>: the contracts your city or county signs, the councils that approve them, and the records requests that expose how the system is used.</p>
+      <div class="flock-divider-cam cam-left" aria-hidden="true">
+        <svg viewBox="0 0 56 52" fill="none">
+          <g stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M48 51.2V13M52 51.2V13" />
+            <path d="M45.3 16 48 13" />
+            <g transform="rotate(-35 32 18)">
+              <rect x="20" y="12" width="24" height="12" rx="2" />
+              <path d="M20 14h-5v8h5" />
+            </g>
+            <g opacity=".5">
+              <path d="M15.8 24.5 3.8 24.9" />
+              <path d="M20.4 31 14.8 44.9" />
+            </g>
+          </g>
+        </svg>
+      </div>
+    </section>
+
+    <!-- e) FIND THE CAMERAS NEAR YOU -->
     <section class="flock-block" aria-labelledby="maps-h">
       <h2 id="maps-h">Find the cameras near you</h2>
       <p>Volunteers have mapped ALPR locations across the country. Start with DeFlock. It is the primary community project and feeds its data into OpenStreetMap. The other map below largely renders that same OpenStreetMap-sourced data.</p>
@@ -359,7 +444,7 @@
         </div>
       </div>
       <p class="flock-caveat">These maps are crowdsourced and incomplete. Absence from a map is not evidence of absence. A camera you cannot see on the map may still be on your street.</p>
-      <div class="flock-divider-cam cam-left" aria-hidden="true">
+      <div class="flock-divider-cam cam-right" aria-hidden="true">
         <svg viewBox="0 0 56 52" fill="none">
           <g stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
             <path d="M48 51.2V13M52 51.2V13" />
@@ -377,7 +462,7 @@
       </div>
     </section>
 
-    <!-- e) WHAT ACTUALLY CHANGES THINGS -->
+    <!-- f) WHAT ACTUALLY CHANGES THINGS -->
     <section class="flock-block" aria-labelledby="civic-h">
       <h2 id="civic-h">What actually changes things</h2>
       <p>Because the lever is local, so is the work. Hardening your own devices does nothing here. This gets decided in public meetings and public contracts, which means it can be changed there too.</p>
