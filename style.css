@@ -2520,3 +2520,85 @@
       .cg-wedge-scene.side-right { right: -95px; }
       .cg-wedge-scene.side-left { left: -95px; }
     }
+
+    /* ---- ENSHITTIFICATION PAGE ---- */
+    /* Reading column reuses .flock-body / .flock-block / .flock-list, as every
+       page before it does. Only the scene layer is bespoke. */
+
+    /* A building being emptied: its windows dim in runs while coins lift off the
+       roof and vanish. The value leaves the structure, which is the whole
+       argument of the page drawn once and repeated down the column. */
+    @keyframes ensh-drain {
+      0%, 100% { opacity: 1; }
+      50%      { opacity: 0.15; }
+    }
+    /* Coins rise out of the top and fade, so the extraction reads as continuous
+       rather than a single lump leaving once. */
+    @keyframes ensh-lift {
+      0%   { opacity: 0; transform: translateY(12px); }
+      30%  { opacity: 1; }
+      100% { opacity: 0; transform: translateY(-26px); }
+    }
+    .ensh-drain-1 { animation: ensh-drain 5s ease-in-out infinite; }
+    .ensh-drain-2 { animation: ensh-drain 5s ease-in-out infinite -1.6s; }
+    .ensh-drain-3 { animation: ensh-drain 5s ease-in-out infinite -3.2s; }
+    .ensh-coin    { animation: ensh-lift 4.5s ease-in-out infinite; }
+    .ensh-coin-2  { animation-delay: -1.5s; }
+    .ensh-coin-3  { animation-delay: -3s; }
+    @media (prefers-reduced-motion: reduce) {
+      .ensh-drain-1, .ensh-drain-2, .ensh-drain-3,
+      .ensh-coin { animation: none; }
+      .ensh-coin { opacity: 0.5; }
+    }
+
+    /* Scene layer, following .cg-wedge-layer and .why-rack-layer. */
+    .ensh-drain-layer {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .ensh-drain-scene {
+      position: absolute;
+      width: 235px;
+      /* aspect-ratio pins the height; without it the absolutely positioned box
+         collapses, the same trap as every other scene layer here. */
+      aspect-ratio: 280 / 250;
+      color: var(--gold);
+      opacity: 0.26;
+    }
+    .ensh-drain-scene svg { width: 100%; height: 100%; display: block; }
+    .ensh-drain-scene.side-right { right: 16px; }
+    /* Mirrored, like the Why This Exists halls: flipping the left-hand copies
+       sends the rising coins inward towards the column rather than off the page. */
+    .ensh-drain-scene.side-left { left: 16px; transform: scaleX(-1); }
+    /* Pinned in pixels so it lands beside the h1 rather than drifting with page
+       length, and clear of the rule that .section-label trails behind it. */
+    .drain-scene-1 { top: 190px; }
+    .drain-scene-2 { top: 33%; }
+    .drain-scene-3 { top: 59%; }
+    .drain-scene-4 { top: 83%; }
+    /* Offset per scene so the four buildings are never emptying in unison. */
+    .drain-scene-2 .ensh-drain-1 { animation-delay: -0.8s; }
+    .drain-scene-2 .ensh-drain-2 { animation-delay: -2.4s; }
+    .drain-scene-2 .ensh-drain-3 { animation-delay: -4.0s; }
+    .drain-scene-3 .ensh-drain-1 { animation-delay: -2.1s; }
+    .drain-scene-3 .ensh-drain-2 { animation-delay: -3.7s; }
+    .drain-scene-3 .ensh-drain-3 { animation-delay: -0.5s; }
+    .drain-scene-4 .ensh-drain-1 { animation-delay: -3.3s; }
+    .drain-scene-4 .ensh-drain-2 { animation-delay: -1.0s; }
+    .drain-scene-4 .ensh-drain-3 { animation-delay: -2.7s; }
+    .drain-scene-2 .ensh-coin-1 { animation-delay: -0.6s; }
+    .drain-scene-3 .ensh-coin-1 { animation-delay: -2.2s; }
+    .drain-scene-4 .ensh-coin-1 { animation-delay: -3.6s; }
+    @media (max-width: 1200px) {
+      .ensh-drain-scene { opacity: 0.18; }
+      .ensh-drain-scene.side-right { right: -70px; }
+      .ensh-drain-scene.side-left { left: -70px; }
+    }
+    @media (max-width: 1000px) {
+      .ensh-drain-scene { width: 200px; opacity: 0.14; }
+      .ensh-drain-scene.side-right { right: -95px; }
+      .ensh-drain-scene.side-left { left: -95px; }
+    }

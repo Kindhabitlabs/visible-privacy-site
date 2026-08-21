@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Enshittification: When Decay Is the Business Model | Visable</title>
+  <meta property="og:title" content="Enshittification: When Decay Is the Business Model | Visable">
+  <meta property="og:description" content="Things don't get worse because people got greedy. Greed is constant. They get worse when the things that used to discipline a company stop working, and private equity is the purest engine for making that happen on purpose.">
+  <meta property="og:image" content="/social-share.svg">
+  <meta name="twitter:image" content="/social-share.svg">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Visable">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Enshittification: When Decay Is the Business Model | Visable">
+  <meta name="twitter:description" content="Things don't get worse because people got greedy. Greed is constant. They get worse when the things that used to discipline a company stop working, and private equity is the purest engine for making that happen on purpose.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+</head>
+<body>
+  <canvas id="binary-canvas" class="binary-canvas" aria-hidden="true"></canvas>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="index.html" class="nav-logo">Visable<span>.</span></a>
+  <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <ul id="nav-menu">
+    <li><a href="tracker.html">Corporate Dossier</a></li>
+    <li><a href="pe-tracker.html">PE Ownership</a></li>
+    <li class="nav-group">
+      <button type="button" class="nav-group-btn" aria-expanded="false" aria-controls="nav-deep-dives" aria-haspopup="true">Deep Dives<span class="nav-group-caret" aria-hidden="true">&#9662;</span></button>
+      <ul class="nav-submenu" id="nav-deep-dives">
+        <li><a href="flock.html">Flock Cameras</a></li>
+        <li><a href="graphene.html">Your Phone</a></li>
+        <li><a href="cars.html">Your Car</a></li>
+        <li><a href="palantir.html">Palantir</a></li>
+        <li><a href="age-verification.html">Your ID</a></li>
+      </ul>
+    </li>
+    <li class="nav-group">
+      <button type="button" class="nav-group-btn active" aria-expanded="false" aria-controls="nav-why-how" aria-haspopup="true">Why &amp; How<span class="nav-group-caret" aria-hidden="true">&#9662;</span></button>
+      <ul class="nav-submenu" id="nav-why-how">
+        <li><a href="why-this-exists.html">Why This Exists</a></li>
+        <li><a href="common-ground.html">Common Ground</a></li>
+        <li><a href="enshittification.html" class="active">Enshittification</a></li>
+        <li><a href="contribute.html">Contribute</a></li>
+        <li><a href="donate.html">Donate</a></li>
+      </ul>
+    </li>
+    <li><a href="index.html#tools" class="nav-cta">Honest Mitigation</a></li>
+  </ul>
+</nav>
+
+<main class="flock-main">
+
+  <div class="ensh-drain-layer" aria-hidden="true">
+    <div class="ensh-drain-scene side-right drain-scene-1">
+      <svg viewBox="0 0 280 250" fill="none">
+        <g stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M40 232h200" />
+          <rect x="92" y="72" width="96" height="150" rx="3" />
+          <rect x="128" y="190" width="24" height="32" rx="1" />
+          <g class="ensh-drain-1">
+            <rect x="100" y="84" width="18" height="14" rx="1" />
+            <rect x="100" y="108" width="18" height="14" rx="1" />
+            <rect x="100" y="132" width="18" height="14" rx="1" />
+            <rect x="100" y="156" width="18" height="14" rx="1" />
+          </g>
+          <g class="ensh-drain-2">
+            <rect x="131" y="84" width="18" height="14" rx="1" />
+            <rect x="131" y="108" width="18" height="14" rx="1" />
+            <rect x="131" y="132" width="18" height="14" rx="1" />
+            <rect x="131" y="156" width="18" height="14" rx="1" />
+          </g>
+          <g class="ensh-drain-3">
+            <rect x="162" y="84" width="18" height="14" rx="1" />
+            <rect x="162" y="108" width="18" height="14" rx="1" />
+            <rect x="162" y="132" width="18" height="14" rx="1" />
+            <rect x="162" y="156" width="18" height="14" rx="1" />
+          </g>
+          <g class="ensh-coin ensh-coin-1"><circle cx="150" cy="52" r="7" /><path d="M150 47v10" stroke-width="1.5" /></g>
+          <g class="ensh-coin ensh-coin-2"><circle cx="170" cy="36" r="7" /><path d="M170 31v10" stroke-width="1.5" /></g>
+          <g class="ensh-coin ensh-coin-3"><circle cx="190" cy="20" r="7" /><path d="M190 15v10" stroke-width="1.5" /></g>
+        </g>
+      </svg>
+    </div>
+    <div class="ensh-drain-scene side-left drain-scene-2">
+      <svg viewBox="0 0 280 250" fill="none">
+        <g stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M40 232h200" />
+          <rect x="92" y="72" width="96" height="150" rx="3" />
+          <rect x="128" y="190" width="24" height="32" rx="1" />
+          <g class="ensh-drain-1">
+            <rect x="100" y="84" width="18" height="14" rx="1" />
+            <rect x="100" y="108" width="18" height="14" rx="1" />
+            <rect x="100" y="132" width="18" height="14" rx="1" />
+            <rect x="100" y="156" width="18" height="14" rx="1" />
+          </g>
+          <g class="ensh-drain-2">
+            <rect x="131" y="84" width="18" height="14" rx="1" />
+            <rect x="131" y="108" width="18" height="14" rx="1" />
+            <rect x="131" y="132" width="18" height="14" rx="1" />
+            <rect x="131" y="156" width="18" height="14" rx="1" />
+          </g>
+          <g class="ensh-drain-3">
+            <rect x="162" y="84" width="18" height="14" rx="1" />
+            <rect x="162" y="108" width="18" height="14" rx="1" />
+            <rect x="162" y="132" width="18" height="14" rx="1" />
+            <rect x="162" y="156" width="18" height="14" rx="1" />
+          </g>
+          <g class="ensh-coin ensh-coin-1"><circle cx="150" cy="52" r="7" /><path d="M150 47v10" stroke-width="1.5" /></g>
+          <g class="ensh-coin ensh-coin-2"><circle cx="170" cy="36" r="7" /><path d="M170 31v10" stroke-width="1.5" /></g>
+          <g class="ensh-coin ensh-coin-3"><circle cx="190" cy="20" r="7" /><path d="M190 15v10" stroke-width="1.5" /></g>
+        </g>
+      </svg>
+    </div>
+    <div class="ensh-drain-scene side-right drain-scene-3">
+      <svg viewBox="0 0 280 250" fill="none">
+        <g stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M40 232h200" />
+          <rect x="92" y="72" width="96" height="150" rx="3" />
+          <rect x="128" y="190" width="24" height="32" rx="1" />
+          <g class="ensh-drain-1">
+            <rect x="100" y="84" width="18" height="14" rx="1" />
+            <rect x="100" y="108" width="18" height="14" rx="1" />
+            <rect x="100" y="132" width="18" height="14" rx="1" />
+            <rect x="100" y="156" width="18" height="14" rx="1" />
+          </g>
+          <g class="ensh-drain-2">
+            <rect x="131" y="84" width="18" height="14" rx="1" />
+            <rect x="131" y="108" width="18" height="14" rx="1" />
+            <rect x="131" y="132" width="18" height="14" rx="1" />
+            <rect x="131" y="156" width="18" height="14" rx="1" />
+          </g>
+          <g class="ensh-drain-3">
+            <rect x="162" y="84" width="18" height="14" rx="1" />
+            <rect x="162" y="108" width="18" height="14" rx="1" />
+            <rect x="162" y="132" width="18" height="14" rx="1" />
+            <rect x="162" y="156" width="18" height="14" rx="1" />
+          </g>
+          <g class="ensh-coin ensh-coin-1"><circle cx="150" cy="52" r="7" /><path d="M150 47v10" stroke-width="1.5" /></g>
+          <g class="ensh-coin ensh-coin-2"><circle cx="170" cy="36" r="7" /><path d="M170 31v10" stroke-width="1.5" /></g>
+          <g class="ensh-coin ensh-coin-3"><circle cx="190" cy="20" r="7" /><path d="M190 15v10" stroke-width="1.5" /></g>
+        </g>
+      </svg>
+    </div>
+    <div class="ensh-drain-scene side-left drain-scene-4">
+      <svg viewBox="0 0 280 250" fill="none">
+        <g stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M40 232h200" />
+          <rect x="92" y="72" width="96" height="150" rx="3" />
+          <rect x="128" y="190" width="24" height="32" rx="1" />
+          <g class="ensh-drain-1">
+            <rect x="100" y="84" width="18" height="14" rx="1" />
+            <rect x="100" y="108" width="18" height="14" rx="1" />
+            <rect x="100" y="132" width="18" height="14" rx="1" />
+            <rect x="100" y="156" width="18" height="14" rx="1" />
+          </g>
+          <g class="ensh-drain-2">
+            <rect x="131" y="84" width="18" height="14" rx="1" />
+            <rect x="131" y="108" width="18" height="14" rx="1" />
+            <rect x="131" y="132" width="18" height="14" rx="1" />
+            <rect x="131" y="156" width="18" height="14" rx="1" />
+          </g>
+          <g class="ensh-drain-3">
+            <rect x="162" y="84" width="18" height="14" rx="1" />
+            <rect x="162" y="108" width="18" height="14" rx="1" />
+            <rect x="162" y="132" width="18" height="14" rx="1" />
+            <rect x="162" y="156" width="18" height="14" rx="1" />
+          </g>
+          <g class="ensh-coin ensh-coin-1"><circle cx="150" cy="52" r="7" /><path d="M150 47v10" stroke-width="1.5" /></g>
+          <g class="ensh-coin ensh-coin-2"><circle cx="170" cy="36" r="7" /><path d="M170 31v10" stroke-width="1.5" /></g>
+          <g class="ensh-coin ensh-coin-3"><circle cx="190" cy="20" r="7" /><path d="M190 15v10" stroke-width="1.5" /></g>
+        </g>
+      </svg>
+    </div>
+  </div>
+
+  <div class="dossier-header">
+    <div class="section-label">Enshittification</div>
+    <h1>Everything gets worse.<br />That's the <em>business model.</em></h1>
+    <p class="dossier-sub">This page is not about a company. It is about the pattern behind most of the other pages here: the reason a service you relied on, or a brand you grew up with, quietly got worse and then fell over. The useful version of that story is not that somebody got greedy. Greed is a constant, and it does not explain timing. The useful version is that the things which used to stop a company from treating you badly stopped working, and that some owners have learned to make that happen on purpose.</p>
+  </div>
+
+  <div class="flock-body">
+
+    <!-- a) THE WORD -->
+    <section class="flock-block" aria-labelledby="name-h">
+      <h2 id="name-h">First, the word</h2>
+      <p>The writer Cory Doctorow coined "enshittification" in late 2022 to describe the way online platforms decay, and it caught on fast enough that the American Dialect Society named it the word of the year for 2023. It is a vulgar word for a precise idea, which is part of why it stuck.</p>
+      <p>The shape he described has four steps. A platform starts out good to the people who use it, because it needs them. Once they are locked in, it gets worse for them in order to win over the businesses that pay it, the advertisers and sellers and drivers. Once those are locked in too, it claws the value back from them as well, leaving everyone just enough reason to stay while the rest gets handed up to shareholders. Then it dies.</p>
+      <p>You have watched this happen. The search that used to find the thing, the feed that used to show you your friends, the app that used to just call a car. None of them announced the turn. That is the tell Doctorow was pointing at, and his own write-up is worth reading rather than taking secondhand.</p>
+      <div class="hm-action-links">
+        <a class="ext-link" href="https://pluralistic.net/2023/01/21/potemkin-ai/" target="_blank" rel="noopener noreferrer">Cory Doctorow, "Tiktok's enshittification," Pluralistic, 21 January 2023<span class="ext-ind" aria-hidden="true">&#8599;</span><span class="visually-hidden"> (opens in a new tab)</span></a>
+      </div>
+    </section>
+
+    <!-- b) THE MECHANISM -->
+    <section class="flock-block" aria-labelledby="mech-h">
+      <h2 id="mech-h">The mechanism, not the mood</h2>
+      <p>Here is the part that gets dropped when the word gets thrown around, and it is the part that makes it worth more than a complaint. The interesting question is not why a company would want to squeeze you. Every company always wants to. The question is why it suddenly can.</p>
+      <p>For a long time four things sat in the way. A competitor you could leave for. A regulator who might notice. The ability to route around the product, to use a different client, to take your data with you, to fix the thing yourself. And workers with enough leverage to refuse to build the worst version. When those four are healthy, the squeeze is expensive and the company mostly behaves. As each one weakens, the same greed that was always there finally has somewhere to go.</p>
+      <p>So enshittification is not a story about villains arriving. It is a story about guardrails leaving, and the greed that was already in the room walking through the gap. That reframing matters, because it tells you where to look. Not for a bad person to blame, but for the missing constraint.</p>
+    </section>
+
+    <!-- c) PRIVATE EQUITY -->
+    <section class="flock-block" aria-labelledby="pe-h">
+      <h2 id="pe-h">Private equity skips to the end</h2>
+      <p>Doctorow was describing platforms, where the decay is slow and emergent, the sum of a thousand small decisions nobody quite owns. Private equity is the same extraction run deliberately, on a clock, as the entire point of the exercise. It does not wait for a company to drift down the curve. It buys the company and starts at the squeeze.</p>
+      <p>The core move is the leveraged buyout, and the trick inside it is worth understanding because it is genuinely counterintuitive. A fund buys a company mostly with borrowed money, and then the debt is placed on the <strong>company</strong>, not the fund. The thing that was bought now owes the money that bought it. From there the playbook is consistent: pay yourself dividends funded by more borrowing, charge the company management and "monitoring" fees for the privilege of being owned, and sell off whatever the company actually holds, most reliably its real estate, then rent it back to itself. The fund can pull its money out and clear a profit years before anyone finds out whether the company survives. Often it does not, and that turns out not to matter to the return.</p>
+      <p>Two cases make the mechanism concrete, and neither is obscure.</p>
+      <p><strong>Toys "R" Us.</strong> In 2005 a group led by KKR, Bain Capital, and Vornado bought it for about $6.6 billion, of which roughly $5.3 billion was borrowed and parked on the company's own books. A retailer that had been finding its way now spent something like $400 million a year just servicing that debt, money it could not spend on stores or prices while Amazon ate the category. It filed for bankruptcy in 2017 carrying roughly $5 billion in debt, and about 33,000 people lost their jobs. The Private Equity Stakeholder Project's accounting found the sponsors had collected on the order of $464 million in fees and interest along the way. The company died. The people who loaded it up mostly did fine.</p>
+      <div class="hm-action-links">
+        <a class="ext-link" href="https://pestakeholder.org/news/kkr-bain-capital-vornado-repeatedly-rewarded-themselves-for-adding-debt-to-toys-r-us/" target="_blank" rel="noopener noreferrer">Private Equity Stakeholder Project: how KKR, Bain, and Vornado were paid for adding debt to Toys "R" Us<span class="ext-ind" aria-hidden="true">&#8599;</span><span class="visually-hidden"> (opens in a new tab)</span></a>
+      </div>
+      <p><strong>Red Lobster.</strong> When Golden Gate Capital bought the chain in 2014, it paid for a chunk of the deal by selling the restaurants' land out from under them, about $1.5 billion in a sale-leaseback, so that a company which had owned its buildings now had to rent them. By 2023 that rent ran to roughly $200 million a year, near a tenth of revenue, on leases written to climb every year regardless of how business was doing. When Red Lobster filed for Chapter 11 in 2024, the endless-shrimp promotion got the headlines, but the rent it could never stop paying is the part that was engineered a decade earlier.</p>
+      <div class="hm-action-links">
+        <a class="ext-link" href="https://prospect.org/economy/2024-05-22-raiding-red-lobster/" target="_blank" rel="noopener noreferrer">The American Prospect: "The Raiding of Red Lobster"<span class="ext-ind" aria-hidden="true">&#8599;</span><span class="visually-hidden"> (opens in a new tab)</span></a>
+        <a class="ext-link secondary" href="https://www.cnbc.com/2024/05/24/how-private-equity-rolled-red-lobster.html" target="_blank" rel="noopener noreferrer">CNBC: how private equity rolled Red Lobster<span class="ext-ind" aria-hidden="true">&#8599;</span><span class="visually-hidden"> (opens in a new tab)</span></a>
+      </div>
+      <p>Notice what is missing from both stories. No moment where a competitor could have saved you, because the debt was structural, not competitive. No regulator in the way of a sale-leaseback. No way for a customer to route around a rent bill. That is the same four missing guardrails from the section above, except here nobody waited for them to erode. The whole design assumes they are already gone.</p>
+    </section>
+
+    <!-- d) WHY IT'S HERE -->
+    <section class="flock-block" aria-labelledby="here-h">
+      <h2 id="here-h">Why this sits next to the surveillance pages</h2>
+      <p>It might look like a detour from a site mostly about cameras and contracts and where your data goes. It is the same subject one level up.</p>
+      <p>The step in Doctorow's cycle where a platform turns on its own users is, very often, a privacy decision in disguise. Worse terms, more collected, more of you sold onward, because your data is the nearest thing left to extract once the product itself has been hollowed out. The squeeze and the surveillance are frequently the same act, seen from two sides.</p>
+      <p>And the reason this is hard to see is not an accident either. Private equity is built to be quiet. The fund's name is not on the door, or the receipt, or the app. You experience the vet clinic, the hospital, the local paper, the apartment manager, and almost never the balance sheet three owners up that decides how each of them treats you. Opacity is not a side effect here. It is a feature, because a brand you trust is worth more than a fund you have heard bad things about.</p>
+      <p>Which is exactly why the response this site keeps landing on applies here too. Follow the ownership. Read the document. The two trackers on this site exist for this: <a href="pe-tracker.html">the PE ownership tracker</a> for who actually owns the thing, and <a href="tracker.html">the corporate dossier</a> for what that owner does. The decay has a mechanism, the mechanism has an owner, and the owner is usually a matter of public record if you go looking.</p>
+    </section>
+
+    <!-- e) THE LIMITS -->
+    <section class="flock-block" aria-labelledby="limits-h">
+      <h2 id="limits-h">The limits of the claim</h2>
+      <p>This argument is easy to overrun, so a few guardrails on it:</p>
+      <ul class="flock-list">
+        <li><strong>It is a coinage, not a law.</strong> "Enshittification" is a useful lens, not a measurement. It describes a pattern that recurs; it does not prove that any particular thing you dislike is an instance of it. The word has drifted toward meaning "anything that got worse," and every time it does that it means a little less.</li>
+        <li><strong>Not all private equity is this.</strong> Some funds genuinely fix broken companies, keep them, and sell them healthier. The leveraged, extract-and-exit version described here is a specific and well-documented model, not the whole industry, and treating them as identical is the kind of overclaim that lets the real cases get waved away.</li>
+        <li><strong>Bad outcomes have more than one father.</strong> Toys "R" Us also faced Amazon. Red Lobster also ran a promotion badly. The claim is not that the owner is the only cause, only that the owner built the thing that removed the room to survive the other causes.</li>
+        <li><strong>This section is reasoning, not a filing.</strong> The two company cases carry sources. The frame around them, the four guardrails, the tie to surveillance, is an argument offered as an argument. You are free to find it half right, and that is a better outcome than taking it whole.</li>
+      </ul>
+    </section>
+
+    <!-- f) CIVIC CLOSE -->
+    <section class="flock-block" aria-labelledby="civic-h">
+      <h2 id="civic-h">What actually changes things</h2>
+      <ul class="flock-list">
+        <li><strong>Find out who owns it before you blame the staff.</strong> The person at the counter did not decide the staffing or the rent. The owner three steps up did, and that owner is frequently findable. Start with <a href="pe-tracker.html">the PE ownership tracker</a>.</li>
+        <li><strong>Say the fund's name out loud.</strong> This model runs on the brand and the fund being kept separate in your head. Naming the owner, in a review, a council comment, a letter to a reporter, is a small act that undoes the one thing the structure depends on.</li>
+        <li><strong>Watch the real estate.</strong> A sale-leaseback is a public-ish transaction and a reliable early sign that a company is being turned into a rent stream. When a familiar business suddenly does not own its own building, the clock has usually started.</li>
+        <li><strong>Keep the mechanism separate from the mood.</strong> "This got worse" is a feeling and it ends the conversation. "The owner loaded it with debt in 2019 and has taken two dividends since" is a fact, and it starts one. The second is always worth the extra ten minutes.</li>
+      </ul>
+      <p>None of this requires believing that everyone in finance is a villain, and the case is weaker if it leans on that. Most of the people involved are following incentives that are perfectly legal and, from where they sit, perfectly rational. That is the uncomfortable part. The reason things keep getting worse is not that bad people keep winning. It is that we took down the fences that made treating people well the cheaper option, and a handful of owners noticed before the rest of us did. The fences can go back up. The first step, every time, is being able to see who is standing where they used to be.</p>
+    </section>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="logo">Visable<span>.</span></div>
+  <p>An independent project, built because the conversation deserves to be better.</p>
+  <p style="color: #2a2a2a; font-size: 11px;">No tracking. No analytics. No ads. Ever.</p>
+</footer>
+
+<script src="binary-background.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
