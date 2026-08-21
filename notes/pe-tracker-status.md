@@ -1,6 +1,6 @@
 # PE Ownership Tracker — Status & Briefing
 
-_Last updated: 2026-08-06. This is the resume-here doc: read this + `pe-tracker-spec.md` and you're caught up._
+_Last updated: 2026-08-06. This is the resume-here doc: read this + `notes/pe-tracker-spec.md` and you're caught up._
 
 ## What it is
 A standalone, sourced, filterable page on visableprivacy.com (static GitHub Pages site,
@@ -55,13 +55,13 @@ Airtable (source of truth) → export script → `pe-data.json` → the page rea
 2. **Stop and summarize** for the user's spot-check before building (never one giant run).
 3. Write `batches/batch-NN-<vertical>.json` (see any existing batch file for shape; firms carry
    optional `tags[]`, businesses carry optional `evidence[]` and optional `locations[]`).
-4. **Dry-run:** `node --env-file=.env import-to-airtable.mjs batches/batch-NN-*.json`
+4. **Dry-run:** `node --env-file=.env scripts/import-to-airtable.mjs batches/batch-NN-*.json`
 5. **Commit to Airtable:** add `--commit`. Lands as `review_status=pending`, evidence `publish=true`
    but still gated. Importer dedups firms/businesses by slug and evidence by business+tag+source+desc
    (idempotent). Evidence attaches to existing businesses too.
 6. Commit the batch file to git.
 7. **User verifies** in Airtable → flips `review_status`→`verified`, checks evidence `publish`✓.
-8. **Export:** `node --env-file=.env export-pe-data.mjs` → writes `pe-data.json`.
+8. **Export:** `node --env-file=.env scripts/export-pe-data.mjs` → writes `pe-data.json`.
 9. Commit `pe-data.json` + push to `main` (GitHub Pages auto-deploys; ~2 min).
 
 Batches can be stacked: import several + commit files, then ONE export + push at the end. The final
@@ -86,10 +86,10 @@ export only publishes `verified` businesses, so verify everything first.
 - `pe-tracker.html` / `pe-tracker.js` / `style.css` — the page (facets: industry / owning firm /
   practice tag + search + sort; stats: Businesses / Owning Firms / Industries). Page is hardened
   against DOM/cache version-skew (defensive byId/setText; load split from render; one fetch retry).
-- `export-pe-data.mjs` — Airtable → `pe-data.json`.
-- `import-to-airtable.mjs` — batch JSON → Airtable (dry-run default; `--commit` to write).
+- `scripts/export-pe-data.mjs` — Airtable → `pe-data.json`.
+- `scripts/import-to-airtable.mjs` — batch JSON → Airtable (dry-run default; `--commit` to write).
 - `batches/batch-01..13-*.json` — source-of-truth batch files.
-- `pe-tracker-spec.md` — original feature spec.
+- `notes/pe-tracker-spec.md` — original feature spec.
 - `.env` — gitignored secrets.
 
 ## Candidate next verticals (not yet done)

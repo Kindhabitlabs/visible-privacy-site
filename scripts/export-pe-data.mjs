@@ -19,7 +19,7 @@
  *      included and what was skipped (and why).
  *
  * Usage:
- *   AIRTABLE_TOKEN=pat_xxx AIRTABLE_BASE_ID=app_xxx node export-pe-data.mjs
+ *   AIRTABLE_TOKEN=pat_xxx AIRTABLE_BASE_ID=app_xxx node scripts/export-pe-data.mjs
  *
  * Getting the two values:
  *   - AIRTABLE_TOKEN:  Airtable → Builder Hub → Personal access tokens.
@@ -57,7 +57,7 @@ const BASE_ID = process.env.AIRTABLE_BASE_ID;
 if (!TOKEN || !BASE_ID) {
   console.error(
     "Missing credentials. Run with:\n" +
-      "  AIRTABLE_TOKEN=pat_xxx AIRTABLE_BASE_ID=app_xxx node export-pe-data.mjs"
+      "  AIRTABLE_TOKEN=pat_xxx AIRTABLE_BASE_ID=app_xxx node scripts/export-pe-data.mjs"
   );
   process.exit(1);
 }

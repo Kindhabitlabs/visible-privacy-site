@@ -4,8 +4,8 @@
  * local batch JSON file, so a researched batch skips manual grid entry.
  *
  * Usage:
- *   node --env-file=.env import-to-airtable.mjs batch.json            # DRY RUN (default)
- *   node --env-file=.env import-to-airtable.mjs batch.json --commit   # actually write
+ *   node --env-file=.env scripts/import-to-airtable.mjs batch.json            # DRY RUN (default)
+ *   node --env-file=.env scripts/import-to-airtable.mjs batch.json --commit   # actually write
  *
  * The token must have BOTH data.records:read AND data.records:write on the base
  * (the export-only token needs read; add write for this script).
@@ -70,7 +70,7 @@ if (!TOKEN || !BASE_ID) {
   process.exit(1);
 }
 if (!inputPath) {
-  console.error("Usage: node --env-file=.env import-to-airtable.mjs <batch.json> [--commit]");
+  console.error("Usage: node --env-file=.env scripts/import-to-airtable.mjs <batch.json> [--commit]");
   process.exit(1);
 }
 

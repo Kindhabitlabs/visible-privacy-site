@@ -3,7 +3,7 @@
 This is a small, independent site maintained by a few people. Contributions are
 welcome. This file covers how changes get in and the house rules a change has to
 respect. For the editorial rules on sourcing and on which page a company belongs
-on, see [`CONTRIBUTING-data.md`](CONTRIBUTING-data.md), which is the authority on
+on, see [`notes/CONTRIBUTING-data.md`](notes/CONTRIBUTING-data.md), which is the authority on
 that and is not duplicated here.
 
 ## The fastest route is email, not a pull request
@@ -97,7 +97,7 @@ visually-hidden "(opens in a new tab)" note. Internal links take neither.
 
 Inline links to primary documents, on first mention. No footnotes, no bibliography.
 Any figure derived from a query gets the query date written into the prose. Read
-`CONTRIBUTING-data.md` before adding a number to any page.
+`notes/CONTRIBUTING-data.md` before adding a number to any page.
 
 ## Verifying a change
 
