@@ -1077,6 +1077,7 @@
     .palantir-teaser,
     .cars-teaser,
     .flock-teaser,
+    .fog-teaser,
     .graphene-teaser {
       background: var(--surface);
       border-top: 1px solid var(--border);
@@ -1094,6 +1095,7 @@
     .palantir-teaser-inner,
     .cars-teaser-inner,
     .flock-teaser-inner,
+    .fog-teaser-inner,
     .graphene-teaser-inner {
       max-width: 1200px;
       margin: 0 auto;
@@ -1108,6 +1110,7 @@
     .palantir-teaser-art,
     .cars-teaser-art,
     .flock-teaser-art,
+    .fog-teaser-art,
     .graphene-teaser-art { color: var(--accent); }
     .cg-teaser-art svg,
     .why-teaser-art svg,
@@ -1115,6 +1118,7 @@
     .palantir-teaser-art svg,
     .cars-teaser-art svg,
     .flock-teaser-art svg,
+    .fog-teaser-art svg,
     .graphene-teaser-art svg { width: 100%; height: auto; display: block; }
 
     /* Plates drift, each on its own timing, so the frame never repeats
@@ -1148,6 +1152,7 @@
     .palantir-teaser h2,
     .cars-teaser h2,
     .flock-teaser h2,
+    .fog-teaser h2,
     .graphene-teaser h2 { margin-bottom: 28px; }
     .cg-teaser p,
     .why-teaser p,
@@ -1155,6 +1160,7 @@
     .palantir-teaser p,
     .cars-teaser p,
     .flock-teaser p,
+    .fog-teaser p,
     .graphene-teaser p {
       color: var(--muted);
       font-size: 17px;
@@ -1168,6 +1174,7 @@
     .palantir-teaser p strong,
     .cars-teaser p strong,
     .flock-teaser p strong,
+    .fog-teaser p strong,
     .graphene-teaser p strong { color: var(--text); font-weight: 500; }
     .flock-civic-line {
       border-left: 2px solid var(--gold);
@@ -1181,6 +1188,7 @@
     .palantir-teaser-cta,
     .cars-teaser-cta,
     .flock-teaser-cta,
+    .fog-teaser-cta,
     .graphene-teaser-cta {
       margin-top: 16px;
       font-size: 15px;
@@ -1870,6 +1878,7 @@
       .palantir-teaser-inner,
       .cars-teaser-inner,
       .flock-teaser-inner,
+      .fog-teaser-inner,
       .graphene-teaser-inner { display: block; position: relative; }
       .cg-teaser-copy,
       .why-teaser-copy,
@@ -1877,6 +1886,7 @@
       .palantir-teaser-copy,
       .cars-teaser-copy,
       .flock-teaser-copy,
+      .fog-teaser-copy,
       .graphene-teaser-copy { position: relative; z-index: 1; }
       .cg-teaser-art,
       .why-teaser-art,
@@ -1884,6 +1894,7 @@
       .palantir-teaser-art,
       .cars-teaser-art,
       .flock-teaser-art,
+      .fog-teaser-art,
       .graphene-teaser-art {
         position: absolute;
         top: 50%;
@@ -2601,4 +2612,86 @@
       .ensh-drain-scene { width: 200px; opacity: 0.14; }
       .ensh-drain-scene.side-right { right: -95px; }
       .ensh-drain-scene.side-left { left: -95px; }
+    }
+
+    /* ---- FOG DATA SCIENCE PAGE ---- */
+    /* Reading column reuses .flock-body / .flock-block / .flock-list /
+       .myth-card / .hm-table / .flock-caveat, as every page before it does.
+       The teaser layout rules live in the shared teaser selector block higher
+       up; only the deltas are here, following the per-page convention. */
+
+    /* Last teaser in the run, placed after Common Ground, which sits on
+       --surface. This one drops to --bg and loses its top rule, the same
+       alternation Graphene and Palantir use, so the two do not read as one
+       band before the civic section. */
+    .fog-teaser { background: var(--bg); border-top: none; }
+    /* Accent red rather than gold: this teaser names a specific harm, like the
+       other Deep Dive teasers, rather than arguing the site's method. */
+    .fog-teaser-art { color: var(--accent); }
+
+    /* The signals blink on a stagger, so the scatter reads as a location feed
+       being searched rather than a static map. Opacity only, so no
+       transform-origin is needed on the individual dots. */
+    @keyframes fog-ping {
+      0%, 100% { opacity: 0.3; }
+      50%      { opacity: 0.95; }
+    }
+    .fog-ping-1 { animation: fog-ping 4.5s ease-in-out infinite; }
+    .fog-ping-2 { animation: fog-ping 4.5s ease-in-out infinite -0.9s; }
+    .fog-ping-3 { animation: fog-ping 4.5s ease-in-out infinite -1.8s; }
+    .fog-ping-4 { animation: fog-ping 4.5s ease-in-out infinite -2.7s; }
+    .fog-ping-5 { animation: fog-ping 4.5s ease-in-out infinite -3.6s; }
+    @media (prefers-reduced-motion: reduce) {
+      .fog-ping-1, .fog-ping-2, .fog-ping-3, .fog-ping-4, .fog-ping-5 {
+        animation: none;
+        opacity: 0.6;
+      }
+    }
+
+    /* Scene layer, following .palantir-node-layer and the other scene layers.
+       A magnifying glass over a scatter of location signals: the drawing is the
+       argument, a feed of ordinary movement being searched. */
+    .fog-map-layer {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .fog-map-scene {
+      position: absolute;
+      width: 240px;
+      /* aspect-ratio pins the height; without it the absolutely positioned box
+         collapses, the same trap as every other scene layer here. */
+      aspect-ratio: 280 / 250;
+      color: var(--accent);
+      opacity: 0.4;
+    }
+    .fog-map-scene svg { width: 100%; height: 100%; display: block; }
+    .fog-map-scene.side-right { right: 16px; }
+    /* Not mirrored: the drawing is symmetrical about the glass, so flipping it
+       would change nothing. */
+    .fog-map-scene.side-left { left: 16px; }
+    /* Pinned in pixels so it lands beside the h1 rather than drifting with page
+       length, and clear of the rule that .section-label trails behind it. */
+    .fog-scene-1 { top: 190px; }
+    .fog-scene-2 { top: 30%; }
+    .fog-scene-3 { top: 55%; }
+    .fog-scene-4 { top: 79%; }
+    /* Offset per scene so the four feeds are never blinking in unison. */
+    .fog-scene-2 .fog-ping-1 { animation-delay: -1.1s; }
+    .fog-scene-2 .fog-ping-3 { animation-delay: -2.9s; }
+    .fog-scene-3 .fog-ping-1 { animation-delay: -2.4s; }
+    .fog-scene-3 .fog-ping-3 { animation-delay: -0.6s; }
+    .fog-scene-4 .fog-ping-1 { animation-delay: -3.6s; }
+    .fog-scene-4 .fog-ping-3 { animation-delay: -1.5s; }
+    @media (max-width: 1200px) {
+      .fog-map-scene { opacity: 0.2; }
+      .fog-map-scene.side-right { right: -70px; }
+      .fog-map-scene.side-left { left: -70px; }
+    }
+    @media (max-width: 1000px) {
+      .fog-map-scene { width: 200px; opacity: 0.15; }
+      .fog-map-scene.side-right { right: -95px; }
+      .fog-map-scene.side-left { left: -95px; }
     }

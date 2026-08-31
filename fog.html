@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fog Data Science: The App Became a Police Search | Visable</title>
+  <meta property="og:title" content="Fog Data Science: The App Became a Police Search | Visable">
+  <meta property="og:description" content="Fog Data Science sells Fog Reveal, a search engine that lets local police browse where your phone has been, going months back, without a warrant. The location came from the ordinary apps already on your phone.">
+  <meta property="og:image" content="/social-share.svg">
+  <meta name="twitter:image" content="/social-share.svg">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Visable">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Fog Data Science: The App Became a Police Search | Visable">
+  <meta name="twitter:description" content="Fog Data Science sells Fog Reveal, a search engine that lets local police browse where your phone has been, going months back, without a warrant. The location came from the ordinary apps already on your phone.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+</head>
+<body>
+  <canvas id="binary-canvas" class="binary-canvas" aria-hidden="true"></canvas>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="index.html" class="nav-logo">Visable<span>.</span></a>
+  <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <ul id="nav-menu">
+    <li><a href="tracker.html">Corporate Dossier</a></li>
+    <li><a href="pe-tracker.html">PE Ownership</a></li>
+    <li class="nav-group">
+      <button type="button" class="nav-group-btn active" aria-expanded="false" aria-controls="nav-deep-dives" aria-haspopup="true">Deep Dives<span class="nav-group-caret" aria-hidden="true">&#9662;</span></button>
+      <ul class="nav-submenu" id="nav-deep-dives">
+        <li><a href="flock.html">Flock Cameras</a></li>
+        <li><a href="graphene.html">Your Phone</a></li>
+        <li><a href="cars.html">Your Car</a></li>
+        <li><a href="palantir.html">Palantir</a></li>
+        <li><a href="fog.html" class="active">Fog Data Science</a></li>
+        <li><a href="age-verification.html">Your ID</a></li>
+      </ul>
+    </li>
+    <li class="nav-group">
+      <button type="button" class="nav-group-btn" aria-expanded="false" aria-controls="nav-why-how" aria-haspopup="true">Why &amp; How<span class="nav-group-caret" aria-hidden="true">&#9662;</span></button>
+      <ul class="nav-submenu" id="nav-why-how">
+        <li><a href="why-this-exists.html">Why This Exists</a></li>
+        <li><a href="common-ground.html">Common Ground</a></li>
+        <li><a href="enshittification.html">Enshittification</a></li>
+        <li><a href="contribute.html">Contribute</a></li>
+        <li><a href="donate.html">Donate</a></li>
+      </ul>
+    </li>
+    <li><a href="index.html#tools" class="nav-cta">Honest Mitigation</a></li>
+  </ul>
+</nav>
+
+<main class="flock-main">
+
+  <div class="fog-map-layer" aria-hidden="true">
+    <div class="fog-map-scene side-right fog-scene-1">
+      <svg viewBox="0 0 280 250" fill="none">
+      <g stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <g opacity=".3">
+      <path d="M18 46h244M18 96h244M18 146h244M18 196h244" />
+      <path d="M60 22v206M120 22v206M180 22v206M240 22v206" />
+      </g>
+      <g class="fog-ping fog-ping-1"><circle cx="70" cy="66" r="5" /></g>
+      <g class="fog-ping fog-ping-2"><circle cx="150" cy="52" r="5" /></g>
+      <g class="fog-ping fog-ping-3"><circle cx="214" cy="104" r="5" /></g>
+      <g class="fog-ping fog-ping-4"><circle cx="92" cy="150" r="5" /></g>
+      <g class="fog-ping fog-ping-5"><circle cx="196" cy="196" r="5" /></g>
+      <circle cx="150" cy="140" r="44" />
+      <path d="M181 171l30 30" stroke-width="3" />
+      <g opacity=".85">
+      <circle cx="136" cy="128" r="3.5" fill="currentColor" stroke="none" />
+      <circle cx="164" cy="136" r="3.5" fill="currentColor" stroke="none" />
+      <circle cx="146" cy="158" r="3.5" fill="currentColor" stroke="none" />
+      <path d="M136 128l28 8M164 136l-18 22" opacity=".55" />
+      </g>
+      </g>
+      </svg>
+    </div>
+    <div class="fog-map-scene side-left fog-scene-2">
+      <svg viewBox="0 0 280 250" fill="none">
+      <g stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <g opacity=".3">
+      <path d="M18 46h244M18 96h244M18 146h244M18 196h244" />
+      <path d="M60 22v206M120 22v206M180 22v206M240 22v206" />
+      </g>
+      <g class="fog-ping fog-ping-1"><circle cx="70" cy="66" r="5" /></g>
+      <g class="fog-ping fog-ping-2"><circle cx="150" cy="52" r="5" /></g>
+      <g class="fog-ping fog-ping-3"><circle cx="214" cy="104" r="5" /></g>
+      <g class="fog-ping fog-ping-4"><circle cx="92" cy="150" r="5" /></g>
+      <g class="fog-ping fog-ping-5"><circle cx="196" cy="196" r="5" /></g>
+      <circle cx="150" cy="140" r="44" />
+      <path d="M181 171l30 30" stroke-width="3" />
+      <g opacity=".85">
+      <circle cx="136" cy="128" r="3.5" fill="currentColor" stroke="none" />
+      <circle cx="164" cy="136" r="3.5" fill="currentColor" stroke="none" />
+      <circle cx="146" cy="158" r="3.5" fill="currentColor" stroke="none" />
+      <path d="M136 128l28 8M164 136l-18 22" opacity=".55" />
+      </g>
+      </g>
+      </svg>
+    </div>
+    <div class="fog-map-scene side-right fog-scene-3">
+      <svg viewBox="0 0 280 250" fill="none">
+      <g stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <g opacity=".3">
+      <path d="M18 46h244M18 96h244M18 146h244M18 196h244" />
+      <path d="M60 22v206M120 22v206M180 22v206M240 22v206" />
+      </g>
+      <g class="fog-ping fog-ping-1"><circle cx="70" cy="66" r="5" /></g>
+      <g class="fog-ping fog-ping-2"><circle cx="150" cy="52" r="5" /></g>
+      <g class="fog-ping fog-ping-3"><circle cx="214" cy="104" r="5" /></g>
+      <g class="fog-ping fog-ping-4"><circle cx="92" cy="150" r="5" /></g>
+      <g class="fog-ping fog-ping-5"><circle cx="196" cy="196" r="5" /></g>
+      <circle cx="150" cy="140" r="44" />
+      <path d="M181 171l30 30" stroke-width="3" />
+      <g opacity=".85">
+      <circle cx="136" cy="128" r="3.5" fill="currentColor" stroke="none" />
+      <circle cx="164" cy="136" r="3.5" fill="currentColor" stroke="none" />
+      <circle cx="146" cy="158" r="3.5" fill="currentColor" stroke="none" />
+      <path d="M136 128l28 8M164 136l-18 22" opacity=".55" />
+      </g>
+      </g>
+      </svg>
+    </div>
+    <div class="fog-map-scene side-left fog-scene-4">
+      <svg viewBox="0 0 280 250" fill="none">
+      <g stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <g opacity=".3">
+      <path d="M18 46h244M18 96h244M18 146h244M18 196h244" />
+      <path d="M60 22v206M120 22v206M180 22v206M240 22v206" />
+      </g>
+      <g class="fog-ping fog-ping-1"><circle cx="70" cy="66" r="5" /></g>
+      <g class="fog-ping fog-ping-2"><circle cx="150" cy="52" r="5" /></g>
+      <g class="fog-ping fog-ping-3"><circle cx="214" cy="104" r="5" /></g>
+      <g class="fog-ping fog-ping-4"><circle cx="92" cy="150" r="5" /></g>
+      <g class="fog-ping fog-ping-5"><circle cx="196" cy="196" r="5" /></g>
+      <circle cx="150" cy="140" r="44" />
+      <path d="M181 171l30 30" stroke-width="3" />
+      <g opacity=".85">
+      <circle cx="136" cy="128" r="3.5" fill="currentColor" stroke="none" />
+      <circle cx="164" cy="136" r="3.5" fill="currentColor" stroke="none" />
+      <circle cx="146" cy="158" r="3.5" fill="currentColor" stroke="none" />
+      <path d="M136 128l28 8M164 136l-18 22" opacity=".55" />
+      </g>
+      </g>
+      </svg>
+    </div>
+  </div>
+
+  <div class="dossier-header">
+    <div class="section-label">The Location Market</div>
+    <h1>The ad in the app<br />became a <em>police search.</em></h1>
+    <p class="dossier-sub">You have no account with Fog Data Science, no contract, and no setting to turn off. What the company sells is a search engine, called Fog Reveal, that lets a local police department browse where a phone has been, going months back in time, for less than the annual cost of a patrol car. The location it searches did not come from a warrant or a cell tower. It came from the ordinary apps already on the phone.</p>
+  </div>
+
+  <div class="flock-body">
+
+    <!-- a) THE FRAME -->
+    <section class="flock-block" aria-labelledby="frame-h">
+      <h2 id="frame-h">You were the supply, not the customer</h2>
+      <p>This page shares its shape with the <a href="palantir.html">Palantir page</a>. There is no Fog Data Science product you signed up for, no account you opened, no privacy notice with your consent recorded in it. Its customers are police departments, and you are not a customer. You are the material.</p>
+      <p>The difference from Palantir is where the material comes from. Palantir joins records the government already held. Fog does not touch government records at all. It resells data that began on your phone, in apps you chose to install, and travelled through the ordinary advertising market before a company you have never heard of packaged it into a tool for the police.</p>
+      <p>That difference matters, because it is the one part of this that you can see, and the one place there is anything honest to do about it. But first, what the thing actually is. Almost everything known publicly comes from a single <a href="https://www.eff.org/deeplinks/2022/08/inside-fog-data-science-secretive-company-selling-mass-surveillance-local-police" target="_blank" rel="noopener noreferrer">Electronic Frontier Foundation investigation</a> in 2022, built from more than a hundred public-records requests, whose findings the EFF shared with the <a href="https://www.pbs.org/newshour/politics/how-an-obscure-cellphone-tracking-tool-provides-police-mass-surveillance-on-a-budget" target="_blank" rel="noopener noreferrer">Associated Press</a>. This page is an account of what those records showed, and it says so wherever the record is a finding rather than a fine.</p>
+    </section>
+
+    <!-- b) HOW THE APP BECAME THE FEED -->
+    <section class="flock-block" aria-labelledby="feed-h">
+      <h2 id="feed-h">How an app became the feed</h2>
+      <p>Every phone carries an advertising identifier: a unique string that Google and Apple assign so advertisers can recognise your device across different apps. It exists to make ads more targeted. Thousands of apps embed tracking code that reads that identifier and, with it, streams of location readings, then sells both into a wholesale market for location data. The AP found the underlying readings came from ordinary apps, naming <strong>Waze, Starbucks, and hundreds of others</strong>, none of which set out to be a police tool.</p>
+      <p>Fog buys from that market. According to the EFF, Fog Reveal identifies devices by what it calls a <strong>"Fog ID,"</strong> a hashed value derived from the advertising identifier. Fog told its customers the Fog ID cannot be turned back into the original advertising ID, which is the company's central privacy claim and is examined further down. The mechanism, though, is not in dispute: the same identifier built to sell you shoes is the one that lets a detective pull your movements. The <a href="graphene.html">phone page</a> on this site is about that identifier and the layer it lives in, because it is the source of everything on this page.</p>
+      <p>The AP reported that Fog worked closely with another location broker, <strong>Venntel</strong>, to the point that their marketing materials were nearly identical and Venntel staff recommended Fog to police. The market this data moves through is not a secret backchannel. It is the advertising economy, sold twice.</p>
+    </section>
+
+    <!-- c) WHAT FOG REVEAL DOES -->
+    <section class="flock-block" aria-labelledby="reveal-h">
+      <h2 id="reveal-h">What Fog Reveal actually does</h2>
+      <p>Fog Reveal is a web application. The EFF's <a href="https://www.eff.org/deeplinks/2022/08/fog-revealed-guided-tour-how-cops-can-browse-your-location-data" target="_blank" rel="noopener noreferrer">guided tour of the interface</a>, reconstructed from training documents obtained in the records requests, describes an officer drawing a box on a map, choosing a span of dates, and getting back the devices that were inside it, then following any one of them backward and forward across the map. Point at a location and see who was there. Point at a device and see everywhere it went.</p>
+      <p>The scale is Fog's own marketing claim, not an outside estimate. The company advertised <strong>billions of data points on more than 250 million devices</strong>, and the records describe police searching across hundreds of billions of location signals. Investigators can build what the industry calls a pattern of life: home, workplace, the people a device travels with, the places it returns to.</p>
+      <div class="myth-card">
+        <div class="myth-quote">"It's sort of a mass surveillance program on a budget."</div>
+        <div class="myth-reframe-label">Bennett Cyphers, Electronic Frontier Foundation, to the Associated Press</div>
+        <p>The phrase is doing precise work. The capability itself is not new. What is new is the price and the paperwork. A tool that once meant a court order and a phone company now means a login and a map, sold to a county sheriff for the cost of a used car.</p>
+      </div>
+    </section>
+
+    <!-- d) THE PRICE AND THE CUSTOMERS -->
+    <section class="flock-block" aria-labelledby="price-h">
+      <h2 id="price-h">The price, and who was buying</h2>
+      <p>The EFF found Fog offered to state highway patrols, city police departments, and county sheriffs for <strong>less than $10,000 a year</strong>. The AP reported subscriptions starting at around <strong>$7,500</strong>. That is the number that makes this different from the surveillance you were warned about: it is cheap enough that a small-town department can buy it out of a normal budget line, without a public vote and often without anyone outside the department knowing it exists.</p>
+      <p>Counting the buyers is harder, because much of the use never became a contract. The EFF documented what it could from the records it received.</p>
+      <div class="hm-table-wrap">
+        <table class="hm-table">
+          <caption class="visually-hidden">What the EFF and AP investigations found about Fog Reveal's cost and law-enforcement use, 2022.</caption>
+          <thead>
+            <tr>
+              <th scope="col">What the record showed</th>
+              <th scope="col">The figure</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row" data-label="What the record showed">Annual subscription</th><td data-label="The figure">Less than $10,000; some starting near <strong>$7,500</strong></td></tr>
+            <tr><th scope="row" data-label="What the record showed">Agencies with a documented contractual relationship</th><td data-label="The figure">At least <strong>18</strong>, per the EFF</td></tr>
+            <tr><th scope="row" data-label="What the record showed">Contracts sold, per procurement data (GovSpend)</th><td data-label="The figure">Around <strong>40</strong>, to nearly two dozen agencies</td></tr>
+            <tr><th scope="row" data-label="What the record showed">Devices in Fog's marketing claim</th><td data-label="The figure">More than <strong>250 million</strong></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="flock-caveat">These counts are floors, not totals. The EFF has been explicit that its investigation was extensive but not exhaustive: some agencies took free trials that left no purchase record, and the requests reached only the departments that answered them. The honest reading is that the documented use is the part that happened to surface, and the real figure is higher by an unknown amount.</p>
+    </section>
+
+    <!-- e) NO WARRANT -->
+    <section class="flock-block" aria-labelledby="warrant-h">
+      <h2 id="warrant-h">No warrant, by design</h2>
+      <p>In <em>Carpenter v. United States</em> (2018) the Supreme Court held that the government generally needs a warrant to obtain the historical cell-site location records a phone company keeps. The theory of the location-data market is that <em>Carpenter</em> does not reach it, because this data is not pried from a carrier. It is bought on the open market from a broker, from data that users are said to have agreed to share when they tapped through an app's permission screen. Whether that theory holds is being argued in courts and in Congress, and it has not been settled.</p>
+      <p>A legal scholar walking through Fog Reveal for <a href="https://theconversation.com/what-is-fog-reveal-a-legal-scholar-explains-the-app-some-police-forces-are-using-to-track-people-without-a-warrant-189944" target="_blank" rel="noopener noreferrer">The Conversation</a> made the plain point: the tool lets police do without a warrant the exact thing <em>Carpenter</em> said normally requires one. The records the EFF obtained show officers using it that way, tracing devices back through time with no court order in the file.</p>
+      <p class="flock-caveat">This is the part to state carefully. A dragnet does not select for suspicion. Everyone whose phone was inside the box is returned by the query, not only the person under investigation, which means the reach of a single search includes people who did nothing but stand near a place. The same capability can show who attended a protest, who visited a place of worship, and who went to a reproductive-health clinic. That is a description of what the tool can surface, drawn from the investigations, not an allegation that any particular department ran any particular search.</p>
+    </section>
+
+    <!-- f) WHO BUILT IT -->
+    <section class="flock-block" aria-labelledby="who-h">
+      <h2 id="who-h">Who built it</h2>
+      <p>Fog Data Science was founded in 2016, the AP reported, by two former officials of the Department of Homeland Security under President George W. Bush. <strong>Robert Liscouski</strong> had led the department's National Cyber Security Division. <strong>Matthew Broderick</strong>, a former Marine brigadier general, had run the Homeland Security Operations Center, the department's watch floor, during Hurricane Katrina in 2005.</p>
+      <p>This is not incidental colour. The people who built a tool that puts nationwide location tracking on a small-department budget came out of the part of government that does national-security surveillance, and pointed the same idea at the retail end of the market. The capability moved from the federal top of the system to a county login, and the founders are the throughline.</p>
+    </section>
+
+    <!-- g) THE RESPONSE AND THEIR ANSWER -->
+    <section class="flock-block" aria-labelledby="answer-h">
+      <h2 id="answer-h">The response, and Fog's answer taken seriously</h2>
+      <p>After the reporting, Representative Anna Eshoo <a href="https://www.mediapost.com/publications/article/377894/ftc-urged-to-investigate-fog-data-science-over-loc.html" target="_blank" rel="noopener noreferrer">asked the Federal Trade Commission to investigate Fog</a> for unfair and deceptive practices that invade privacy and may skirt Fourth Amendment protections. It fits a wider push, led in the Senate by Ron Wyden, to make the FTC treat the sale of location data by brokers as a legal problem rather than a business model.</p>
+      <p>State it plainly, because the site's rules require it: <strong>there has been no enforcement action and no fine against Fog Data Science.</strong> Nothing described here is, as far as the public record shows, a violation of any current law. That is not a footnote. It is the argument. The tool operates in the gap the law has not closed.</p>
+      <p>Fog's own defence deserves to be met on its terms. The company's position, per the EFF's reading of its documents, is that Fog IDs are hashed and anonymised and cannot be reversed into advertising IDs, so the data does not identify people by name. Grant it. Even granted, it answers a question nobody serious is asking. A pattern of life does not need a name attached. A device that sleeps at one address every night and spends every weekday at one office has, in practice, told you who it belongs to, and the EFF noted that combining a Fog result with other records is how identification actually happens. Anonymised movement, followed closely enough, stops being anonymous. The claim is technically defensible and beside the point.</p>
+    </section>
+
+    <!-- h) WHAT ACTUALLY REDUCES IT -->
+    <section class="flock-block" aria-labelledby="reduce-h">
+      <h2 id="reduce-h">What actually reduces this</h2>
+      <p>Unlike the Palantir page, this one does not have to end in pure structure, because the supply chain starts on a device you hold. None of the steps below is a fix, and each reduces the supply by some amount rather than stopping it. That is the honest framing this site uses everywhere.</p>
+      <ul class="flock-list">
+        <li><strong>Reset and limit the advertising identifier.</strong> Both Android and iOS let you delete or turn off the advertising ID, which breaks the persistent thread that ties a month of your movements together. It is a setting, it is free, and it is the single most direct thing an individual can do about this particular pipeline.</li>
+        <li><strong>Starve the apps that sell location.</strong> Most apps that harvest location do not need it. Setting location permission to "while using" or "never," and denying it to anything that has no reason to ask, cuts what enters the market in the first place. The <a href="graphene.html">phone page</a> is the deeper version of this argument, because the operating system is where the identifier and the permissions actually live.</li>
+        <li><strong>The real answer is collective, and it is legislative.</strong> Because there is no fine and no violation, the thing that closes this is a law, not a settlement. Some states have moved to bar police from buying location data they would need a warrant to demand, and proposals at the federal level, of the "Fourth Amendment is not for sale" kind, aim to shut the broker loophole directly. That is where this actually stops.</li>
+        <li><strong>The FTC has started on the brokers.</strong> The commission has moved against the data-broker end of this market: an <a href="https://www.ftc.gov/news-events/news/press-releases/2024/01/ftc-order-prohibits-data-broker-x-mode-social-outlogic-selling-sensitive-location-data" target="_blank" rel="noopener noreferrer">order banning X-Mode and its successor Outlogic from selling sensitive location data</a>, and a 2024 action against <a href="https://www.ftc.gov/news-events/news/press-releases/2024/12/ftc-takes-action-against-gravy-analytics-venntel-unlawfully-selling-location-data-tracking-consumers" target="_blank" rel="noopener noreferrer">Gravy Analytics and Venntel</a>, the broker the AP tied to Fog. These reach the suppliers, not Fog, but they are the shape of the answer.</li>
+      </ul>
+      <p class="flock-caveat">Fog Data Science now has an entry in our <a href="tracker.html?company=Fog%20Data%20Science">Corporate Dossier</a>, and like Palantir it carries no fine. That is not an oversight. The uncomfortable point of this page is the same one: the thing protecting you was never a law that had already been broken, it was friction and obscurity, and both are cheap to remove. What replaces them has to be written down.</p>
+    </section>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="logo">Visable<span>.</span></div>
+  <p>An independent project, built because the conversation deserves to be better.</p>
+  <p style="color: #2a2a2a; font-size: 11px;">No tracking. No analytics. No ads. Ever.</p>
+</footer>
+
+<script src="binary-background.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
