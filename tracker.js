@@ -1649,6 +1649,24 @@ const COMPANIES = [
       },
     ],
   },
+  {
+    name: "Fog Data Science",
+    ticker: "Private",
+    industry: "Location Data Broker",
+    totalFines: "No fine — investigative finding",
+    fineRaw: 0,
+    categories: ["privacy"],
+    violations: [
+      {
+        title: "Warrantless Phone-Location Tracking Sold to Local Police",
+        amount: "No fine",
+        year: "2022",
+        detail:
+          "A 2022 Electronic Frontier Foundation investigation, built from more than 100 public-records requests and shared with the Associated Press, found that Fog Data Science sells Fog Reveal, a search engine that lets state and local police browse the historical location of ordinary people's phones, going months back in time, usually without a warrant. The location originates from advertising identifiers harvested by ordinary apps (the AP named Waze, Starbucks and hundreds of others) and bought on the open location-data market; Fog worked closely with the broker Venntel. Fog's marketing claimed billions of data points on more than 250 million devices, and it offered subscriptions for less than $10,000 a year, with the EFF documenting at least 18 law-enforcement clients. There has been no enforcement action or fine against Fog. Rep. Anna Eshoo asked the FTC to investigate. This is an investigative finding, not a settlement or verdict. See the Fog Data Science deep dive on this site for the full account.",
+        source: "EFF / AP Investigation",
+      },
+    ],
+  },
 ];
 
 function categoryColor(catId) {
