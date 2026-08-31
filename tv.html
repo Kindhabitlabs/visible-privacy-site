@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your TV: Sold At A Loss | Visable</title>
+  <meta property="og:title" content="Your TV: Sold At A Loss | Visable">
+  <meta property="og:description" content="Smart TVs fingerprint what is on screen and sell the record. Researchers put two new sets behind a packet capture and measured exactly what leaves the house. It runs even when the TV is a dumb monitor, and the opt-out genuinely works.">
+  <meta property="og:image" content="/social-share.svg">
+  <meta name="twitter:image" content="/social-share.svg">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Visable">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Your TV: Sold At A Loss | Visable">
+  <meta name="twitter:description" content="Smart TVs fingerprint what is on screen and sell the record. Researchers put two new sets behind a packet capture and measured exactly what leaves the house. It runs even when the TV is a dumb monitor, and the opt-out genuinely works.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+</head>
+<body>
+  <canvas id="binary-canvas" class="binary-canvas" aria-hidden="true"></canvas>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="index.html" class="nav-logo">Visable<span>.</span></a>
+  <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <ul id="nav-menu">
+    <li><a href="tracker.html">Corporate Dossier</a></li>
+    <li><a href="pe-tracker.html">PE Ownership</a></li>
+    <li class="nav-group">
+      <button type="button" class="nav-group-btn active" aria-expanded="false" aria-controls="nav-deep-dives" aria-haspopup="true">Deep Dives<span class="nav-group-caret" aria-hidden="true">&#9662;</span></button>
+      <ul class="nav-submenu" id="nav-deep-dives">
+        <li><a href="flock.html">Flock Cameras</a></li>
+        <li><a href="graphene.html">Your Phone</a></li>
+        <li><a href="cars.html">Your Car</a></li>
+        <li><a href="tv.html" class="active">Your TV</a></li>
+        <li><a href="palantir.html">Palantir</a></li>
+        <li><a href="age-verification.html">Your ID</a></li>
+      </ul>
+    </li>
+    <li class="nav-group">
+      <button type="button" class="nav-group-btn" aria-expanded="false" aria-controls="nav-why-how" aria-haspopup="true">Why &amp; How<span class="nav-group-caret" aria-hidden="true">&#9662;</span></button>
+      <ul class="nav-submenu" id="nav-why-how">
+        <li><a href="why-this-exists.html">Why This Exists</a></li>
+        <li><a href="common-ground.html">Common Ground</a></li>
+        <li><a href="enshittification.html">Enshittification</a></li>
+        <li><a href="contribute.html">Contribute</a></li>
+        <li><a href="donate.html">Donate</a></li>
+      </ul>
+    </li>
+    <li><a href="index.html#tools" class="nav-cta">Honest Mitigation</a></li>
+  </ul>
+</nav>
+
+<main class="flock-main">
+
+  <div class="tv-glow-layer" aria-hidden="true">
+    <div class="tv-glow-scene side-right glow-scene-1">
+      <svg viewBox="0 0 280 250" fill="none">
+        <g stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="46" y="86" width="188" height="116" rx="4" />
+          <path d="M140 202v18" />
+          <path d="M106 220h68" />
+          <rect x="58" y="98" width="164" height="92" rx="2" opacity=".4" />
+          <g class="tv-scan"><path d="M58 102h164" opacity=".85" /></g>
+          <g class="tv-fp tv-fp-1">
+            <path d="M92 78v-12M100 78v-20M108 78v-8M116 78v-16M124 78v-11" />
+          </g>
+          <g class="tv-fp tv-fp-2">
+            <path d="M140 78v-16M148 78v-9M156 78v-19M164 78v-12M172 78v-7" />
+          </g>
+          <g class="tv-fp tv-fp-3">
+            <path d="M116 78v-10M124 78v-18M132 78v-13M140 78v-21M148 78v-9" />
+          </g>
+        </g>
+      </svg>
+    </div>
+    <div class="tv-glow-scene side-left glow-scene-2">
+      <svg viewBox="0 0 280 250" fill="none">
+        <g stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="46" y="86" width="188" height="116" rx="4" />
+          <path d="M140 202v18" />
+          <path d="M106 220h68" />
+          <rect x="58" y="98" width="164" height="92" rx="2" opacity=".4" />
+          <g class="tv-scan"><path d="M58 102h164" opacity=".85" /></g>
+          <g class="tv-fp tv-fp-1">
+            <path d="M92 78v-12M100 78v-20M108 78v-8M116 78v-16M124 78v-11" />
+          </g>
+          <g class="tv-fp tv-fp-2">
+            <path d="M140 78v-16M148 78v-9M156 78v-19M164 78v-12M172 78v-7" />
+          </g>
+          <g class="tv-fp tv-fp-3">
+            <path d="M116 78v-10M124 78v-18M132 78v-13M140 78v-21M148 78v-9" />
+          </g>
+        </g>
+      </svg>
+    </div>
+    <div class="tv-glow-scene side-right glow-scene-3">
+      <svg viewBox="0 0 280 250" fill="none">
+        <g stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="46" y="86" width="188" height="116" rx="4" />
+          <path d="M140 202v18" />
+          <path d="M106 220h68" />
+          <rect x="58" y="98" width="164" height="92" rx="2" opacity=".4" />
+          <g class="tv-scan"><path d="M58 102h164" opacity=".85" /></g>
+          <g class="tv-fp tv-fp-1">
+            <path d="M92 78v-12M100 78v-20M108 78v-8M116 78v-16M124 78v-11" />
+          </g>
+          <g class="tv-fp tv-fp-2">
+            <path d="M140 78v-16M148 78v-9M156 78v-19M164 78v-12M172 78v-7" />
+          </g>
+          <g class="tv-fp tv-fp-3">
+            <path d="M116 78v-10M124 78v-18M132 78v-13M140 78v-21M148 78v-9" />
+          </g>
+        </g>
+      </svg>
+    </div>
+    <div class="tv-glow-scene side-left glow-scene-4">
+      <svg viewBox="0 0 280 250" fill="none">
+        <g stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="46" y="86" width="188" height="116" rx="4" />
+          <path d="M140 202v18" />
+          <path d="M106 220h68" />
+          <rect x="58" y="98" width="164" height="92" rx="2" opacity=".4" />
+          <g class="tv-scan"><path d="M58 102h164" opacity=".85" /></g>
+          <g class="tv-fp tv-fp-1">
+            <path d="M92 78v-12M100 78v-20M108 78v-8M116 78v-16M124 78v-11" />
+          </g>
+          <g class="tv-fp tv-fp-2">
+            <path d="M140 78v-16M148 78v-9M156 78v-19M164 78v-12M172 78v-7" />
+          </g>
+          <g class="tv-fp tv-fp-3">
+            <path d="M116 78v-10M124 78v-18M132 78v-13M140 78v-21M148 78v-9" />
+          </g>
+        </g>
+      </svg>
+    </div>
+  </div>
+
+  <div class="dossier-header">
+    <div class="section-label">In The Living Room</div>
+    <h1>Sold at a loss.<br />Paid for by <em>watching you.</em></h1>
+    <p class="dossier-sub">Most televisions now identify what is on the screen, second by second, and send the record home to be sold. That is not a rumour and it is not a reading of a privacy policy. In 2024 researchers put two new sets behind a packet capture and wrote down what left the house. This page covers what they saw, what their method could not see, and why the only measure that does not depend on a manufacturer's good behaviour is keeping the set off your network entirely.</p>
+  </div>
+
+  <div class="flock-body">
+
+    <!-- a) WHAT ACR IS -->
+    <section class="flock-block" aria-labelledby="acr-h">
+      <h2 id="acr-h">What the technology actually is</h2>
+      <p>The feature is called Automatic Content Recognition, and the clearest way to describe it is Shazam for your screen. The television captures the image it is displaying, reduces it to a fingerprint, and matches that fingerprint against a catalogue of known media. It does not need to understand the picture. It only needs to recognise it, which is a far cheaper problem, and one that was solved for music twenty years ago.</p>
+      <p>The capture rates come from the manufacturers' own documentation. LG states that its system captures frames <strong>every 10 milliseconds</strong>. Samsung states that its system captures <strong>every 500 milliseconds</strong>. Neither figure is disputed by anyone. They are published, and they are the basis on which the Texas Attorney General described the technology as screenshotting the screen twice a second.</p>
+      <p>The output is a timeline. Not "this household likes cooking shows," but a minute-by-minute record of what was on that screen, which is a different and much more specific object. It covers whatever the panel displays, so the source does not matter: cable, antenna, a streaming app, a disc, a console, or a laptop plugged into the side.</p>
+    </section>
+
+    <!-- b) THE AUDIT -->
+    <section class="flock-block" aria-labelledby="audit-h">
+      <h2 id="audit-h">Somebody measured it</h2>
+      <p>In November 2024, a team from UC Davis, University College London and Universidad Carlos III de Madrid published <a href="https://arxiv.org/abs/2409.06203" target="_blank" rel="noopener noreferrer">a black-box audit of ACR network traffic</a> at the ACM Internet Measurement Conference. The method is the reason to trust it. They bought new LG and Samsung sets, put each one behind a controlled network hub, captured every packet the television sent, and then repeated the whole experiment across six ways of watching, four privacy configurations, and two countries.</p>
+      <p>That design is what makes the findings hold. They are not inferred from a policy document or from a company's description of itself. They are what the wire showed.</p>
+      <ul class="flock-list">
+        <li><strong>The fingerprints go out on a clock.</strong> LG batches its 10 millisecond captures and transmits a fingerprint <strong>every 15 seconds</strong>. Samsung batches its 500 millisecond captures and transmits <strong>once per minute</strong>. Both patterns are visible as regular spikes in the traffic.</li>
+        <li><strong>It runs hardest when the TV is a dumb monitor.</strong> The two scenarios with the <em>highest</em> ACR traffic on both brands were broadcast television and <strong>HDMI</strong>. Plugging in a laptop or a games console does not put the television to sleep. It is the condition under which the television has the least other information about you, and it is the condition under which it fingerprints most.</li>
+        <li><strong>Logging out changes nothing.</strong> Traffic was materially identical whether the researchers were signed into a manufacturer account or not. The authors conclude that the tracking is keyed to the set's advertising ID and IP address rather than to any account you control.</li>
+        <li><strong>The data does not always stay in the country.</strong> For the UK sets, one Samsung ACR endpoint resolved to a server in New York. British viewing records were leaving the jurisdiction whose data protection law was supposed to be the strong one.</li>
+      </ul>
+      <p>They then ran the same experiments with the advertising and tracking settings switched off. In their words, "once opt-out is exercised, there is a complete absence of communication with any previously identified ACR domains, and no new ACR-related domains are observed." Their stated conclusion is that "the opt-out mechanisms implemented on LG and Samsung smart TVs are working."</p>
+      <p>That is worth knowing and it is worth acting on. It is also weaker than it sounds, and the limit is stated by the authors rather than inferred by us.</p>
+      <ul class="flock-list">
+        <li><strong>Nothing was decrypted.</strong> The method section says it directly: the analysis was "focused at extracting traffic patterns from the data captured by Mon(IoT)r <strong>without decrypting it</strong>." Nobody read a payload. What was demonstrated is that packets to known ACR domains stopped, which is not the same claim as nothing being collected, retained, or sent later by another route. The authors list man-in-the-middle work to read the payloads as future work, meaning it had not been done.</li>
+        <li><strong>It is a snapshot, and the snapshot is old.</strong> Two brands, two countries, one firmware version, 2024. Nothing about that result carries forward automatically to a set sold today, and firmware is precisely the layer a manufacturer can change without telling anyone.</li>
+        <li><strong>Absence of traffic to a known domain is the weakest form of proof there is.</strong> It is evidence, and it is the best available evidence, and it would be satisfied equally by a system that had genuinely stopped and by one that had moved.</li>
+      </ul>
+      <p>So the honest version is this. Somebody checked, and what they could see stopped. That is a real finding and it is more than anyone had before. It is not a guarantee, it is ageing, and it is the reason the recommendation further down this page does not begin with a settings menu.</p>
+      <div class="hm-action-links">
+        <a class="ext-link" href="https://arxiv.org/abs/2409.06203" target="_blank" rel="noopener noreferrer">Anselmi, Vekaria, D'Souza, Callejo, Mandalari and Shafiq, "Watching TV with the Second-Party," ACM IMC 2024<span class="ext-ind" aria-hidden="true">&#8599;</span><span class="visually-hidden"> (opens in a new tab)</span></a>
+        <a class="ext-link secondary" href="https://github.com/SafeNetIoT/ACR" target="_blank" rel="noopener noreferrer">Their measurement code<span class="ext-ind" aria-hidden="true">&#8599;</span><span class="visually-hidden"> (opens in a new tab)</span></a>
+      </div>
+    </section>
+
+    <!-- c) THE PARTY WHO GOT IT SWITCHED OFF -->
+    <section class="flock-block" aria-labelledby="netflix-h">
+      <h2 id="netflix-h">One viewer did get it switched off</h2>
+      <p>Buried in the same measurements is the most instructive result on this page. ACR traffic dropped sharply while the researchers were streaming through a third-party app. Peaks fell by as much as twelvefold, consistent with the fingerprinting simply not running.</p>
+      <p>The reason is not a privacy setting. It is a commercial one. Netflix's stated position, quoted in the paper, is that it wants ACR deactivated during its streaming "in order to preserve the integrity of its subscribers viewing experiences and maintain sole control over measurement of its viewership." The measurement of who watched what is valuable, and Netflix declined to let the television manufacturer have it.</p>
+      <p>So the fingerprinting can be turned off per source, cleanly, at scale, and it already has been. Not for you. For a company with the leverage to ask. When you watch broadcast television or plug in your own machine, nobody is in the room negotiating on your behalf, and the fingerprinting runs at full rate.</p>
+      <p>That is worth holding onto, because it disposes of the argument that this is technically unavoidable. It is avoidable. It has been avoided. The question was only ever who had standing to demand it.</p>
+      <div class="flock-caveat">The country comparison makes the same point from the other side. In the UK, the manufacturers' own free ad-supported channels showed reduced ACR traffic. In the US, the identical channels showed traffic comparable to broadcast. The paper's suggested explanation is that the content agreements differ between the two markets. Same hardware, same software, different contracts, different amount of watching.</div>
+    </section>
+
+    <!-- d) THE ENFORCEMENT RECORD -->
+    <section class="flock-block" aria-labelledby="law-h">
+      <h2 id="law-h">Regulators have been here before</h2>
+      <p>None of this is new, and it has already been found unlawful once. In February 2017 the FTC and the New Jersey Attorney General <a href="https://www.ftc.gov/news-events/news/press-releases/2017/02/vizio-pay-22-million-ftc-state-new-jersey-settle-charges-it-collected-viewing-histories-11-million" target="_blank" rel="noopener noreferrer">settled with Vizio for $2.2 million</a> over exactly this practice on <strong>11 million televisions</strong>. The order records that Vizio was capturing second-by-second viewing data, appending demographic detail such as income, marital status and education, and selling the combined profiles. The FTC put the collection rate at as many as <strong>100 billion data points a day</strong>. Vizio had also pushed the tracking software onto sets that shipped without it.</p>
+      <p>Eight years later Texas sued five manufacturers over the same technology. Samsung settled in February 2026 and LG in May 2026, both agreeing to stop collecting ACR data without informed consent and to put the disclosure on screen rather than in a policy. The cases against Sony, Hisense and TCL are still open, and those are allegations that have not been tested at trial.</p>
+      <p>The full record for each company, with the figures and the sources, is in the dossier rather than repeated here.</p>
+      <ul class="flock-list">
+        <li><a href="tracker.html?company=Vizio">Vizio</a>, for the 2017 FTC order and the class action that followed it.</li>
+        <li><a href="tracker.html?company=Samsung%20Electronics%20America">Samsung Electronics America</a> and <a href="tracker.html?company=LG%20Electronics%20USA">LG Electronics USA</a>, for the two Texas settlements and what each agreed to change.</li>
+        <li><a href="tracker.html?company=Sony%2C%20Hisense%20%26%20TCL">Sony, Hisense and TCL</a>, for the three cases still in litigation.</li>
+      </ul>
+      <p>Read those two dates together. A federal regulator established in 2017 that doing this without clear consent was unlawful, and in 2025 a state attorney general had to establish it again against five more companies. The 2017 order changed one company's conduct. It did not change the industry's, because nothing made it.</p>
+    </section>
+
+    <!-- e) THE ECONOMICS -->
+    <section class="flock-block" aria-labelledby="money-h">
+      <h2 id="money-h">Why the television was so cheap</h2>
+      <p>The usual way to make this argument is to say that if you are not paying for the product, you are the product. That is a slogan, and it is weaker than the evidence, because in this case the evidence is a filed financial statement.</p>
+      <p>Vizio was a public company until Walmart acquired it, so its numbers are on the record. In the <a href="https://www.sec.gov/Archives/edgar/data/1835591/000183559124000008/shareholderletterwex991.htm" target="_blank" rel="noopener noreferrer">shareholder letter it filed with the SEC in February 2024</a>, covering the full year 2023, the split reads like this.</p>
+      <div class="hm-table-wrap">
+        <table class="hm-table">
+          <caption class="visually-hidden">Vizio Holding Corp. full year 2023 results, comparing the hardware business to the advertising and data business.</caption>
+          <thead>
+            <tr>
+              <th scope="col">Full year 2023</th>
+              <th scope="col">Devices, meaning televisions</th>
+              <th scope="col">Platform+, meaning ads and viewing data</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row" data-label="Full year 2023">Net revenue</th>
+              <td data-label="Devices">$1,081.8 million</td>
+              <td data-label="Platform+">$598.2 million</td>
+            </tr>
+            <tr>
+              <th scope="row" data-label="Full year 2023">Gross profit</th>
+              <td data-label="Devices"><strong>Negative $8.6 million</strong></td>
+              <td data-label="Platform+"><strong>$364.9 million</strong></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Vizio sold a billion dollars of televisions in 2023 and <strong>lost money on them</strong>. Every cent of gross profit the company made, and then some, came from the advertising and data business attached to the sets. The hardware was not a product with a thin margin. At the gross profit line it was a negative number, absorbed as the cost of placing a screen in a room.</p>
+      <p>This is the subsidy stated in the company's own accounts. The television was cheap because the television is not what was being sold. The reason the set in the shop undercut the one next to it is that its manufacturer had a second revenue line and the other did not, and the second line is a record of what you watch.</p>
+      <p>Ten weeks after that letter, Walmart completed its acquisition of Vizio. It did not buy a screen factory. The <a href="tracker.html?company=Walmart">dossier entry for Walmart</a> covers the rest, and the general pattern is on the <a href="enshittification.html">Enshittification page</a>: the point at which a product stops being the thing you bought and becomes the place where something is sold.</p>
+    </section>
+
+    <!-- f) WHAT WORKS -->
+    <section class="flock-block" aria-labelledby="fix-h">
+      <h2 id="fix-h">What actually works</h2>
+      <p>There is one answer that does not depend on trusting anybody, and there is a second answer that does. They are not equivalent, so they are not presented as a menu of equals.</p>
+
+      <h3>1. Never put it on your network</h3>
+      <p>A television with no route to the internet has nowhere to send a fingerprint. Whatever the set captures, whatever the firmware decides to do next year, whatever a future agreement screen says: with no network path, none of it leaves the room. This is the only measure on this page that is true by construction rather than by permission, and it is the reason it goes first.</p>
+      <p>Feed it from a source device you chose, over HDMI. Decline the network during first-time setup rather than joining and forgetting, because on many models the setup flow treats connecting as the default path and some will re-prompt after an update.</p>
+      <p>The cost is real, so here it is plainly. No built-in apps, so you are buying a separate box. No firmware updates, which occasionally matter for panel or HDMI handshake fixes. Some sets nag at every startup. That is the price of the only version that does not rely on a manufacturer's continued good behaviour.</p>
+      <div class="flock-caveat">One thing worth knowing, and it applies to a set that <em>is</em> on the network. The audit found broadcast and <strong>HDMI</strong> to be the two <em>highest</em> ACR traffic scenarios on both brands. Fingerprinting does not stop because the picture arrives over a cable. So "I only use it as a monitor" is not by itself a defence if the television still has wifi. It is a complete defence once it does not. The external box and the disconnection are two halves of the same measure, and the second half is the one doing the work.</div>
+      <p>The box you plug in has its own version of this business, so choose it on the same terms. Roku and Amazon are built on advertising and viewing data in much the way Vizio is. An external device is one whose terms you can read and whose hardware you can replace. It is not automatically clean.</p>
+
+      <h3>2. If the set is going to be online anyway, turn the settings off</h3>
+      <p>Plenty of people are not going to give up the built-in apps, and telling them to is how privacy writing gets ignored. On Samsung the setting to look for is <em>Viewing Information Services</em>, and on LG it is the <em>Viewing Information</em> agreement, under privacy or user agreements. Menu paths move between firmware versions, so any list of them rots. Hunt for the words "viewing information" and switch off everything adjacent to them.</p>
+      <p>It is not one switch. The researchers' own opt-out configuration lists roughly a dozen separate settings on the LG set and six on the Samsung, spread across advertising, personalisation, voice and recommendation menus. A choice split across twelve menus is technically offered and practically declined, which is exactly the defect the Texas settlements are meant to address by forcing a plain on-screen disclosure.</p>
+      <p>Be clear about what this buys you. It is a vendor-controlled setting, honoured for as long as the vendor honours it, and resettable by a firmware update or a fresh consent prompt. The 2024 audit is the best evidence anyone has that it does something, and that evidence is a two-year-old traffic pattern on firmware that has since been replaced. Use it. Do not mistake it for the first option.</p>
+    </section>
+
+    <!-- g) WHY THIS ONE IS FIXABLE -->
+    <section class="flock-block" aria-labelledby="civic-h">
+      <h2 id="civic-h">Why this one is fixable</h2>
+      <p>Set this page beside <a href="cars.html">the one about your car</a> and the contrast is the whole argument. There, a federal statute requires a camera pointed at the driver and places no condition on what it may keep. There is no setting, no menu, and no consumer fix, because the hardware arrives under a mandate.</p>
+      <p>Here, everything is the other way round. Nothing requires a television to fingerprint the screen. It does it because it is profitable, which means it stops being done the moment it stops being profitable or stops being allowed. Three things have already been shown to work on it:</p>
+      <ul class="flock-list">
+        <li><strong>Measurement, when someone funds it.</strong> The value of the IMC audit is not that it settled anything. It is that it made a specific, falsifiable claim that anyone with a network hub can re-run, and it was honest about stopping at the encryption. That work needs doing again, on current firmware, by people who can read the payloads. There is far more policy writing that assumes such audits exist than there is money paying for them.</li>
+        <li><strong>An enforcement action, when someone brings one.</strong> Texas did not ask the manufacturers to behave better. It sued five of them, and the two settlements require informed consent and an on-screen disclosure, which is the specific defect that made the setting useless in practice.</li>
+        <li><strong>Leverage, when someone has it.</strong> Netflix got the fingerprinting switched off during its own content by treating viewership measurement as an asset worth protecting. That is precisely what it is when it is yours, too. The difference was standing, not technology.</li>
+      </ul>
+      <p>The gap is that the first and third of those are not available to an individual, and the second exists in one state at a time. The organisations that work this specific issue are the <a href="https://www.eff.org" target="_blank" rel="noopener noreferrer">Electronic Frontier Foundation</a>, the <a href="https://epic.org" target="_blank" rel="noopener noreferrer">Electronic Privacy Information Center</a>, and <a href="https://advocacy.consumerreports.org" target="_blank" rel="noopener noreferrer">Consumer Reports advocacy</a>, which has run its own smart TV testing for years.</p>
+      <p>In the meantime, the thing you control is the network cable and the wifi password. A television that was never given them is not relying on anyone's promise, is not affected by the next firmware update, and does not need a researcher to verify it. Everything else on this page is a reason to want that, or a second-best for when it is not possible.</p>
+    </section>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="logo">Visable<span>.</span></div>
+  <p>An independent project, built because the conversation deserves to be better.</p>
+  <p style="color: #2a2a2a; font-size: 11px;">No tracking. No analytics. No ads. Ever.</p>
+</footer>
+
+<script src="binary-background.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
