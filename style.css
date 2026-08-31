@@ -2685,7 +2685,7 @@
          collapses, the same trap as every other scene layer here. */
       aspect-ratio: 280 / 250;
       color: var(--accent);
-      opacity: 0.24;
+      opacity: 0.45;
     }
     .tv-glow-scene svg { width: 100%; height: 100%; display: block; }
     .tv-glow-scene.side-right { right: 16px; }
@@ -2712,12 +2712,12 @@
     .glow-scene-4 .tv-fp-2 { animation-delay: -0.53s; }
     .glow-scene-4 .tv-fp-3 { animation-delay: -1.86s; }
     @media (max-width: 1200px) {
-      .tv-glow-scene { opacity: 0.17; }
+      .tv-glow-scene { opacity: 0.22; }
       .tv-glow-scene.side-right { right: -70px; }
       .tv-glow-scene.side-left { left: -70px; }
     }
     @media (max-width: 1000px) {
-      .tv-glow-scene { width: 205px; opacity: 0.13; }
+      .tv-glow-scene { width: 205px; opacity: 0.18; }
       .tv-glow-scene.side-right { right: -95px; }
       .tv-glow-scene.side-left { left: -95px; }
     }
